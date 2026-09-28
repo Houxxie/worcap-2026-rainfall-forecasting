@@ -1,0 +1,14 @@
+# Preservar bytes dos artefatos auditados, inclusive quebras de linha.
+* -text
+/entregas/Nimbus_PA_homologacao/** -text
+/competicao/Nimbus_PA_WorCAP_2026.ipynb -text
+/competicao/manifesto_preservacao.json -text
+/pesquisa/** -text
+
+# Documentação e código novos, fora dos snapshots acima.
+/README.md text eol=lf
+/CHANGELOG.md text eol=lf
+/VERSOES.json text eol=lf
+/docs/PUBLICACAO_GITHUB.md text eol=lf
+/docs/REPRODUCAO.md text eol=lf
+/scripts/conferir_versoes.py text eol=lf

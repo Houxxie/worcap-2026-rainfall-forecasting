@@ -1,0 +1,36 @@
+# Dados originais podem ser baixados novamente; manter fora dos commits.
+data/raw/*.nc
+data/raw/sample_submission.csv
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+outputs/
+.cdsapirc
+.env
+
+# Artefatos científicos, downloads e ambientes: disponibilizar por fonte/manifesto.
+*.nc
+*.grib
+*.grb
+*.npz
+*.npy
+*.zip
+*.partial*
+tmp/
+data/
+.env.*
+!.env.example
+**/kaggle.json
+**/.cdsapirc
+**/objetos/
+**/.escrita.lock
+*.pkl
+*.pickle
+*.joblib
+**/modelos/
+**/*arvores_*.txt
+
+# CSVs completos de competição e previsões; métricas continuam visíveis.
+**/submission*.csv
+**/componentes/*.csv

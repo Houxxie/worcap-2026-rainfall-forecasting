@@ -1,0 +1,20 @@
+{
+  "equipe": "Nimbus PA",
+  "selecao_final": "Conforme registrada pelo participante no Kaggle; não alterada pelo pacote.",
+  "submissoes_reproduzidas": [
+    {
+      "solucao": "Média de dois LightGBM",
+      "score_publico_informado": 1.65183,
+      "arquivo_gerado": "componentes/media_arvores.csv",
+      "nome_csv_original": "submission_media_M6_0.900_M8_0.875_50_50.csv",
+      "sha256": "d06e2968e3cd6cc64e2afe92d1f51a3b32554da67bf8bdfb32a7dc50f46edc66"
+    },
+    {
+      "solucao": "Árvores e ridge local",
+      "score_publico_informado": 1.65354,
+      "arquivo_gerado": "submission_hibrida.csv",
+      "nome_csv_original": "submission_8G_75pct_8C_25pct_M11_regressao_local.csv",
+      "sha256": "e98e8954debb8f7c764665a31804ec5512a1c2578c1ed4a24e50c51dedfb429b"
+    }
+  ]
+}
