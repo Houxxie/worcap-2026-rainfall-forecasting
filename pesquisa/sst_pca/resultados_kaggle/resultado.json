@@ -1,0 +1,366 @@
+{
+  "status": "comparacao_completa",
+  "saida": "/kaggle/working/nimbus_pesquisa_sst/20260928T141021Z",
+  "rmse_controle": 1.748951169244873,
+  "rmse_sst": 1.747381721366929,
+  "delta_rmse": -0.0015694478779439969,
+  "consistencia": {
+    "blocos": {
+      "melhores": 5,
+      "piores": 2,
+      "media_delta": -0.0015952148518504508
+    },
+    "anos": {
+      "melhores": 9,
+      "piores": 5,
+      "media_delta": -0.0015985999556216157
+    }
+  },
+  "holdout_independente": false,
+  "conclusao": "Resultado exploratorio nos mesmos anos de desenvolvimento; nao comprova ganho em anos futuros.",
+  "protocolo": {
+    "experimento": "Hibrido com oito PCs SST nos dois componentes de arvores",
+    "controle": "/kaggle/working/worcap_banca_hibrida/20260928T134051529081Z",
+    "hash_csv_controle": "079f0eb31ce5c4b1f8033dab27492cae40d2dbadbff097aea8799927b5c7ed88",
+    "auditoria_reproducao": {
+      "identico_byte_a_byte": false,
+      "sha256_esperado": "e98e8954debb8f7c764665a31804ec5512a1c2578c1ed4a24e50c51dedfb429b",
+      "sha256_obtido": "079f0eb31ce5c4b1f8033dab27492cae40d2dbadbff097aea8799927b5c7ed88",
+      "n": 1885464,
+      "diferentes": 532,
+      "max_abs": 1.00000000458067e-06,
+      "media_abs": 2.8215866226454436e-10,
+      "rmse_entre_previsoes": 1.679757905944058e-08,
+      "tolerancias": {
+        "max_abs": 1.01e-06,
+        "media_abs": 1e-09,
+        "rmse": 1e-07
+      },
+      "criterio": "Conferência integral após diagnóstico de 28/09/2026; até uma unidade na sexta casa decimal.",
+      "causa": "Diferença numérica residual; causa exata ainda não isolada. Não constitui identidade de arquivo.",
+      "uso_referencia": "Somente auditoria; valores arquivados não entram em ajuste nem substituem previsões.",
+      "numericamente_confirmado": true
+    },
+    "snapshot_sst": {
+      "arquivo": "ersstv5_4graus_198201_202411.nc",
+      "sha256": "908034f6418833302ea432f25850ad2982d1114b747b7b298e26a350eaf2891d",
+      "bytes": 3574571,
+      "inicio_origens": "1982-01-01",
+      "fim_origens": "2024-11-01",
+      "meses": 515,
+      "grade": [
+        31,
+        90
+      ],
+      "minimo": -1.7999999523162842,
+      "maximo": 34.27073669433594,
+      "atributos": {
+        "climatology": "Climatology is based on 1971-2000 SST, Xue, Y., T. M. Smith, and R. W. Reynolds, 2003: Interdecadal changes of 30-yr SST normals during 1871.2000. Journal of Climate, 16, 1601-1612.",
+        "description": "In situ data: ICOADS2.5 before 2007 and NCEP in situ data from 2008 to present. Ice data: HadISST ice before 2010 and NCEP ice after 2010.",
+        "keywords_vocabulary": "NASA Global Change Master Directory (GCMD) Science Keywords",
+        "keywords": "Earth Science > Oceans > Ocean Temperature > Sea Surface Temperature >",
+        "instrument": "Conventional thermometers",
+        "source_comment": "SSTs were observed by conventional thermometers in Buckets (insulated or un-insulated canvas and wooded buckets) or Engine Room Intaker",
+        "geospatial_lon_min": "-180.0",
+        "geospatial_lon_max": "180.0",
+        "geospatial_laty_max": "89.0",
+        "geospatial_laty_min": "-89.0",
+        "geospatial_lat_max": "62.0",
+        "geospatial_lat_min": "-62.0",
+        "geospatial_lat_units": "degrees_north",
+        "geospatial_lon_units": "degrees_east",
+        "cdm_data_type": "Grid",
+        "project": "NOAA Extended Reconstructed Sea Surface Temperature (ERSST)",
+        "original_publisher_url": "http://www.ncdc.noaa.gov",
+        "References": "https://www.ncdc.noaa.gov/data-access/marineocean-data/extended-reconstructed-sea-surface-temperature-ersst-v5 at NCEI and http://www.esrl.noaa.gov/psd/data/gridded/data.noaa.ersst.v5.html",
+        "source": "In situ data: ICOADS R3.0 before 2015, NCEP in situ GTS from 2016 to present, and Argo SST from 1999 to present. Ice data: HadISST2 ice before 2015, and NCEP ice after 2015",
+        "title": "NOAA ERSSTv5 (in situ only)",
+        "history": "created 07/2017 by PSD data using NCEI's ERSST V5 NetCDF values",
+        "institution": "This version written at NOAA/ESRL PSD: obtained from NOAA/NESDIS/National Centers for Environmental Information and time aggregated. Original Full Source: NOAA/NESDIS/NCEI/CCOG",
+        "citation": "Huang et al, 2017: Extended Reconstructed Sea Surface Temperatures Version 5 (ERSSTv5): Upgrades, Validations, and Intercomparisons. Journal of Climate, https://doi.org/10.1175/JCLI-D-16-0836.1",
+        "platform": "Ship and Buoy SSTs from ICOADS R3.0 and NCEP GTS",
+        "standard_name_vocabulary": "CF Standard Name Table (v40, 25 January 2017)",
+        "processing_level": "NOAA Level 4",
+        "Conventions": "CF-1.6, ACDD-1.3",
+        "metadata_link": ":metadata_link = https://doi.org/10.7289/V5T72FNM (original format)",
+        "creator_name": "Boyin Huang (original)",
+        "date_created": "2017-06-30T12:18:00Z (original)",
+        "product_version": "Version 5",
+        "creator_url_original": "https://www.ncei.noaa.gov",
+        "license": "No constraints on data access or use",
+        "comment": "SSTs were observed by conventional thermometers in Buckets (insulated or un-insulated canvas and wooded buckets), Engine Room Intakers, or floats and drifters",
+        "summary": "ERSST.v5 is developed based on v4 after revisions of 8 parameters using updated data sets and advanced knowledge of ERSST analysis",
+        "dataset_title": "NOAA Extended Reconstructed SST V5",
+        "data_modified": "2026-09-03",
+        "History": "Translated to CF-1.0 Conventions by Netcdf-Java CDM (CFGridCoverageWriter)\nOriginal Dataset = sst.mnmean.nc; Translation Date = 2026-09-24T01:53:25.314Z"
+      },
+      "referencia": "https://psl.noaa.gov/data/gridded/data.noaa.ersst.v5.html",
+      "origem": "NOAA PSL / ERSSTv5; snapshot retrospectivo, sem garantia de versão operacional histórica"
+    },
+    "periodo_avaliacao": [
+      "2007-01-01",
+      "2020-12-01"
+    ],
+    "blocos": [
+      {
+        "nome": "H1",
+        "corte": "2006-12-01",
+        "inicio": "2007-01-01"
+      },
+      {
+        "nome": "H2",
+        "corte": "2008-12-01",
+        "inicio": "2009-01-01"
+      },
+      {
+        "nome": "H3",
+        "corte": "2010-12-01",
+        "inicio": "2011-01-01"
+      },
+      {
+        "nome": "H4",
+        "corte": "2012-12-01",
+        "inicio": "2013-01-01"
+      },
+      {
+        "nome": "A",
+        "corte": "2014-12-01",
+        "inicio": "2015-01-01"
+      },
+      {
+        "nome": "B",
+        "corte": "2016-12-01",
+        "inicio": "2017-01-01"
+      },
+      {
+        "nome": "C",
+        "corte": "2018-12-01",
+        "inicio": "2019-01-01"
+      }
+    ],
+    "anos_maximos": 30,
+    "pontos_por_mes": 5000,
+    "semente": 42,
+    "features": [
+      37,
+      39
+    ],
+    "parametros_arvores": {
+      "objective": "regression",
+      "metric": "rmse",
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "min_data_in_leaf": 150,
+      "lambda_l2": 10.0,
+      "feature_fraction": 0.9,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "num_threads": 4,
+      "seed": 42,
+      "deterministic": true,
+      "force_col_wise": true,
+      "verbosity": -1
+    },
+    "arvores": 300,
+    "pesos": [
+      0.375,
+      0.375,
+      0.25
+    ],
+    "escalas_residuais": {
+      "arvores_seas5": 0.9,
+      "arvores_multissistema": 0.875
+    },
+    "pca": {
+      "componentes": 8,
+      "solver": "full",
+      "ponderacao": "sqrt(cos(latitude))",
+      "anomalias": "mensais; mascara, medias e PCA somente no treino",
+      "padronizacao_por_desvio": false,
+      "lag_meses": 1
+    },
+    "controle_ridge": "mesmos coeficientes e previsoes nos dois tratamentos",
+    "busca_hiperparametros": false,
+    "busca_pesos": false,
+    "holdout_independente": false,
+    "aviso_temporal": "Retrospectivo: disponibilidade operacional e revisoes historicas nao comprovadas.",
+    "ambiente": {
+      "numpy": "2.0.2",
+      "pandas": "2.3.3",
+      "xarray": "2025.12.0",
+      "lightgbm": "4.6.0",
+      "scikit-learn": "1.6.1",
+      "scipy": "1.16.3"
+    }
+  },
+  "auditorias": [
+    {
+      "bloco": "H1",
+      "meses": 299,
+      "exemplos": 1495000,
+      "sha256_29_features": "ecd26bbcb968781404476814f9bc44568525867dccb0506a8cad2ac6a5295fec",
+      "sha256_y": "f3719adf90a183fef91eaa575b2bb9560f7ba4ac717ea5c30b7d9551a599b4a8",
+      "sha256_pontos": "a8a70f89177d14021abe1d35a5ff1bcaa7ef8d1aad28ff12d7ebbb74e60fae72",
+      "variancia_explicada": [
+        0.20294312379665108,
+        0.09526431940874971,
+        0.06600315926012419,
+        0.04537927636095098,
+        0.03807954405938773,
+        0.03411889192608413,
+        0.02903004898962407,
+        0.026183847909794833
+      ],
+      "auditoria_temporal": {
+        "ajuste_somente_treino": true,
+        "mutacao_T_e_futuro_nao_altera_entrada_Tmenos1": true,
+        "ultimo_mes_ajuste": "2006-11-01",
+        "primeiro_alvo": "2007-01-01"
+      }
+    },
+    {
+      "bloco": "H2",
+      "meses": 323,
+      "exemplos": 1615000,
+      "sha256_29_features": "7963f5be23388a8feee6f082bc4a8e9271f1981e9417e9ac690a41e2ff39711a",
+      "sha256_y": "ebb9fe5b9c5ba05abc6f87969b4ed0c9f75ba9ffed2d06be4531c0a91cdc0df6",
+      "sha256_pontos": "a55d31d49da72878c172b0d75ad1e2948cb77f960cc6f4a46e1e05580f0bddfe",
+      "variancia_explicada": [
+        0.2059092060181243,
+        0.09764313358016652,
+        0.0634843528930452,
+        0.04310437958385046,
+        0.03629242278458794,
+        0.03324804468147639,
+        0.02820936219685216,
+        0.02629851274719733
+      ],
+      "auditoria_temporal": {
+        "ajuste_somente_treino": true,
+        "mutacao_T_e_futuro_nao_altera_entrada_Tmenos1": true,
+        "ultimo_mes_ajuste": "2008-11-01",
+        "primeiro_alvo": "2009-01-01"
+      }
+    },
+    {
+      "bloco": "H3",
+      "meses": 347,
+      "exemplos": 1735000,
+      "sha256_29_features": "fbdf54cf9bb0dd22f6611b0964117fc1dccc3e53aebd6100164d17dbbca213ee",
+      "sha256_y": "b0d08d1a363ce2a79d6cde91898c44f8d36fdffb056fa0141c663ae275e344d2",
+      "sha256_pontos": "c45b53e51d0d446620c289c50b65146aacda90b846d38cad3e73fce7f9752861",
+      "variancia_explicada": [
+        0.20660052221073233,
+        0.1035995783020535,
+        0.06155890198538763,
+        0.04173870834551594,
+        0.03596928402967834,
+        0.031224092868590906,
+        0.027774683773109637,
+        0.026116369681529732
+      ],
+      "auditoria_temporal": {
+        "ajuste_somente_treino": true,
+        "mutacao_T_e_futuro_nao_altera_entrada_Tmenos1": true,
+        "ultimo_mes_ajuste": "2010-11-01",
+        "primeiro_alvo": "2011-01-01"
+      }
+    },
+    {
+      "bloco": "H4",
+      "meses": 360,
+      "exemplos": 1800000,
+      "sha256_29_features": "d00b0fac00df62c4034c4b913cb591498b4c4ceadadfd7a7bc9e47ddad8ab2f0",
+      "sha256_y": "69f180caabe1ff4656e97a4428990603854988eeae2aaf6c45da24773a6683db",
+      "sha256_pontos": "cd92c8e4509edda088ff4dce4ec9a7719f66c1f449c8aca58ba30ddc324364a3",
+      "variancia_explicada": [
+        0.20751656863003576,
+        0.10482600282747125,
+        0.05872881808354085,
+        0.04300451029048325,
+        0.037116936947522605,
+        0.030366374159566587,
+        0.027623887862039814,
+        0.02623798278414864
+      ],
+      "auditoria_temporal": {
+        "ajuste_somente_treino": true,
+        "mutacao_T_e_futuro_nao_altera_entrada_Tmenos1": true,
+        "ultimo_mes_ajuste": "2012-11-01",
+        "primeiro_alvo": "2013-01-01"
+      }
+    },
+    {
+      "bloco": "A",
+      "meses": 360,
+      "exemplos": 1800000,
+      "sha256_29_features": "b7e810e0005ee5a3d4ce397b62172206b10aa18d939c6a172fd763d8de10342c",
+      "sha256_y": "f31959353c443b812ad9fecfb2981c8668b24838fe06a81f62191aff5ba8152f",
+      "sha256_pontos": "d4495bdaf68f4491fc6613a0eb590fc8d9d1f200b22e289b216fa3e50e77e48b",
+      "variancia_explicada": [
+        0.1957449096660862,
+        0.10556030892484634,
+        0.05927045446249289,
+        0.04333583902206685,
+        0.037939644263322934,
+        0.031034594058830776,
+        0.027308985137221464,
+        0.026161337268444145
+      ],
+      "auditoria_temporal": {
+        "ajuste_somente_treino": true,
+        "mutacao_T_e_futuro_nao_altera_entrada_Tmenos1": true,
+        "ultimo_mes_ajuste": "2014-11-01",
+        "primeiro_alvo": "2015-01-01"
+      }
+    },
+    {
+      "bloco": "B",
+      "meses": 360,
+      "exemplos": 1800000,
+      "sha256_29_features": "f8cea3bad9070ce78b0b035a0dcee1bba4a5d73c3ad2856761a65ae066b276d4",
+      "sha256_y": "74a91d5a877a582076bb2b4d4efc3b31cf0c8dd65906d660f7d4232a78e84aec",
+      "sha256_pontos": "e1edac1b3f4cfb0be6cf2875695b4891ec86c0f7a5c408932b97d2f4a3ce1f94",
+      "variancia_explicada": [
+        0.21236905564210307,
+        0.09931226202013738,
+        0.062102537259382924,
+        0.04503631437999441,
+        0.03667701591963033,
+        0.03564488795632041,
+        0.029427677854841124,
+        0.025771087246167376
+      ],
+      "auditoria_temporal": {
+        "ajuste_somente_treino": true,
+        "mutacao_T_e_futuro_nao_altera_entrada_Tmenos1": true,
+        "ultimo_mes_ajuste": "2016-11-01",
+        "primeiro_alvo": "2017-01-01"
+      }
+    },
+    {
+      "bloco": "C",
+      "meses": 360,
+      "exemplos": 1800000,
+      "sha256_29_features": "dd579f0157b8b423ad90029941530cbeed636500b337b52b86677f4f6821a80d",
+      "sha256_y": "e433ad922a4d7398be8b69ae21e8d43517344dfbb626306998cd208f3d680d74",
+      "sha256_pontos": "b3985bd28fb0a9e834499aae4e3f994395709aa7b67bee36df07786b641915a2",
+      "variancia_explicada": [
+        0.19961647117805814,
+        0.10792908821024737,
+        0.06424484399993566,
+        0.042279681577778415,
+        0.03837560254766346,
+        0.036756506405070354,
+        0.030347615814064047,
+        0.02575183960762553
+      ],
+      "auditoria_temporal": {
+        "ajuste_somente_treino": true,
+        "mutacao_T_e_futuro_nao_altera_entrada_Tmenos1": true,
+        "ultimo_mes_ajuste": "2018-11-01",
+        "primeiro_alvo": "2019-01-01"
+      }
+    }
+  ]
+}

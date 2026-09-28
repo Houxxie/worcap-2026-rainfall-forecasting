@@ -1,0 +1,18 @@
+[
+  {
+    "arquivo": "entregas\\etapa8A_CFSv2_dados\\01_CFSv2_baixar_e_auditar.py",
+    "sha256": "8f0e58027f3bd783c896f4cc8bc05dba2f4cb1be0bbec637e4029ddad920be77"
+  },
+  {
+    "arquivo": "entregas\\etapa7A_SEAS5\\01_SEAS5_baixar_e_auditar.py",
+    "sha256": "1294baaab3c5609725b5f80e2d024add695f116d3cc5ade259fcf6db6e74797e"
+  },
+  {
+    "arquivo": "entregas\\banca_8G\\WorCAP_modelo_hibrido_reproducao.py",
+    "sha256": "547bd7ac54c8873b5d6e237627f4b6dba94851259548a455f8574e2ecfff8616"
+  },
+  {
+    "arquivo": "pesquisa\\sst_pca\\extensao_sst.py",
+    "sha256": "789a8a2d38cca97ae32d04db7aa11aecc0c175dacd31bd84ab465ff8eff5d8d8"
+  }
+]

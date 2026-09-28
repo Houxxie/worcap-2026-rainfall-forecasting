@@ -1,0 +1,12 @@
+{
+  "fonte_funcoes": "entregas\\etapa8F_M10_SST_PCA\\06_M10_SST_global_PCA_8_componentes.py",
+  "fonte_sha256": "18535b7ffe2a7df791081747463e2fbe39f706ab5c7dd76780bea793c839cd77",
+  "funcoes_preservadas": [
+    "sst_auditar_arquivo",
+    "sst_ajustar_pca",
+    "sst_transformar",
+    "sst_auditar_causalidade"
+  ],
+  "extensao_sha256": "789a8a2d38cca97ae32d04db7aa11aecc0c175dacd31bd84ab465ff8eff5d8d8",
+  "escopo": "Uma comparação retrospectiva fixa; sem busca, seleção por placar ou emissão operacional."
+}

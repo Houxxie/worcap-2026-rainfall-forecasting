@@ -1,0 +1,24 @@
+{
+  "bloco": "C",
+  "meses": 360,
+  "exemplos": 1800000,
+  "sha256_29_features": "dd579f0157b8b423ad90029941530cbeed636500b337b52b86677f4f6821a80d",
+  "sha256_y": "e433ad922a4d7398be8b69ae21e8d43517344dfbb626306998cd208f3d680d74",
+  "sha256_pontos": "b3985bd28fb0a9e834499aae4e3f994395709aa7b67bee36df07786b641915a2",
+  "variancia_explicada": [
+    0.19961647117805814,
+    0.10792908821024737,
+    0.06424484399993566,
+    0.042279681577778415,
+    0.03837560254766346,
+    0.036756506405070354,
+    0.030347615814064047,
+    0.02575183960762553
+  ],
+  "auditoria_temporal": {
+    "ajuste_somente_treino": true,
+    "mutacao_T_e_futuro_nao_altera_entrada_Tmenos1": true,
+    "ultimo_mes_ajuste": "2018-11-01",
+    "primeiro_alvo": "2019-01-01"
+  }
+}

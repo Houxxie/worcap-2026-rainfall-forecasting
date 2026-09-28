@@ -1,0 +1,67 @@
+[
+  {
+    "nome": "treino_tp.nc",
+    "sha256": "012bebbe0e38aefdf4f9e2432c3ca22f71d94ea1a1b5421da9d9e5048632cab0",
+    "bytes": 186685299
+  },
+  {
+    "nome": "treino_tp_alvo.nc",
+    "sha256": "915f67f2627e37399830d1dd92b209ce1160082b0645662675eab17df957abe4",
+    "bytes": 186509303
+  },
+  {
+    "nome": "teste_features.nc",
+    "sha256": "70bcb5c9bb9c011c8901660834b42dc57ff7e54a4f34161d489ec5e9f05c1f23",
+    "bytes": 39057097
+  },
+  {
+    "nome": "sample_submission.csv",
+    "sha256": "34fe449ddb309b0579a87786f76049863833d82c26f183d18e943dc76f1e4c8c",
+    "bytes": 48145117
+  },
+  {
+    "nome": "treino_cloud_cover.nc",
+    "sha256": "607ee1210615a0ca8a5c954737617e668a5f016eb881554cb1468fda74b4fde1",
+    "bytes": 190610590
+  },
+  {
+    "nome": "treino_geopotential_850.nc",
+    "sha256": "ca3baca0177e2e90b42901803f348a4b4affe88bee202b76af3f293fa7035c17",
+    "bytes": 159707312
+  },
+  {
+    "nome": "treino_rel_hum_850.nc",
+    "sha256": "90f62b44b1b461259e7539249914e26cf09993f3bcd572ba4871931e45264b19",
+    "bytes": 180398147
+  },
+  {
+    "nome": "treino_shum_850.nc",
+    "sha256": "35cf8071b68d1e924ad87e0f8bd801d0a66d1d78ae75fc3cb623bde85c3f47bb",
+    "bytes": 175651693
+  },
+  {
+    "nome": "treino_surface_pressure.nc",
+    "sha256": "f00a5e44a03ea923ac0f693b975ef71cd347f8ad3d07692c602e3ac9a25c10fb",
+    "bytes": 160228025
+  },
+  {
+    "nome": "treino_t2.nc",
+    "sha256": "7d8c53b438289cddf87a11414ad10c8167f52ff33c6eff459a3288975079ef23",
+    "bytes": 175952066
+  },
+  {
+    "nome": "treino_temperature_850.nc",
+    "sha256": "1db7b4fdeba87b6a25f7fb6f1e40abec50964234dd9cc918cd34f902b8e41bac",
+    "bytes": 172474226
+  },
+  {
+    "nome": "treino_u_850.nc",
+    "sha256": "73c898f27bea25cf2ab0914bbe5c29acc9794a93f8b6b3affa39854bebccf761",
+    "bytes": 188451602
+  },
+  {
+    "nome": "treino_v_850.nc",
+    "sha256": "7bab583972e5718bb0e0fe0fe6a056bd56c968af1f1497205182f7621e26c241",
+    "bytes": 197354831
+  }
+]

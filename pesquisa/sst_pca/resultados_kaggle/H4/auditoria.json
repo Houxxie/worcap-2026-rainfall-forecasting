@@ -1,0 +1,24 @@
+{
+  "bloco": "H4",
+  "meses": 360,
+  "exemplos": 1800000,
+  "sha256_29_features": "d00b0fac00df62c4034c4b913cb591498b4c4ceadadfd7a7bc9e47ddad8ab2f0",
+  "sha256_y": "69f180caabe1ff4656e97a4428990603854988eeae2aaf6c45da24773a6683db",
+  "sha256_pontos": "cd92c8e4509edda088ff4dce4ec9a7719f66c1f449c8aca58ba30ddc324364a3",
+  "variancia_explicada": [
+    0.20751656863003576,
+    0.10482600282747125,
+    0.05872881808354085,
+    0.04300451029048325,
+    0.037116936947522605,
+    0.030366374159566587,
+    0.027623887862039814,
+    0.02623798278414864
+  ],
+  "auditoria_temporal": {
+    "ajuste_somente_treino": true,
+    "mutacao_T_e_futuro_nao_altera_entrada_Tmenos1": true,
+    "ultimo_mes_ajuste": "2012-11-01",
+    "primeiro_alvo": "2013-01-01"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "chuva_pos_corte_invariante": true,
+  "atmosfera_apos_Tmenos4_invariante": true,
+  "indices_apos_Tmenos3_invariantes": true,
+  "sst_apos_Tmenos2_invariante": true,
+  "climas_sazonais_somente_treino": true,
+  "publicacao_historica_comprovada": false,
+  "inicio": "1988-10-01",
+  "corte": "2018-09-01",
+  "meses": 360,
+  "n_exemplos": 1800000,
+  "sha256_X": "a3c09bee70c3d82656286cc5cdd2f1689540f8a7e168ca73207f37e48d0c0e02",
+  "sha256_y": "1e7213538acad23f8bd658b7310a9b56ace9c0fa6c7dadb664688572c70363ad",
+  "sha256_ids": "b3ff53fc58a1fd0a0c6bfe2a97543f7d8e81a1644d44f5fce89b504bc420a375",
+  "identidade_pareada": "mesmas colunas base, mesmos y/ids/referências/ridge; só acrescenta 8 PCs",
+  "referencia_chuva": [
+    "1988-10-01",
+    "2018-09-01"
+  ],
+  "fontes_clima": {
+    "atmosfera": [
+      "1988-06-01",
+      "2018-05-01"
+    ],
+    "indices": [
+      "1988-07-01",
+      "2018-06-01"
+    ]
+  }
+}

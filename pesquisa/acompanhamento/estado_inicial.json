@@ -1,0 +1,201 @@
+{
+  "conferido_em_utc": "2026-09-28T20:32:30.944948+00:00",
+  "protocolo": "b61d3ae3dac9e65da02c1b6d5aa3b66f9d918bae94db51a9f55c3728cf490e37",
+  "eventos": 10,
+  "fontes": [
+    {
+      "fonte": "nino34",
+      "recebido_em_utc": "2026-09-28T20:21:44.407298+00:00",
+      "sha256": "46e501b91f624ef85b525d73fbb427f9d04d30411ba6e5c7cff579b35fb4ff01",
+      "bytes": 16327,
+      "validado": true,
+      "ultimo_mes": "2026-07",
+      "meses": [
+        "2026-05",
+        "2026-06",
+        "2026-07"
+      ]
+    },
+    {
+      "fonte": "nino12",
+      "recebido_em_utc": "2026-09-28T20:21:45.317748+00:00",
+      "sha256": "b13ad5ad085cd13e70ec5d82662b509d522204e38a8eefd133f14be270e51928",
+      "bytes": 16328,
+      "validado": true,
+      "ultimo_mes": "2026-07",
+      "meses": [
+        "2026-05",
+        "2026-06",
+        "2026-07"
+      ]
+    },
+    {
+      "fonte": "tna",
+      "recebido_em_utc": "2026-09-28T20:21:46.159081+00:00",
+      "sha256": "387c4125f377e57bcb683a849aefcd76da7d7f3cdcb2ac68ab086ceadf300e8b",
+      "bytes": 8332,
+      "validado": true,
+      "ultimo_mes": "2026-07",
+      "meses": [
+        "2026-05",
+        "2026-06",
+        "2026-07"
+      ]
+    },
+    {
+      "fonte": "tsa",
+      "recebido_em_utc": "2026-09-28T20:21:46.916346+00:00",
+      "sha256": "700c0dffda0f19c1254ba482808b345eaa0538f5bf09fc3bc025f46a5fbe3a69",
+      "bytes": 8230,
+      "validado": true,
+      "ultimo_mes": "2026-07",
+      "meses": [
+        "2026-05",
+        "2026-06",
+        "2026-07"
+      ]
+    },
+    {
+      "fonte": "ersstv5",
+      "recebido_em_utc": "2026-09-28T20:21:49.524135+00:00",
+      "sha256": "73cb80d50977aec9699ade66599ffdc7aaf519aef99ad1cf08e3b8a4404305b9",
+      "bytes": 168249,
+      "validado": true,
+      "ultimo_mes": null,
+      "meses": [
+        "2026-08"
+      ]
+    },
+    {
+      "fonte": "cfsv2",
+      "recebido_em_utc": "2026-09-28T20:25:47.215604+00:00",
+      "sha256": "41f4a85a5a8984bf2a752820c42c1e0db385ca9b56f72f5e5f94bdae52fe320b",
+      "bytes": 596040,
+      "validado": false,
+      "ultimo_mes": null,
+      "meses": []
+    },
+    {
+      "fonte": "cfsv2",
+      "recebido_em_utc": "2026-09-28T20:27:36.113390+00:00",
+      "sha256": "69cff2d3a04f74777ffdde87e069a49d87c49da74c96c0f8a1a3bb5120765a0a",
+      "bytes": 780,
+      "validado": false,
+      "ultimo_mes": null,
+      "meses": []
+    }
+  ],
+  "falhas_auditoria": [
+    {
+      "acao": "bloquear; nenhuma exceção ou média parcial aplicada",
+      "fonte": "cfsv2",
+      "membros_esperados": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "mes_alvo": "2026-10",
+      "mes_origem": "2026-09",
+      "motivo": "Membros ausentes/parciais não previstos em 2026-09-01: (21, 22, 23, 24).",
+      "objetos": [],
+      "pais": [
+        "e7e5c2e2f948f7de6d5c35e262e8aa4cecf2514f393b96dd2599d08babff2721",
+        "a00222fbe775ec692b1e68fec97a238dc789ddbeb3f785b2d86ed5e17dada230"
+      ],
+      "pixels_finitos_por_membro": {
+        "1": 5304,
+        "10": 5304,
+        "11": 5304,
+        "12": 5304,
+        "13": 5304,
+        "14": 5304,
+        "15": 5304,
+        "16": 5304,
+        "17": 5304,
+        "18": 5304,
+        "19": 5304,
+        "2": 5304,
+        "20": 5304,
+        "21": 0,
+        "22": 0,
+        "23": 0,
+        "24": 0,
+        "25": 0,
+        "26": 0,
+        "27": 0,
+        "28": 0,
+        "3": 5304,
+        "4": 5304,
+        "5": 5304,
+        "6": 5304,
+        "7": 5304,
+        "8": 5304,
+        "9": 5304
+      }
+    }
+  ],
+  "prontidao": {
+    "mes_alvo": "2026-10",
+    "pronto": false,
+    "faltantes": [
+      "cfsv2: mês 2026-09",
+      "era5_pl: mês 2026-06",
+      "era5_sl: mês 2026-06",
+      "seas5: mês 2026-09",
+      "modelo: pacote final do controle com defasagens ainda não registrado"
+    ],
+    "fontes": {
+      "nino12": "0cb82f8cd491b4d6aa7e3eec0c87c485ad02b7c429c5f325f20103efa2a13102",
+      "nino34": "48ff4b649cdfd79d3fa6f0a4ed46d0185f3f5607029d0c05c20e317afd677537",
+      "tna": "0bd56344b7113feb9410ff19bb844b40056e879c2759aaecf69dee0438866d34",
+      "tsa": "7d1ad102d00e1ff9291aac6378ce84fd3db4c5e84efd6e63d9ed005a81fa54e6"
+    },
+    "modelo": null,
+    "protocolo": "b61d3ae3dac9e65da02c1b6d5aa3b66f9d918bae94db51a9f55c3728cf490e37",
+    "previsao_emitida": false
+  },
+  "previsoes_reais_emitidas": 0,
+  "testes": "14 testes sintéticos isolados aprovados; nenhuma previsão sintética no registro real",
+  "github_publicado": false,
+  "agendamento_automatico": false,
+  "ambiente_coleta": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "xarray": "2026.7.0",
+    "requests": "2.34.2",
+    "netCDF4": "1.7.4",
+    "cftime": "1.6.5"
+  },
+  "codigo_coleta_sha256": {
+    "adaptador_cfsv2.py": "fa7ddd811c990f1f87c4437479095abe337a8ffc5ece50aa5564651338337bba",
+    "avaliar.py": "407dfbae85cde34125191dd4d207a98ff2f9bcd58d0a0f2f536271e40e3c97a4",
+    "coletar.py": "7600b2909b5b2adae1eb07ca4b8c65399594fe2b01dbee1c367b0d314a62ada0",
+    "dados.py": "9c97a76d9077fc9deb9e2bbb1a8c707bdff03bd43ace7dc9a06c0a112cb86586",
+    "gerar_notebook.py": "44839f7eaed963fe19ec9ab36db109af6bce73ff96ab0e1fe63b0946f1b3e4c8",
+    "preparar_cfsv2.py": "c51e5dbcec55b30c3754bba82089d7de7ed43fd0d87f8167e89f8fde836d0fd1",
+    "registro.py": "9a61d98b7d87d6d584c6bb0b7792d36dac25a1234d4f9d1531d08c47b7bd0d91",
+    "testar_registro.py": "20bf006b14565890d26ad1dcf316a6153e620b0210adca4c9522884181c91fe8"
+  },
+  "notebook": "Nimbus_PA_registro_prospectivo.ipynb"
+}

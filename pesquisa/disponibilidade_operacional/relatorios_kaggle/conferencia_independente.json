@@ -1,0 +1,9 @@
+{
+  "arquivos_sha256_conferidos": 49,
+  "linhas_mensais": 2016,
+  "agregacoes_conferidas": true,
+  "calendarios_conferidos": true,
+  "auditorias_conferidas": true,
+  "delta_rmse": -0.000637159323199743,
+  "sem_novo_ajuste": true
+}

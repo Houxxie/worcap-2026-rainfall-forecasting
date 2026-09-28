@@ -1,0 +1,30 @@
+{
+  "chuva_pos_corte_invariante": true,
+  "atmosfera_apos_Tmenos4_invariante": true,
+  "indices_apos_Tmenos3_invariantes": true,
+  "sst_apos_Tmenos2_invariante": true,
+  "climas_sazonais_somente_treino": true,
+  "publicacao_historica_comprovada": false,
+  "inicio": "1982-03-01",
+  "corte": "2006-09-01",
+  "meses": 295,
+  "n_exemplos": 1475000,
+  "sha256_X": "0751b4a23a88a8c699613a0b1f7fe592662b393b0421581137ffc6ac2a217b53",
+  "sha256_y": "0de8044d9b2cefe325fcfef81ee2d300febf2fbaf479215c1c67ca417055c393",
+  "sha256_ids": "1984f5f6cabe38322ab60e50bdb34ca34a89d86a156b0b34fbc16a719707709a",
+  "identidade_pareada": "mesmas colunas base, mesmos y/ids/referências/ridge; só acrescenta 8 PCs",
+  "referencia_chuva": [
+    "1976-10-01",
+    "2006-09-01"
+  ],
+  "fontes_clima": {
+    "atmosfera": [
+      "1976-06-01",
+      "2006-05-01"
+    ],
+    "indices": [
+      "1976-07-01",
+      "2006-06-01"
+    ]
+  }
+}

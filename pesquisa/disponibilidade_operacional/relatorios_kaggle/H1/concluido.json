@@ -1,0 +1,20 @@
+{
+  "assinatura": "b825b069bba9106be5362e8311f18871952d81cba27ead1d9a1bd7eb8e82d118",
+  "arquivos": {
+    "amostras.npz": "90ab3b89a15ce235c0cdf98e40a4e4c43a05d187523ab310cc3870be9e1e5a11",
+    "auditoria.json": "1429f56fec3fb3040ce04b9b85944c449dfb0933071bc3707037781b27b1073a",
+    "calendario_emissoes.csv": "321b876fcfb1e4c8ef4a4e0e51c0c45b4319c47f09160ad6c08c157c396c402d",
+    "clima_atmosfera_indices.npz": "120c7a0e9656067a3e40283558a89b4d703c4ebdfef5fb2f62ccaf792293a2e0",
+    "clima_cfsv2.nc": "59a411302cc78baa9b709eec348c40a284902a1be978d1d60893dbde86e05964",
+    "clima_chuva.nc": "53f3c9b97cfd222fa279514b45fc9a12343ecf8e3deab898d48353051ee0f533",
+    "clima_seas5.nc": "e0a1f6af3a6f2fc01e85846da627fd0c13a11b4dd825fb46d314cf26794f8331",
+    "controle_defasado_arvores_multissistema.txt": "747d94cacf280ae1c409c7b1999abee64247b810c20f18b125c90eb2bb3fcedc",
+    "controle_defasado_arvores_seas5.txt": "aec8c7bba9a1519be539e9e1dbf5528ade4de6fe67c2808ee28c8cac76d7dc46",
+    "metricas.csv": "4f5a5fdbc3c8afe35c137313ef92fb3ef087331f38062d44818531a280222086",
+    "pca.npz": "e312960c4614115e680c7385419d03d79f1ed3901f5e8ade137d52c6f90b45e1",
+    "previsoes.nc": "1581719fb5ec788cdc20c64b5d60ba6086a57584db1fa044dd66e06f386c5745",
+    "ridge.npz": "643c5c113afb02ed31b4f367d9069ed05d804cebffd08c35ce9fa74a7c8ddedb",
+    "sst_defasada_arvores_multissistema.txt": "0f09df5ac7e66632a672a2e31e6f98cbac155c92338097156e49d986f26358f0",
+    "sst_defasada_arvores_seas5.txt": "1d4773bcd48032af9cadedd7c52fb012868efb8026a9bddfe6cb7f2a965c2396"
+  }
+}

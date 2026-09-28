@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "testes": {
+    "normaliza_grade_e_converte_apenas_1000_sem_dias_mes": true,
+    "ZIP_mensal_horarios_00_e_06_sem_duplicacao_ou_media": true,
+    "rejeita_grade_deslocada": true,
+    "scripts_e_notebook_compilam": true,
+    "protocolo_2025_fixo_e_sem_treino_na_reserva": true,
+    "CFSv2_real_datas_hash_e_auditoria": true,
+    "SST_real_datas_hash_e_auditoria": true,
+    "indices_reais_snapshot_original_12_meses": true
+  },
+  "limite": "Aquisição CDS, piloto com dados reais ERA5, treinamento e métricas 2025 ainda não executados."
+}

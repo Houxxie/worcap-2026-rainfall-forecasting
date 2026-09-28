@@ -1,0 +1,28 @@
+{
+  "fontes": [
+    {
+      "indice": "nino34",
+      "url": "https://psl.noaa.gov/data/timeseries/month/data/nino34.long.anom.data",
+      "sha256_bruto": "46e501b91f624ef85b525d73fbb427f9d04d30411ba6e5c7cff579b35fb4ff01"
+    },
+    {
+      "indice": "nino12",
+      "url": "https://psl.noaa.gov/data/timeseries/month/data/nino12.long.anom.data",
+      "sha256_bruto": "b13ad5ad085cd13e70ec5d82662b509d522204e38a8eefd133f14be270e51928"
+    },
+    {
+      "indice": "tna",
+      "url": "https://psl.noaa.gov/data/correlation/tna.data",
+      "sha256_bruto": "387c4125f377e57bcb683a849aefcd76da7d7f3cdcb2ac68ab086ceadf300e8b"
+    },
+    {
+      "indice": "tsa",
+      "url": "https://psl.noaa.gov/data/correlation/tsa.data",
+      "sha256_bruto": "700c0dffda0f19c1254ba482808b345eaa0538f5bf09fc3bc025f46a5fbe3a69"
+    }
+  ],
+  "captura": "2026-09-21T23:00:40.933121+00:00",
+  "extensao_197607_197611": true,
+  "sobreposicao_exata": true,
+  "vintages": false
+}

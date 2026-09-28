@@ -1,0 +1,82 @@
+{
+  "protocolo_sha256": "5a531778786b49ca9cd8ac337cdb3297ac580d67f78d5f278492e41ff6aa243a",
+  "codigo": {
+    "LEIA_ME.md": "b46957f9c5d512dc94f70745a439d18b918ac149becd6b36f7eef799402e2851",
+    "biblioteca.py": "df68d363b952ecb885cec67111fb795857f4c1d419a3940ad0f101b23015706c",
+    "executar_comparacao.py": "70c2cd10f7b7dbe9f3a1bde8bc83baa9c9ff215949f8e9a212c5212c9948da4a",
+    "fontes_noaa.json": "91f412b2e5ccd5c273e2543158fc2cdf72013828907edd03469f13c704fd8240",
+    "hashes_oficiais.json": "bd5648197c4cf25f85d89a32c701b422f1e0b788421766cc7b8aca99ea42223d",
+    "indices_noaa_197607_202009.csv": "69226b2e65f783b4d4971a254d1e325d0908447c76ec1df3bf532ecef1f0cf5b",
+    "protocolo.json": "5a531778786b49ca9cd8ac337cdb3297ac580d67f78d5f278492e41ff6aa243a",
+    "proveniencia.json": "226ee5aba1021624d97170862b88dbb3feafab10ee1f2a12a2338108a83fc20b",
+    "testar_contrato.py": "c50496095b0300c616e78f645a204bcadcc817281ee091074baf240639e03e18"
+  },
+  "entradas": [
+    {
+      "nome": "treino_tp.nc",
+      "sha256": "012bebbe0e38aefdf4f9e2432c3ca22f71d94ea1a1b5421da9d9e5048632cab0",
+      "bytes": 186685299
+    },
+    {
+      "nome": "treino_tp_alvo.nc",
+      "sha256": "915f67f2627e37399830d1dd92b209ce1160082b0645662675eab17df957abe4",
+      "bytes": 186509303
+    },
+    {
+      "nome": "treino_cloud_cover.nc",
+      "sha256": "607ee1210615a0ca8a5c954737617e668a5f016eb881554cb1468fda74b4fde1",
+      "bytes": 190610590
+    },
+    {
+      "nome": "treino_geopotential_850.nc",
+      "sha256": "ca3baca0177e2e90b42901803f348a4b4affe88bee202b76af3f293fa7035c17",
+      "bytes": 159707312
+    },
+    {
+      "nome": "treino_rel_hum_850.nc",
+      "sha256": "90f62b44b1b461259e7539249914e26cf09993f3bcd572ba4871931e45264b19",
+      "bytes": 180398147
+    },
+    {
+      "nome": "treino_shum_850.nc",
+      "sha256": "35cf8071b68d1e924ad87e0f8bd801d0a66d1d78ae75fc3cb623bde85c3f47bb",
+      "bytes": 175651693
+    },
+    {
+      "nome": "treino_surface_pressure.nc",
+      "sha256": "f00a5e44a03ea923ac0f693b975ef71cd347f8ad3d07692c602e3ac9a25c10fb",
+      "bytes": 160228025
+    },
+    {
+      "nome": "treino_t2.nc",
+      "sha256": "7d8c53b438289cddf87a11414ad10c8167f52ff33c6eff459a3288975079ef23",
+      "bytes": 175952066
+    },
+    {
+      "nome": "treino_temperature_850.nc",
+      "sha256": "1db7b4fdeba87b6a25f7fb6f1e40abec50964234dd9cc918cd34f902b8e41bac",
+      "bytes": 172474226
+    },
+    {
+      "nome": "treino_u_850.nc",
+      "sha256": "73c898f27bea25cf2ab0914bbe5c29acc9794a93f8b6b3affa39854bebccf761",
+      "bytes": 188451602
+    },
+    {
+      "nome": "treino_v_850.nc",
+      "sha256": "7bab583972e5718bb0e0fe0fe6a056bd56c968af1f1497205182f7621e26c241",
+      "bytes": 197354831
+    }
+  ],
+  "versoes": {
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "xarray": "2025.12.0",
+    "lightgbm": "4.6.0",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.16.3"
+  },
+  "sst_sha256": "908034f6418833302ea432f25850ad2982d1114b747b7b298e26a350eaf2891d",
+  "manifesto_seas5": "c7ce3a54f9a6f16189f5732ce12898ad42e1128de1a9395170c50b97718a45a9",
+  "manifesto_cfsv2": "02423b1016bae9c90314d7aea1cab6b374d09c010c226f635576d7f79f42d196"
+}

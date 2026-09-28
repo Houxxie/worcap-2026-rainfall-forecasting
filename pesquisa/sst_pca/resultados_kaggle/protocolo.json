@@ -1,0 +1,175 @@
+{
+  "experimento": "Hibrido com oito PCs SST nos dois componentes de arvores",
+  "controle": "/kaggle/working/worcap_banca_hibrida/20260928T134051529081Z",
+  "hash_csv_controle": "079f0eb31ce5c4b1f8033dab27492cae40d2dbadbff097aea8799927b5c7ed88",
+  "auditoria_reproducao": {
+    "identico_byte_a_byte": false,
+    "sha256_esperado": "e98e8954debb8f7c764665a31804ec5512a1c2578c1ed4a24e50c51dedfb429b",
+    "sha256_obtido": "079f0eb31ce5c4b1f8033dab27492cae40d2dbadbff097aea8799927b5c7ed88",
+    "n": 1885464,
+    "diferentes": 532,
+    "max_abs": 1.00000000458067e-06,
+    "media_abs": 2.8215866226454436e-10,
+    "rmse_entre_previsoes": 1.679757905944058e-08,
+    "tolerancias": {
+      "max_abs": 1.01e-06,
+      "media_abs": 1e-09,
+      "rmse": 1e-07
+    },
+    "criterio": "Conferência integral após diagnóstico de 28/09/2026; até uma unidade na sexta casa decimal.",
+    "causa": "Diferença numérica residual; causa exata ainda não isolada. Não constitui identidade de arquivo.",
+    "uso_referencia": "Somente auditoria; valores arquivados não entram em ajuste nem substituem previsões.",
+    "numericamente_confirmado": true
+  },
+  "snapshot_sst": {
+    "arquivo": "ersstv5_4graus_198201_202411.nc",
+    "sha256": "908034f6418833302ea432f25850ad2982d1114b747b7b298e26a350eaf2891d",
+    "bytes": 3574571,
+    "inicio_origens": "1982-01-01",
+    "fim_origens": "2024-11-01",
+    "meses": 515,
+    "grade": [
+      31,
+      90
+    ],
+    "minimo": -1.7999999523162842,
+    "maximo": 34.27073669433594,
+    "atributos": {
+      "climatology": "Climatology is based on 1971-2000 SST, Xue, Y., T. M. Smith, and R. W. Reynolds, 2003: Interdecadal changes of 30-yr SST normals during 1871.2000. Journal of Climate, 16, 1601-1612.",
+      "description": "In situ data: ICOADS2.5 before 2007 and NCEP in situ data from 2008 to present. Ice data: HadISST ice before 2010 and NCEP ice after 2010.",
+      "keywords_vocabulary": "NASA Global Change Master Directory (GCMD) Science Keywords",
+      "keywords": "Earth Science > Oceans > Ocean Temperature > Sea Surface Temperature >",
+      "instrument": "Conventional thermometers",
+      "source_comment": "SSTs were observed by conventional thermometers in Buckets (insulated or un-insulated canvas and wooded buckets) or Engine Room Intaker",
+      "geospatial_lon_min": "-180.0",
+      "geospatial_lon_max": "180.0",
+      "geospatial_laty_max": "89.0",
+      "geospatial_laty_min": "-89.0",
+      "geospatial_lat_max": "62.0",
+      "geospatial_lat_min": "-62.0",
+      "geospatial_lat_units": "degrees_north",
+      "geospatial_lon_units": "degrees_east",
+      "cdm_data_type": "Grid",
+      "project": "NOAA Extended Reconstructed Sea Surface Temperature (ERSST)",
+      "original_publisher_url": "http://www.ncdc.noaa.gov",
+      "References": "https://www.ncdc.noaa.gov/data-access/marineocean-data/extended-reconstructed-sea-surface-temperature-ersst-v5 at NCEI and http://www.esrl.noaa.gov/psd/data/gridded/data.noaa.ersst.v5.html",
+      "source": "In situ data: ICOADS R3.0 before 2015, NCEP in situ GTS from 2016 to present, and Argo SST from 1999 to present. Ice data: HadISST2 ice before 2015, and NCEP ice after 2015",
+      "title": "NOAA ERSSTv5 (in situ only)",
+      "history": "created 07/2017 by PSD data using NCEI's ERSST V5 NetCDF values",
+      "institution": "This version written at NOAA/ESRL PSD: obtained from NOAA/NESDIS/National Centers for Environmental Information and time aggregated. Original Full Source: NOAA/NESDIS/NCEI/CCOG",
+      "citation": "Huang et al, 2017: Extended Reconstructed Sea Surface Temperatures Version 5 (ERSSTv5): Upgrades, Validations, and Intercomparisons. Journal of Climate, https://doi.org/10.1175/JCLI-D-16-0836.1",
+      "platform": "Ship and Buoy SSTs from ICOADS R3.0 and NCEP GTS",
+      "standard_name_vocabulary": "CF Standard Name Table (v40, 25 January 2017)",
+      "processing_level": "NOAA Level 4",
+      "Conventions": "CF-1.6, ACDD-1.3",
+      "metadata_link": ":metadata_link = https://doi.org/10.7289/V5T72FNM (original format)",
+      "creator_name": "Boyin Huang (original)",
+      "date_created": "2017-06-30T12:18:00Z (original)",
+      "product_version": "Version 5",
+      "creator_url_original": "https://www.ncei.noaa.gov",
+      "license": "No constraints on data access or use",
+      "comment": "SSTs were observed by conventional thermometers in Buckets (insulated or un-insulated canvas and wooded buckets), Engine Room Intakers, or floats and drifters",
+      "summary": "ERSST.v5 is developed based on v4 after revisions of 8 parameters using updated data sets and advanced knowledge of ERSST analysis",
+      "dataset_title": "NOAA Extended Reconstructed SST V5",
+      "data_modified": "2026-09-03",
+      "History": "Translated to CF-1.0 Conventions by Netcdf-Java CDM (CFGridCoverageWriter)\nOriginal Dataset = sst.mnmean.nc; Translation Date = 2026-09-24T01:53:25.314Z"
+    },
+    "referencia": "https://psl.noaa.gov/data/gridded/data.noaa.ersst.v5.html",
+    "origem": "NOAA PSL / ERSSTv5; snapshot retrospectivo, sem garantia de versão operacional histórica"
+  },
+  "periodo_avaliacao": [
+    "2007-01-01",
+    "2020-12-01"
+  ],
+  "blocos": [
+    {
+      "nome": "H1",
+      "corte": "2006-12-01",
+      "inicio": "2007-01-01"
+    },
+    {
+      "nome": "H2",
+      "corte": "2008-12-01",
+      "inicio": "2009-01-01"
+    },
+    {
+      "nome": "H3",
+      "corte": "2010-12-01",
+      "inicio": "2011-01-01"
+    },
+    {
+      "nome": "H4",
+      "corte": "2012-12-01",
+      "inicio": "2013-01-01"
+    },
+    {
+      "nome": "A",
+      "corte": "2014-12-01",
+      "inicio": "2015-01-01"
+    },
+    {
+      "nome": "B",
+      "corte": "2016-12-01",
+      "inicio": "2017-01-01"
+    },
+    {
+      "nome": "C",
+      "corte": "2018-12-01",
+      "inicio": "2019-01-01"
+    }
+  ],
+  "anos_maximos": 30,
+  "pontos_por_mes": 5000,
+  "semente": 42,
+  "features": [
+    37,
+    39
+  ],
+  "parametros_arvores": {
+    "objective": "regression",
+    "metric": "rmse",
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "min_data_in_leaf": 150,
+    "lambda_l2": 10.0,
+    "feature_fraction": 0.9,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "num_threads": 4,
+    "seed": 42,
+    "deterministic": true,
+    "force_col_wise": true,
+    "verbosity": -1
+  },
+  "arvores": 300,
+  "pesos": [
+    0.375,
+    0.375,
+    0.25
+  ],
+  "escalas_residuais": {
+    "arvores_seas5": 0.9,
+    "arvores_multissistema": 0.875
+  },
+  "pca": {
+    "componentes": 8,
+    "solver": "full",
+    "ponderacao": "sqrt(cos(latitude))",
+    "anomalias": "mensais; mascara, medias e PCA somente no treino",
+    "padronizacao_por_desvio": false,
+    "lag_meses": 1
+  },
+  "controle_ridge": "mesmos coeficientes e previsoes nos dois tratamentos",
+  "busca_hiperparametros": false,
+  "busca_pesos": false,
+  "holdout_independente": false,
+  "aviso_temporal": "Retrospectivo: disponibilidade operacional e revisoes historicas nao comprovadas.",
+  "ambiente": {
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "xarray": "2025.12.0",
+    "lightgbm": "4.6.0",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.16.3"
+  }
+}

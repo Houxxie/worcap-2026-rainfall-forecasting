@@ -1,0 +1,6 @@
+{
+  "implementacao_sha256": "5f957e192d2d9c2b0e56e41ab4bb2ad1fe6aea67dbe1cc1c8581b8208c413d73",
+  "script_sha256": "5a13b45e95975587f8cf7a8413ed49ac8e960c30655d49a4bba26339662ce061",
+  "alteracoes": "Nomes descritivos, mensagens e organização documental. Operações numéricas preservadas; CSVs usam LF explícito.",
+  "sha256_csv_documentado": "e98e8954debb8f7c764665a31804ec5512a1c2578c1ed4a24e50c51dedfb429b"
+}

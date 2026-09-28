@@ -1,0 +1,23 @@
+{
+  "data": "2026-09-28",
+  "notebook": "https://www.kaggle.com/code/houxie/notebook4e808e9ee7/edit",
+  "origem_evidencia": "Saídas observadas da execução no Kaggle e comparação integral dos CSVs no próprio notebook",
+  "blocos_historicos_reexecutados": 7,
+  "rmse_historico": 1.748951169,
+  "mae_historico": 1.045834189,
+  "vies_historico": 0.011350132,
+  "tolerancia_metricas_historicas": 1e-7,
+  "componentes_arvores_e_media_byte_identicos": true,
+  "hibrido_byte_identico": false,
+  "sha256_esperado": "e98e8954debb8f7c764665a31804ec5512a1c2578c1ed4a24e50c51dedfb429b",
+  "sha256_obtido": "079f0eb31ce5c4b1f8033dab27492cae40d2dbadbff097aea8799927b5c7ed88",
+  "n": 1885464,
+  "valores_diferentes": 532,
+  "max_abs_mm_day": 1.00000000458067e-6,
+  "media_abs_mm_day": 2.8215866226454436e-10,
+  "rmse_entre_previsoes": 1.679757905944058e-8,
+  "causa_exata_isolada": false,
+  "status": "Referência histórica e numérica confirmada; identidade de arquivo não confirmada",
+  "uso_csv_arquivado": "Somente conferência; nunca treinamento, substituição de valores ou escolha de parâmetros",
+  "entrega_competicao_modificada": false
+}

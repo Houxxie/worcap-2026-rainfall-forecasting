@@ -1,0 +1,52 @@
+{
+  "id": "nimbus_acompanhamento_controle_defasado_v1",
+  "equipe": "Nimbus PA",
+  "primeiro_mes": "2026-10",
+  "ultimo_mes": "2027-09",
+  "prazo": "antes de 00:00 UTC do primeiro dia do mes alvo; sem emissao retroativa",
+  "treino_inicio": "1993-01",
+  "treino_fim": "2022-12",
+  "politica_modelo": "um pacote final do controle com defasagens, reajustado na janela fixa; sem SST/PCA; sem atualizar pesos ou treino durante estes doze meses",
+  "modelo": {
+    "arvores": 300,
+    "folhas": 31,
+    "taxa": 0.05,
+    "semente": 42,
+    "pontos_por_mes": 5000,
+    "ridge_alpha": 0.1,
+    "pesos": [0.375, 0.375, 0.25],
+    "escalas_residuais": [0.9, 0.875],
+    "maximo_meses_treino": 360
+  },
+  "arquivos_modelo": [
+    "arvores_seas5.txt", "arvores_multissistema.txt", "ridge.npz",
+    "clima_chuva.nc", "clima_atmosfera_indices.npz", "clima_seas5.nc",
+    "clima_cfsv2.nc", "biblioteca.py", "inferir.py", "ambiente.json",
+    "auditoria_treino.json"
+  ],
+  "fontes": {
+    "era5_sl": {"lag": 4, "obrigatoria": true, "produto": "ERA5 final mensal; tcc,t2m,sp"},
+    "era5_pl": {"lag": 4, "obrigatoria": true, "produto": "ERA5 final mensal 850 hPa; z,r,q,t,u,v"},
+    "nino34": {"lag": 3, "obrigatoria": true, "produto": "NOAA PSL nino34.long.anom.data"},
+    "nino12": {"lag": 3, "obrigatoria": true, "produto": "NOAA PSL nino12.long.anom.data"},
+    "tna": {"lag": 3, "obrigatoria": true, "produto": "NOAA PSL tna.data"},
+    "tsa": {"lag": 3, "obrigatoria": true, "produto": "NOAA PSL tsa.data"},
+    "seas5": {"lag": 1, "obrigatoria": true, "produto": "SEAS5 sistema 51, inicializacao T-1, forecastMonth 2; datas e membros auditados"},
+    "cfsv2": {"lag": 1, "obrigatoria": true, "produto": "CFSv2 IRI PENTAD_SAMPLES_FULL; emissao nominal T-1 e lead 1.5; membros auditados"},
+    "ersstv5": {"lag": 2, "obrigatoria": false, "produto": "ERSSTv5; somente arquivo de chegada, nao entra na referencia"}
+  },
+  "falha_de_fonte": "bloquear emissao; nao preencher, trocar mes, versao ou modelo silenciosamente",
+  "selecao_versao": "ultima versao recebida e validada antes da emissao; registrar IDs exatos",
+  "avaliacao": {
+    "alvo": "ERA5 mensal final total_precipitation em mm/day; nao representa pluviometro independente",
+    "primeira_verificacao": "primeira versao final conferida recebida a partir do primeiro dia de T+4",
+    "metrica_primaria": "RMSE global sqrt(soma SSE / soma n)",
+    "secundarias": ["MAE", "vies", "RMSE por area", "tres faixas de latitude", "meses emitidos/previstos"],
+    "comparacao": "climatologia do mesmo treino congelada junto a cada previsao",
+    "revisoes": "adicionar outra verificacao rotulada; nunca sobrescrever a primeira",
+    "faltantes": "reportar cobertura; nao omitir meses sem emissao dos relatorios"
+  },
+  "agendamento_automatico": false,
+  "carimbo_independente": false,
+  "limitacao": "Registro local com relogio UTC do computador e hashes. Sem assinatura/ancoragem externa; nao prova contra reescrita integral ou exclusao da ponta. Qualidade e calendario de cada adaptador devem ser auditados."
+}

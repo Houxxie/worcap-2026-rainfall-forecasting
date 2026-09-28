@@ -1,0 +1,44 @@
+{
+  "data": "2026-09-28",
+  "notebook": "https://www.kaggle.com/code/houxie/nimbus-pa-refer-ncia-h-brida-e-pesquisa-sst/edit",
+  "versao_salva": 6,
+  "nome_versao": "2025 concluído: referência e SST auditadas",
+  "status_salvamento_observado": "Successful",
+  "outputs_incluidos": true,
+  "protocolo_sha256": "0c4762c5b8f81da5395394c7dd04829d576143d9fa5de733dccacaf6ea14f0c3",
+  "preparacao_kaggle": "concluida",
+  "inferencia_fixa": "concluida",
+  "avaliacao_2025": "concluida",
+  "pendentes": [],
+  "alvos_2025_adquiridos": true,
+  "alvos_2025_consultados": true,
+  "natureza": "retrospectiva com produtos consolidados",
+  "resultados_2025": {
+    "protocolo_sha256": "0c4762c5b8f81da5395394c7dd04829d576143d9fa5de733dccacaf6ea14f0c3",
+    "previsoes_sha256": "cb49671551795d5c08cad22ac9c80c9d8ff078b1368934ad16d873e580af35b7",
+    "natureza": "retrospectiva com produtos consolidados",
+    "treino": [
+      "1993-01-01",
+      "2022-12-01"
+    ],
+    "avaliacao": [
+      "2025-01-01",
+      "2025-12-01"
+    ],
+    "n": 942732,
+    "rmse_controle": 1.684156549556672,
+    "rmse_sst": 1.6676149886771188,
+    "delta_rmse": -0.016541560879553163,
+    "ganho_percentual": 0.9821866550296332,
+    "meses_com_melhora": 9,
+    "meses": 12,
+    "ajuste_apos_consulta": false,
+    "agregacao_mensal_conferida": true
+  },
+  "previsoes_congeladas_utc": "2026-09-28T17:14:30.002497+00:00",
+  "primeira_leitura_alvos_utc": "2026-09-28T17:17:28.728800+00:00",
+  "preservacao_kaggle": "nimbus_avaliacao_2025_preservada.zip; 98 arquivos; aproximadamente 75 MiB",
+  "preservacao_local": "oito relatórios exportados e verificados; download do ZIP pelo navegador expirou",
+  "auditoria_disponibilidade": "concluida; defasagens operacionais ainda precisam ser revistas e validadas",
+  "proxima_etapa": "Novo protocolo de treinamento com entradas disponíveis na data de emissão; sem usar 2025 como reserva inédita novamente."
+}

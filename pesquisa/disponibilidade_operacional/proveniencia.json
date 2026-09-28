@@ -1,0 +1,22 @@
+[
+  {
+    "arquivo": "entregas\\banca_8G\\WorCAP_modelo_hibrido_reproducao.py",
+    "sha256": "547bd7ac54c8873b5d6e237627f4b6dba94851259548a455f8574e2ecfff8616"
+  },
+  {
+    "arquivo": "pesquisa\\sst_pca\\extensao_sst.py",
+    "sha256": "789a8a2d38cca97ae32d04db7aa11aecc0c175dacd31bd84ab465ff8eff5d8d8"
+  },
+  {
+    "arquivo": "pesquisa\\disponibilidade_operacional\\defasagens.py",
+    "sha256": "89631394f19f08b6a41cfce48154663cc0d31dc7d61e3276095be23c116d931f"
+  },
+  {
+    "arquivo": "pesquisa\\disponibilidade_operacional\\executar_comparacao.py",
+    "sha256": "70c2cd10f7b7dbe9f3a1bde8bc83baa9c9ff215949f8e9a212c5212c9948da4a"
+  },
+  {
+    "arquivo": "pesquisa\\disponibilidade_operacional\\testar_contrato.py",
+    "sha256": "c50496095b0300c616e78f645a204bcadcc817281ee091074baf240639e03e18"
+  }
+]

@@ -1,0 +1,667 @@
+[
+  {
+    "arquivo": "A/amostras.npz",
+    "sha256": "77b0921c2a44c6d5f7d7cbb3d2b6098ef1b2a75e5cc11eb742284a0c6b46ed05",
+    "bytes": 4950586
+  },
+  {
+    "arquivo": "A/auditoria.json",
+    "sha256": "62e0072cb92149a10ae484bb8e1c47cdc43c4dd6a62deee78adb83c997e996c7",
+    "bytes": 912
+  },
+  {
+    "arquivo": "A/calendario_emissoes.csv",
+    "sha256": "d128b8d7afa6626f8bef46d11c0db715d22a6d0b791554fe858b052c250ec991",
+    "bytes": 2573
+  },
+  {
+    "arquivo": "A/clima_atmosfera_indices.npz",
+    "sha256": "41f4ab7f405b7f6e87440f9e8069cd8db3ca88357980c744159d3cd604f696a0",
+    "bytes": 25201184
+  },
+  {
+    "arquivo": "A/clima_cfsv2.nc",
+    "sha256": "0b04e655c12a13f7a55c31599c9be3d708a61025e3c849c74805561f027dbe20",
+    "bytes": 3786808
+  },
+  {
+    "arquivo": "A/clima_chuva.nc",
+    "sha256": "911f9c242d15d6f42d146e1758b8867d3b1bf4c9576a087581593db43895c854",
+    "bytes": 3783712
+  },
+  {
+    "arquivo": "A/clima_seas5.nc",
+    "sha256": "03ea477b89c6d6d22ddfa806e7303c3d97e335dd23c21afeb52ec57dfe0d439a",
+    "bytes": 3786808
+  },
+  {
+    "arquivo": "A/concluido.json",
+    "sha256": "4b9e69a81049094314b3711d172d5f3ab18d392ca3471bbf93ba00a5532cd03c",
+    "bytes": 1550
+  },
+  {
+    "arquivo": "A/controle_defasado_arvores_multissistema.txt",
+    "sha256": "af6545e3858a0079c267974b3505e47476c4230364bad3ea009d45d9ef97106a",
+    "bytes": 910455
+  },
+  {
+    "arquivo": "A/controle_defasado_arvores_seas5.txt",
+    "sha256": "dabc6a10efd7d2db4f49d487fd012000b4d760181dee3c1f85e7ddb196325b6f",
+    "bytes": 910367
+  },
+  {
+    "arquivo": "A/metricas.csv",
+    "sha256": "a2cf6aa8613631da7c2f5fe7747a25d22b73f49a8f76650d84db222f992cb46e",
+    "bytes": 44454
+  },
+  {
+    "arquivo": "A/pca.npz",
+    "sha256": "5a223987335313be09f58e244d5521cd19736f100154ea6b35b0b8442af211ba",
+    "bytes": 258639
+  },
+  {
+    "arquivo": "A/previsoes.nc",
+    "sha256": "dd61c47d75abd197d39ae6fe7d2691cefb54d4f61a3d1b11bc531dbabcf819c0",
+    "bytes": 35433374
+  },
+  {
+    "arquivo": "A/ridge.npz",
+    "sha256": "715581aceda0eb2dccad1cd9f83c7783f36753911906302a345e9fa8eeed442b",
+    "bytes": 13796113
+  },
+  {
+    "arquivo": "A/sst_defasada_arvores_multissistema.txt",
+    "sha256": "693ee82d2c569a98b605cac28df1771bfc80baa6409c63316664b46a105b21c5",
+    "bytes": 911392
+  },
+  {
+    "arquivo": "A/sst_defasada_arvores_seas5.txt",
+    "sha256": "ca314a568191c0aea804d478b0c3d4d0badf872692c9d5ef4c8daa4e32e280e4",
+    "bytes": 910736
+  },
+  {
+    "arquivo": "B/amostras.npz",
+    "sha256": "bbd1476861a4972931de15c4ed3ac9834f4585fdc321824d9a5b1c30d2946eb6",
+    "bytes": 4950656
+  },
+  {
+    "arquivo": "B/auditoria.json",
+    "sha256": "d8844eead46f8a8e8430adf9aa8db41cc8aff5ae4c6511519e0f8d6ad3ea68a3",
+    "bytes": 912
+  },
+  {
+    "arquivo": "B/calendario_emissoes.csv",
+    "sha256": "fca88bee094820b02b12ad18bc65e9b1090125af011a407174e89400fb2f6e70",
+    "bytes": 2573
+  },
+  {
+    "arquivo": "B/clima_atmosfera_indices.npz",
+    "sha256": "c7cb894cf5ecda90773fe9f81fe6bb71b145b939cfd529da59ca588847a5042c",
+    "bytes": 25180618
+  },
+  {
+    "arquivo": "B/clima_cfsv2.nc",
+    "sha256": "92603a1a5a71075be6eaa89540d83b7783f9424500ca24e82024d590a9bce528",
+    "bytes": 3786808
+  },
+  {
+    "arquivo": "B/clima_chuva.nc",
+    "sha256": "bfba6e4c5ae8e3f5af9d09caa265a29268a528995756a7fc060dfa63a2c2761d",
+    "bytes": 3783712
+  },
+  {
+    "arquivo": "B/clima_seas5.nc",
+    "sha256": "0a67ad9d204cbe2040bdc6852181ef903f16a8332d3b8e341d9498c633914454",
+    "bytes": 3786808
+  },
+  {
+    "arquivo": "B/concluido.json",
+    "sha256": "58ee78280f9b2424e30b49d78a8c0cdcdc7886e27dcc6ffb24e51b5c22ecbf94",
+    "bytes": 1550
+  },
+  {
+    "arquivo": "B/controle_defasado_arvores_multissistema.txt",
+    "sha256": "41e33c4c0b51d59bfddb2b4015bcb5b23c068c008be208593c39ccbdcc0d896a",
+    "bytes": 910127
+  },
+  {
+    "arquivo": "B/controle_defasado_arvores_seas5.txt",
+    "sha256": "ffb6a3f56a4609291bf43fb5443af6b47cc685981b9d55dbc1bec2338b4da2ba",
+    "bytes": 909817
+  },
+  {
+    "arquivo": "B/metricas.csv",
+    "sha256": "2980ee4307e85667248add07c3dbe5bc128a552a6f727f6be27c3e0849a7f25c",
+    "bytes": 44504
+  },
+  {
+    "arquivo": "B/pca.npz",
+    "sha256": "3bf7b5ec4c11f1c4acd41da6e84d48d4c59215210f88fb0ba61b7a4c3cf1e4f2",
+    "bytes": 258746
+  },
+  {
+    "arquivo": "B/previsoes.nc",
+    "sha256": "8eee02fb01497be02b0de8e1e547170ba5991b411e68aa73afd168fc632b54c9",
+    "bytes": 35465211
+  },
+  {
+    "arquivo": "B/ridge.npz",
+    "sha256": "7e9c60782b6ca771744f6d4e9ec2c17b592ac0a3fe169a7e804998188bf11ded",
+    "bytes": 13809737
+  },
+  {
+    "arquivo": "B/sst_defasada_arvores_multissistema.txt",
+    "sha256": "3444f9b7a21a4791ddc2fe91beaf2b34a4b648ef3ae6120e4e487a96900d53f8",
+    "bytes": 909637
+  },
+  {
+    "arquivo": "B/sst_defasada_arvores_seas5.txt",
+    "sha256": "097eea998150f395ccb1b062c6159620c921ad7488b8b0b4a04abc0b709844df",
+    "bytes": 909655
+  },
+  {
+    "arquivo": "C/amostras.npz",
+    "sha256": "7f07c6796f0607d5b7153b35ffbb6f19c25a98aaa262fde146933c1967867c26",
+    "bytes": 4950527
+  },
+  {
+    "arquivo": "C/auditoria.json",
+    "sha256": "3c867c8be53ad6d247b2ae5f0a65b753c395ca9b56d6b70e7fdd275d05192126",
+    "bytes": 912
+  },
+  {
+    "arquivo": "C/calendario_emissoes.csv",
+    "sha256": "546f288ede5e7bb85086c835b6f94bde96f77bf14f4fe2259a1933d1cec609a4",
+    "bytes": 2573
+  },
+  {
+    "arquivo": "C/clima_atmosfera_indices.npz",
+    "sha256": "642867f0f3cf4c122568556a1208c78ee17544dd9393dfd4f3535e89b9e18f98",
+    "bytes": 25190099
+  },
+  {
+    "arquivo": "C/clima_cfsv2.nc",
+    "sha256": "287b7f414af2082769e02153ba1e3366572f9a0fbf98ec0c88ca53f361ca9861",
+    "bytes": 3786808
+  },
+  {
+    "arquivo": "C/clima_chuva.nc",
+    "sha256": "029dfeada18076ec0ceda34d2216a963f24baba0d41a5dad94020eebf3bb0583",
+    "bytes": 3783712
+  },
+  {
+    "arquivo": "C/clima_seas5.nc",
+    "sha256": "226a42ce8123337b253d9b49ca03a0d17b96679e4d38ff6e6c8d6a5a208e0460",
+    "bytes": 3786808
+  },
+  {
+    "arquivo": "C/concluido.json",
+    "sha256": "62834552c6aef1d11c3bd5edce17a267865ae980c559d9eea16c9904f5e7b49a",
+    "bytes": 1550
+  },
+  {
+    "arquivo": "C/controle_defasado_arvores_multissistema.txt",
+    "sha256": "f8ccd61ddcf38d26b29fcdb537ca5fb124673d654e23fb21798009eee1845fcf",
+    "bytes": 911417
+  },
+  {
+    "arquivo": "C/controle_defasado_arvores_seas5.txt",
+    "sha256": "8bb0696db3e9fce2a677bfac639286fcf0785fd0dd3f773897f3b4b1ef067245",
+    "bytes": 909744
+  },
+  {
+    "arquivo": "C/metricas.csv",
+    "sha256": "e243ba7e908a770e79396851b963f4ac6b9d9e8b84e152f8bb82a2a59dd4b8eb",
+    "bytes": 44469
+  },
+  {
+    "arquivo": "C/pca.npz",
+    "sha256": "dcbf1087a6b1d7d40d87e1cb3ddb469369a318df23fe130643bb4bd82bef0803",
+    "bytes": 258715
+  },
+  {
+    "arquivo": "C/previsoes.nc",
+    "sha256": "1219e69f9ecc8ea4756328dd8961f9892886a60071c131ef6b2f52cb5e494010",
+    "bytes": 35433546
+  },
+  {
+    "arquivo": "C/ridge.npz",
+    "sha256": "fbc8b00a04e6c1882f5e05ba1af9f5b5755c74d835f42b62a48c6cb7d539a32d",
+    "bytes": 13808405
+  },
+  {
+    "arquivo": "C/sst_defasada_arvores_multissistema.txt",
+    "sha256": "cb573b10891040716ca8e02efc46523f89ee71fb9c32760e3a32d54cedcfd8fd",
+    "bytes": 909421
+  },
+  {
+    "arquivo": "C/sst_defasada_arvores_seas5.txt",
+    "sha256": "1cdeb18be8c8d3bce65dd9b9735225c4962e3344331b639505817c61dcd4ed16",
+    "bytes": 909133
+  },
+  {
+    "arquivo": "H1/amostras.npz",
+    "sha256": "90ab3b89a15ce235c0cdf98e40a4e4c43a05d187523ab310cc3870be9e1e5a11",
+    "bytes": 4056880
+  },
+  {
+    "arquivo": "H1/auditoria.json",
+    "sha256": "1429f56fec3fb3040ce04b9b85944c449dfb0933071bc3707037781b27b1073a",
+    "bytes": 912
+  },
+  {
+    "arquivo": "H1/calendario_emissoes.csv",
+    "sha256": "321b876fcfb1e4c8ef4a4e0e51c0c45b4319c47f09160ad6c08c157c396c402d",
+    "bytes": 2573
+  },
+  {
+    "arquivo": "H1/clima_atmosfera_indices.npz",
+    "sha256": "120c7a0e9656067a3e40283558a89b4d703c4ebdfef5fb2f62ccaf792293a2e0",
+    "bytes": 25209200
+  },
+  {
+    "arquivo": "H1/clima_cfsv2.nc",
+    "sha256": "59a411302cc78baa9b709eec348c40a284902a1be978d1d60893dbde86e05964",
+    "bytes": 3786808
+  },
+  {
+    "arquivo": "H1/clima_chuva.nc",
+    "sha256": "53f3c9b97cfd222fa279514b45fc9a12343ecf8e3deab898d48353051ee0f533",
+    "bytes": 3783712
+  },
+  {
+    "arquivo": "H1/clima_seas5.nc",
+    "sha256": "e0a1f6af3a6f2fc01e85846da627fd0c13a11b4dd825fb46d314cf26794f8331",
+    "bytes": 3786808
+  },
+  {
+    "arquivo": "H1/concluido.json",
+    "sha256": "b4d2df52260112865558b71938f5bd069035aa1527a0c4836c3bafdd75d1bfe4",
+    "bytes": 1550
+  },
+  {
+    "arquivo": "H1/controle_defasado_arvores_multissistema.txt",
+    "sha256": "747d94cacf280ae1c409c7b1999abee64247b810c20f18b125c90eb2bb3fcedc",
+    "bytes": 909386
+  },
+  {
+    "arquivo": "H1/controle_defasado_arvores_seas5.txt",
+    "sha256": "aec8c7bba9a1519be539e9e1dbf5528ade4de6fe67c2808ee28c8cac76d7dc46",
+    "bytes": 908808
+  },
+  {
+    "arquivo": "H1/metricas.csv",
+    "sha256": "4f5a5fdbc3c8afe35c137313ef92fb3ef087331f38062d44818531a280222086",
+    "bytes": 44751
+  },
+  {
+    "arquivo": "H1/pca.npz",
+    "sha256": "e312960c4614115e680c7385419d03d79f1ed3901f5e8ade137d52c6f90b45e1",
+    "bytes": 260189
+  },
+  {
+    "arquivo": "H1/previsoes.nc",
+    "sha256": "1581719fb5ec788cdc20c64b5d60ba6086a57584db1fa044dd66e06f386c5745",
+    "bytes": 35442584
+  },
+  {
+    "arquivo": "H1/ridge.npz",
+    "sha256": "643c5c113afb02ed31b4f367d9069ed05d804cebffd08c35ce9fa74a7c8ddedb",
+    "bytes": 13620134
+  },
+  {
+    "arquivo": "H1/sst_defasada_arvores_multissistema.txt",
+    "sha256": "0f09df5ac7e66632a672a2e31e6f98cbac155c92338097156e49d986f26358f0",
+    "bytes": 909471
+  },
+  {
+    "arquivo": "H1/sst_defasada_arvores_seas5.txt",
+    "sha256": "1d4773bcd48032af9cadedd7c52fb012868efb8026a9bddfe6cb7f2a965c2396",
+    "bytes": 908565
+  },
+  {
+    "arquivo": "H2/amostras.npz",
+    "sha256": "867f50079747fb03ca0a66cdee5824e39c63aead159f3b52daf229943d038c83",
+    "bytes": 4386878
+  },
+  {
+    "arquivo": "H2/auditoria.json",
+    "sha256": "1bde6254e75e4f04349554cde4720d520a08b0b439631c5076ec13af0fec70a0",
+    "bytes": 912
+  },
+  {
+    "arquivo": "H2/calendario_emissoes.csv",
+    "sha256": "40a890485099c431c3418b091adafd8d103cc20192bce2d24d18e280a7068507",
+    "bytes": 2573
+  },
+  {
+    "arquivo": "H2/clima_atmosfera_indices.npz",
+    "sha256": "b568d12f5c568add8e1f1c022f06741da20f9ebe1afa55fadbc8f20c691690f7",
+    "bytes": 25201418
+  },
+  {
+    "arquivo": "H2/clima_cfsv2.nc",
+    "sha256": "fc14424aad44397410dc1aec4dda4b9f1ca1f3e154cb33a9d8e744144d941e3a",
+    "bytes": 3786808
+  },
+  {
+    "arquivo": "H2/clima_chuva.nc",
+    "sha256": "4306382a052ca87877577eddf0604a939d7f7e0c336201cd7a4d8ec728ff6c1c",
+    "bytes": 3783712
+  },
+  {
+    "arquivo": "H2/clima_seas5.nc",
+    "sha256": "2c4db7414dbf7111a3695d8652c570e44d91082250f7edf4864346845f51fcc0",
+    "bytes": 3786808
+  },
+  {
+    "arquivo": "H2/concluido.json",
+    "sha256": "6f162ff05a8c338fb2c4752ad629d0a91c9d5e6d5e7810a3f69ff750f9149763",
+    "bytes": 1550
+  },
+  {
+    "arquivo": "H2/controle_defasado_arvores_multissistema.txt",
+    "sha256": "0f1b6b02b9199716d891b9848de77214a3a31ba2dd40bf419a1b87daf05cfc22",
+    "bytes": 909498
+  },
+  {
+    "arquivo": "H2/controle_defasado_arvores_seas5.txt",
+    "sha256": "26e093b88baee1ef5f36978e8219fb7f3e7141c114f60c3ad10553833a0d64fb",
+    "bytes": 909077
+  },
+  {
+    "arquivo": "H2/metricas.csv",
+    "sha256": "462adc00cf6aaea1226726fde14bd65f5c3de054649eddf2c22d3f3a1c248022",
+    "bytes": 44818
+  },
+  {
+    "arquivo": "H2/pca.npz",
+    "sha256": "1482ac5c316db1627b6712c4f02d6051c49a8e2a4c1d99406a8a7fd89ca798b8",
+    "bytes": 262685
+  },
+  {
+    "arquivo": "H2/previsoes.nc",
+    "sha256": "c0c7638f8faa39e8601b2fc49287b580d68eeda65a8ad771608f4e1e88878b69",
+    "bytes": 35411462
+  },
+  {
+    "arquivo": "H2/ridge.npz",
+    "sha256": "60f9a5f1291c3bf65ffde4735692a249a1a11ef2d84c80ff830bbc117fd9a683",
+    "bytes": 13793235
+  },
+  {
+    "arquivo": "H2/sst_defasada_arvores_multissistema.txt",
+    "sha256": "15e973c9a248fad4fc057637cc944e3cd25d98edc0fd19267fb305121b91a95d",
+    "bytes": 910846
+  },
+  {
+    "arquivo": "H2/sst_defasada_arvores_seas5.txt",
+    "sha256": "61c2867b1bdba6e44a29af158f75a02bb5645fa803573d7964c58016a7e8ea7d",
+    "bytes": 909679
+  },
+  {
+    "arquivo": "H3/amostras.npz",
+    "sha256": "1f4b499a36c1a7bb3b50fa570824b66e0b9fba30438a970b36f6e5e82c3bf2ac",
+    "bytes": 4716783
+  },
+  {
+    "arquivo": "H3/auditoria.json",
+    "sha256": "988046962d28848e80deaebd1f1bfd084cd131fc1b1e64e4dfaadebd5b90ef7e",
+    "bytes": 912
+  },
+  {
+    "arquivo": "H3/calendario_emissoes.csv",
+    "sha256": "83fd3d6e0c46b7dabe91db01412a1e79a5fa71a21795a15d0003ef3032d3fde0",
+    "bytes": 2573
+  },
+  {
+    "arquivo": "H3/clima_atmosfera_indices.npz",
+    "sha256": "91e09c9eb6d2638a663afb8881b1e230d364791b7eb82bb77aaa7d9aa671012c",
+    "bytes": 25191723
+  },
+  {
+    "arquivo": "H3/clima_cfsv2.nc",
+    "sha256": "8ff637997f939fd11c2f57c0c879bbc4ee99a7143520bc95e9dcb74e72431d87",
+    "bytes": 3786808
+  },
+  {
+    "arquivo": "H3/clima_chuva.nc",
+    "sha256": "f92c79d522590249dc06a6d30d6821d335a27efcbe0fda5633e3d4aaacb6a055",
+    "bytes": 3783712
+  },
+  {
+    "arquivo": "H3/clima_seas5.nc",
+    "sha256": "aec7290f4603600a3d1242b0c828b035c72ff969e90d405c8d66c88fafa33e70",
+    "bytes": 3786808
+  },
+  {
+    "arquivo": "H3/concluido.json",
+    "sha256": "c5b2f05990411b6c4855ee301d1ea478501884840730be06487e2fbf87d0f251",
+    "bytes": 1550
+  },
+  {
+    "arquivo": "H3/controle_defasado_arvores_multissistema.txt",
+    "sha256": "8a8a6edd084cf376aaa3faa978aaeccb423a4a37ff30bf9f9351536c806bdd9b",
+    "bytes": 909923
+  },
+  {
+    "arquivo": "H3/controle_defasado_arvores_seas5.txt",
+    "sha256": "92c0a71f41e592cad20f04fffb5ce9a5df93e7c8e5f6f5a62b020d49b8f41005",
+    "bytes": 910542
+  },
+  {
+    "arquivo": "H3/metricas.csv",
+    "sha256": "17527aa1534479353986c75967047a5f60057b9c91a220fdcfb774156b561ace",
+    "bytes": 44802
+  },
+  {
+    "arquivo": "H3/pca.npz",
+    "sha256": "65cee057a7de47e00b24111cbf451684478ddc1029fa60b4ac455cfdc39b5abb",
+    "bytes": 262488
+  },
+  {
+    "arquivo": "H3/previsoes.nc",
+    "sha256": "c2e1f803c1df12a29e7378ec5bfdd6837965d47da49b8a0b1d447807061e1719",
+    "bytes": 35447245
+  },
+  {
+    "arquivo": "H3/ridge.npz",
+    "sha256": "d3c144e7ed9ea8fa5fab61cd695754759755c920081fb0952e60cfcd90aa8f3b",
+    "bytes": 13768287
+  },
+  {
+    "arquivo": "H3/sst_defasada_arvores_multissistema.txt",
+    "sha256": "d197c32db6c20698d8bf863073e176c60221e97d91503a2c2935217ab0c42def",
+    "bytes": 910757
+  },
+  {
+    "arquivo": "H3/sst_defasada_arvores_seas5.txt",
+    "sha256": "169ec2d4eead4b76bc7054d246aa8fa9a851399fc68520d7f67c6eb8edcc8815",
+    "bytes": 910015
+  },
+  {
+    "arquivo": "H4/amostras.npz",
+    "sha256": "1dbbd8030056d6dc7112fc960b2c2ba84f5b9ff11d68cfb3b928f8c2b332cbfd",
+    "bytes": 4950545
+  },
+  {
+    "arquivo": "H4/auditoria.json",
+    "sha256": "de7f90854269a717e8b14285674a3d8a3ca8ea4ae2fcc8e66118e74c733e88fe",
+    "bytes": 912
+  },
+  {
+    "arquivo": "H4/calendario_emissoes.csv",
+    "sha256": "db9860b421d3190bc58f469badfad1a2375b9e9d2d14a235b3a07b32810739ef",
+    "bytes": 2573
+  },
+  {
+    "arquivo": "H4/clima_atmosfera_indices.npz",
+    "sha256": "de26e66fc981f843a166cfe4545e6aa237e99da7f9626d096059e068019a4de9",
+    "bytes": 25194553
+  },
+  {
+    "arquivo": "H4/clima_cfsv2.nc",
+    "sha256": "1fd9a86ec8241f8799d4465073cb398a7018f056d19ee39c8bb0033cbc29e114",
+    "bytes": 3786808
+  },
+  {
+    "arquivo": "H4/clima_chuva.nc",
+    "sha256": "513f5745fd14248fe260758e19efbb8838a8e618ef12555c18c5f76c7e6a4c97",
+    "bytes": 3783712
+  },
+  {
+    "arquivo": "H4/clima_seas5.nc",
+    "sha256": "a88733b9831f4dc9ebb790e22a8d8d49967bd6cbbe2ac0d384849db6d7eb1015",
+    "bytes": 3786808
+  },
+  {
+    "arquivo": "H4/concluido.json",
+    "sha256": "38e2677296e8a3fd9a2f8f92f0a2b35d41fd494fadb657c4d2f608f4b502670d",
+    "bytes": 1550
+  },
+  {
+    "arquivo": "H4/controle_defasado_arvores_multissistema.txt",
+    "sha256": "9a08a8a8448d39a7110d413cd4a77ad622087004977a217ff14acb369d30897b",
+    "bytes": 910343
+  },
+  {
+    "arquivo": "H4/controle_defasado_arvores_seas5.txt",
+    "sha256": "af632271ebc8a9b9ab09c1f457b843b73f1edf8ac2691a9f34bf012566246122",
+    "bytes": 910054
+  },
+  {
+    "arquivo": "H4/metricas.csv",
+    "sha256": "c1bac98eb66d13694e56716feff6685ef53b2a9b3cee601f7db6a18c8fec4753",
+    "bytes": 44764
+  },
+  {
+    "arquivo": "H4/pca.npz",
+    "sha256": "7ab646935869e850fe88f1d1ccaa68667a6104cf0cd9c89834354da336650ca0",
+    "bytes": 258809
+  },
+  {
+    "arquivo": "H4/previsoes.nc",
+    "sha256": "aa40431325bbe0db834676118a89e20b1b9623fa63e6c0538987de98c04df0a8",
+    "bytes": 35454742
+  },
+  {
+    "arquivo": "H4/ridge.npz",
+    "sha256": "05da40482cee30f993682736db383f6d2243f87c3bb37b1b72eb3e525757b3c2",
+    "bytes": 13795933
+  },
+  {
+    "arquivo": "H4/sst_defasada_arvores_multissistema.txt",
+    "sha256": "33fe7034c10e23150faee7231479e4adfcc37c10a09161fc09d0a0f60df73a16",
+    "bytes": 912046
+  },
+  {
+    "arquivo": "H4/sst_defasada_arvores_seas5.txt",
+    "sha256": "a28d9be0c20ba80863e4739517e9154700b2172f23846d1599108d42881fb92c",
+    "bytes": 911246
+  },
+  {
+    "arquivo": "assinatura_execucao.json",
+    "sha256": "b825b069bba9106be5362e8311f18871952d81cba27ead1d9a1bd7eb8e82d118",
+    "bytes": 3152
+  },
+  {
+    "arquivo": "atmosfera_fontes.json",
+    "sha256": "83568eee11c9e99c45356fce76a9299b740fb74348ac026864e4f899ae101b00",
+    "bytes": 1763
+  },
+  {
+    "arquivo": "auditoria_CFSv2_desenvolvimento.json",
+    "sha256": "50709213a7345de936b584eb36279cb50677acae1e2ed18519dcb9a6d3319e5b",
+    "bytes": 333
+  },
+  {
+    "arquivo": "codigo/LEIA_ME.md",
+    "sha256": "b46957f9c5d512dc94f70745a439d18b918ac149becd6b36f7eef799402e2851",
+    "bytes": 6248
+  },
+  {
+    "arquivo": "codigo/biblioteca.py",
+    "sha256": "df68d363b952ecb885cec67111fb795857f4c1d419a3940ad0f101b23015706c",
+    "bytes": 56807
+  },
+  {
+    "arquivo": "codigo/executar_comparacao.py",
+    "sha256": "70c2cd10f7b7dbe9f3a1bde8bc83baa9c9ff215949f8e9a212c5212c9948da4a",
+    "bytes": 15746
+  },
+  {
+    "arquivo": "codigo/fontes_noaa.json",
+    "sha256": "91f412b2e5ccd5c273e2543158fc2cdf72013828907edd03469f13c704fd8240",
+    "bytes": 958
+  },
+  {
+    "arquivo": "codigo/hashes_oficiais.json",
+    "sha256": "bd5648197c4cf25f85d89a32c701b422f1e0b788421766cc7b8aca99ea42223d",
+    "bytes": 1936
+  },
+  {
+    "arquivo": "codigo/indices_noaa_197607_202009.csv",
+    "sha256": "69226b2e65f783b4d4971a254d1e325d0908447c76ec1df3bf532ecef1f0cf5b",
+    "bytes": 32534
+  },
+  {
+    "arquivo": "codigo/protocolo.json",
+    "sha256": "5a531778786b49ca9cd8ac337cdb3297ac580d67f78d5f278492e41ff6aa243a",
+    "bytes": 1930
+  },
+  {
+    "arquivo": "codigo/proveniencia.json",
+    "sha256": "226ee5aba1021624d97170862b88dbb3feafab10ee1f2a12a2338108a83fc20b",
+    "bytes": 806
+  },
+  {
+    "arquivo": "codigo/testar_contrato.py",
+    "sha256": "c50496095b0300c616e78f645a204bcadcc817281ee091074baf240639e03e18",
+    "bytes": 5738
+  },
+  {
+    "arquivo": "comparacao.png",
+    "sha256": "99a077e718ceb949fdd6703fe0cf9e2b2f33de1c732b4f8c167cb4d10f22e86a",
+    "bytes": 157067
+  },
+  {
+    "arquivo": "metricas_anos.csv",
+    "sha256": "fafc64f22696e09e79dfe38e61b2cb1ddd5af6065c289f3d5b892f606b62f384",
+    "bytes": 8322
+  },
+  {
+    "arquivo": "metricas_blocos.csv",
+    "sha256": "da2c2af92556c0cb64606e4a8dfd6d5d00af215ecf408cbe326d776df60cb457",
+    "bytes": 4173
+  },
+  {
+    "arquivo": "metricas_globais.csv",
+    "sha256": "227780400015e9ce8e3ba3a02bc7ad16c80690d1c80bd55d1d20aff9f8810d55",
+    "bytes": 668
+  },
+  {
+    "arquivo": "metricas_mensais_regioes.csv",
+    "sha256": "8eff21b05844aad19ac0b2461b17998ad68913546776b570242cf040b69392c0",
+    "bytes": 312016
+  },
+  {
+    "arquivo": "metricas_regioes.csv",
+    "sha256": "ba55dd36ce2e3beb8a9c738406de82af141f42c0043f751ffd2db5c87178d113",
+    "bytes": 2647
+  },
+  {
+    "arquivo": "resultado.md",
+    "sha256": "587d0ffbd88648a2b30320eeba47f7a1aa68de17f67b252532380796f693edec",
+    "bytes": 1664
+  },
+  {
+    "arquivo": "resumo.json",
+    "sha256": "bc4aa8877a15634e5c69f808a70117634631a3c8f401f1f1c09add4e40f4046f",
+    "bytes": 774
+  },
+  {
+    "arquivo": "sst_fonte.json",
+    "sha256": "c4a7c070dc85682dff90bdfdd7762bdac373f561ceac1c8a1c622c2ef6522c56",
+    "bytes": 3849
+  }
+]

@@ -1,0 +1,7 @@
+numpy>=2.0,<3
+pandas>=2.2,<4
+xarray>=2025.1
+requests>=2.31,<3
+netCDF4>=1.6,<2
+cftime>=1.6,<2
+nbformat>=5.10,<6

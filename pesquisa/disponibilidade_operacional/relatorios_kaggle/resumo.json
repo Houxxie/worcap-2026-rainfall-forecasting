@@ -1,0 +1,28 @@
+{
+  "status": "completo",
+  "protocolo_sha256": "5a531778786b49ca9cd8ac337cdb3297ac580d67f78d5f278492e41ff6aa243a",
+  "rmse_controle": 1.7533987173382521,
+  "rmse_sst": 1.7527615580150522,
+  "delta_rmse": -0.000637159323199965,
+  "reducao_percentual": 0.03633853024411955,
+  "consistencia": {
+    "blocos": {
+      "melhores": 5,
+      "piores": 2,
+      "empates": 0,
+      "pior_delta": 0.006457796414578665,
+      "melhor_delta": -0.008874766028108327
+    },
+    "anos": {
+      "melhores": 6,
+      "piores": 8,
+      "empates": 0,
+      "pior_delta": 0.008008334447967336,
+      "melhor_delta": -0.014981965798091856
+    }
+  },
+  "disponibilidade_historica_comprovada": false,
+  "holdout_independente": false,
+  "producao_liberada": false,
+  "alvos_2025_lidos": false
+}

@@ -1,0 +1,64 @@
+{
+  "id": "nimbus_defasagens_4_3_2_v1",
+  "registrado_em_utc": "2026-09-28T19:11:53.321218+00:00",
+  "objetivo": "Contribuição pareada de oito PCs SST com entradas e chuva de treino defasadas",
+  "natureza": "retrospectivo com produtos consolidados; disponibilidade e vintages não comprovados",
+  "lags_meses": {
+    "atmosfera": 4,
+    "indices": 3,
+    "sst": 2,
+    "chuva_treino": 4,
+    "inicializacao_sazonal": 1
+  },
+  "avaliacao": [
+    "2007-01-01",
+    "2020-12-01"
+  ],
+  "holdout_independente": false,
+  "consultar_2025": false,
+  "inicio_comum": "1982-03-01",
+  "meses_maximos": 360,
+  "corte_treino": "primeiro alvo de cada bloco menos quatro meses; setembro do ano anterior",
+  "frequencia_ajuste": "uma vez a cada bloco de 24 meses; previsões mensais com entradas atualizadas",
+  "climatologias": "chuva/atmosfera/índices: 360 meses por fonte; sazonais e PCA: meses dos exemplos",
+  "pca": {
+    "componentes": 8,
+    "solver": "full",
+    "mascara_clima_centro": "somente treino",
+    "peso_area": "sqrt(cos(latitude))",
+    "padronizar_desvio": false
+  },
+  "arvores": 300,
+  "folhas": 31,
+  "taxa": 0.05,
+  "semente": 42,
+  "pontos_por_mes": 5000,
+  "ridge_alpha": 0.1,
+  "pesos": [
+    0.375,
+    0.375,
+    0.25
+  ],
+  "escalas_residuais": [
+    0.9,
+    0.875
+  ],
+  "busca_parametros": false,
+  "busca_lags": false,
+  "busca_pesos": false,
+  "metrica_primaria": "sqrt(SSE/n) sem ponderação, todos os pontos; diferença SST menos controle",
+  "secundarios": [
+    "MAE",
+    "vies",
+    "RMSE coslat",
+    "blocos",
+    "anos",
+    "meses",
+    "3 faixas de latitude"
+  ],
+  "fontes_em_producao": "data de publicação e recebimento comprovadas antes da emissão; ausência bloqueia",
+  "lags_nao_certificam_publicacao": true,
+  "cfs_publicacao_iri": "desconhecida",
+  "arquivo_sst": "ersstv5_4graus_198201_202411.nc",
+  "hash_sst": "908034f6418833302ea432f25850ad2982d1114b747b7b298e26a350eaf2891d"
+}
