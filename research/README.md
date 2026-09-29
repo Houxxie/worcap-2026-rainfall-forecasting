@@ -15,8 +15,10 @@ Units: mm/day. SST reduced RMSE by 0.0363% but worsened MAE and bias; it remains
 
 - [Paired experiment](lagged_sources/README.md)
 - [Prospective registry](prospective/README.md)
+- [Final baseline fitting and inference](prospective/BASELINE_RUN.md)
+- [Spatial U-Net experiment](spatial_unet/README.md)
 - [Earlier research results](../docs/RESEARCH_HISTORY.md)
 
-The baseline has been evaluated historically. Its final prospective inference package still needs fitting and integration with complete inputs. No real forecast has been emitted.
+The baseline has been evaluated historically. Final fitting, source adapters and inference are implemented; a real prospective run still needs its fitted package and complete inputs. No real forecast has been emitted by the implementation or synthetic checks. The U-Net workflow is a separate development experiment, without a claimed improvement.
 
 Freeze hypotheses and configurations before new evaluation. Compare identical dates, grid points and information cutoffs, inspect temporal/regional behavior, and record decisions even without improvement. Small gains on consulted years do not establish future skill.

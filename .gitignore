@@ -27,6 +27,8 @@ tmp/
 *.pkl
 *.pickle
 *.joblib
+*.pt
+*.pth
 **/objetos/
 **/.escrita.lock
 **/modelos/

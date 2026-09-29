@@ -2,6 +2,7 @@
 
 - `verify_repository.py`: check inventory, hashes, links, syntax and notebook/script consistency without training.
 - `build_notebooks.py`: rebuild the self-contained research notebooks from their guides and modules.
+- `build_spatial_notebooks.py`: build the separate U-Net experiment and final-baseline inference notebooks.
 - `render_overview.py`: regenerate the model architecture image with Matplotlib.
 
 Historical sources remain in Git tags. A scientific change needs a new protocol and output directory; do not overwrite historical hashes to disguise it.

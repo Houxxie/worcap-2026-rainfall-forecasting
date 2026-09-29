@@ -1,0 +1,2 @@
+-r ../lagged_sources/requirements.txt
+torch==2.8.0

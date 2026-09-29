@@ -1,6 +1,6 @@
 # Prospective source and forecast registry
 
-This workflow records received data and prepares monthly forecast records for October 2026–September 2027. **Collection has begun; no real forecast has been issued.** The final model package and authenticated ERA5/SEAS5 inputs still require integration.
+This workflow records received data and prepares monthly forecast records for October 2026–September 2027. **Collection has begun; no real forecast has been issued.** The [fitting and inference workflow](BASELINE_RUN.md) now implements the model package and ERA5/SEAS5 adapters. Real fitting and complete audited inputs are still required before emission.
 
 The [notebook](prospective_registry.ipynb) collects public sources, audits inputs, restores records and reports readiness. It does not train or substitute a model when inputs are unavailable.
 

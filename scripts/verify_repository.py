@@ -80,6 +80,12 @@ def main():
     for p in [ROOT/'README.md',ROOT/'competition/README.md']:
         text=p.read_text(encoding='utf-8')
         require('1.65354' not in text and '1.65183' not in text, 'Legacy leaderboard score in presentation.')
+    for name in ['research/spatial_unet/spatial_unet.ipynb', 'research/prospective/baseline_inference.ipynb']:
+        nb = json.loads((ROOT/name).read_text(encoding='utf-8'))
+        tree = ast.parse(''.join(nb['cells'][1]['source']))
+        bundle = next(ast.literal_eval(n.value) for n in tree.body if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='BUNDLE' for t in n.targets))
+        for path, content in bundle.items():
+            require((ROOT/path).read_text(encoding='utf-8') == content, f'Outdated standalone bundle: {name}: {path}')
     print(json.dumps(dict(**count, hashes=True, syntax=True, local_links=True,
         notebook_script_consistency=True, research_bundles=True, real_data_training_performed=False),indent=2))
 
