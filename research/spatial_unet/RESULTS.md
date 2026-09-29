@@ -30,7 +30,7 @@ U-Net RMSE increased by **0.011327 mm/day (0.646%)** relative to the hybrid. MAE
 
 Difference means U-Net minus hybrid; positive values favor the hybrid. Epoch counts were selected by the prespecified inner chronological validation, followed by a fresh outer fit. They were not chosen from these evaluation scores.
 
-The U-Net improved RMSE in **3 of 14 individual years**: 2009, 2018 and 2019. It worsened in the other 11 years and in all three latitude bands used by the regional diagnostic. The largest block loss occurred in 2013–2014. This does not establish why the network underperformed; error maps and training curves are the next diagnostic inputs before proposing another configuration.
+The U-Net improved RMSE in **3 of 14 individual years**: 2009, 2018 and 2019. It worsened in the other 11 years and in all three latitude bands used by the regional diagnostic. The largest block loss occurred in 2013–2014. This does not establish why the network underperformed. The subsequent [archived-map diagnostic](../diagnostics/README.md) examines spatial errors, calendar months, rainfall intensity and training curves without changing this experiment.
 
 ![Annual RMSE and block differences](seven_blocks.png)
 
