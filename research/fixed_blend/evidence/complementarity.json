@@ -1,0 +1,12 @@
+{
+  "n": 13198248,
+  "hybrid_error_sum": 64885.73412620914,
+  "unet_error_sum": 280034.8668725812,
+  "hybrid_sse": 40576786.85674469,
+  "unet_sse": 41102735.369748324,
+  "error_product_sum": 40147434.265865706,
+  "disagreement_sse": 1384653.6947616062,
+  "centered_error_correlation": 0.9831093190578288,
+  "blend_sse_from_products": 40448651.4172278,
+  "blend_sse_from_disagreement": 40448651.417227805
+}

@@ -39,9 +39,9 @@ def write_json(path, value):
 
 def code_files():
     names = []
-    for folder in ['common', 'spatial_unet', 'diagnostics', 'workflow']:
+    for folder in ['common', 'spatial_unet', 'diagnostics', 'workflow', 'fixed_blend']:
         names.extend(p for p in (ROOT / 'research' / folder).glob('*.py'))
-    names += [PROTOCOL, ROOT / 'research/lagged_sources/library.py', ROOT / 'research/lagged_sources/official_hashes.json',
+    names += [PROTOCOL, ROOT / 'research/fixed_blend/protocol.json', ROOT / 'research/lagged_sources/library.py', ROOT / 'research/lagged_sources/official_hashes.json',
               ROOT / 'research/lagged_sources/ocean_indices.csv', ROOT / 'research/lagged_sources/evidence/metricas_blocos.csv']
     return sorted(set(names))
 
@@ -102,6 +102,10 @@ def preflight(config):
     code = {p.relative_to(ROOT).as_posix(): sha256(p) for p in code_files()}
     facts = dict(mode=config['mode'], device=config.get('device'), scientific_protocol=read_json(PROTOCOL),
                  inputs=inventory, code=code, environment=dict(python=platform.python_version(), packages=versions))
+    facts['experiment'] = config['experiment']
+    if config['experiment'] == 'fixed_blend_v1':
+        from research.fixed_blend.evaluate import validate_protocol
+        facts['comparison_protocol'] = validate_protocol()
     return dict(**facts, source_signature_sha256=source_signature, fingerprint=identity_hash(facts),
                 scope='development_2007_2020', independent_holdout=False, model_promoted=False, forecast_issued=False)
 
@@ -208,13 +212,22 @@ def run(config_path):
             copy_evidence(source['evidence'], folder / 'source_evidence')
             from research.diagnostics.analyze_errors import execute as diagnose
             summary = diagnose(source['predictions'], source['observations'], folder / 'diagnostics', evidence=folder / 'source_evidence')
+            if config['experiment'] == 'fixed_blend_v1':
+                stage = 'fixed_blend'
+                write_json(folder / 'state.json', dict(status='running', stage=stage, started_at=record['started_at']))
+                from research.fixed_blend.evaluate import execute as evaluate_blend
+                summary = evaluate_blend(source['predictions'], source['observations'], folder / 'fixed_blend',
+                                         folder / 'diagnostics', folder / 'source_evidence')
             record['models_fitted_in_this_run'] = config['mode'] == 'train'
             record['evaluation_summary'] = summary
             write_json(folder / 'identity.json', record)
             stage = 'report'
             write_json(folder / 'state.json', dict(status='running', stage=stage, started_at=record['started_at']))
             comparisons(folder / 'source_evidence', folder / 'comparison')
-            from .report import render
+            if config['experiment'] == 'fixed_blend_v1':
+                from research.fixed_blend.report import render
+            else:
+                from .report import render
             render(folder, record)
             print('Report:', folder / 'report.html', flush=True)
         for name, expected in audit['code'].items():
@@ -242,5 +255,7 @@ def list_runs(root):
         record = read_json(path.parent / 'identity.json')
         summary = record.get('evaluation_summary', {})
         rows.append(dict(run_id=record['run_id'], status=state['status'], mode=record['mode'],
-                         hybrid_rmse=summary.get('hybrid_rmse'), unet_rmse=summary.get('unet_rmse')))
+                         experiment=record.get('experiment', 'hybrid_unet_v1'),
+                         hybrid_rmse=summary.get('hybrid_rmse'), unet_rmse=summary.get('unet_rmse'),
+                         blend_rmse=summary.get('blend_rmse')))
     return rows

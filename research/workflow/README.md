@@ -11,6 +11,8 @@ There are two explicit modes:
 
 These are previously consulted **development years**. Neither mode claims an independent holdout, promotes a model or issues a prospective forecast. Operational data collection and its incomplete-source gate remain separate.
 
+The optional `experiment` field selects `hybrid_unet_v1` (the default comparison) or `fixed_blend_v1` (one prespecified 75% hybrid + 25% U-Net blend, saved mode only). The latter uses the [blend example](blend.example.json), retains the original diagnostics, and adds paired candidate tables, maps and a report. It never searches weights. See the [fixed-blend protocol and results](../fixed_blend/README.md).
+
 ## Easiest route: Kaggle
 
 Import [experiment_workflow.ipynb](experiment_workflow.ipynb). Its source bundle is self-contained: no private GitHub login, API key or new source download is required for saved-mode evaluation.
@@ -20,6 +22,8 @@ Import [experiment_workflow.ipynb](experiment_workflow.ipynb). Its source bundle
 3. Run the check cell, then the execution cell. No GPU is needed in saved mode.
 4. Open or download `report.html`. Save the notebook version **with outputs** to retain the run package.
 
+To reproduce the fixed combination, set `EXPERIMENT = "fixed_blend_v1"` and leave `MODE = "saved"`. It uses the same attached maps; neither a GPU nor new training is needed. Existing notebook code bundles are preserved: import the updated notebook into a fresh session/output location if an older bundle is already present.
+
 For training, set `MODE = "train"`, attach the three prepared input datasets and enable a GPU. This runs all seven blocks and needs the [fixed training dependencies](../spatial_unet/requirements.txt). It can be substantially more expensive than saved-mode analysis. The notebook does not install packages, download data or start training during its check cell.
 
 ## Local use
@@ -28,7 +32,7 @@ Run commands from the repository root using Python 3.12 or later. For saved-mode
 
 ```bash
 python -m pip install -r research/workflow/requirements_evaluation.txt
-python -m unittest research.workflow.test_workflow research.diagnostics.test_diagnostics -v
+python -m unittest research.workflow.test_workflow research.diagnostics.test_diagnostics research.fixed_blend.test_blend -v
 ```
 
 Copy [saved.example.json](saved.example.json) to your own configuration file and edit its paths. Keep `evidence: null` only when using the original archived maps: it selects the bundled seven-block evidence. For another complete run of the same protocol, set both `predictions` and `evidence` to that run's results folder. Do not mix its maps with the original run's hashes.
@@ -64,6 +68,7 @@ RUN_ID/
   REPORT.md                Short result and report entry point
   manifest.json            Completed output inventory and hashes
   training/                Models and forecasts, only in train mode
+  fixed_blend/             Prespecified blend maps/tables, only for fixed_blend_v1
 ```
 
 The output snapshot preserves configuration and code but does not vendor Python packages or copy the large source datasets in saved mode. Reproduction still requires the same input snapshots. The HTML can be read by itself; full verification requires the entire run directory. Hashes check byte integrity and consistency, not independent authenticity or real historical publication dates.

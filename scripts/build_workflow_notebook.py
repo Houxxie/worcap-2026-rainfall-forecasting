@@ -17,6 +17,7 @@ def main():
     settings = '''from research.workflow.config import discover_saved, WorkflowError
 from research.workflow.runner import write_json
 MODE = "saved"  # "train" reruns the complete fixed seven-block comparison.
+EXPERIMENT = "hybrid_unet_v1"  # "fixed_blend_v1" evaluates only 75% hybrid + 25% U-Net, in saved mode.
 MANUAL_INPUTS = None
 # Saved example:
 # MANUAL_INPUTS = {"observations": "/kaggle/input/.../treino_tp.nc",
@@ -38,7 +39,7 @@ elif MODE == "train":
 else:
     raise WorkflowError("MODE must be saved or train.")
 CONFIG = {"schema": "rainfall_workflow_v1", "name": "hybrid-unet-comparison",
-          "mode": MODE, "output_root": str(BASE/'experiments'), "inputs": INPUTS}
+          "mode": MODE, "experiment": EXPERIMENT, "output_root": str(BASE/'experiments'), "inputs": INPUTS}
 if MODE == "train":
     CONFIG["device"] = "cuda"
 CONFIG_FILE = RUN_ROOT/'workflow_config.json'
@@ -48,7 +49,7 @@ print(json.dumps(CONFIG, indent=2))
     build('research/workflow/experiment_workflow.ipynb', 'research/workflow/README.md', names, [
         markdown('## 1. Configure paths and mode\nSaved mode evaluates the previous seven-block output and uses no GPU. Keep the default unless you intend to refit all models. The lookup requires the forecast maps, not only the report archive.'), code(settings),
         markdown('## 2. Check before execution\nThese tests use small synthetic fixtures. Preflight verifies the configured real files without fitting a model. Missing data, changed hashes or an incompatible training environment stop here.'),
-        code("import unittest\nfrom research.workflow.__main__ import main\nsuite = unittest.defaultTestLoader.loadTestsFromNames(['research.workflow.test_workflow', 'research.diagnostics.test_diagnostics'])\nassert unittest.TextTestRunner(verbosity=2).run(suite).wasSuccessful(), 'Checks failed.'\nassert main(['check', '--config', str(CONFIG_FILE)]) == 0, 'Preflight stopped; read the message above.'\n"),
+        code("import unittest\nfrom research.workflow.__main__ import main\nsuite = unittest.defaultTestLoader.loadTestsFromNames(['research.workflow.test_workflow', 'research.diagnostics.test_diagnostics', 'research.fixed_blend.test_blend'])\nassert unittest.TextTestRunner(verbosity=2).run(suite).wasSuccessful(), 'Checks failed.'\nassert main(['check', '--config', str(CONFIG_FILE)]) == 0, 'Preflight stopped; read the message above.'\n"),
         markdown('## 3. Execute the configured comparison\nEach execution creates a new run directory and preserves its configuration, code, evidence, logs and outputs. No result changes the operational hybrid or issues a forecast.'),
         code("from research.workflow.runner import run, verify_run\nRUN = run(CONFIG_FILE)\nprint(verify_run(RUN))\n"),
         markdown('## 4. Read and preserve the report\nThe HTML embeds its figures and can be downloaded on its own. Save the complete notebook output version for the audit files and, in training mode, the fitted models and predictions.'),

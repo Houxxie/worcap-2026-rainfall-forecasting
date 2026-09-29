@@ -1,0 +1,12 @@
+{
+  "schema": "rainfall_workflow_v1",
+  "name": "fixed-blend-75-25",
+  "experiment": "fixed_blend_v1",
+  "mode": "saved",
+  "output_root": "../../outputs/experiments",
+  "inputs": {
+    "observations": "/path/to/official/treino_tp.nc",
+    "predictions": "/path/to/seven-block/predictions",
+    "evidence": null
+  }
+}

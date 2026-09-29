@@ -41,13 +41,16 @@ def resolve_path(value, base, label):
 
 def normalize(raw, base):
     require(isinstance(raw, dict), 'Configuration must be a JSON object.')
-    require(set(raw) <= {'schema', 'name', 'mode', 'output_root', 'inputs', 'device'},
+    require(set(raw) <= {'schema', 'name', 'mode', 'output_root', 'inputs', 'device', 'experiment'},
             'Unknown configuration field. Use saved.example.json or train.example.json; scientific settings live in protocol.json.')
     require(raw.get('schema') == 'rainfall_workflow_v1', 'Set schema to rainfall_workflow_v1.')
     require(isinstance(raw.get('name'), str) and re.fullmatch(r'[a-z][a-z0-9_-]{0,63}', raw['name']),
             'Name must start with a lowercase letter and use up to 64 letters, digits, underscores or hyphens.')
     mode = raw.get('mode')
     require(mode in {'saved', 'train'}, 'Mode must be saved (no fitting) or train (all seven blocks).')
+    experiment = raw.get('experiment', 'hybrid_unet_v1')
+    require(experiment in {'hybrid_unet_v1', 'fixed_blend_v1'}, 'Experiment must be hybrid_unet_v1 or fixed_blend_v1.')
+    require(experiment != 'fixed_blend_v1' or mode == 'saved', 'fixed_blend_v1 evaluates saved maps only; it does not train models.')
     supplied = raw.get('inputs')
     require(isinstance(supplied, dict), 'inputs must be an object containing the dataset paths.')
     keys = {'observations', 'predictions', 'evidence'} if mode == 'saved' else {'official', 'seas5', 'cfsv2'}
@@ -68,6 +71,7 @@ def normalize(raw, base):
     require(not output.is_relative_to(ROOT / 'research') and not output.is_relative_to(ROOT / 'competition'),
             'Use an outputs directory outside the source folders.')
     result = dict(schema=raw['schema'], name=raw['name'], mode=mode, output_root=str(output), inputs=paths)
+    result['experiment'] = experiment
     if mode == 'train':
         result['device'] = raw.get('device', 'cuda')
     return result

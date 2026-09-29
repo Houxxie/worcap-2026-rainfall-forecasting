@@ -1,5 +1,12 @@
 # Changelog
 
+## Fixed hybrid / U-Net blend — 2026-09-29
+
+- Evaluate one prespecified 75% hybrid / 25% U-Net combination in the common workflow, using the original seven-block maps without retraining.
+- Preserve candidate maps, verify their exact readback and the MSE identities, and compare global, temporal, regional and intensity errors.
+- Record a development RMSE reduction from 1.753399 to 1.750628, with improvements in six of seven blocks and a worse global absolute bias.
+- Keep the blend experimental and the operational hybrid unchanged; document the complete outcome and reproduction path.
+
 ## Research evaluation workflow — 2026-09-29
 
 - Add one configured entry point for evaluating saved hybrid/U-Net maps or running their existing seven-block comparison.
