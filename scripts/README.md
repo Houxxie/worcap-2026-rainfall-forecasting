@@ -4,6 +4,7 @@
 - `build_notebooks.py`: rebuild the self-contained research notebooks from their guides and modules.
 - `build_spatial_notebooks.py`: build the separate U-Net experiment and final-baseline inference notebooks.
 - `build_workflow_notebook.py`: build the unified saved-evaluation/training notebook and its checked source bundle.
+- `build_extension_notebook.py`: build the fixed 2021–2022 temporal-extension notebook, with separate prediction freezing and evaluation.
 - `render_overview.py`: regenerate the model architecture image with Matplotlib.
 
 Historical sources remain in Git tags. A scientific change needs a new protocol and output directory; do not overwrite historical hashes to disguise it.

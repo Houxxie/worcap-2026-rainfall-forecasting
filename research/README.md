@@ -22,6 +22,7 @@ Units: mm/day. SST reduced RMSE by 0.0363% but worsened MAE and bias; it remains
 - [Error maps, rainfall intensity, seasonality and training diagnostics](diagnostics/README.md)
 - [Unified evaluation workflow and standalone Kaggle notebook](workflow/README.md)
 - [One fixed 75% hybrid / 25% U-Net combination](fixed_blend/README.md)
+- [Prepared additional chronological evaluation: 2021–2022](temporal_extension/README.md)
 - [Earlier research results](../docs/RESEARCH_HISTORY.md)
 
 The operational hybrid was fitted and frozen on 29 September 2026. October issuance is still blocked by incomplete CFSv2 inputs; see the [operational status](prospective/OPERATIONAL_STATUS.md). No real prospective forecast has been emitted. The U-Net completed all seven development blocks: RMSE was 1.764726 versus 1.753399 for the hybrid, with no improved block. A subsequent single fixed 75% hybrid / 25% U-Net blend reached 1.750628, improving six blocks but worsening global absolute bias. It remains a research candidate; the hybrid remains the operational reference. Both diagnostics used the archived maps without retraining.

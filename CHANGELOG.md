@@ -1,5 +1,11 @@
 # Changelog
 
+## Prepared chronological extension — 2026-09-29
+
+- Add a separate locked Kaggle notebook for the unchanged hybrid, U-Net and 75/25 blend on January 2021–December 2022, with fitting capped at September 2020.
+- Keep fitting/freezing and evaluation in separate calls; neural inference can run without target rainfall, and the frozen artifact package is checked before scoring.
+- Document that earlier final models used these observations, so the extension is retrospective rather than an untouched holdout. Real training and evaluation remain pending.
+
 ## Fixed hybrid / U-Net blend — 2026-09-29
 
 - Evaluate one prespecified 75% hybrid / 25% U-Net combination in the common workflow, using the original seven-block maps without retraining.
