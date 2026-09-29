@@ -258,8 +258,8 @@
       "bytes": 4629
     },
     "research/prospective/OPERATIONAL_STATUS.md": {
-      "sha256": "2acc0e5a64e7dfc6670444585ecc65723bfcce4a031adb104af5df0b6f02a932",
-      "bytes": 3606
+      "sha256": "75c7c8dbd7e70ed8c4d59fb98061a1698e4723046a93ad18c041cf5b31fcd306",
+      "bytes": 6247
     },
     "research/prospective/README.md": {
       "sha256": "fa8d6f8a63b99ebd9ed412861b783c3c8c7b75209c78fa0190089e3bad5e50c5",
@@ -288,6 +288,14 @@
     "research/prospective/evaluate.py": {
       "sha256": "0e1297cb9acfb22005fb22e6ea2054e484899933a15a3d349a43dd2d978a20a8",
       "bytes": 3684
+    },
+    "research/prospective/evidence/cfsv2_recheck_2026_09_29.json": {
+      "sha256": "fc1520f6269dad380f00bdc30afa9b57c77513f8e95d05edcedb2053f8f44c11",
+      "bytes": 3453
+    },
+    "research/prospective/evidence/cfsv2_recheck_2026_09_29_verification.json": {
+      "sha256": "457e7e80db31b5f28679e398c071f16a63dda1045fc037feaf06f76c3e961c74",
+      "bytes": 328
     },
     "research/prospective/evidence/operational_2026_10.json": {
       "sha256": "74aa141b5ae0b801ec91e55b24fe3b2a934102a4a103061f330f9b2fc9a6ba9e",

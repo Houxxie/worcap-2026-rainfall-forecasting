@@ -2,6 +2,8 @@
 
 On 29 September 2026, the fixed lagged hybrid was fitted on 360 target months, January 1993–December 2022, and registered with all 11 required package files. **The forecast is blocked, not issued.** The acquired September CFSv2 fields do not contain complete members 21–24. No partial ensemble, month substitution, imputation or model fallback was used.
 
+The [follow-up acquisition](#follow-up-acquisition-and-provider-migration) below extends the local registry to 35 events. The saved Kaggle version and original ZIP retain the initial 26-event preparation.
+
 | Component | Recorded state |
 | --- | --- |
 | Final hybrid | Fitted once; two LightGBMs and local ridge; 52,248,030 bytes in the registered package |
@@ -28,4 +30,16 @@ Restore the complete latest registry, including `eventos` and `objetos`. Do not 
 
 If the source remains incomplete at the deadline, record October as a month without an issued forecast. A later successful download cannot authorize a backdated October prediction. No automatic monitoring job is enabled.
 
-The [private Kaggle run, version 1](https://www.kaggle.com/code/houxie/worcap-operational-rainfall-forecast?scriptVersionId=353975624) retains the complete model and registry, including `operational_october_2026.zip`. Its embedded 13-event starting snapshot documents this first execution; a continuation must restore the completed output with 26 events, as described above. Git contains code and audit metadata, not source data, credentials or model binaries. This preparation does not measure future rainfall skill. The local hash chain is not an independent timestamp or tamper-proof storage.
+The [private Kaggle run, version 1](https://www.kaggle.com/code/houxie/worcap-operational-rainfall-forecast?scriptVersionId=353975624) retains the complete model and initial 26-event registry, including `operational_october_2026.zip`. Its embedded 13-event starting snapshot documents the first execution. A continuation must restore the latest completed registry, including the follow-up events below. Git contains code and audit metadata, not source data, credentials or model binaries. This preparation does not measure future rainfall skill. The local hash chain is not an independent timestamp or tamper-proof storage.
+
+## Follow-up acquisition and provider migration
+
+At 20:11 UTC on 29 September, a fresh acquisition from the original IRI endpoint again returned complete fields for members 1–20 and no finite values for expected members 21–24. Separate requests for each missing member confirmed 0 of 5,304 finite grid points. The recorded initialization table assigns all four to 3 September 2026.
+
+IRI's [migration announcement](https://iri.columbia.edu/resources/data-library/sunset/) describes the transition to forecast.ccsr and warns of changes during beta testing. This notice does not establish the cause of the missing fields. Its successor [CFSv2 pentad forecast dataset](https://forecast.ccsr.columbia.edu/data/NMME/NOAA-NCEP/CFSv2/pentad_samples/forecast/pr) supplied all 24 expected member fields in a diagnostic acquisition at 20:16 UTC. The explicit target bounds are 1 October–1 November 2026; the new lead coordinate is 1, whereas the original IRI coordinate is 1.5.
+
+The two services are **not established as interchangeable**. Comparing matching member IDs 1–20 on the same one-degree coordinates gives an RMSE difference of 0.626789 mm/day between their 20-member means, and a maximum individual-member grid-point difference of 18.998323 mm/day. These are differences between source fields, not prediction errors against observed rainfall. The cause—such as preprocessing or member mapping—has not been determined. The decoded successor subset is retained only as a diagnostic artifact, explicitly distinguished from raw transport bytes; it is not a validated forecast input.
+
+The [recheck report](evidence/cfsv2_recheck_2026_09_29.json) records the comparison, receipt times and unchanged model/protocol IDs. [Snapshot verification](evidence/cfsv2_recheck_2026_09_29_verification.json) checked all referenced object hashes and the new 35-event ZIP. This ZIP is 54,232,856 bytes, SHA-256 `4ffb55e4d99dd57fc3f9db2a392321176cb0912c5c27ad864aef89453fa38044`. It contains the registry rather than the duplicated model/code directory layout of the original Kaggle ZIP.
+
+Continue from the **35-event registry**, not from either earlier snapshot. No source-policy change, retraining or forecast emission occurred. Further work must resolve source equivalence before using the successor service; availability alone does not satisfy the frozen input contract. No automatic monitoring job is enabled.

@@ -1,0 +1,10 @@
+{
+  "verified_at_utc": "2026-09-29T20:18:53.803068+00:00",
+  "events": 35,
+  "all_referenced_object_hashes_verified": true,
+  "archive_sha256": "4ffb55e4d99dd57fc3f9db2a392321176cb0912c5c27ad864aef89453fa38044",
+  "archive_bytes": 54232856,
+  "zip_crc_valid": true,
+  "model_event_unchanged": true,
+  "forecast_issued": false
+}

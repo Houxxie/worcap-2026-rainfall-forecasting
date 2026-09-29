@@ -1,0 +1,114 @@
+{
+  "checked_at_utc": "2026-09-29T20:18:50.420230+00:00",
+  "target": "2026-10",
+  "status": "blocked_not_issued",
+  "events": 35,
+  "registry_tip": "f3995fb3d8f85fc0d4509d517f93f60146b9772e32a1d8646a1a3e102ab387fd",
+  "latest_legacy_receipt": "04e2fa6b70d1d9f1edc240d78b20e4e1f299517e70bab06ac05f4086a05d26a7",
+  "missing_members": [
+    21,
+    22,
+    23,
+    24
+  ],
+  "missing_member_initialization": "2026-09-03",
+  "individually_requested_missing_members_have_zero_finite_pixels": true,
+  "successor_source": {
+    "source_url": "https://forecast.ccsr.columbia.edu/data/NMME/NOAA-NCEP/CFSv2/pentad_samples/forecast/pr",
+    "started_at_utc": "2026-09-29T20:15:54.464562+00:00",
+    "received_at_utc": "2026-09-29T20:16:05.642482+00:00",
+    "nominal_start": "2026-09-01T00:00:00.000000000",
+    "lead": [
+      1
+    ],
+    "target": [
+      [
+        "2026-10-01T00:00:00.000000000"
+      ]
+    ],
+    "finite_pixels_by_member": {
+      "1": 5304,
+      "2": 5304,
+      "3": 5304,
+      "4": 5304,
+      "5": 5304,
+      "6": 5304,
+      "7": 5304,
+      "8": 5304,
+      "9": 5304,
+      "10": 5304,
+      "11": 5304,
+      "12": 5304,
+      "13": 5304,
+      "14": 5304,
+      "15": 5304,
+      "16": 5304,
+      "17": 5304,
+      "18": 5304,
+      "19": 5304,
+      "20": 5304,
+      "21": 5304,
+      "22": 5304,
+      "23": 5304,
+      "24": 5304,
+      "25": 0,
+      "26": 0,
+      "27": 0,
+      "28": 0
+    },
+    "role": "diagnostic only, not registered as a validated operational input",
+    "serialization": "local NetCDF of decoded OPeNDAP subset, not original response bytes",
+    "sha256": "132853aa2b03aecf3cf265c79490e7cc2e968dd9ac0e2a8670f0788cb1b24e9b"
+  },
+  "comparison": {
+    "overlapping_members": 20,
+    "pixels_per_member": 5304,
+    "units": "mm/day",
+    "same_grid_coordinates": true,
+    "target_bounds": [
+      [
+        [
+          "2026-10-01T00:00:00.000000000",
+          "2026-11-01T00:00:00.000000000"
+        ]
+      ]
+    ],
+    "exact_values_equal": false,
+    "memberwise_rmse_difference": [
+      0.7794247427242417,
+      0.9831045446271931,
+      0.8790681928025083,
+      0.8114142870941877,
+      0.8392460247536914,
+      0.8512390072092735,
+      1.0861837406778516,
+      0.9989897829351636,
+      0.8303547537053182,
+      0.9730622120194465,
+      0.9234973174693355,
+      0.8693482682355567,
+      0.8645841038126002,
+      0.8470058028447324,
+      0.8885469296808328,
+      0.9016012265683961,
+      0.8396406093750917,
+      0.7819728455693535,
+      0.8955249947921743,
+      0.9478023132853705
+    ],
+    "maximum_absolute_difference": 18.998322705396127,
+    "ensemble_mean_rmse_difference": 0.6267893911645965,
+    "iri_spatial_mean": 3.417833961221696,
+    "ccsr_spatial_mean": 3.4352011285001716,
+    "flattened_correlation": 0.9702701478677648,
+    "interpretation": "Source-value comparison, not forecast error against observations. Equivalence is not established; no normalization, filling or issuance is authorized by this diagnostic."
+  },
+  "model_event": "8b7fae77efa361b7ec09d4212f20f429a2ba30a01ebdba36ec44f0b9733e6d82",
+  "protocol_event": "b61d3ae3dac9e65da02c1b6d5aa3b66f9d918bae94db51a9f55c3728cf490e37",
+  "source_policy_changed": false,
+  "model_changed": false,
+  "forecast_issued": false,
+  "deadline_exclusive_utc": "2026-10-01T00:00:00Z",
+  "automatic_monitoring_enabled": false,
+  "provider_notice": "https://iri.columbia.edu/resources/data-library/sunset/"
+}
