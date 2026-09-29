@@ -1,22 +1,9 @@
-# Autoria, licença e fontes
+# Attribution and data rights
 
-O código e a documentação originais do projeto Nimbus PA são disponibilizados
-sob a [licença MIT](LICENSE), escolhida pela equipe. O aviso de licença e autoria
-deve acompanhar cópias ou partes substanciais do software. Texto de referência:
-[MIT no Choose a License](https://choosealicense.com/licenses/mit/).
+Original code and documentation are available under the [MIT license](LICENSE). Copies or substantial portions must retain its copyright and permission notice.
 
-A licença do projeto não substitui as licenças das bibliotecas nem concede direitos
-sobre os dados de terceiros. Snapshots NOAA e manifestos preservam sua proveniência;
-ERA5, SEAS5/C3S, CFSv2/IRI, ERSST e os dados da competição continuam sujeitos às
-condições dos respectivos fornecedores. Consulte as
-[fontes da competição](entregas/Nimbus_PA_homologacao/DADOS_EXTERNOS.md) e as
-[instruções de reprodução](docs/REPRODUCAO.md).
+The license does not replace library licenses or grant rights to third-party data. ERA5, SEAS5/C3S, NOAA PSL, CFSv2/IRI, ERSST and official competition files retain their providers' terms. See [DATA.md](docs/DATA.md).
 
-O projeto nasceu da participação da equipe Nimbus PA no Hackathon WorCAP 2026.
-Não é um produto oficial do evento, do INPE, do ECMWF, da NOAA ou do Kaggle.
-Houve assistência de IA em programação, depuração e documentação. O código de
-outro participante mencionado na conversa não foi incorporado nesta preparação.
+This is not an official product of WorCAP, INPE, ECMWF, NOAA, IRI or Kaggle. AI tools assisted implementation, debugging and documentation.
 
-A pasta de homologação é um arquivo histórico: nomes, resultados e notas originais
-são preservados. Os notebooks preparados posteriormente e a pesquisa são
-identificados separadamente, com suas próprias limitações e referências.
+Original delivery files remain unchanged in historical Git tags. English presentation files are later derivatives. Original dataset filenames, feature names and machine-readable schema keys are retained where compatibility requires them.

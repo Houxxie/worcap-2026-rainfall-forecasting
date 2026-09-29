@@ -1,7 +1,0 @@
-Equipe: Nimbus PA
-
-O ZIP contém o código de reprodução das duas soluções documentadas, as fontes externas e a nota temporal. A seleção final continua sendo a registrada no Kaggle. Confira a correspondência com suas escolhas.
-
-A documentação do HadISST indica atraso de divulgação. O código usa o índice mensal T−1 em versão retrospectiva; isso não comprova que o valor estivesse publicado até o fim de T−1. Não declare ausência garantida de vazamento. O rascunho de e-mail entregue separadamente solicita esclarecimento à organização e entrega a solução efetivamente usada.
-
-O código de treinamento e os dados não foram alterados nesta organização do pacote. O notebook recebeu somente uma abertura de identificação e referência às ressalvas. Nenhum e-mail ou submissão foi enviado.

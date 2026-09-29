@@ -1,0 +1,14 @@
+{
+  "historical_tag": "competicao-2026",
+  "original_script_sha256": "547bd7ac54c8873b5d6e237627f4b6dba94851259548a455f8574e2ecfff8616",
+  "expected_hybrid_csv_sha256": "e98e8954debb8f7c764665a31804ec5512a1c2578c1ed4a24e50c51dedfb429b",
+  "competition_functions_structurally_checked": 52,
+  "check_scope": "Function ASTs match after normalizing text constants; numerical constants, operators and control flow retained.",
+  "changes": [
+    "English prose, labels, messages and docstrings",
+    "Hybrid-only presentation; intermediate components retained for exact reproduction",
+    "English directory/module paths for research",
+    "Historic machine-readable contracts and evidence remain byte-identical"
+  ],
+  "full_training_repeated_for_this_update": false
+}

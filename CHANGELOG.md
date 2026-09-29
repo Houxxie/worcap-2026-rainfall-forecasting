@@ -1,33 +1,20 @@
-# Histórico do Nimbus PA
+# Changelog
 
-Este histórico foi organizado em 28/09/2026 a partir dos artefatos locais.
-O histórico Git começa com a importação atual da entrega preservada, seguida
-pela organização da pesquisa. As tags não simulam commits feitos durante a competição.
+## English presentation — 2026-09-28
 
-## pesquisa-v0.1.0 — 28/09/2026
+- Rename the repository to `worcap-2026-rainfall-forecasting`.
+- Present the hybrid as the sole competition solution on the current branch.
+- Add English guides, explained notebooks, runtime messages and a model diagram.
+- Add “What I learned”; report the Top 10 finish and official final score.
+- Organize active code under `competition/` and `research/`; preserve original deliveries and earlier experiments in historical tags.
+- Keep numeric settings, feature ordering and the hybrid CSV identity check.
 
-- Apresentação do projeto com origem no Hackathon WorCAP 2026 e duas entradas: competição e pesquisa.
-- Catálogo que distingue versão do software, referência preditiva, candidato e infraestrutura de coleta.
-- Referência `hibrido-defasado-v1`, com atmosfera T−4, índices T−3 e previsões sazonais T−1.
-- Comparação histórica com oito PCs de SST: leve melhora de RMSE, piora de MAE/viés; sem promoção automática.
-- Registro prospectivo de versões recebidas, auditoria, congelamento e verificação posterior.
-- Estado em 28/09: nenhuma previsão real emitida; faltam entradas e o pacote final de inferência.
-- Notebook de competição para leitura, com código preservado e outputs removidos.
-- Conferência de preservação por hashes e de igualdade das células do notebook.
-- Licença MIT e repositório privado `Houxxie/nimbus-pa`, conforme escolha da equipe.
-- Lista explícita de 250 arquivos para o primeiro envio; revisão dos notebooks, links e conteúdo compactado.
+This is a presentation and packaging update, not a new model or evaluation.
 
-## Marco histórico — competicao-2026
+## Initial research snapshot — 2026-09-28
 
-Pacote de homologação preparado em 24/09/2026, preservado em
-`entregas/Nimbus_PA_homologacao/`.
+`pesquisa-v0.1.0`: first archive of the lagged-source baseline, SST experiments and prospective registry. No real prospective forecast had been issued.
 
-- Duas soluções reproduzidas: média de árvores e híbrido com ridge local.
-- Scores públicos informados: 1,65183 e 1,65354, respectivamente.
-- Nimbus PA: 9º lugar oficial, score 1,80114, conforme comunicado apresentado pela equipe.
-- Seleção do híbrido como ponto de partida para a pesquisa posterior.
-- Fontes externas, ambiente, hashes e limitações temporais documentados.
+## Competition archive — 2026-09-28
 
-O marco `competicao-2026` identifica o primeiro commit, uma importação atual dos
-arquivos preservados, sem inventar commits intermediários da competição. As duas
-partes também podem ser acessadas pelas pastas e pelos links do README.
+`competicao-2026`: import of the original delivery. Git timestamps reflect the actual import date, not simulated competition-period commits.

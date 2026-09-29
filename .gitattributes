@@ -1,14 +1,11 @@
-# Preservar bytes dos artefatos auditados, inclusive quebras de linha.
+# Preserve exact bytes for scientific snapshots and hash inventories.
 * -text
-/entregas/Nimbus_PA_homologacao/** -text
-/competicao/Nimbus_PA_WorCAP_2026.ipynb -text
-/competicao/manifesto_preservacao.json -text
-/pesquisa/** -text
 
-# Documentação e código novos, fora dos snapshots acima.
-/README.md text eol=lf
-/CHANGELOG.md text eol=lf
-/VERSOES.json text eol=lf
-/docs/PUBLICACAO_GITHUB.md text eol=lf
-/docs/REPRODUCAO.md text eol=lf
-/scripts/conferir_versoes.py text eol=lf
+# New prose and source files use consistent line endings.
+*.md text eol=lf
+*.py text eol=lf
+/LICENSE text eol=lf
+/.gitignore text eol=lf
+/.gitattributes text eol=lf
+/competition/metadata/** -text
+/research/lagged_sources/evidence/** -text

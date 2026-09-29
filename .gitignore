@@ -1,15 +1,22 @@
-# Dados originais podem ser baixados novamente; manter fora dos commits.
-data/raw/*.nc
-data/raw/sample_submission.csv
+# Environments, local settings and credentials.
 .venv/
 .ipynb_checkpoints/
 __pycache__/
 *.pyc
-outputs/
 .cdsapirc
 .env
+.env.*
+!.env.example
+**/kaggle.json
+**/.cdsapirc
+.DS_Store
+Thumbs.db
+Desktop.ini
 
-# Artefatos científicos, downloads e ambientes: disponibilizar por fonte/manifesto.
+# Raw inputs, fitted models and generated outputs belong outside Git.
+outputs/
+data/
+tmp/
 *.nc
 *.grib
 *.grb
@@ -17,20 +24,12 @@ outputs/
 *.npy
 *.zip
 *.partial*
-tmp/
-data/
-.env.*
-!.env.example
-**/kaggle.json
-**/.cdsapirc
-**/objetos/
-**/.escrita.lock
 *.pkl
 *.pickle
 *.joblib
+**/objetos/
+**/.escrita.lock
 **/modelos/
 **/*arvores_*.txt
-
-# CSVs completos de competição e previsões; métricas continuam visíveis.
 **/submission*.csv
 **/componentes/*.csv

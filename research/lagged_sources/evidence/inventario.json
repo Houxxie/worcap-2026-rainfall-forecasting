@@ -1,0 +1,102 @@
+[
+  {
+    "arquivo": "A/auditoria.json",
+    "sha256": "62e0072cb92149a10ae484bb8e1c47cdc43c4dd6a62deee78adb83c997e996c7",
+    "bytes": 912
+  },
+  {
+    "arquivo": "A/calendario_emissoes.csv",
+    "sha256": "d128b8d7afa6626f8bef46d11c0db715d22a6d0b791554fe858b052c250ec991",
+    "bytes": 2573
+  },
+  {
+    "arquivo": "B/auditoria.json",
+    "sha256": "d8844eead46f8a8e8430adf9aa8db41cc8aff5ae4c6511519e0f8d6ad3ea68a3",
+    "bytes": 912
+  },
+  {
+    "arquivo": "B/calendario_emissoes.csv",
+    "sha256": "fca88bee094820b02b12ad18bc65e9b1090125af011a407174e89400fb2f6e70",
+    "bytes": 2573
+  },
+  {
+    "arquivo": "C/auditoria.json",
+    "sha256": "3c867c8be53ad6d247b2ae5f0a65b753c395ca9b56d6b70e7fdd275d05192126",
+    "bytes": 912
+  },
+  {
+    "arquivo": "C/calendario_emissoes.csv",
+    "sha256": "546f288ede5e7bb85086c835b6f94bde96f77bf14f4fe2259a1933d1cec609a4",
+    "bytes": 2573
+  },
+  {
+    "arquivo": "H1/auditoria.json",
+    "sha256": "1429f56fec3fb3040ce04b9b85944c449dfb0933071bc3707037781b27b1073a",
+    "bytes": 912
+  },
+  {
+    "arquivo": "H1/calendario_emissoes.csv",
+    "sha256": "321b876fcfb1e4c8ef4a4e0e51c0c45b4319c47f09160ad6c08c157c396c402d",
+    "bytes": 2573
+  },
+  {
+    "arquivo": "H2/auditoria.json",
+    "sha256": "1bde6254e75e4f04349554cde4720d520a08b0b439631c5076ec13af0fec70a0",
+    "bytes": 912
+  },
+  {
+    "arquivo": "H2/calendario_emissoes.csv",
+    "sha256": "40a890485099c431c3418b091adafd8d103cc20192bce2d24d18e280a7068507",
+    "bytes": 2573
+  },
+  {
+    "arquivo": "H3/auditoria.json",
+    "sha256": "988046962d28848e80deaebd1f1bfd084cd131fc1b1e64e4dfaadebd5b90ef7e",
+    "bytes": 912
+  },
+  {
+    "arquivo": "H3/calendario_emissoes.csv",
+    "sha256": "83fd3d6e0c46b7dabe91db01412a1e79a5fa71a21795a15d0003ef3032d3fde0",
+    "bytes": 2573
+  },
+  {
+    "arquivo": "H4/auditoria.json",
+    "sha256": "de7f90854269a717e8b14285674a3d8a3ca8ea4ae2fcc8e66118e74c733e88fe",
+    "bytes": 912
+  },
+  {
+    "arquivo": "H4/calendario_emissoes.csv",
+    "sha256": "db9860b421d3190bc58f469badfad1a2375b9e9d2d14a235b3a07b32810739ef",
+    "bytes": 2573
+  },
+  {
+    "arquivo": "metricas_anos.csv",
+    "sha256": "fafc64f22696e09e79dfe38e61b2cb1ddd5af6065c289f3d5b892f606b62f384",
+    "bytes": 8322
+  },
+  {
+    "arquivo": "metricas_blocos.csv",
+    "sha256": "da2c2af92556c0cb64606e4a8dfd6d5d00af215ecf408cbe326d776df60cb457",
+    "bytes": 4173
+  },
+  {
+    "arquivo": "metricas_globais.csv",
+    "sha256": "227780400015e9ce8e3ba3a02bc7ad16c80690d1c80bd55d1d20aff9f8810d55",
+    "bytes": 668
+  },
+  {
+    "arquivo": "metricas_mensais_regioes.csv",
+    "sha256": "8eff21b05844aad19ac0b2461b17998ad68913546776b570242cf040b69392c0",
+    "bytes": 312016
+  },
+  {
+    "arquivo": "metricas_regioes.csv",
+    "sha256": "ba55dd36ce2e3beb8a9c738406de82af141f42c0043f751ffd2db5c87178d113",
+    "bytes": 2647
+  },
+  {
+    "arquivo": "resumo.json",
+    "sha256": "bc4aa8877a15634e5c69f808a70117634631a3c8f401f1f1c09add4e40f4046f",
+    "bytes": 774
+  }
+]
