@@ -1,6 +1,6 @@
 # Prospective source and forecast registry
 
-This workflow records received data and prepares monthly forecast records for October 2026–September 2027. **Collection has begun; no real forecast has been issued.** The [fitting and inference workflow](BASELINE_RUN.md) now implements the model package and ERA5/SEAS5 adapters. Real fitting and complete audited inputs are still required before emission.
+This workflow records received data and prepares monthly forecast records for October 2026–September 2027. **The final hybrid was fitted and frozen on 29 September 2026; no real forecast has been issued.** ERA5, SEAS5 and the four required ocean indices passed their source checks. October emission remains blocked by missing CFSv2 members. See the [operational record](OPERATIONAL_STATUS.md) and [fitting and inference workflow](BASELINE_RUN.md).
 
 The [notebook](prospective_registry.ipynb) collects public sources, audits inputs, restores records and reports readiness. It does not train or substitute a model when inputs are unavailable.
 
@@ -26,4 +26,4 @@ python research/prospective/prepare_cfsv2.py --alvo 2026-10
 
 Save outputs. Attach the complete previous registry in Kaggle to restore its chain and objects. Restarting without it creates another chain and cannot prove earlier acquisitions.
 
-On 28 September 2026, September CFSv2 lacked members 21–24 and was blocked without a partial mean. No real forecast was frozen. This record does not assert the source's current state. Sources are listed in [DATA.md](../../docs/DATA.md).
+On 28 and 29 September 2026, the acquired September CFSv2 fields lacked members 21–24 and were blocked without a partial mean. A later acquisition must be checked again; this record does not assert the source's future state. Sources are listed in [DATA.md](../../docs/DATA.md).

@@ -1,8 +1,10 @@
 # Fit and issue the lagged baseline
 
-The executable workflow now covers final fitting, model registration, source normalization, inference and freezing. **Implementation is not an issued forecast:** a real run must still fit the package and acquire every required source before its deadline. Missing inputs block the run.
+The workflow covers final fitting, model registration, source normalization, inference and freezing. The first real final fit and authenticated ERA5/SEAS5 acquisition completed on 29 September 2026. **No forecast was issued:** September CFSv2 was incomplete. The [operational record](OPERATIONAL_STATUS.md) identifies the frozen package and remaining blocker.
 
 The separate `baseline_inference.ipynb` bundles this code for Kaggle. Attach the official training data, the two prepared seasonal datasets, and the **complete existing registry** with its `eventos` and `objetos` directories. It must resume that chain rather than create a replacement with invented earlier receipt dates.
+
+The first cell installs missing NetCDF/GRIB/CDS readers before importing xarray. Model-library versions are checked against the fixed training environment; they are not automatically upgraded. In a session where xarray was already imported before a reader was installed, restart from the saved registry instead of treating a cached missing reader as a missing source.
 
 ## Training
 
@@ -16,7 +18,7 @@ An existing model event blocks refitting. A package directory is never silently 
 
 ## Sources
 
-Public NOAA/CFSv2 collection continues through the existing adapters. ERA5 and SEAS5 use an existing CDS credential, supplied through the normal `cdsapi` environment or local `.cdsapirc`, never through committed code. On Kaggle, an enabled `CDS_KEY` secret can be passed through `CDSAPI_KEY` with `CDSAPI_URL=https://cds.climate.copernicus.eu/api`; do not print it. The CDS dataset terms must already have been accepted by the account owner.
+Public NOAA/CFSv2 collection continues through the existing adapters. ERA5 and SEAS5 use an existing CDS credential, supplied through the normal `cdsapi` environment or local `.cdsapirc`, never through committed code. On Kaggle, the operational run uses an enabled `CDS_API_KEY` secret, passed through the environment variable `CDSAPI_KEY` with `CDSAPI_URL=https://cds.climate.copernicus.eu/api`; do not print it. The secret label and environment-variable name are different. The CDS dataset terms must already have been accepted by the account owner.
 
 ```bash
 python research/prospective/collect_cds.py --registry outputs/prospective --target 2026-10
@@ -32,7 +34,7 @@ To register a GRIB already downloaded, preserving the actual *current* import ti
 python research/prospective/prepare_cds.py --registry outputs/prospective --target 2026-10 --source seas5 --file /path/to/source.grib
 ```
 
-Original bytes, normalized bytes and adapter source are linked in the registry. Local import cannot establish an earlier download time. Live authenticated CDS retrieval remains to be verified in the user's configured environment; isolated tests are not a substitute for that check.
+Original bytes, normalized bytes and adapter source are linked in the registry. Local import cannot establish an earlier download time. The authenticated run validated June 2026 ERA5 final monthly fields and the 51-member September 2026 SEAS5 forecast for October; future acquisitions must pass the same checks.
 
 ## Inference
 

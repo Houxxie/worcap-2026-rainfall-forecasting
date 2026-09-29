@@ -1,0 +1,30 @@
+{
+  "archive_sha256": "eb8ca693f053e1ec81d71e70e411798b43704e90cdfe7ab49570bafbb2e02990",
+  "archive_bytes": 102870856,
+  "previous_events": 13,
+  "events": 26,
+  "registry_tip": "6a42acfd497209f61ae80d9f5c4d46638b02806132b9df652fd6428bab1d3a97",
+  "object_hashes_verified": true,
+  "original_events_preserved": true,
+  "status": {
+    "mes_alvo": "2026-10",
+    "pronto": false,
+    "faltantes": [
+      "cfsv2: month 2026-09"
+    ],
+    "fontes": {
+      "era5_pl": "f54439998cc3eba26787d2fa61395e3b9054d81c670769dde59026bbe0aba15f",
+      "era5_sl": "741d3bc20a9ee906ca96e3c1b5fd6b1091e95d916496147ecf55ec87c9de9055",
+      "nino12": "7e8bc7bf753665ce6aa58ccaaaa62dfd627c20c52c3746077f524921d6ea881f",
+      "nino34": "c87d8d592d08a564bdf9e331b223d6ff180921113f3694afc3355fbd825cfa07",
+      "seas5": "6a42acfd497209f61ae80d9f5c4d46638b02806132b9df652fd6428bab1d3a97",
+      "tna": "c43dad243af91a985e822de5d46c33dbd43bf089502cf81a9aa3e5811263be4f",
+      "tsa": "9eeb4da93e2d733dc6ce1ab7a48a9303519f02b08e45f33a2331ffd065187710"
+    },
+    "modelo": "8b7fae77efa361b7ec09d4212f20f429a2ba30a01ebdba36ec44f0b9733e6d82",
+    "protocolo": "b61d3ae3dac9e65da02c1b6d5aa3b66f9d918bae94db51a9f55c3728cf490e37",
+    "previsao_emitida": false
+  },
+  "saved_kaggle_version": "353975624",
+  "model_files": 11
+}

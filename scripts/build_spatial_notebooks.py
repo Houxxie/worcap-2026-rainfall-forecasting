@@ -27,6 +27,16 @@ sys.path.insert(0, str(CODE_ROOT))
 sys.path.insert(0, str(CODE_ROOT/'research/prospective'))
 print('Reviewed source bundle:', CODE_ROOT)
 '''
+    if Path(output).stem == 'baseline_inference':
+        # Install readers before importing xarray, which caches optional engines.
+        bootstrap = '''import importlib.util, subprocess, sys
+READERS = {'netCDF4': 'netCDF4>=1.6,<2', 'cftime': 'cftime>=1.6,<2',
+           'h5netcdf': 'h5netcdf>=1.3,<2', 'cdsapi': 'cdsapi>=0.7,<1',
+           'eccodes': 'eccodes>=2.38,<3'}
+missing = [requirement for name, requirement in READERS.items() if importlib.util.find_spec(name) is None]
+if missing:
+    subprocess.run([sys.executable, '-m', 'pip', 'install', '-q', *missing], check=True)
+''' + bootstrap
     cells = [markdown((ROOT / introduction).read_text(encoding='utf-8')), code(bootstrap)] + following
     for i, cell in enumerate(cells):
         cell['id'] = f'cell-{i:02d}'

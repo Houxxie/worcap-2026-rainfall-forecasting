@@ -254,16 +254,20 @@
       "bytes": 3757
     },
     "research/prospective/BASELINE_RUN.md": {
-      "sha256": "81110fe62bce2e9f5088d6b364a6c28c1dc1828264a2b237e773a0761b599077",
-      "bytes": 4045
+      "sha256": "3b7ee094a473eab2ccbd499790b27896f287854cf931214be0c9b858a87ee1db",
+      "bytes": 4629
+    },
+    "research/prospective/OPERATIONAL_STATUS.md": {
+      "sha256": "2acc0e5a64e7dfc6670444585ecc65723bfcce4a031adb104af5df0b6f02a932",
+      "bytes": 3606
     },
     "research/prospective/README.md": {
-      "sha256": "aa15de5679b1ee126a0362120b4cb57185ae72aa093f592f29de13336e4e897a",
-      "bytes": 2297
+      "sha256": "fa8d6f8a63b99ebd9ed412861b783c3c8c7b75209c78fa0190089e3bad5e50c5",
+      "bytes": 2430
     },
     "research/prospective/baseline_inference.ipynb": {
-      "sha256": "1be06bb161f4db00ab4a298b056072e79343b1be4579923caa762b5b4e9ceaf3",
-      "bytes": 237375
+      "sha256": "4675f6b6ca76b037711422d5c5b52bd38814940705d18417ec31c18e1ee8e93d",
+      "bytes": 238844
     },
     "research/prospective/cfsv2_adapter.py": {
       "sha256": "79c698b6e0cd1cb16aa21f0b919bc521e4836cdb0252a605f3a7268eb24e136b",
@@ -284,6 +288,14 @@
     "research/prospective/evaluate.py": {
       "sha256": "0e1297cb9acfb22005fb22e6ea2054e484899933a15a3d349a43dd2d978a20a8",
       "bytes": 3684
+    },
+    "research/prospective/evidence/operational_2026_10.json": {
+      "sha256": "74aa141b5ae0b801ec91e55b24fe3b2a934102a4a103061f330f9b2fc9a6ba9e",
+      "bytes": 6608
+    },
+    "research/prospective/evidence/operational_2026_10_verification.json": {
+      "sha256": "9844e5678040d5b0748c07bb189f56651889179dc78b9eaf37ace3ecc8142660",
+      "bytes": 1303
     },
     "research/prospective/fit_baseline.py": {
       "sha256": "d6c8bd10a98174eef9f7efc24a465e1a92fa58ded3c6c918bcf97c56cabac38b",
@@ -310,12 +322,12 @@
       "bytes": 3253
     },
     "research/prospective/prospective_registry.ipynb": {
-      "sha256": "419410f25096a986cea09748cbb1360bab3fce7edd164508cd9220980ecd7f6a",
-      "bytes": 68188
+      "sha256": "d1f193c95a10b8b5603fcb62aee6b0cfe065630920fdef6dfac2b99441f1781a",
+      "bytes": 68841
     },
     "research/prospective/registry.py": {
-      "sha256": "79f02d3718f44102bf366b52e2fe262b44dd505821a34fc3930527c2313f6893",
-      "bytes": 11496
+      "sha256": "71a2d34a21c5f1005aa424f3465e23f963ec92f06491cd184c605c7d9f036690",
+      "bytes": 11602
     },
     "research/prospective/requirements.txt": {
       "sha256": "5d94e4558764ac18a61f9198c5636813ca14b4ddd57a5718a23d3da386e786f9",
@@ -330,8 +342,8 @@
       "bytes": 9195
     },
     "research/prospective/test_registry.py": {
-      "sha256": "7f1ee1898837f730e0be6791ed348666da5a1acb4f677140dc8f99e3ecb1cd7b",
-      "bytes": 8878
+      "sha256": "bbac9ddaca1c377f14a157432a07f3d66a101680d7c335dc903ab8897183bc0d",
+      "bytes": 9099
     },
     "research/spatial_unet/PILOT_RESULTS.md": {
       "sha256": "eea1cf4457664cba11cdf0663a56b8a88cb67090765e132566eeef927bf58c08",
@@ -838,12 +850,12 @@
       "bytes": 934
     },
     "scripts/build_notebooks.py": {
-      "sha256": "a45e1b809784a09a22a55e72ba2284d064e5752e699caa8d99c20288c6ab464d",
-      "bytes": 6613
+      "sha256": "7bbe589499d46bd8a611b7ee2f8a73fd0505e68eab4f3ae42d0bd524aeb86782",
+      "bytes": 6625
     },
     "scripts/build_spatial_notebooks.py": {
-      "sha256": "ce8f9bd524ac3eb4113907ab914504ccf7bca7d751b8b940f1b857d00fe94dbc",
-      "bytes": 8725
+      "sha256": "e066ffca341f659b67f5967fd1ba17102c15c0956712268fd87dcb7f6c18499b",
+      "bytes": 9325
     },
     "scripts/render_overview.py": {
       "sha256": "92976dfc7802057160a0d6eb4e17054108bd35407bccccceca3e1255be570897",
