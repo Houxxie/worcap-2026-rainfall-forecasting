@@ -1,5 +1,12 @@
 # Changelog
 
+## Research evaluation workflow — 2026-09-29
+
+- Add one configured entry point for evaluating saved hybrid/U-Net maps or running their existing seven-block comparison.
+- Add a self-contained Kaggle notebook, early input checks, distinct run directories, source/configuration snapshots, failure records and output verification.
+- Generate a portable HTML report with embedded diagnostic figures and paired block/year metrics.
+- Validate saved-mode integration on the real 2007–2020 predictions, reproducing archived scores without refitting or changing the operational model.
+
 ## English presentation — 2026-09-28
 
 - Rename the repository to `worcap-2026-rainfall-forecasting`.

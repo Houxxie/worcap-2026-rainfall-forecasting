@@ -1,0 +1,12 @@
+{
+  "schema": "rainfall_workflow_v1",
+  "name": "fixed-unet-comparison",
+  "mode": "train",
+  "device": "cuda",
+  "output_root": "../../outputs/experiments",
+  "inputs": {
+    "official": "/path/to/official",
+    "seas5": "/path/to/prepared_seas5",
+    "cfsv2": "/path/to/prepared_cfsv2"
+  }
+}
