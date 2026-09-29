@@ -1,0 +1,127 @@
+{
+  "code": {
+    "research/common/__init__.py": "4f6bfaae6ba45669c7d41e1b087df0582970932f06cdea87a4ff3b352f4135f0",
+    "research/common/baseline.py": "653594bf49fa338304129d7d22e7dc31a4e32647b26ee87af7bea4bad94a4dfa",
+    "research/common/inputs.py": "d22140d4ad3db4ac3fecdca26c7ebdd1d780486b51622a1f333fce2a637e6851",
+    "research/common/synthetic_fixture.py": "da4de7a662c2c8c25f324c5b543ab04914d490ffde5e316c39187eb8f1640bff",
+    "research/spatial_unet/__init__.py": "ee933fd666f8d33250d76a02fcd8b898d3a2dc7b341dde8165411387cfa27c19",
+    "research/spatial_unet/network.py": "f1d10bbe1634018857b4fda8ae2753c1cf43d553f221e338bd1d6dcd89f40654",
+    "research/spatial_unet/run_experiment.py": "4484f2a6c0b29bee18e003ecfab880f0e16e192f1d1b9c71e90bc486f1cd6412",
+    "research/spatial_unet/test_spatial.py": "65215314cb5ebd1229ded058c4aab91ab71b9ceccc6af8a83de25668301a8516",
+    "research/spatial_unet/training.py": "698d27f397a312c3a4a5f832a15fa09fe431095431b74ca328a8034c3f232275"
+  },
+  "cuda": "12.8",
+  "cudnn": 91002,
+  "device": "cuda",
+  "gpu": "Tesla T4",
+  "inputs": {
+    "files": {
+      "cfsv2_desenvolvimento.nc": "1c20df191e347268d3844bff855904a963d5769544929dfcc03363a5f5720163",
+      "cfsv2_manifesto.json": "02423b1016bae9c90314d7aea1cab6b374d09c010c226f635576d7f79f42d196",
+      "seas5_51_desenvolvimento.nc": "bb4ba9085b32f008172ba1987b5c158263d0019a63e52046ad4c99dc20e02fa8",
+      "seas5_51_manifesto.json": "c7ce3a54f9a6f16189f5732ce12898ad42e1128de1a9395170c50b97718a45a9",
+      "treino_cloud_cover.nc": "607ee1210615a0ca8a5c954737617e668a5f016eb881554cb1468fda74b4fde1",
+      "treino_geopotential_850.nc": "ca3baca0177e2e90b42901803f348a4b4affe88bee202b76af3f293fa7035c17",
+      "treino_rel_hum_850.nc": "90f62b44b1b461259e7539249914e26cf09993f3bcd572ba4871931e45264b19",
+      "treino_shum_850.nc": "35cf8071b68d1e924ad87e0f8bd801d0a66d1d78ae75fc3cb623bde85c3f47bb",
+      "treino_surface_pressure.nc": "f00a5e44a03ea923ac0f693b975ef71cd347f8ad3d07692c602e3ac9a25c10fb",
+      "treino_t2.nc": "7d8c53b438289cddf87a11414ad10c8167f52ff33c6eff459a3288975079ef23",
+      "treino_temperature_850.nc": "1db7b4fdeba87b6a25f7fb6f1e40abec50964234dd9cc918cd34f902b8e41bac",
+      "treino_tp.nc": "012bebbe0e38aefdf4f9e2432c3ca22f71d94ea1a1b5421da9d9e5048632cab0",
+      "treino_tp_alvo.nc": "915f67f2627e37399830d1dd92b209ce1160082b0645662675eab17df957abe4",
+      "treino_u_850.nc": "73c898f27bea25cf2ab0914bbe5c29acc9794a93f8b6b3affa39854bebccf761",
+      "treino_v_850.nc": "7bab583972e5718bb0e0fe0fe6a056bd56c968af1f1497205182f7621e26c241"
+    },
+    "final_training": false,
+    "forecast_partitions": [
+      "desenvolvimento"
+    ],
+    "indices_sha256": "69226b2e65f783b4d4971a254d1e325d0908447c76ec1df3bf532ecef1f0cf5b",
+    "library_sha256": "4b92dd77d868d7806fd0ae37d2837abfcde36e173df75b1bd6d88760593ee9c3",
+    "rainfall_read": [
+      "1976-10-01",
+      "2020-12-01"
+    ],
+    "sst_used": false,
+    "test_partition_read": false,
+    "versions": {
+      "lightgbm": "4.6.0",
+      "numpy": "2.0.2",
+      "pandas": "2.3.3",
+      "xarray": "2025.12.0"
+    }
+  },
+  "protocol": {
+    "architecture": {
+      "activation": "SiLU",
+      "channels": [
+        16,
+        32,
+        64
+      ],
+      "convolutions_per_block": 2,
+      "kernel": 3,
+      "normalization": "GroupNorm_4",
+      "output": "one_unbounded_rainfall_anomaly",
+      "padding": "replicate",
+      "upsampling": "bilinear_align_corners_false"
+    },
+    "augmentation": "none: do not flip geography or mix months across temporal boundaries",
+    "baseline": {
+      "architecture": "two_LightGBM_and_local_ridge",
+      "residual_scales": [
+        0.9,
+        0.875
+      ],
+      "weights": [
+        0.375,
+        0.375,
+        0.25
+      ]
+    },
+    "batch_size": 2,
+    "blend": "none",
+    "comparison_limit": "same source information and target months; U-Net uses all pixels in monthly maps, baseline trees use 5000 sampled pixels per month",
+    "evaluation": [
+      "2007-01",
+      "2020-12"
+    ],
+    "id": "spatial_unet_v1",
+    "inner_label_lag": 4,
+    "inner_validation_months": 24,
+    "lags": {
+      "atmosphere": 4,
+      "indices": 3,
+      "seasonal_initialization": 1,
+      "training_rainfall": 4
+    },
+    "loss": "unweighted pixel MSE in mm/day anomalies; mean over complete monthly maps",
+    "max_epochs": 40,
+    "max_training_months": 360,
+    "optimizer": {
+      "gradient_clip_norm": 1.0,
+      "learning_rate": 0.001,
+      "name": "AdamW",
+      "weight_decay": 0.0001
+    },
+    "outer_metrics": [
+      "RMSE",
+      "MAE",
+      "bias",
+      "area_weighted_RMSE",
+      "year",
+      "block",
+      "latitude_band"
+    ],
+    "patience": 6,
+    "prospective_registration": "separate future protocol after historical development; never alter the existing hybrid registry",
+    "reconstruction": "maximum(0, training_rainfall_climatology + predicted_anomaly); no tuned residual scale",
+    "scaling": "per-channel mean and standard deviation fitted on training maps only; standard deviation floor 1e-6",
+    "seed": 42,
+    "selection": "lowest reconstructed inner RMSE; earliest epoch on ties; refit from seed on full outer training window for that epoch count",
+    "sources": "same 31 available features as the lagged multisystem component; no SST or new source",
+    "status": "development_experiment_not_independent_holdout"
+  },
+  "python": "3.12.13",
+  "torch": "2.10.0+cu128"
+}

@@ -1,0 +1,13 @@
+{
+  "blocks": [
+    "H1"
+  ],
+  "complete_seven_blocks": false,
+  "delta_rmse": 0.0022378499197146517,
+  "forecast_issued": false,
+  "hybrid_rmse": 1.7413644424984764,
+  "independent_holdout": false,
+  "interpretation": "Development comparison on previously consulted years. A pilot is not the seven-block result.",
+  "model_promoted": false,
+  "unet_rmse": 1.743602292418191
+}

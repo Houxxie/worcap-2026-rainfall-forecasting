@@ -17,6 +17,7 @@ Units: mm/day. SST reduced RMSE by 0.0363% but worsened MAE and bias; it remains
 - [Prospective registry](prospective/README.md)
 - [Final baseline fitting and inference](prospective/BASELINE_RUN.md)
 - [Spatial U-Net experiment](spatial_unet/README.md)
+- [First U-Net pilot: results and execution record](spatial_unet/PILOT_RESULTS.md)
 - [Earlier research results](../docs/RESEARCH_HISTORY.md)
 
 The baseline has been evaluated historically. Final fitting, source adapters and inference are implemented; a real prospective run still needs its fitted package and complete inputs. No real forecast has been emitted by the implementation or synthetic checks. The U-Net workflow is a separate development experiment, without a claimed improvement.
