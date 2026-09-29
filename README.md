@@ -8,7 +8,7 @@ After the competition, I decided to keep working on it. This repository brings t
 
 ![Overview of the rainfall forecasting model](assets/model_overview.png)
 
-📝 ## About the project
+## 📝 About the project
 
 The goal is to predict monthly rainfall patterns across South America using atmospheric data, ocean indices, and seasonal climate forecasts.
 
@@ -26,7 +26,7 @@ Training uses up to 30 years of data, with climatologies and transformations fit
 
 The [competition notebook](competition/hybrid_forecast.ipynb) explains the full process, from loading the data to generating the final CSV.
 
-💾 ## Technologies
+## 💾 Technologies
 
 - Python
 - NumPy
@@ -38,7 +38,7 @@ The [competition notebook](competition/hybrid_forecast.ipynb) explains the full 
 - NetCDF/GRIB
 - Kaggle
 
-🛠️ ## How I built it
+## 🛠️ How I built it
 
 The starting point was a model based on rainfall climatology. From there, I gradually added atmospheric and ocean information. Seasonal forecasts provided another way to represent the conditions expected for each target month.
 
@@ -50,7 +50,7 @@ After the competition, my focus shifted toward forecasts for future months. That
 
 The [research folder](research/README.md) contains this work: the current baseline, an experiment with global SST and PCA, and a registry of source arrivals. The complete pipeline for issuing future forecasts is still being integrated.
 
-💡 ## What I learned
+## 💡 What I learned
 
 ### Working with climate data
 
@@ -76,7 +76,7 @@ Over time, I started paying more attention to MAE, bias, and results by year and
 
 Reproducing the submission taught me to keep track of configurations, package versions, input files, and hashes. It also showed me how something as small as the order of CSV rounding can change the final file.
 
-📝 ## Running the competition model
+## 🚀 Running the competition model
 
 The notebook is prepared to run in Kaggle:
 
