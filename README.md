@@ -1,4 +1,4 @@
-🌎 # WorCAP 2026 · Rainfall Forecasting
+# 🌎 WorCAP 2026 · Rainfall Forecasting
 
 Monthly rainfall forecasting over South America, combining seasonal climate forecasts, gradient boosting, and local ridge regression.
 
