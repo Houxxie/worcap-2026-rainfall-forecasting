@@ -106,8 +106,8 @@
       "bytes": 1460
     },
     "research/README.md": {
-      "sha256": "139896a8a6b59a880f39067a6ed65527fbbbcea1ad95103a97ece594a84388a2",
-      "bytes": 1763
+      "sha256": "76a9473bf868798cf9d79b9faefbcaeaeae156c2e3aa872fbb3c4b256dacef81",
+      "bytes": 1925
     },
     "research/common/__init__.py": {
       "sha256": "4f6bfaae6ba45669c7d41e1b087df0582970932f06cdea87a4ff3b352f4135f0",
@@ -334,12 +334,16 @@
       "bytes": 8878
     },
     "research/spatial_unet/PILOT_RESULTS.md": {
-      "sha256": "fea3b27d9624183970d2c638335bc70ad2fc783f45f33bf186eb668d5764ab93",
-      "bytes": 3233
+      "sha256": "eea1cf4457664cba11cdf0663a56b8a88cb67090765e132566eeef927bf58c08",
+      "bytes": 3457
     },
     "research/spatial_unet/README.md": {
       "sha256": "94a7dd9386e18d829b6529123867c58c665d2211d7d2ee1586ef4ba902e24de6",
       "bytes": 5972
+    },
+    "research/spatial_unet/RESULTS.md": {
+      "sha256": "1126e4eac1d9a6a81723128cf640da1bcda77f8fe4cc4748eb657e963856c228",
+      "bytes": 5925
     },
     "research/spatial_unet/__init__.py": {
       "sha256": "ee933fd666f8d33250d76a02fcd8b898d3a2dc7b341dde8165411387cfa27c19",
@@ -425,6 +429,378 @@
       "sha256": "de3e7f8a76c32131b9838ca689aa927440f5886879c3e59dc66ffb8f828d4c5c",
       "bytes": 1224
     },
+    "research/spatial_unet/evidence/seven_blocks/A/baseline_check.json": {
+      "sha256": "e14a23353cd8d4a73ed10f51337c8ca9aac882a12e654dc4979efc3108d062b0",
+      "bytes": 124
+    },
+    "research/spatial_unet/evidence/seven_blocks/A/complete.json": {
+      "sha256": "0bb726d929c72c999e89bb43653b70dcf2033f352f76bcba1932eaf0ec023f3a",
+      "bytes": 2705
+    },
+    "research/spatial_unet/evidence/seven_blocks/A/hybrid/fit.json": {
+      "sha256": "8f55c5ca472389590e4ae08f621524f5fbe616278e1eeb3b3ec53f4e9ad10d62",
+      "bytes": 2728
+    },
+    "research/spatial_unet/evidence/seven_blocks/A/inner/context.json": {
+      "sha256": "676a517a25f215bc59fc5db7eb00256ab035e25258512c59d9e0a274ec9c2722",
+      "bytes": 10953
+    },
+    "research/spatial_unet/evidence/seven_blocks/A/inner/training.json": {
+      "sha256": "72363f855838e9d4185559d95a00ccc80aa4fe055ebc71763b8c3da5cca09ab2",
+      "bytes": 186
+    },
+    "research/spatial_unet/evidence/seven_blocks/A/inner/training_history.json": {
+      "sha256": "3bf2693365a121adaba2828a1e941cd30d298886bf95ec27f96db262e720c950",
+      "bytes": 1779
+    },
+    "research/spatial_unet/evidence/seven_blocks/A/monthly_metrics.csv": {
+      "sha256": "e94feeaa24c019b6843a190806ca108dc5ff32556c9a82e5abc996e0e7a279b2",
+      "bytes": 42532
+    },
+    "research/spatial_unet/evidence/seven_blocks/A/source_calendar.csv": {
+      "sha256": "d128b8d7afa6626f8bef46d11c0db715d22a6d0b791554fe858b052c250ec991",
+      "bytes": 2573
+    },
+    "research/spatial_unet/evidence/seven_blocks/A/split.json": {
+      "sha256": "7b13475e8dd96144a7c4f91724bb81cc0c68d9ad10be33f475089fe284b4cb97",
+      "bytes": 16310
+    },
+    "research/spatial_unet/evidence/seven_blocks/A/unet/context.json": {
+      "sha256": "1ef3da22657165feee22bd4f91cb4cb053d77f7041db183bd897570bc051167c",
+      "bytes": 11763
+    },
+    "research/spatial_unet/evidence/seven_blocks/A/unet/training.json": {
+      "sha256": "90d834c5f3c9894531f5cd9829c2059e0e288b63f89928f0495ff19b397c1bbc",
+      "bytes": 187
+    },
+    "research/spatial_unet/evidence/seven_blocks/A/unet/training_history.json": {
+      "sha256": "7ebb09bab80a6e31d2e63c1073cc9c6438575321d050f86ad9f39a297e57fec0",
+      "bytes": 686
+    },
+    "research/spatial_unet/evidence/seven_blocks/B/baseline_check.json": {
+      "sha256": "f1d3970e916b9b4a2ccdec3cc2f7f1476d1d4b6fec65a8ae6c7bae72194f2a37",
+      "bytes": 122
+    },
+    "research/spatial_unet/evidence/seven_blocks/B/complete.json": {
+      "sha256": "109976d9d35e6ccb343daeb34139f5ddf03ccff552eb3f73803773277fdf2a74",
+      "bytes": 2705
+    },
+    "research/spatial_unet/evidence/seven_blocks/B/hybrid/fit.json": {
+      "sha256": "8e7c0f7909120dd1b5987354c9d5712c079d46d3cb4498159218a1e6cbd483ce",
+      "bytes": 2728
+    },
+    "research/spatial_unet/evidence/seven_blocks/B/inner/context.json": {
+      "sha256": "9a5ad03e2a42ff3baca1a42809ca2a07bdbc2248b7b1a375fadbcef23e45aa97",
+      "bytes": 10953
+    },
+    "research/spatial_unet/evidence/seven_blocks/B/inner/training.json": {
+      "sha256": "86fb5a91dfbcd0ee802b032691767bbe20429316f8ffd55fcc0111626f197ee8",
+      "bytes": 187
+    },
+    "research/spatial_unet/evidence/seven_blocks/B/inner/training_history.json": {
+      "sha256": "a57824d77f62ed7657c61a93057c187b997ec0fb6340c5240ee1be6135e5f2c1",
+      "bytes": 3277
+    },
+    "research/spatial_unet/evidence/seven_blocks/B/monthly_metrics.csv": {
+      "sha256": "8553057907dcccc2740682c99771b9d010737cd32145493c88f68847a9ba156f",
+      "bytes": 42597
+    },
+    "research/spatial_unet/evidence/seven_blocks/B/source_calendar.csv": {
+      "sha256": "fca88bee094820b02b12ad18bc65e9b1090125af011a407174e89400fb2f6e70",
+      "bytes": 2573
+    },
+    "research/spatial_unet/evidence/seven_blocks/B/split.json": {
+      "sha256": "9f91c64097ede8c47da2404ca89cee79f38e14e508b5bce309925187967a0953",
+      "bytes": 16310
+    },
+    "research/spatial_unet/evidence/seven_blocks/B/unet/context.json": {
+      "sha256": "53bfc4ba55e6d4fedad64f3453fe2839c4ed841054cfb48f5a58b44566687611",
+      "bytes": 11763
+    },
+    "research/spatial_unet/evidence/seven_blocks/B/unet/training.json": {
+      "sha256": "df8c77187b46c19cb97ce24af3e2f11dc87c69c0993d812b1c9abad0c8f5ced7",
+      "bytes": 188
+    },
+    "research/spatial_unet/evidence/seven_blocks/B/unet/training_history.json": {
+      "sha256": "73cfbf2afb218971a24bbfe5ebe960a1e9a0087bbc538d26bc64a2b87d70b01e",
+      "bytes": 1774
+    },
+    "research/spatial_unet/evidence/seven_blocks/C/baseline_check.json": {
+      "sha256": "7f122d971f5a90098d901fe995d1a7c33700c97be5ebea93d3668d9e584207ad",
+      "bytes": 124
+    },
+    "research/spatial_unet/evidence/seven_blocks/C/complete.json": {
+      "sha256": "2da0f3ca0c924c11de9721e6735b5174539e6e34151f548b27d602be83a184af",
+      "bytes": 2705
+    },
+    "research/spatial_unet/evidence/seven_blocks/C/hybrid/fit.json": {
+      "sha256": "577ea29297b3fb26e045bf08192d2bf19bbe035e1b7faad0190be3f2f0a1a084",
+      "bytes": 2728
+    },
+    "research/spatial_unet/evidence/seven_blocks/C/inner/context.json": {
+      "sha256": "8c3edfeeee8b38f5eaa4c1519cbab6587386694f678f9020320a84b385f5f51a",
+      "bytes": 10953
+    },
+    "research/spatial_unet/evidence/seven_blocks/C/inner/training.json": {
+      "sha256": "9d8fb4da86c2dcc78793842be18bd8e5a4f7ff5f3e30d8fc3511c54bae7e1a31",
+      "bytes": 186
+    },
+    "research/spatial_unet/evidence/seven_blocks/C/inner/training_history.json": {
+      "sha256": "588792d87882e50dba74e53f279ff5006c71e4b3a29ebb47a1ee9ec0272b42f9",
+      "bytes": 2048
+    },
+    "research/spatial_unet/evidence/seven_blocks/C/monthly_metrics.csv": {
+      "sha256": "7e1e251ba0121ca2f2f0e610aa1ed25b964cd0b82cbdb1c01947218063ee4eff",
+      "bytes": 42504
+    },
+    "research/spatial_unet/evidence/seven_blocks/C/source_calendar.csv": {
+      "sha256": "546f288ede5e7bb85086c835b6f94bde96f77bf14f4fe2259a1933d1cec609a4",
+      "bytes": 2573
+    },
+    "research/spatial_unet/evidence/seven_blocks/C/split.json": {
+      "sha256": "913001edf8a679143de0b4a95bf96f57d359eb22a2183a0a7e4f4d2d25e02aba",
+      "bytes": 16310
+    },
+    "research/spatial_unet/evidence/seven_blocks/C/unet/context.json": {
+      "sha256": "86d1acac07bc68d5ecbd83de97e50940fd1c799fac695914c821d3fc9efe8255",
+      "bytes": 11763
+    },
+    "research/spatial_unet/evidence/seven_blocks/C/unet/training.json": {
+      "sha256": "9f08d5f86d56687d2fc626545a93d151f602216d68bcf9a9919bf12ed7c47e52",
+      "bytes": 187
+    },
+    "research/spatial_unet/evidence/seven_blocks/C/unet/training_history.json": {
+      "sha256": "b5f1f29b8884f21e05eec676a5ac873c8916c46ab1f71412b32613217aa128e1",
+      "bytes": 889
+    },
+    "research/spatial_unet/evidence/seven_blocks/H1/baseline_check.json": {
+      "sha256": "eaf22b2e51fc3a65d5f9777c76871e1d678a67e77c35f37d4e28fb928b9a228f",
+      "bytes": 124
+    },
+    "research/spatial_unet/evidence/seven_blocks/H1/complete.json": {
+      "sha256": "64478bbd8173af1be6c81b842f7c4519d4f86db289e20fac826e0c25a3b893cf",
+      "bytes": 2705
+    },
+    "research/spatial_unet/evidence/seven_blocks/H1/hybrid/fit.json": {
+      "sha256": "5f21f82ff87762ecc1c2d9c38b7231aa61fc5a6e7a9dd2265cd9edc3c17c047a",
+      "bytes": 2728
+    },
+    "research/spatial_unet/evidence/seven_blocks/H1/inner/context.json": {
+      "sha256": "20b0cf183a2c0651ec09126371cfceba4d5b93e3e937536b29ef40224a037c43",
+      "bytes": 9978
+    },
+    "research/spatial_unet/evidence/seven_blocks/H1/inner/training.json": {
+      "sha256": "6c2f05c250aa4c694bd9b96bbdc76d497e9bd18b7ec2c814f5141a7f3712082c",
+      "bytes": 186
+    },
+    "research/spatial_unet/evidence/seven_blocks/H1/inner/training_history.json": {
+      "sha256": "03d6e27f74a03baf79da6b6cf37428bea999c084f454ed4874b89a8b8dddc77c",
+      "bytes": 1502
+    },
+    "research/spatial_unet/evidence/seven_blocks/H1/monthly_metrics.csv": {
+      "sha256": "73eaea553f587b1b664ced3760bb1e47c33b25d271ce595c6fc7abf986efb862",
+      "bytes": 42848
+    },
+    "research/spatial_unet/evidence/seven_blocks/H1/source_calendar.csv": {
+      "sha256": "321b876fcfb1e4c8ef4a4e0e51c0c45b4319c47f09160ad6c08c157c396c402d",
+      "bytes": 2573
+    },
+    "research/spatial_unet/evidence/seven_blocks/H1/split.json": {
+      "sha256": "2339fc58697d911f5631261d50aa0f2242ac54eabdce38a0d2d9a47a31d2fea7",
+      "bytes": 14360
+    },
+    "research/spatial_unet/evidence/seven_blocks/H1/unet/context.json": {
+      "sha256": "98fcb35a3397b6f3059f7bcfb0a105e6dd7e1d1de4bb98a5e5504b9f03332cab",
+      "bytes": 10788
+    },
+    "research/spatial_unet/evidence/seven_blocks/H1/unet/training.json": {
+      "sha256": "6c856cbb90035b6e4bbf6a1db33f7acea11edeec23c9787a8ad54f7d39af81f2",
+      "bytes": 187
+    },
+    "research/spatial_unet/evidence/seven_blocks/H1/unet/training_history.json": {
+      "sha256": "3013155d59efc48bb61ae1eb8e5924c18ca7f4c366a6a6eee7ffd8245e53e6b4",
+      "bytes": 489
+    },
+    "research/spatial_unet/evidence/seven_blocks/H2/baseline_check.json": {
+      "sha256": "1a086678d5bd3a8347fac1a42cb69dcd3e5adae04290c9dad83715f94a05367e",
+      "bytes": 124
+    },
+    "research/spatial_unet/evidence/seven_blocks/H2/complete.json": {
+      "sha256": "f5ea5ff51bdceff56c69b38ee41b78366494f59747b6eb97013730b570920ef3",
+      "bytes": 2705
+    },
+    "research/spatial_unet/evidence/seven_blocks/H2/hybrid/fit.json": {
+      "sha256": "4d0f6b4c45b641fbc852c731a9ef333d6521ce4d765839f3478b17b66b2c8d1e",
+      "bytes": 2728
+    },
+    "research/spatial_unet/evidence/seven_blocks/H2/inner/context.json": {
+      "sha256": "cfc79749c8c7537767d59633b9ba42416278e84c05bf131d3931704b28744e8a",
+      "bytes": 10338
+    },
+    "research/spatial_unet/evidence/seven_blocks/H2/inner/training.json": {
+      "sha256": "5ee6d6965db0b3886a2f2bf0391fc9dacd1d3a58c19f9f26af13720dac29a248",
+      "bytes": 187
+    },
+    "research/spatial_unet/evidence/seven_blocks/H2/inner/training_history.json": {
+      "sha256": "dfe2400a2c50455d20669d19208df4aea35130d25ff16c12476291ba8cbb9489",
+      "bytes": 5062
+    },
+    "research/spatial_unet/evidence/seven_blocks/H2/monthly_metrics.csv": {
+      "sha256": "0fcd88f5c2c791aa09776186eae38f9fd06c54e3c7c13d9486a3c672ce755f9a",
+      "bytes": 42901
+    },
+    "research/spatial_unet/evidence/seven_blocks/H2/source_calendar.csv": {
+      "sha256": "40a890485099c431c3418b091adafd8d103cc20192bce2d24d18e280a7068507",
+      "bytes": 2573
+    },
+    "research/spatial_unet/evidence/seven_blocks/H2/split.json": {
+      "sha256": "585fff2facadac324229427d0c7b3ed990b20051cf7dc3f1632f1b99b6daffee",
+      "bytes": 15080
+    },
+    "research/spatial_unet/evidence/seven_blocks/H2/unet/context.json": {
+      "sha256": "e12e2c1791d54c5769aaba7dc9e51e78f9761185e08a4c55cb7b454af70083c2",
+      "bytes": 11148
+    },
+    "research/spatial_unet/evidence/seven_blocks/H2/unet/training.json": {
+      "sha256": "72c64d5d55baa6dcc719dfc38c5d65df70e8f3f052f525cfde085703284d3535",
+      "bytes": 188
+    },
+    "research/spatial_unet/evidence/seven_blocks/H2/unet/training_history.json": {
+      "sha256": "79910009d5bd562eb266ae0c58fe33930d990af9b96a9fea35c5338c8b071d58",
+      "bytes": 3056
+    },
+    "research/spatial_unet/evidence/seven_blocks/H3/baseline_check.json": {
+      "sha256": "644d6cf9bd5f820da8f6d934bf6d771d9fc9a2aff2a2a0ea5f26f15aa33d7bd7",
+      "bytes": 124
+    },
+    "research/spatial_unet/evidence/seven_blocks/H3/complete.json": {
+      "sha256": "133b63c716b60e9083e270616af4bf877e25ba4549e229fa38af6d2ac35fa264",
+      "bytes": 2705
+    },
+    "research/spatial_unet/evidence/seven_blocks/H3/hybrid/fit.json": {
+      "sha256": "cb8dd4422964a56f38ad49e1c815143946cf45f2d661b885cb48dd70cf0e2a96",
+      "bytes": 2728
+    },
+    "research/spatial_unet/evidence/seven_blocks/H3/inner/context.json": {
+      "sha256": "00b5fed9836a2bc3f3a255b6d0e4eae087274aaccd672a4237147d876d51c686",
+      "bytes": 10698
+    },
+    "research/spatial_unet/evidence/seven_blocks/H3/inner/training.json": {
+      "sha256": "3c8c735d4b2dc0e35bbda761ac5812a6ef4cab49cb226af69b912dd577152f45",
+      "bytes": 187
+    },
+    "research/spatial_unet/evidence/seven_blocks/H3/inner/training_history.json": {
+      "sha256": "361bc891a20f8a41146c678505ad143e4b709db71505e259ef9dd60b0d6cc5b6",
+      "bytes": 2182
+    },
+    "research/spatial_unet/evidence/seven_blocks/H3/monthly_metrics.csv": {
+      "sha256": "759c72686d504b1924e12dd226aaaa4c75a7ab1a0eb696a0148ad48d22e8b394",
+      "bytes": 42899
+    },
+    "research/spatial_unet/evidence/seven_blocks/H3/source_calendar.csv": {
+      "sha256": "83fd3d6e0c46b7dabe91db01412a1e79a5fa71a21795a15d0003ef3032d3fde0",
+      "bytes": 2573
+    },
+    "research/spatial_unet/evidence/seven_blocks/H3/split.json": {
+      "sha256": "21c77b2eec0d5af702eff0fc9f274dd28fea3251aebc8daf2c8522525a627b09",
+      "bytes": 15800
+    },
+    "research/spatial_unet/evidence/seven_blocks/H3/unet/context.json": {
+      "sha256": "c0a913ef821e411feb93a13e942a5e2ec53cfa7ad93a73641e35c8a70f41594a",
+      "bytes": 11508
+    },
+    "research/spatial_unet/evidence/seven_blocks/H3/unet/training.json": {
+      "sha256": "61e5529a342aaf14026b9a86c9446f231c7c8ca84bf0ff11d6a33b5cf93fa819",
+      "bytes": 188
+    },
+    "research/spatial_unet/evidence/seven_blocks/H3/unet/training_history.json": {
+      "sha256": "37db5dbca3e3073d06e4bb23044905a4ac375d82198ff097a2c6d4ca131c8720",
+      "bytes": 983
+    },
+    "research/spatial_unet/evidence/seven_blocks/H4/baseline_check.json": {
+      "sha256": "f63e083fc255c449e3d6ded37cda31783f7fce53bc5e77da09f32f1faeeba638",
+      "bytes": 124
+    },
+    "research/spatial_unet/evidence/seven_blocks/H4/complete.json": {
+      "sha256": "c96c02069fa58efdd016535b73703749b7b88c910a5f073f66ef03b132a4d490",
+      "bytes": 2705
+    },
+    "research/spatial_unet/evidence/seven_blocks/H4/hybrid/fit.json": {
+      "sha256": "71dc8f55d121d8e4596a16bf5af7ab7f2d855268226e5b7ed431156cd8ca8089",
+      "bytes": 2728
+    },
+    "research/spatial_unet/evidence/seven_blocks/H4/inner/context.json": {
+      "sha256": "d13ae70d1b8044789f4f264a89aea0d82e95f5df71615c6d1b5821288fbf1bce",
+      "bytes": 10953
+    },
+    "research/spatial_unet/evidence/seven_blocks/H4/inner/training.json": {
+      "sha256": "91b3dce3ef9877051688692dfa9139e818f42b88f59ade24909e68eeed0b9ae7",
+      "bytes": 187
+    },
+    "research/spatial_unet/evidence/seven_blocks/H4/inner/training_history.json": {
+      "sha256": "53787e9943551bcaf186863383f31ef8ba92329e4f7623d49c86106fef56a273",
+      "bytes": 3279
+    },
+    "research/spatial_unet/evidence/seven_blocks/H4/monthly_metrics.csv": {
+      "sha256": "280d7197b163b5de0104078f25dd0438bcf4e9705e3b0681054e33c3c1d6e603",
+      "bytes": 42817
+    },
+    "research/spatial_unet/evidence/seven_blocks/H4/source_calendar.csv": {
+      "sha256": "db9860b421d3190bc58f469badfad1a2375b9e9d2d14a235b3a07b32810739ef",
+      "bytes": 2573
+    },
+    "research/spatial_unet/evidence/seven_blocks/H4/split.json": {
+      "sha256": "231802dd65c0e6995c5177860d036abd0e0f7292dade92dce64749a0717f1494",
+      "bytes": 16310
+    },
+    "research/spatial_unet/evidence/seven_blocks/H4/unet/context.json": {
+      "sha256": "2133a3e7f1d1ff69b4ce0b25115561c2116b5557d05d22e5d859a315faaf1929",
+      "bytes": 11763
+    },
+    "research/spatial_unet/evidence/seven_blocks/H4/unet/training.json": {
+      "sha256": "31c17e8568e8f5b159cf40ca194bd2def932192be5923fdad5e4622ead6d8981",
+      "bytes": 188
+    },
+    "research/spatial_unet/evidence/seven_blocks/H4/unet/training_history.json": {
+      "sha256": "6ae88f922f6f1fd73f1f5ecc91b4c64cfb16f8f91bd1e22b0771362bbdadbdd9",
+      "bytes": 1784
+    },
+    "research/spatial_unet/evidence/seven_blocks/auditoria_CFSv2_desenvolvimento.json": {
+      "sha256": "153a8e20b230164a510de006c6f905d8b17e71e57d1737950a472dd17858f9be",
+      "bytes": 338
+    },
+    "research/spatial_unet/evidence/seven_blocks/blocks.csv": {
+      "sha256": "ffc49d8d5327cf008c0016ded9a1d20e90003310b2e6c9a2e19e34ee6a9d71ac",
+      "bytes": 4042
+    },
+    "research/spatial_unet/evidence/seven_blocks/export_verification.json": {
+      "sha256": "183a570e3189ac7f7c42c32133a7dfd4709f484766dc003a8f0c551a80d46de3",
+      "bytes": 949
+    },
+    "research/spatial_unet/evidence/seven_blocks/global.csv": {
+      "sha256": "81876a63390371ba3f3a4eb757222c54e487a8df7e13571d54ac8ffeb314308b",
+      "bytes": 649
+    },
+    "research/spatial_unet/evidence/seven_blocks/monthly_metrics.csv": {
+      "sha256": "dc99813d94da444233c732f975bb232bec123b3137963ca2e680b4fd2ed6ece5",
+      "bytes": 297703
+    },
+    "research/spatial_unet/evidence/seven_blocks/regions.csv": {
+      "sha256": "12a98d888f96479ee04c50750cc9046cc2b682f8f51b1ce8bc9ffbe225ee15bb",
+      "bytes": 2572
+    },
+    "research/spatial_unet/evidence/seven_blocks/signature.json": {
+      "sha256": "02d1ffc0a7205f2bf372673d337cf5daa95f125d43a95836b953c10ae101244c",
+      "bytes": 5442
+    },
+    "research/spatial_unet/evidence/seven_blocks/summary.json": {
+      "sha256": "11377af205bb39ea179a1cfc396d14ae60457009613b79cf602e5a3cc5f990d3",
+      "bytes": 432
+    },
+    "research/spatial_unet/evidence/seven_blocks/years.csv": {
+      "sha256": "351c8c70c96053093a7f3ccbc5bc8de6036c1adbc8d4d7279457b8d39f8acb5a",
+      "bytes": 8036
+    },
     "research/spatial_unet/network.py": {
       "sha256": "f1d10bbe1634018857b4fda8ae2753c1cf43d553f221e338bd1d6dcd89f40654",
       "bytes": 2326
@@ -440,6 +816,10 @@
     "research/spatial_unet/run_experiment.py": {
       "sha256": "4484f2a6c0b29bee18e003ecfab880f0e16e192f1d1b9c71e90bc486f1cd6412",
       "bytes": 10032
+    },
+    "research/spatial_unet/seven_blocks.png": {
+      "sha256": "d310477728ce6749a9a2b5534eeeefdd0ece17d5bda9f29f16c1d7ffd571503b",
+      "bytes": 163186
     },
     "research/spatial_unet/spatial_unet.ipynb": {
       "sha256": "b61efd52713cd8c26773a774f8cb8a17a07622f080d42547f64233f9ce372da5",

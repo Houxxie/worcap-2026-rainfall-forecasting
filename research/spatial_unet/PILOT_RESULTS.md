@@ -1,5 +1,7 @@
 # First spatial pilot
 
+Historical pilot record. The subsequent unchanged seven-block run is documented in [the complete comparison](RESULTS.md).
+
 The prespecified H1 run completed on Kaggle on 29 September 2026 (UTC). It evaluates January 2007 through December 2008. This is a development result on previously consulted years, not an independent holdout or a forecast of future skill.
 
 | Model | RMSE | MAE | Bias |
@@ -28,4 +30,4 @@ Full-precision [scores](evidence/h1/global.csv), the [run signature](evidence/h1
 
 ## Next comparison
 
-Run the remaining six blocks with the same protocol before changing architecture or choosing an ensemble weight. Only H1 has been executed so far. This pilot establishes feasibility and baseline reproduction; it neither establishes an overall improvement nor rules one out. No neural model has been promoted and no prospective forecast has been issued.
+At the pilot checkpoint, the next step was to run the remaining six blocks with the same protocol before changing architecture or choosing an ensemble weight. Only H1 had been executed. The pilot established feasibility and baseline reproduction; it neither established an overall improvement nor ruled one out. No neural model was promoted and no prospective forecast was issued. The follow-up is now available in [the complete comparison](RESULTS.md).
