@@ -1,6 +1,6 @@
 # WorCAP 2026 · Rainfall Forecasting
 
-I started this project during the **WorCAP 2026 Hackathon**, working on monthly rainfall forecasts for South America. My solution finished in the **Top 10**, with an official final score of **1.80114**.
+I started this project during the **WorCAP 2026 Hackathon**, working on monthly rainfall forecasts for South America. My solution finished in the **Top 10**, with an official final score of **1.78758**.
 
 I wanted to keep working on it after the competition, so I put together this repository to share the model I submitted, explain how I built it, and document the experiments I’m working on now.
 
