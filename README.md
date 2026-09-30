@@ -52,7 +52,7 @@ The [research folder](research/README.md) contains this work, including the curr
 
 ## 🌧️ First forecast for a future month
 
-The first forecast for **October 2026** was saved on **30 September at 18:18 UTC**, before the month began. For this run, I kept the hybrid and its settings fixed, checked all required sources, and saved the prediction together with the model record and exact input versions.
+The first forecast for **October 2026** was saved on **30 September at 18:18 UTC**, before the month began. For October, I used an operational version of the competition hybrid: two LightGBM models and local ridge regression, trained on 1993–2022 with longer input lags. U-Net and global SST/PCA remain separate research experiments.
 
 ![October 2026 rainfall forecast, training climatology, and their difference](assets/forecast_october_2026.png)
 
