@@ -1,5 +1,9 @@
 # Maintenance scripts
 
+- `check_inputs.py --config configs/competition.inputs.json`: list all missing or altered historical inputs and core package versions before fitting. Research and operational-fit configs select their required partitions. No source download or model import occurs.
+- `../demo/explore.py`: regenerate or verify the standalone offline viewer from hash-checked repository evidence using only Python's standard library.
+- `render_competition_example.py`: plot the first submitted month after verifying the exact competition CSV and coastline hashes; no training or observation scoring.
+
 - `verify_repository.py`: check inventory, hashes, links, syntax and notebook/script consistency without training.
 - `build_notebooks.py`: rebuild the self-contained research notebooks from their guides and modules.
 - `build_spatial_notebooks.py`: build the separate U-Net experiment and final-baseline inference notebooks.

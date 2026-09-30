@@ -2,6 +2,8 @@
 
 The aim is to evaluate future monthly forecasts with inputs that actually arrived before issue time. The competition hybrid supplies the starting architecture; later changes are evaluated separately.
 
+New here? [Explore the saved results](../demo/README.md), [reproduce a comparison](../docs/REPRODUCTION.md), or [start a monthly forecast](../docs/MONTHLY_FORECAST.md). The current operational reference is distinct from the experimental candidates listed below.
+
 ## Current baseline
 
 Two LightGBMs and local ridge, fixed weights **0.375 / 0.375 / 0.25**, up to 30 training years, atmosphere T−4, indices T−3 and seasonal initializations T−1. Additional SST principal components are not part of the baseline.

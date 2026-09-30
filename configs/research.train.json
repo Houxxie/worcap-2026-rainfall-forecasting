@@ -1,0 +1,14 @@
+{
+  "schema": "rainfall_workbench_v1",
+  "name": "reproduce-seven-blocks",
+  "task": "train",
+  "experiment": "hybrid_unet_v1",
+  "device": "cuda",
+  "inputs": {
+    "official": "../data/official",
+    "seas5": "../data/seas5",
+    "cfsv2": "../data/cfsv2"
+  },
+  "search_roots": [],
+  "output_root": "../outputs/experiments"
+}

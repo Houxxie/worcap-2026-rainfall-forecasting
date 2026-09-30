@@ -8,6 +8,20 @@ After the competition, I decided to keep working on it. This repository brings t
 
 ![Overview of the rainfall forecasting model](assets/model_overview.png)
 
+## Start here
+
+The competition solution and the model I'm developing now are both here. I kept the submitted version separate so it can still be reproduced while the research continues.
+
+| What would you like to do? | Where to start |
+|---|---|
+| **Explore the results** | [Open the offline demo](demo/README.md): competition results and the current model, with saved maps and yearly metrics. No credentials or training. |
+| **Reproduce an experiment** | [Follow the reproduction guide](docs/REPRODUCTION.md): choose the competition hybrid or a research comparison, check the inputs, then run. |
+| **Run a monthly forecast** | [Use the operational guide](docs/MONTHLY_FORECAST.md): fit or restore the current model, collect sources, check readiness and freeze a forecast. |
+
+For a quick look, download the repository ZIP, extract it and open `demo/index.html` in a browser. The two tabs distinguish the submitted model from the current reference. October's forecast is still marked as **not yet evaluated**.
+
+Full runs need the [documented datasets](docs/DATA.md#availability), which are not all included in Git. [Start here](docs/GETTING_STARTED.md) explains what is available and what needs to be prepared.
+
 ## 📝 About the project
 
 The goal is to predict monthly rainfall patterns across South America using atmospheric data, ocean indices, and seasonal climate forecasts.

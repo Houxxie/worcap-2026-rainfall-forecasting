@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WorCAP · Explore the results</title>
+<style>
+:root{color-scheme:light;--ink:#17333d;--muted:#526874;--teal:#007e80;--line:#d5e1e5;--paper:#f5f8f7}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1120px;margin:auto;padding:42px 26px 60px}.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);font-weight:750}
+h1{font-size:clamp(30px,4vw,47px);line-height:1.15;letter-spacing:-.035em;margin:12px 0 18px}h2{font-size:26px;line-height:1.25;margin:0 0 12px}h3{font-size:18px;margin:0 0 14px}p{margin:10px 0}a{color:#006773}a:hover{text-decoration-thickness:2px}.intro{max-width:770px;color:var(--muted)}
+nav{display:flex;gap:10px;margin:28px 0}button,select{font:inherit}button{padding:12px 20px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink);cursor:pointer}button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #d19432;outline-offset:3px}
+section{margin-bottom:26px}.panel{background:white;border:1px solid var(--line);border-radius:14px;padding:26px;margin:20px 0}.tag{display:inline-block;background:#e5f3f1;color:#006465;border-radius:5px;padding:3px 9px;font-size:12px;font-weight:700;letter-spacing:.04em;margin-bottom:14px}.pending{background:#fff2d5;color:#785218}.muted,figcaption{color:var(--muted);font-size:14px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0}.card{background:#f0f6f5;border-radius:10px;padding:18px}.value{font-size:29px;font-weight:650;line-height:1.5}.unit{font-size:12px;color:var(--muted)}
+.chart-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}select{padding:7px;border:1px solid var(--line);border-radius:5px;background:white;color:var(--ink)}.chart{width:100%;height:auto;display:block}.chart text{font-family:system-ui,sans-serif;fill:var(--muted);font-size:12px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:right;padding:9px 12px;border-bottom:1px solid var(--line)}th:first-child,td:first-child{text-align:left}th{color:var(--muted)}
+figure{margin:22px 0 0}img{display:block;width:100%;height:auto;border-radius:8px}.competition-image{max-width:650px;margin:auto}figcaption{margin-top:12px}details{margin-top:18px}summary{cursor:pointer;font-weight:600}code{font-size:12px;overflow-wrap:anywhere}.notice{border-left:3px solid #d19432;padding:10px 16px;background:#fff9ed;margin:18px 0}.links{display:flex;gap:20px;flex-wrap:wrap}footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:13px}[hidden]{display:none!important}
+@media(max-width:600px){main{padding:25px 14px}.panel{padding:18px}.cards{gap:8px}.card{padding:12px}.value{font-size:23px}nav{flex-wrap:wrap}button{flex:1}h2{font-size:23px}[data-chart]{overflow-x:auto}.chart{min-width:640px}}
+@media print{nav,select{display:none}[hidden]{display:block!important}.panel{break-inside:avoid}}
+</style>
+</head>
+<body><main>
+<header><div class="eyebrow">WorCAP 2026 / Saved results</div><h1>From the hackathon<br>to monthly forecasts.</h1>
+<p class="intro">I started with a competition submission and kept working toward forecasts made before the target month begins. This demo lets you explore both versions using results already saved in the project.</p>
+<p class="muted">Works offline · No credentials · No training or new forecast issuance</p></header>
+<nav aria-label="Choose model"><button type="button" aria-pressed="true" aria-controls="competition" data-view="competition">Competition model</button><button type="button" aria-pressed="false" aria-controls="current" data-view="current">Current forecasting model</button></nav>
+<noscript><p class="notice">Enable JavaScript to view the saved metrics and switch sections. The embedded maps below remain available.</p></noscript>
+<section id="competition" aria-labelledby="competition-title">
+<div class="panel"><span class="tag">COMPETITION · 8G</span><h2 id="competition-title">The submitted hybrid</h2>
+<p>Two LightGBM models and local ridge regression, combined with fixed weights of 37.5%, 37.5% and 25%. The final fit used 1993–2022 to predict 2023–2024.</p>
+<p class="muted">The metrics below are the archived seven-block validation over 2007–2020. They are not the competition's 2024 score or the performance of a model fitted through 2022 on earlier years.</p>
+<div class="cards" data-cards="competition"></div>
+<div class="chart-heading"><h3>Results by validation year</h3><label>Metric <select data-metric="competition"><option value="rmse">RMSE</option><option value="mae">MAE</option><option value="bias">Bias</option></select></label></div><div data-chart="competition"></div>
+<details><summary>View the saved yearly values</summary><div class="table-wrap" data-table="competition"></div></details>
+<p class="muted">Values in mm/day. Lower RMSE and MAE are better; bias closer to zero is better. Global RMSE pools squared errors, rather than averaging yearly RMSE.</p>
+</div>
+<div class="panel"><h3>A map from the submitted CSV</h3><figure><img class="competition-image" src="data:image/png;base64,@@COMPETITION_MAP@@" alt="January 2023 monthly rainfall prediction from the verified competition CSV, on the South America grid."><figcaption>January 2023, the first target month in the submitted file. This is an archived prediction, not observed rainfall. The validation tables above concern 2007–2020; they do not score this map. This demo does not include the full competition validation maps needed for a spatial prediction–observation comparison.</figcaption></figure></div>
+</section>
+<section id="current" aria-labelledby="current-title">
+<div class="panel"><span class="tag">CURRENT REFERENCE</span><h2 id="current-title">The hybrid with longer input lags</h2>
+<p>The architecture and fixed blend are retained. Atmospheric inputs use T−4, ocean indices T−3, and seasonal initializations T−1. The operational package was fitted separately on 1993–2022; U-Net and global SST/PCA remain research experiments.</p>
+<p class="muted">These historical metrics come from earlier training windows evaluated on 2007–2020. They use the lagged protocol and are not a paired new-model contest against the competition tab. Development years have already been consulted.</p>
+<div class="cards" data-cards="current"></div>
+<div class="chart-heading"><h3>Results by validation year</h3><label>Metric <select data-metric="current"><option value="rmse">RMSE</option><option value="mae">MAE</option><option value="bias">Bias</option></select></label></div><div data-chart="current"></div>
+<details><summary>View the saved yearly values</summary><div class="table-wrap" data-table="current"></div></details>
+<p class="muted">Historical improvements do not establish skill in future years. The actual operational fit is preserved while other candidates are studied separately.</p>
+</div>
+<div class="panel"><span class="tag pending">ISSUED · NOT YET EVALUATED</span><h2>October 2026</h2><p>Frozen before the month began, after required model and source checks. This is the project's first prospective monthly forecast.</p>
+<p class="muted">Issued: <code>@@ISSUED@@</code> · First verification eligible from: <code>@@VERIFY_FROM@@</code></p>
+<figure><img src="data:image/png;base64,@@OCTOBER_MAP@@" alt="October 2026 frozen rainfall forecast, training climatology for October and forecast minus climatology. No observations or skill score are shown."><figcaption>Monthly mean daily precipitation (mm/day). Forecast minus climatology is an anomaly, not forecast error. No observed October rainfall or accuracy score is included.</figcaption></figure>
+<p class="notice">The saved registry records local timestamps and hashes. It is not an independent external timestamp. October's accuracy remains unknown until the planned verification with final ERA5.</p></div>
+</section>
+<section class="panel"><h2>Try the code</h2><p>The saved demo is included. Full reproduction requires the audited datasets; monthly issuance also needs current sources and CDS access.</p><div class="links"><a href="https://github.com/Houxxie/worcap-2026-rainfall-forecasting/blob/main/docs/REPRODUCTION.md">Reproduce an experiment →</a><a href="https://github.com/Houxxie/worcap-2026-rainfall-forecasting/blob/main/docs/MONTHLY_FORECAST.md">Run a monthly forecast →</a></div><p class="muted">These optional links require Internet and repository access. Viewing this page does not.</p>
+<details><summary>Where these results come from</summary><p class="muted">The viewer is generated from these repository files. Their hashes are checked by demo/explore.py against demo/sources.json. No new model fitting or scoring occurs.</p><ul>@@SOURCES@@</ul></details></section>
+<footer>WorCAP 2026 · Monthly rainfall forecasting over South America · Saved snapshot, 30 September 2026</footer>
+</main>
+<script>
+const DATA=@@DATA@@;
+const fmt=v=>v.toFixed(6);
+for(const [name,group] of Object.entries(DATA)){
+ document.querySelector(`[data-cards="${name}"]`).innerHTML=['rmse','mae','bias'].map(k=>`<div class="card"><div>${k==='bias'?'Bias':k.toUpperCase()}</div><div class="value">${group.global[k].toFixed(4)}</div><div class="unit">mm/day · pooled 2007–2020</div></div>`).join('');
+ document.querySelector(`[data-table="${name}"]`).innerHTML='<table><caption>Historical yearly metrics (mm/day)</caption><thead><tr><th scope="col">Year</th><th scope="col">RMSE</th><th scope="col">MAE</th><th scope="col">Bias</th></tr></thead><tbody>'+group.years.map(r=>`<tr><th scope="row">${r.year}</th><td>${fmt(r.rmse)}</td><td>${fmt(r.mae)}</td><td>${fmt(r.bias)}</td></tr>`).join('')+'</tbody></table>';
+}
+function draw(name,metric){
+ const rows=DATA[name].years,W=950,H=280,left=60,right=20,top=20,bottom=45;
+ const values=rows.map(r=>r[metric]);let lo=Math.min(0,...values),hi=Math.max(...values);const pad=(hi-lo||1)*.10;hi+=pad;if(lo<0)lo-=pad;
+ const y=v=>top+(hi-v)/(hi-lo)*(H-top-bottom);const step=(W-left-right)/rows.length;
+ let s=`<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${metric.toUpperCase()} by year from 2007 to 2020, in millimetres per day. Exact values follow in the table."><title>${metric.toUpperCase()} by validation year (mm/day)</title>`;
+ for(let i=0;i<=4;i++){const v=lo+(hi-lo)*i/4,yy=y(v);s+=`<line x1="${left}" x2="${W-right}" y1="${yy}" y2="${yy}" stroke="#dce6e9"/><text x="${left-10}" y="${yy+4}" text-anchor="end">${v.toFixed(2)}</text>`;}
+ s+=`<line x1="${left}" x2="${W-right}" y1="${y(0)}" y2="${y(0)}" stroke="#69838b"/>`;
+ rows.forEach((r,i)=>{const x=left+i*step+step*.17,v=r[metric],yy=Math.min(y(0),y(v));s+=`<rect x="${x}" y="${yy}" width="${step*.66}" height="${Math.max(.7,Math.abs(y(v)-y(0)))}" fill="${v<0?'#b27830':'#007e80'}" rx="2"><title>${r.year}: ${fmt(v)} mm/day</title></rect><text x="${left+(i+.5)*step}" y="${H-18}" text-anchor="middle">${r.year}</text>`;});
+ document.querySelector(`[data-chart="${name}"]`).innerHTML=s+'</svg>';
+}
+document.querySelectorAll('[data-metric]').forEach(s=>{draw(s.dataset.metric,s.value);s.addEventListener('change',()=>draw(s.dataset.metric,s.value));});
+function select(name){document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===name)));for(const id of ['competition','current'])document.getElementById(id).hidden=id!==name;}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>select(b.dataset.view)));
+select('competition');
+</script></body></html>

@@ -1,0 +1,13 @@
+{
+  "schema": "rainfall_saved_demo_v1",
+  "description": "Saved evidence for an offline viewer; no fitting, new scoring or forecast issuance.",
+  "files": {
+    "competition/results/global.csv": "351eee33a84877569912107e380c5032385a2f14be4070c0554ad05fcf0cad55",
+    "competition/results/years.csv": "f05d8cb46a82208c9bbc42f6a025c971a080fd8240babe3dcd63e928cec328aa",
+    "research/lagged_sources/evidence/metricas_globais.csv": "227780400015e9ce8e3ba3a02bc7ad16c80690d1c80bd55d1d20aff9f8810d55",
+    "research/lagged_sources/evidence/metricas_anos.csv": "fafc64f22696e09e79dfe38e61b2cb1ddd5af6065c289f3d5b892f606b62f384",
+    "research/prospective/evidence/issued_forecast_2026_10.json": "c196f4ae310a83ee6105bfd4280712fe263525cb107aed6efbbb28caf10f325a",
+    "assets/competition_forecast_example.png": "6243659e6f7407f9c5a3a0c946b86d4a88c1e829c29bd3e9d44661c85df8e43d",
+    "assets/forecast_october_2026.png": "2a42195d3b99825926ca185fadf25e2494e17a7bab7574908f8f689f2c494a74"
+  }
+}
