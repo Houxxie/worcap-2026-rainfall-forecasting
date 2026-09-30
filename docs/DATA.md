@@ -32,3 +32,31 @@ CFSv2 normally has 24 or 28 expected members. The historical August 2019 missing
 Raw data, models and large prediction arrays stay outside Git. There is currently no public project download for the exact prepared NetCDF snapshots. Provider links locate the products, but revised downloads may differ. Exact reproduction requires the snapshots matching the hashes.
 
 Historical acquisition scripts remain in `pesquisa-v0.1.0`. Newly acquired CFSv2 is audited by the active prospective adapter. Source terms remain separate from the code license. See [temporal validity](TEMPORAL_VALIDITY.md).
+
+## Availability
+
+| Artifact | Included in the repository? | How to obtain or use it |
+|---|---|---|
+| Competition and research code | Yes | Download ZIP or clone; repository access is currently required |
+| Lightweight demo, archived metrics and selected map images | Yes | Open `demo/index.html` after downloading; no credentials |
+| Official competition NetCDFs and sample CSV | No | Use the competition data link above; access is controlled by Kaggle/organizers |
+| Exact historical SEAS5/CFSv2 prepared NetCDFs | No; manifests only | Use a retained matching snapshot; no project release download is currently attached |
+| Archived NOAA indices | Yes | Included in the code and metadata; current inference acquires fresh recorded responses |
+| Trained operational model and full registry | No | Fit with the matching historical inputs, or restore your own complete saved registry |
+| Complete historical forecast maps and experiment model weights | No | Retain the full output of your experiment; the small reports ZIP is insufficient for rescoring |
+| Current operational sources | No | Collect using the monthly workflow; ERA5/SEAS5 need CDS access |
+
+The first-time execution path is therefore **download → inspect demo → obtain data → check inputs → run**. Exact numerical reproduction is not promised for newly downloaded provider revisions.
+
+For the default local examples, arrange your files as follows (these folders are ignored by Git):
+
+```text
+data/
+  official/   treino_*.nc, teste_features.nc, sample_submission.csv
+  seas5/      seas5_51_manifesto.json, seas5_51_*.nc
+  cfsv2/      cfsv2_manifesto.json, cfsv2_*.nc
+```
+
+Run `python scripts/check_inputs.py --config configs/competition.inputs.json` from the repository root. It reports every missing/changed file and core package. Research and operational-fit profiles need fewer partitions; use their separate configs.
+
+For provenance, the archived preparation sources are [SEAS5 acquisition](https://github.com/Houxxie/worcap-2026-rainfall-forecasting/blob/pesquisa-v0.1.0/entregas/etapa7A_SEAS5/01_SEAS5_baixar_e_auditar.py) and [CFSv2 acquisition](https://github.com/Houxxie/worcap-2026-rainfall-forecasting/blob/pesquisa-v0.1.0/entregas/etapa8A_CFSv2_dados/01_CFSv2_baixar_e_auditar.py). They are historical sources, not a guarantee that today's endpoints return the same bytes. Review provider compatibility before using them for a new dataset; keep changed data under a new experiment identity.

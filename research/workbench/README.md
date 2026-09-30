@@ -1,5 +1,7 @@
 # Rainfall workbench
 
+To explore the project with no input files or Python installation, use the [offline demo](../../demo/README.md). For a fresh full run, start with [reproduction](../../docs/REPRODUCTION.md); the paths below are for the shared experiment interface.
+
 Use one notebook or command to check inputs, evaluate saved forecasts, train the existing experiment, and inspect monthly readiness. The model definitions, source lags, training windows and fixed weights are unchanged.
 
 ## Choose the task

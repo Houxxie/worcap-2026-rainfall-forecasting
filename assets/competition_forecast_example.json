@@ -1,0 +1,16 @@
+{
+  "target_month": "2023-01",
+  "selection": "First target month in the submitted CSV; no selection by performance.",
+  "submission_sha256": "e98e8954debb8f7c764665a31804ec5512a1c2578c1ed4a24e50c51dedfb429b",
+  "image_sha256": "6243659e6f7407f9c5a3a0c946b86d4a88c1e829c29bd3e9d44661c85df8e43d",
+  "coastline": {
+    "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_coastline.geojson",
+    "received_at_utc": "2026-09-30T18:21:18.926164+00:00",
+    "sha256": "851f581ff5ffb844deed8ae1a9ce22e3c4bb3d74fa342cadb5d8e39b41ae7c3c",
+    "bytes": 139907,
+    "purpose": "Natural Earth coastline for visualization only; not a model input"
+  },
+  "renderer": "scripts/render_competition_example.py",
+  "observations_shown": false,
+  "description": "Prediction from archived competition CSV, not observed rainfall or a new operational issue."
+}

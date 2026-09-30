@@ -1,5 +1,12 @@
 # Changelog
 
+## Getting started and offline demo — 2026-09-30
+
+- Add three entry paths: explore saved results, reproduce a competition/research run, and issue monthly forecasts. Preserve the personal README and distinguish the two model versions.
+- Include a self-contained offline viewer with checked archived metrics, yearly charts, a verified competition CSV example and October's frozen map. October remains unscored; historical metrics refer to earlier validation fits.
+- Document exact input availability, missing prepared-data/model downloads, new versus existing registries, credentials, expected outputs and realistic compute requirements.
+- Add read-only historical input checks and portable config examples. Preserve all scientific model implementations, protocols, archived numerical results and issued forecasts.
+
 ## First prospective monthly forecast — 2026-09-30
 
 - Resolve incomplete CFSv2 acquisition by explicitly evaluating the original IRI catalog recipe. All 24 expected September members are present; every overlapping value matches the named product exactly. Four-month checks include complete 24- and 28-member ensembles.

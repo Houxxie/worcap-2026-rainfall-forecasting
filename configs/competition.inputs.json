@@ -1,0 +1,8 @@
+{
+  "profile": "competition",
+  "inputs": {
+    "official": "../data/official",
+    "seas5": "../data/seas5",
+    "cfsv2": "../data/cfsv2"
+  }
+}

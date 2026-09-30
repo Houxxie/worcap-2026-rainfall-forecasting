@@ -1,5 +1,7 @@
 # Fit and issue the lagged baseline
 
+For first-time setup, start with the [monthly forecast guide](../../docs/MONTHLY_FORECAST.md). It separates a new registry from continuation of an existing run. This page retains the detailed record of October's workflow.
+
 The workflow covers final fitting, model registration, source normalization, inference and freezing. The final fit and authenticated ERA5/SEAS5 acquisition completed on 29 September 2026. **October's forecast was frozen on 30 September at 18:18 UTC**, after the original IRI recipe supplied the complete CFSv2 ensemble. The [operational record](OPERATIONAL_STATUS.md) identifies the frozen package, source-equivalence evidence and issued forecast.
 
 The separate `baseline_inference.ipynb` bundles this code for Kaggle. Attach the official training data, the two prepared seasonal datasets, and the **complete existing registry** with its `eventos` and `objetos` directories. It must resume that chain rather than create a replacement with invented earlier receipt dates.

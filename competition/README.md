@@ -7,6 +7,8 @@ Two LightGBM residual models plus local ridge regression, developed for the WorC
 - [Reference environment](requirements.txt)
 - [Input hashes and audited results](reference.json)
 - [Required data snapshots](../docs/DATA.md)
+- [Explore saved results without installing anything](../demo/README.md)
+- [Step-by-step Kaggle and local reproduction](../docs/REPRODUCTION.md)
 
 Final training: January 1993–December 2022. Predictions: January 2023–December 2024 on the 301 × 261 official grid. Fixed component weights: 0.375, 0.375 and 0.25. Expected final CSV SHA-256:
 
