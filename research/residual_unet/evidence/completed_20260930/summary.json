@@ -1,0 +1,35 @@
+{
+  "blocks": [
+    "C"
+  ],
+  "comparisons": {
+    "direct_blend": {
+      "delta_absolute_bias": 0.0527541533977367,
+      "mae": 0.013655952704860974,
+      "rmse": 0.016720567529833863,
+      "rmse_area": 0.01750119049907517,
+      "vies": 0.0527541533977367
+    },
+    "direct_unet": {
+      "delta_absolute_bias": 0.023409685730513108,
+      "mae": 0.0009642508720755227,
+      "rmse": 0.0024069914156217287,
+      "rmse_area": 0.0026250000754517444,
+      "vies": 0.023409685730513108
+    },
+    "hybrid": {
+      "delta_absolute_bias": 0.0625356426201445,
+      "mae": 0.012963770726006851,
+      "rmse": 0.014398507386364168,
+      "rmse_area": 0.014918223905902472,
+      "vies": 0.0625356426201445
+    }
+  },
+  "complete_seven_blocks": false,
+  "forecast_issued": false,
+  "independent_holdout": false,
+  "model_promoted": false,
+  "note": "One fixed-budget, previously consulted block. The 120-month/eight-epoch direct control is new, not the archived full-training U-Net.",
+  "pilot_complete": true,
+  "status": "complete"
+}

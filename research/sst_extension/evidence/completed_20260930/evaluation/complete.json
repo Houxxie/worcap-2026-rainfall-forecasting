@@ -1,0 +1,43 @@
+{
+  "files": {
+    "calendar.csv": "c6b9ac22e12f3cc86bee355b4689301bc600830e432da0b800d0b47ce16b5c28",
+    "global.csv": "6efdee5695689093202c639e46f58e5b2254db3454a5ac7eed48ef42b6f9ab3f",
+    "monthly_comparison.png": "77e2202240ba04f399c4d778737a3b0c8688833d3502cbbbcadf7a247ebeb6d2",
+    "monthly_metrics.csv": "079f65065c0a006a477702dd14355a91cf0eb829dc9ff7eb9bb8d59e873af2b0",
+    "opened.json": "d94c886abf4ac4dbddce7b70ab3fe7ab54844be376021810af331a784908da81",
+    "regions.csv": "26fbf8b6cf330255946554588779463d8b8a6af208f084ce54a495ee14e1e71d",
+    "report.html": "139f214721426368874d12e1b177da51cad504d384942d0d94ccacd155195ba2",
+    "summary.json": "cb7e6bbbf21e99ce50d8c488acee5f4db24bf35e623d401b0624442e1d41c6ae",
+    "years.csv": "fcf5d04f718a6356fd8593d40ca6bc79a051e2e1e948253eb744b34d02590fa8"
+  },
+  "summary": {
+    "automatic_promotion": false,
+    "baseline_differences": {
+      "mae": 0.0,
+      "rmse": 0.0,
+      "rmse_area": 0.0,
+      "vies": 0.0
+    },
+    "baseline_reproduced": true,
+    "complete_extension": true,
+    "complete_seven_blocks": false,
+    "delta": {
+      "mae": -0.002676653675183216,
+      "rmse": -0.004150119422746235,
+      "rmse_area": -0.004417199491846047,
+      "vies": 0.008266566923305574
+    },
+    "evaluation": [
+      "2021-01",
+      "2022-12"
+    ],
+    "forecast_issued": false,
+    "historical_publication_vintages_verified": false,
+    "independent_holdout": false,
+    "months_better": 12,
+    "months_tied": 0,
+    "months_worse": 12,
+    "seconds_fit": 187.35894487299993,
+    "status": "complete"
+  }
+}

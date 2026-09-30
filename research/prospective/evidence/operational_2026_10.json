@@ -1,0 +1,164 @@
+{
+  "checked_utc": "2026-09-29T19:49:59.963258+00:00",
+  "event_count": 26,
+  "event_types": {
+    "auditoria_falhou": 3,
+    "coleta_falhou": 1,
+    "fonte_recebida": 20,
+    "modelo_congelado": 1,
+    "protocolo": 1
+  },
+  "forecast_ids": [],
+  "missing": [
+    "cfsv2: month 2026-09"
+  ],
+  "model_files": {
+    "ambiente.json": {
+      "bytes": 92,
+      "sha256": "c6560df7ca7bcc694636cdd4ef492302dad7aeb1cfcd82952e0cdb2d431f1f13"
+    },
+    "arvores_multissistema.txt": {
+      "bytes": 910325,
+      "sha256": "1bf5c782ba9ad0fca4ea08b394649d114a293a1c1ae90d35e5bea1afe8ff473b"
+    },
+    "arvores_seas5.txt": {
+      "bytes": 909747,
+      "sha256": "eb3b24afb905f171046f80536bed153c328bf580956be0a5fc0cde187517f163"
+    },
+    "auditoria_treino.json": {
+      "bytes": 3578,
+      "sha256": "80a69ecbf78739032481b1122cd7f91ef0db551a0d2dd39d43045a6859b2d58e"
+    },
+    "biblioteca.py": {
+      "bytes": 56380,
+      "sha256": "4b92dd77d868d7806fd0ae37d2837abfcde36e173df75b1bd6d88760593ee9c3"
+    },
+    "clima_atmosfera_indices.npz": {
+      "bytes": 25183178,
+      "sha256": "afde38194c27b781c9e963244e2a2a73b50c4272643a74754cc72d64a7cb3ec7"
+    },
+    "clima_cfsv2.nc": {
+      "bytes": 3786808,
+      "sha256": "4b90c3410a2e71b77d98f4f55348cad798565e488e8540accfa91d5ebc01257d"
+    },
+    "clima_chuva.nc": {
+      "bytes": 3783712,
+      "sha256": "53df7067e5dc4daf445f39e6b267e73b0e6792b08f4dc8124ccd885436060ef0"
+    },
+    "clima_seas5.nc": {
+      "bytes": 3786808,
+      "sha256": "1dcda80e3354babe772538ccecf12f6c2e9aa88e5e860f2b4fa0c6554c2b3c5e"
+    },
+    "inferir.py": {
+      "bytes": 5050,
+      "sha256": "6440524a5fa4ee7bd2e7966593fddac887ae351f706d33a9d75ec6e1bf100e6c"
+    },
+    "ridge.npz": {
+      "bytes": 13822352,
+      "sha256": "5d0e0866396d361dbef79bdbc44b3ee03f7d0ad2d282706ec5b4ceeaba52e398"
+    }
+  },
+  "model_id": "8b7fae77efa361b7ec09d4212f20f429a2ba30a01ebdba36ec44f0b9733e6d82",
+  "model_registered_utc": "2026-09-29T19:42:08.785802+00:00",
+  "original_registry_events_preserved": true,
+  "protocol": "b61d3ae3dac9e65da02c1b6d5aa3b66f9d918bae94db51a9f55c3728cf490e37",
+  "registry_tip": "6a42acfd497209f61ae80d9f5c4d46638b02806132b9df652fd6428bab1d3a97",
+  "selected_sources": {
+    "era5_pl": "f54439998cc3eba26787d2fa61395e3b9054d81c670769dde59026bbe0aba15f",
+    "era5_sl": "741d3bc20a9ee906ca96e3c1b5fd6b1091e95d916496147ecf55ec87c9de9055",
+    "nino12": "7e8bc7bf753665ce6aa58ccaaaa62dfd627c20c52c3746077f524921d6ea881f",
+    "nino34": "c87d8d592d08a564bdf9e331b223d6ff180921113f3694afc3355fbd825cfa07",
+    "seas5": "6a42acfd497209f61ae80d9f5c4d46638b02806132b9df652fd6428bab1d3a97",
+    "tna": "c43dad243af91a985e822de5d46c33dbd43bf089502cf81a9aa3e5811263be4f",
+    "tsa": "9eeb4da93e2d733dc6ce1ab7a48a9303519f02b08e45f33a2331ffd065187710"
+  },
+  "status": "blocked",
+  "target": "2026-10",
+  "training": {
+    "examples": 1800000,
+    "fitting_code_sha256": "d6c8bd10a98174eef9f7efc24a465e1a92fa58ded3c6c918bcf97c56cabac38b",
+    "historical_vintages_verified": false,
+    "inference_sha256": "6440524a5fa4ee7bd2e7966593fddac887ae351f706d33a9d75ec6e1bf100e6c",
+    "inputs": {
+      "files": {
+        "cfsv2_desenvolvimento.nc": "1c20df191e347268d3844bff855904a963d5769544929dfcc03363a5f5720163",
+        "cfsv2_manifesto.json": "02423b1016bae9c90314d7aea1cab6b374d09c010c226f635576d7f79f42d196",
+        "cfsv2_somente_ajuste_final.nc": "38706f6880b71b78d420bac9a7d0b36868dbf59193c7ef5ebf9f5c82197552d8",
+        "seas5_51_desenvolvimento.nc": "bb4ba9085b32f008172ba1987b5c158263d0019a63e52046ad4c99dc20e02fa8",
+        "seas5_51_manifesto.json": "c7ce3a54f9a6f16189f5732ce12898ad42e1128de1a9395170c50b97718a45a9",
+        "seas5_51_somente_ajuste_final.nc": "28e8703ce9f629ea6b7d6954e154a36883a291ba5f8cb65dc46e715a92c3f3bc",
+        "treino_cloud_cover.nc": "607ee1210615a0ca8a5c954737617e668a5f016eb881554cb1468fda74b4fde1",
+        "treino_geopotential_850.nc": "ca3baca0177e2e90b42901803f348a4b4affe88bee202b76af3f293fa7035c17",
+        "treino_rel_hum_850.nc": "90f62b44b1b461259e7539249914e26cf09993f3bcd572ba4871931e45264b19",
+        "treino_shum_850.nc": "35cf8071b68d1e924ad87e0f8bd801d0a66d1d78ae75fc3cb623bde85c3f47bb",
+        "treino_surface_pressure.nc": "f00a5e44a03ea923ac0f693b975ef71cd347f8ad3d07692c602e3ac9a25c10fb",
+        "treino_t2.nc": "7d8c53b438289cddf87a11414ad10c8167f52ff33c6eff459a3288975079ef23",
+        "treino_temperature_850.nc": "1db7b4fdeba87b6a25f7fb6f1e40abec50964234dd9cc918cd34f902b8e41bac",
+        "treino_tp.nc": "012bebbe0e38aefdf4f9e2432c3ca22f71d94ea1a1b5421da9d9e5048632cab0",
+        "treino_tp_alvo.nc": "915f67f2627e37399830d1dd92b209ce1160082b0645662675eab17df957abe4",
+        "treino_u_850.nc": "73c898f27bea25cf2ab0914bbe5c29acc9794a93f8b6b3affa39854bebccf761",
+        "treino_v_850.nc": "7bab583972e5718bb0e0fe0fe6a056bd56c968af1f1497205182f7621e26c241"
+      },
+      "final_training": true,
+      "forecast_partitions": [
+        "desenvolvimento",
+        "somente_ajuste_final"
+      ],
+      "indices_sha256": "b6f444fbec48681c1e5b46a5c22aa197ad91c7fbbdaff82c3ed3a9c63f7c15a4",
+      "library_sha256": "4b92dd77d868d7806fd0ae37d2837abfcde36e173df75b1bd6d88760593ee9c3",
+      "rainfall_read": [
+        "1993-01-01",
+        "2022-12-01"
+      ],
+      "sst_used": false,
+      "test_partition_read": false,
+      "versions": {
+        "lightgbm": "4.6.0",
+        "numpy": "2.0.2",
+        "pandas": "2.3.3",
+        "xarray": "2025.12.0"
+      }
+    },
+    "lags": {
+      "atmosphere": 4,
+      "indices": 3,
+      "rainfall_training": 4,
+      "seasonal": 1
+    },
+    "library_sha256": "4b92dd77d868d7806fd0ae37d2837abfcde36e173df75b1bd6d88760593ee9c3",
+    "model_package_is_competition_model": false,
+    "parameters": {
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "deterministic": true,
+      "feature_fraction": 0.9,
+      "force_col_wise": true,
+      "lambda_l2": 10,
+      "learning_rate": 0.05,
+      "metric": "rmse",
+      "min_data_in_leaf": 150,
+      "num_leaves": 31,
+      "num_threads": 4,
+      "objective": "regression",
+      "seed": 42,
+      "verbosity": -1
+    },
+    "protocolo_id": "b61d3ae3dac9e65da02c1b6d5aa3b66f9d918bae94db51a9f55c3728cf490e37",
+    "residual_scales": [
+      0.9,
+      0.875
+    ],
+    "sample_hash": "7bb1099af1453b5ebe2178d40580f5499eb8a487145c46d236ae968e62034c6a",
+    "training_end": "2022-12-01",
+    "training_months": 360,
+    "training_start": "1993-01-01",
+    "tree_count": 300,
+    "treino_fim": "2022-12",
+    "treino_inicio": "1993-01",
+    "weights": [
+      0.375,
+      0.375,
+      0.25
+    ]
+  }
+}

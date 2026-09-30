@@ -1,0 +1,12 @@
+{
+  "development_sha256": "69226b2e65f783b4d4971a254d1e325d0908447c76ec1df3bf532ecef1f0cf5b",
+  "historical_publication_vintages_verified": false,
+  "new_download": false,
+  "overlap_exact": true,
+  "selected_end": "2022-09-01",
+  "selected_months": 387,
+  "selected_start": "1990-07-01",
+  "sha256": "b6f444fbec48681c1e5b46a5c22aa197ad91c7fbbdaff82c3ed3a9c63f7c15a4",
+  "shared_months": 526,
+  "source": "competition/metadata/NOAA/indices_noaa.csv"
+}

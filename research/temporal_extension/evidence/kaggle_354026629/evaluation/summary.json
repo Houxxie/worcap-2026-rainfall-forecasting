@@ -1,0 +1,14 @@
+{
+  "blend_rmse": 1.7952885294286802,
+  "delta_absolute_bias": 0.01796911931856579,
+  "delta_mae": 0.002581589139992513,
+  "delta_rmse": -0.0014950824611834612,
+  "evaluated_at": "2026-09-30T02:44:50.851976+00:00",
+  "forecast_issued": false,
+  "hybrid_rmse": 1.7967836118898637,
+  "independent_holdout": false,
+  "model_promoted": false,
+  "protocol": "temporal_extension_2021_2022_v1",
+  "status": "evaluated",
+  "unet_rmse": 1.8067747114937376
+}

@@ -1,0 +1,3 @@
+-r ../lagged_sources/requirements.txt
+cdsapi>=0.7,<1
+eccodes>=2.40,<3

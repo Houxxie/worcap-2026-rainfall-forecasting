@@ -1,0 +1,78 @@
+{
+  "code": {
+    "research/common/inputs.py": "d22140d4ad3db4ac3fecdca26c7ebdd1d780486b51622a1f333fce2a637e6851",
+    "research/diagnostics/analyze_errors.py": "21ee50ab5d06fbb8ae59a524553ecac4121bb40136b77ac9b99299eff53f9067",
+    "research/fixed_blend/evaluate.py": "6c90f6cb96eaa2841fcec4ad57921b3bf9382f8143d3d2a4b8b04996e1cb44a9",
+    "research/sst_extension/evidence/completed_20260930/evaluation/global.csv": "6efdee5695689093202c639e46f58e5b2254db3454a5ac7eed48ef42b6f9ab3f",
+    "research/sst_extension/evidence/completed_20260930/frozen.json": "84c7c54e66686bbaa22f4aa15d50e2f9d19a5ab95a7637bde501eb06c8b46d23",
+    "research/sst_unet_blend/__init__.py": "bf61b3fab3d44f939bbb448de4d41d7174519520b7938680f8e47e3a38e66c35",
+    "research/sst_unet_blend/experiment.py": "3e60d4e4199a4af1298025d280cbf25efe8deead78707a12ed53e8ff08a0b388",
+    "research/sst_unet_blend/protocol.json": "57312ad188255b70b9b3103ef26d63d1c911971ff9f480c2c0c522f7aaffc7ae",
+    "research/sst_unet_blend/test_blend.py": "08d50a3dc39bdd74562b386b1d5417c77f1165cceb3f08c748414e93a5d98241",
+    "research/temporal_extension/evidence/kaggle_354026629/evaluation/global.csv": "044c310fe49c905b01b4963704cc550c31da6a9ac0bdaaf531361e569a378f36",
+    "research/temporal_extension/evidence/kaggle_354026629/frozen.json": "915ed044d66fd24406d9d688505b718f02da8f2b92c7fefeb94bbc03c8eaaa60"
+  },
+  "input_hashes": {
+    "observations": "012bebbe0e38aefdf4f9e2432c3ca22f71d94ea1a1b5421da9d9e5048632cab0",
+    "sst_predictions": "8888ce1301a389c98ac832dfa9d353d8611c1f1c26910d011a18ad19faf7c7cf",
+    "unet_predictions": "5e5341220a58a84305d6676ee0d2ceb5fd5dcf7b9b2da3172ad3e3d75050b23f"
+  },
+  "plan": {
+    "arithmetic": "float64 on final nonnegative rainfall maps, no further clipping or calibration",
+    "automatic_promotion": false,
+    "candidate": "0.75 * hybrid_sst + 0.25 * unet",
+    "conditional_switching": false,
+    "evaluation_end": "2022-12-01",
+    "evaluation_start": "2021-01-01",
+    "forecast_issued": false,
+    "historical_publication_vintages_verified": false,
+    "id": "sst_unet_fixed_blend_2021_2022_v1",
+    "independent_holdout": false,
+    "inputs": {
+      "observations": {
+        "filename": "treino_tp.nc",
+        "sha256": "012bebbe0e38aefdf4f9e2432c3ca22f71d94ea1a1b5421da9d9e5048632cab0"
+      },
+      "sst_predictions": {
+        "filename": "predictions.nc",
+        "sha256": "8888ce1301a389c98ac832dfa9d353d8611c1f1c26910d011a18ad19faf7c7cf",
+        "source": "SST extension completed 2026-09-30: models/predictions.nc"
+      },
+      "unet_predictions": {
+        "filename": "predictions.nc",
+        "sha256": "5e5341220a58a84305d6676ee0d2ceb5fd5dcf7b9b2da3172ad3e3d75050b23f",
+        "source": "Temporal extension Kaggle version 354026629: predictions.nc"
+      }
+    },
+    "new_download_from_data_providers": false,
+    "new_training": false,
+    "primary_comparison": [
+      "blend_sst",
+      "blend_reference"
+    ],
+    "prior_use": "2021-2022 was already evaluated for both source experiments; this is a consulted retrospective development block.",
+    "reference": "0.75 * hybrid + 0.25 * unet",
+    "secondary_comparisons": [
+      [
+        "blend_sst",
+        "hybrid_sst"
+      ],
+      [
+        "blend_sst",
+        "hybrid"
+      ]
+    ],
+    "training_end": "2020-09-01",
+    "weight_search": false,
+    "weights": [
+      0.75,
+      0.25
+    ]
+  },
+  "versions": {
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "python": "3.12.13",
+    "xarray": "2025.12.0"
+  }
+}

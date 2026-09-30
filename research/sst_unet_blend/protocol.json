@@ -1,0 +1,26 @@
+{
+  "id": "sst_unet_fixed_blend_2021_2022_v1",
+  "evaluation_start": "2021-01-01",
+  "evaluation_end": "2022-12-01",
+  "training_end": "2020-09-01",
+  "candidate": "0.75 * hybrid_sst + 0.25 * unet",
+  "reference": "0.75 * hybrid + 0.25 * unet",
+  "weights": [0.75, 0.25],
+  "primary_comparison": ["blend_sst", "blend_reference"],
+  "secondary_comparisons": [["blend_sst", "hybrid_sst"], ["blend_sst", "hybrid"]],
+  "arithmetic": "float64 on final nonnegative rainfall maps, no further clipping or calibration",
+  "new_training": false,
+  "new_download_from_data_providers": false,
+  "weight_search": false,
+  "conditional_switching": false,
+  "independent_holdout": false,
+  "prior_use": "2021-2022 was already evaluated for both source experiments; this is a consulted retrospective development block.",
+  "historical_publication_vintages_verified": false,
+  "automatic_promotion": false,
+  "forecast_issued": false,
+  "inputs": {
+    "observations": {"filename": "treino_tp.nc", "sha256": "012bebbe0e38aefdf4f9e2432c3ca22f71d94ea1a1b5421da9d9e5048632cab0"},
+    "sst_predictions": {"filename": "predictions.nc", "sha256": "8888ce1301a389c98ac832dfa9d353d8611c1f1c26910d011a18ad19faf7c7cf", "source": "SST extension completed 2026-09-30: models/predictions.nc"},
+    "unet_predictions": {"filename": "predictions.nc", "sha256": "5e5341220a58a84305d6676ee0d2ceb5fd5dcf7b9b2da3172ad3e3d75050b23f", "source": "Temporal extension Kaggle version 354026629: predictions.nc"}
+  }
+}

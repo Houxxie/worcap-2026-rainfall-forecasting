@@ -87,9 +87,12 @@ class TestRegistro(unittest.TestCase):
 
     def test_congelamento_e_reemissao_bloqueada(self):
         self.pronto()
+        self.assertFalse(self.r.prontidao('2026-10')['previsao_emitida'])
         e = self.r.congelar('2026-10', self.fp, self.inf)
         self.assertEqual(e['registrado_em_utc'], NOW.isoformat())
         self.assertEqual(e['dados']['validacao']['pontos'], 78561)
+        self.assertTrue(self.r.prontidao('2026-10')['previsao_emitida'])
+        self.assertFalse(self.r.prontidao('2026-11')['previsao_emitida'])
         with self.assertRaises(ContratoError):
             self.r.congelar('2026-10', self.fp, self.inf)
 

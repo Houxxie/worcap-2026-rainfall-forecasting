@@ -1,0 +1,69 @@
+{
+  "zip_sha256": "b8977b6c2670b1923df209be151d169950d6a68f5edcff64923b2bdf9a115e7d",
+  "complete_seven_blocks": true,
+  "included_artifact_hashes_verified": 154,
+  "referenced_artifacts_omitted": 182,
+  "source_files_verified": {
+    "research/bias_calibration/__init__.py": "exact",
+    "research/bias_calibration/calibration.py": "exact",
+    "research/bias_calibration/experiment.py": "exact",
+    "research/bias_calibration/protocol.json": "exact",
+    "research/bias_calibration/report.py": "exact",
+    "research/bias_calibration/test_calibration.py": "exact",
+    "research/common/__init__.py": "exact",
+    "research/common/baseline.py": "exact",
+    "research/common/inputs.py": "exact",
+    "research/common/synthetic_fixture.py": "exact",
+    "research/lagged_sources/evidence/metricas_blocos.csv": "exact",
+    "research/lagged_sources/library.py": "exact",
+    "research/lagged_sources/ocean_indices.csv": "exact",
+    "research/lagged_sources/official_hashes.json": "LF_normalized",
+    "research/spatial_unet/__init__.py": "exact",
+    "research/spatial_unet/network.py": "exact",
+    "research/spatial_unet/protocol.json": "exact",
+    "research/spatial_unet/run_experiment.py": "exact",
+    "research/spatial_unet/test_spatial.py": "exact",
+    "research/spatial_unet/training.py": "exact"
+  },
+  "pooled_metrics_recomputed": {
+    "blend": {
+      "rmse": 1.7506280424784038,
+      "mae": 1.0461279178606528,
+      "vies": 0.008991573526486406,
+      "rmse_area": 1.8291041386880798
+    },
+    "blend_corrected": {
+      "rmse": 1.7506225252619971,
+      "mae": 1.0468068948285607,
+      "vies": 0.01426427790074577,
+      "rmse_area": 1.829110442595695
+    },
+    "climatology": {
+      "rmse": 1.8506453532404494,
+      "mae": 1.100536343088238,
+      "vies": -0.005280152785643034,
+      "rmse_area": 1.9383848994707498
+    },
+    "hybrid": {
+      "rmse": 1.7533987173382521,
+      "mae": 1.0472127540041432,
+      "vies": 0.004916238437572103,
+      "rmse_area": 1.8321062766271015
+    },
+    "unet": {
+      "rmse": 1.764725739441376,
+      "mae": 1.0603130299481256,
+      "vies": 0.021217578793229313,
+      "rmse_area": 1.8439363783418774
+    },
+    "unet_corrected": {
+      "rmse": 1.764864600461629,
+      "mae": 1.0630721557460567,
+      "vies": 0.04230839629026674,
+      "rmse_area": 1.844119899838958
+    }
+  },
+  "all_baselines_reproduced": true,
+  "recorded_calibration_chronology_checked": true,
+  "limitation": "Only included reports and recorded sums were verified. Raw data, prediction maps and model artifacts omitted from this ZIP were not independently recomputed. Development years are not an independent holdout."
+}

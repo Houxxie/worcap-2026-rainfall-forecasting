@@ -1,0 +1,12 @@
+{
+  "arquivo": "/kaggle/input/datasets/houxie/worcap-cfsv2-dados/cfsv2_somente_ajuste_final.nc",
+  "sha256": "38706f6880b71b78d420bac9a7d0b36868dbf59193c7ef5ebf9f5c82197552d8",
+  "meses": 24,
+  "minimo": 0.0,
+  "maximo": 38.84219741821289,
+  "membros_usados": [
+    24,
+    28
+  ],
+  "interpolacao": "bilinear without extrapolation"
+}

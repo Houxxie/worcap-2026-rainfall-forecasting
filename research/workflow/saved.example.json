@@ -1,0 +1,11 @@
+{
+  "schema": "rainfall_workflow_v1",
+  "name": "archived-unet-comparison",
+  "mode": "saved",
+  "output_root": "../../outputs/experiments",
+  "inputs": {
+    "observations": "/path/to/official/treino_tp.nc",
+    "predictions": "/path/to/spatial_unet/results",
+    "evidence": null
+  }
+}

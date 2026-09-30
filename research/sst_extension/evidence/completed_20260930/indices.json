@@ -1,0 +1,15 @@
+{
+  "all_required_months_present": true,
+  "older_unshared_months": [
+    "1976-07",
+    "1976-08",
+    "1976-09",
+    "1976-10",
+    "1976-11"
+  ],
+  "overlap_exact": true,
+  "required_end": "2022-09-01",
+  "required_start": "1990-07-01",
+  "sha256": "b6f444fbec48681c1e5b46a5c22aa197ad91c7fbbdaff82c3ed3a9c63f7c15a4",
+  "shared_months": 526
+}

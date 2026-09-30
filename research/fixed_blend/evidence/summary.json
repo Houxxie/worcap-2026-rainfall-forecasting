@@ -1,0 +1,38 @@
+{
+  "protocol": "fixed_blend_v1",
+  "months": 168,
+  "gridpoint_months": 13198248,
+  "hybrid_rmse": 1.7533987173382521,
+  "unet_rmse": 1.764725739441376,
+  "blend_rmse": 1.7506280424784038,
+  "delta_rmse_vs_hybrid": -0.0027706748598483877,
+  "relative_rmse_reduction_percent": 0.15801738831281442,
+  "delta_mae_vs_hybrid": -0.0010848361434903087,
+  "delta_absolute_bias_vs_hybrid": 0.004075335088914306,
+  "blend_lower_rmse_grid_fraction": 0.5699392828502692,
+  "input_hashes_verified": true,
+  "original_scores_reproduced": true,
+  "blend_maps_read_back_exactly": true,
+  "mse_identity_verified": true,
+  "intensity_partition_verified": true,
+  "independent_holdout": false,
+  "model_fitted": false,
+  "weight_search": false,
+  "model_promoted": false,
+  "forecast_issued": false,
+  "blocks": {
+    "improved": 6,
+    "worsened": 1,
+    "tied": 0
+  },
+  "years": {
+    "improved": 10,
+    "worsened": 4,
+    "tied": 0
+  },
+  "calendar": {
+    "improved": 10,
+    "worsened": 2,
+    "tied": 0
+  }
+}

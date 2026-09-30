@@ -1,0 +1,47 @@
+{
+  "verified_report_artifacts": 77,
+  "same_signature_as_pilot": true,
+  "blocks": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "A",
+    "B",
+    "C"
+  ],
+  "selected_epochs": {
+    "H1": 5,
+    "H2": 31,
+    "H3": 10,
+    "H4": 18,
+    "A": 7,
+    "B": 18,
+    "C": 9
+  },
+  "all_hybrid_blocks_reproduced": true,
+  "aggregates_reproduced": true,
+  "evaluated_months_per_model": 168,
+  "improved_blocks": 0,
+  "improved_years": 3,
+  "h1_repeated_rmse_delta": 0.0,
+  "summary": {
+    "blocks": [
+      "A",
+      "B",
+      "C",
+      "H1",
+      "H2",
+      "H3",
+      "H4"
+    ],
+    "complete_seven_blocks": true,
+    "delta_rmse": 0.011327022103124085,
+    "forecast_issued": false,
+    "hybrid_rmse": 1.753398717338252,
+    "independent_holdout": false,
+    "interpretation": "Development comparison on previously consulted years. A pilot is not the seven-block result.",
+    "model_promoted": false,
+    "unet_rmse": 1.764725739441376
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "files": {
+    "calendar.csv": "7a3e9f81b3cff62183e53f04e597bc59378d29122d675c50f2d2c7363a086dc6",
+    "global.csv": "044c310fe49c905b01b4963704cc550c31da6a9ac0bdaaf531361e569a378f36",
+    "monthly_comparison.png": "aace208b35d309c7fe444dcf05ad3e7a8b69ed5af5c8a2b2f061bb452705dd75",
+    "monthly_metrics.csv": "2bc1f25f9fa145012ca915727c640b6f03faae1a2e8ee37efeb90d28c60a74f7",
+    "opened.json": "961abcd10e2be72a08f13315a5e8aa1c5408c2fb05f34ad3ea3a0fd87983b7a0",
+    "regions.csv": "e23af487b8a6a4925899b0abe9c2e641fd165689e2d72bd2604fb306d519e240",
+    "report.html": "d0ff15ab83a74869fe92449ff286470d59eef325f1436f90c9d86426a9f4877f",
+    "summary.json": "30449e16fc71bfde9306abe6730ed0e26693726f114242faf88336dc5e05ee17",
+    "years.csv": "150420d842c0846684b2f7dd4e8d2919c2f46d56eb32a02daee20ace6a7b1269"
+  },
+  "frozen_record_sha256": "915ed044d66fd24406d9d688505b718f02da8f2b92c7fefeb94bbc03c8eaaa60"
+}

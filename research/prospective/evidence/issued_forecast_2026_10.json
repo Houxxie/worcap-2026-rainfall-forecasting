@@ -1,0 +1,66 @@
+{
+  "checked_at_utc": "2026-09-30T18:20:32.801729+00:00",
+  "registry_event_count": 44,
+  "registry_tip": "712c60325428670c50ed1c059af09be6e58c192ac7a3ef25ff8cea6e35961a7e",
+  "all_referenced_object_hashes_verified": true,
+  "forecast_event": "712c60325428670c50ed1c059af09be6e58c192ac7a3ef25ff8cea6e35961a7e",
+  "issued_at_utc": "2026-09-30T18:18:00.374052+00:00",
+  "issued_at_brasilia": "2026-09-30T15:18:00.374052-03:00",
+  "deadline_utc": "2026-10-01T00:00:00+00:00",
+  "issued_before_deadline": true,
+  "model_event": "8b7fae77efa361b7ec09d4212f20f429a2ba30a01ebdba36ec44f0b9733e6d82",
+  "protocol_event": "b61d3ae3dac9e65da02c1b6d5aa3b66f9d918bae94db51a9f55c3728cf490e37",
+  "sources": {
+    "cfsv2": "b6ba02640ec1d4591a0e2533457382e1804fb9dc82274c7743c0c76b5dd70672",
+    "era5_pl": "f54439998cc3eba26787d2fa61395e3b9054d81c670769dde59026bbe0aba15f",
+    "era5_sl": "741d3bc20a9ee906ca96e3c1b5fd6b1091e95d916496147ecf55ec87c9de9055",
+    "nino12": "7e8bc7bf753665ce6aa58ccaaaa62dfd627c20c52c3746077f524921d6ea881f",
+    "nino34": "c87d8d592d08a564bdf9e331b223d6ff180921113f3694afc3355fbd825cfa07",
+    "seas5": "6a42acfd497209f61ae80d9f5c4d46638b02806132b9df652fd6428bab1d3a97",
+    "tna": "c43dad243af91a985e822de5d46c33dbd43bf089502cf81a9aa3e5811263be4f",
+    "tsa": "9eeb4da93e2d733dc6ce1ab7a48a9303519f02b08e45f33a2331ffd065187710"
+  },
+  "forecast": {
+    "bytes": 957631,
+    "sha256": "7ec16a8e96e942877aa25a0d817dc5ab3709e8672bae765781356fcce4bf45f7"
+  },
+  "shape": {
+    "time": 1,
+    "lat": 301,
+    "lon": 261
+  },
+  "units": "mm/day",
+  "minimum": 0.0021098803627356217,
+  "maximum": 87.2238006851372,
+  "first_verification_eligible_from": "2027-02-01T00:00:00+00:00",
+  "observed_rainfall_used_for_scoring": false,
+  "skill_not_yet_measured": true,
+  "independent_timestamp": false,
+  "inference_environment": {
+    "python": "3.12.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.0.2",
+      "pandas": "2.3.3",
+      "xarray": "2025.12.0",
+      "lightgbm": "4.6.0",
+      "netCDF4": "1.7.4",
+      "h5netcdf": "1.8.1",
+      "h5py": "3.16.0",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.6.1",
+      "threadpoolctl": "3.6.0",
+      "ipython": "9.17.1"
+    },
+    "frozen_core_versions_matched": true,
+    "synthetic_package_replay_passed": true,
+    "grib_decoding_performed_during_inference": false
+  },
+  "validation": {
+    "new_source_tests": 11,
+    "existing_registry_tests": 14,
+    "inference_tests_in_pinned_environment_passed": 4,
+    "grib_tests_in_existing_decoder_environment_passed": 3,
+    "note": "GRIB tests initially failed in the inference-only environment because eccodes is absent; all three passed in the decoder environment. No GRIB decoding occurs during this forecast inference."
+  }
+}

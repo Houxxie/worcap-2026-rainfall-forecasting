@@ -1,0 +1,18 @@
+{
+  "id": "fixed_blend_v1",
+  "hypothesis": "The compact U-Net adds complementary information to the fixed hybrid when given a small fixed contribution.",
+  "design": "Chosen after inspecting the original models' development diagnostics, before evaluating this combination. Not an independent holdout.",
+  "evaluation": ["2007-01", "2020-12"],
+  "blocks": ["H1", "H2", "H3", "H4", "A", "B", "C"],
+  "formula": "0.75 * archived_hybrid + 0.25 * archived_unet",
+  "weights": {"hybrid": 0.75, "unet": 0.25},
+  "input_stage": "Final archived nonnegative rainfall maps in mm/day; not unbounded anomalies.",
+  "arithmetic": "float64, no additional clipping, rounding, normalization or bias correction",
+  "weight_search": false,
+  "conditional_switching": false,
+  "new_training": false,
+  "sources": "Unchanged spatial_unet_v1 information cutoffs and source snapshots",
+  "primary_metric": "RMSE pooled over all 168 months and the full 301 by 261 grid",
+  "secondary_metrics": ["MAE", "signed bias", "block", "year", "calendar month", "latitude band", "observed monthly intensity", "pixel"],
+  "interpretation": "Describe complementary errors and temporal/regional consistency. No significance claim or automatic promotion. No new forecasts are issued."
+}

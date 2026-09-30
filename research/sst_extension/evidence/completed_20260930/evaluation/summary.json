@@ -1,0 +1,30 @@
+{
+  "automatic_promotion": false,
+  "baseline_differences": {
+    "mae": 0.0,
+    "rmse": 0.0,
+    "rmse_area": 0.0,
+    "vies": 0.0
+  },
+  "baseline_reproduced": true,
+  "complete_extension": true,
+  "complete_seven_blocks": false,
+  "delta": {
+    "mae": -0.002676653675183216,
+    "rmse": -0.004150119422746235,
+    "rmse_area": -0.004417199491846047,
+    "vies": 0.008266566923305574
+  },
+  "evaluation": [
+    "2021-01",
+    "2022-12"
+  ],
+  "forecast_issued": false,
+  "historical_publication_vintages_verified": false,
+  "independent_holdout": false,
+  "months_better": 12,
+  "months_tied": 0,
+  "months_worse": 12,
+  "seconds_fit": 187.35894487299993,
+  "status": "complete"
+}

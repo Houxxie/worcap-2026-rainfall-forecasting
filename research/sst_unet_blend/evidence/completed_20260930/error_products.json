@@ -1,0 +1,26 @@
+{
+  "reference": {
+    "blend_sse_from_disagreement": 6076965.304107504,
+    "blend_sse_from_products": 6076965.304107503,
+    "centered_error_correlation": 0.9888961428065651,
+    "disagreement_sse": 144515.25063656014,
+    "error_product_sum": 6048775.118842954,
+    "hybrid_error_sum": 241685.94897880653,
+    "hybrid_sse": 6087091.083042482,
+    "n": 1885464,
+    "unet_error_sum": 377206.4593262484,
+    "unet_sse": 6154974.405279987
+  },
+  "sst": {
+    "blend_sse_from_disagreement": 6056779.069983241,
+    "blend_sse_from_products": 6056779.069983242,
+    "centered_error_correlation": 0.9890879949143244,
+    "disagreement_sse": 139827.83534994067,
+    "error_product_sum": 6037075.410159262,
+    "hybrid_error_sum": 257272.26331628993,
+    "hybrid_sse": 6059004.250388479,
+    "n": 1885464,
+    "unet_error_sum": 377206.4593262484,
+    "unet_sse": 6154974.405279987
+  }
+}

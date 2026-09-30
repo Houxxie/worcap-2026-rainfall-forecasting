@@ -1,0 +1,65 @@
+{
+  "automatic_promotion": false,
+  "availability_policy": "Apply the existing monthly lags; do not infer historical publication timestamps from month labels. Actual future issuance still requires timely source receipts.",
+  "budget": {
+    "lightgbm_fits": 4,
+    "neural_fits": 0,
+    "outer_blocks": 1,
+    "pca_fits": 1,
+    "shared_ridge_fits": 1
+  },
+  "evaluation_end": "2022-12-01",
+  "evaluation_months": 24,
+  "evaluation_start": "2021-01-01",
+  "forecast_issued": false,
+  "historical_publication_vintages_verified": false,
+  "hyperparameter_search": false,
+  "hypothesis": "Eight global SST principal components add information to the fixed lagged hybrid.",
+  "id": "sst_temporal_extension_2021_2022_v1",
+  "independent_holdout": false,
+  "lags": {
+    "atmosphere": 4,
+    "indices": 3,
+    "seasonal_initialization": 1,
+    "sst": 2,
+    "training_rainfall": 4
+  },
+  "learning_rate": 0.05,
+  "leaves": 31,
+  "models_fixed_for_block": true,
+  "paired_inputs": "Identical samples, targets, base features, climatologies and ridge. Append eight PCs only to the two tree models.",
+  "pca": {
+    "area_weight": "sqrt(cos(latitude))",
+    "components": 8,
+    "fit_mask_climatology_center_on_training_only": true,
+    "solver": "full",
+    "standardize_variance": false
+  },
+  "primary_metric": "Pooled full-grid RMSE: SST candidate minus paired hybrid.",
+  "prior_use": "Both years were used in earlier final fits and have already been evaluated in the hybrid/U-Net temporal extension. This is an additional retrospective check, not a fresh holdout.",
+  "residual_scales": [
+    0.9,
+    0.875
+  ],
+  "ridge_alpha": 0.1,
+  "sampled_points_per_month": 5000,
+  "secondary_metrics": [
+    "MAE",
+    "signed bias",
+    "area-weighted RMSE",
+    "year",
+    "month",
+    "latitude band"
+  ],
+  "seed": 42,
+  "training_end": "2020-09-01",
+  "training_months": 360,
+  "training_start": "1990-10-01",
+  "trees": 300,
+  "weight_search": false,
+  "weights": [
+    0.375,
+    0.375,
+    0.25
+  ]
+}

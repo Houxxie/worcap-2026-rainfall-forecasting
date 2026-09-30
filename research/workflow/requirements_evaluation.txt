@@ -1,0 +1,2 @@
+# Evaluation only. Do not install into the fixed training environment.
+-r ../diagnostics/requirements.txt

@@ -46,9 +46,21 @@ Forecast anomalies became an important part of the model. These describe how muc
 
 For the final hybrid, I combined two LightGBM components with a local ridge regression. Predictions were evaluated across seven chronological validation blocks covering 2007–2020, checking both the overall results and the differences between years.
 
-After the competition, my focus shifted toward forecasts for future months. That meant looking more closely at when each data source would actually be available. I’m now testing longer input lags and recording when new files arrive.
+After the competition, my focus shifted toward forecasts for future months. That meant looking more closely at when each data source would actually be available. I started using longer input lags and recording when new files arrive, while keeping the model experiments separate.
 
-The [research folder](research/README.md) contains this work: the current baseline, an experiment with global SST and PCA, and a registry of source arrivals. The complete pipeline for issuing future forecasts is still being integrated.
+The [research folder](research/README.md) contains this work, including the current baseline, U-Net and global SST/PCA experiments, and a [shared notebook for reviewing results](research/workbench/README.md). The experiment notes include what improved, what didn’t, and why some ideas stayed in research.
+
+## 🌧️ First forecast for a future month
+
+The first forecast for **October 2026** was saved on **30 September at 18:18 UTC**, before the month began. For this run, I kept the hybrid and its settings fixed, checked all required sources, and saved the prediction together with the model record and exact input versions.
+
+![October 2026 rainfall forecast, training climatology, and their difference](assets/forecast_october_2026.png)
+
+*Monthly mean precipitation in mm/day. The middle panel shows the October climatology from 1993–2022; the right panel shows the forecast’s departure from it.*
+
+This is something I wanted to do after the competition: keep a forecast made in advance and come back later to see how it performed. October’s accuracy is still unknown. Under the current protocol, the first check against final ERA5 data can begin in **February 2027**.
+
+The [operational record](research/prospective/OPERATIONAL_STATUS.md) explains the source checks, the CFSv2 acquisition fix, and how this forecast was preserved.
 
 ## 💡 What I learned
 

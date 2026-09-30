@@ -1,0 +1,12 @@
+{
+  "tests_passed": 6,
+  "isolated_notebook_bundle_verified": true,
+  "notebook_code_cells_compiled": true,
+  "bundle_files": 11,
+  "notebook_sha256": "e5eb36e64ba48abd64198189953407dde058c189a1f206e9d9e4fb5f8324e18f",
+  "neural_or_tree_training_libraries_imported": false,
+  "actual_saved_prediction_comparison_performed": false,
+  "seconds": 6.492086299986113,
+  "limitations": "Local synthetic checks only. Actual 2021-2022 SST and U-Net maps are absent locally; real comparison is pending.",
+  "reused_kernel_import_regression_passed": true
+}

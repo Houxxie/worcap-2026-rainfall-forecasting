@@ -1,0 +1,17 @@
+{
+  "months": 168,
+  "gridpoint_months": 13198248,
+  "all_seven_prediction_hashes_verified": true,
+  "monthly_region_scores_reproduced": 2016,
+  "intensity_partition_verified": true,
+  "hybrid_rmse": 1.7533987173382521,
+  "unet_rmse": 1.764725739441376,
+  "global_delta_mse": 0.03984987348348299,
+  "unet_lower_rmse_grid_fraction": 0.265029722126755,
+  "unet_higher_rmse_grid_fraction": 0.734970277873245,
+  "calendar_months_unet_improved": 2,
+  "independent_holdout": false,
+  "model_fitted": false,
+  "model_promoted": false,
+  "forecast_issued": false
+}

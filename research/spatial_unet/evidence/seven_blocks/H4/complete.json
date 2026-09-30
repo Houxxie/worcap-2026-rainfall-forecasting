@@ -1,0 +1,32 @@
+{
+  "files": {
+    "baseline_check.json": "f63e083fc255c449e3d6ded37cda31783f7fce53bc5e77da09f32f1faeeba638",
+    "hybrid/arvores_multissistema.txt": "9a08a8a8448d39a7110d413cd4a77ad622087004977a217ff14acb369d30897b",
+    "hybrid/arvores_seas5.txt": "af632271ebc8a9b9ab09c1f457b843b73f1edf8ac2691a9f34bf012566246122",
+    "hybrid/clima_atmosfera_indices.npz": "de26e66fc981f843a166cfe4545e6aa237e99da7f9626d096059e068019a4de9",
+    "hybrid/clima_cfsv2.nc": "50573683678bef9837c240b4effd7b346659cd8133c5ef0b9e42f98584567240",
+    "hybrid/clima_chuva.nc": "513f5745fd14248fe260758e19efbb8838a8e618ef12555c18c5f76c7e6a4c97",
+    "hybrid/clima_seas5.nc": "20de4786a3a4b6fec1b45908c8be8b381b372d417d627c0893dae6f071e9c715",
+    "hybrid/fit.json": "71dc8f55d121d8e4596a16bf5af7ab7f2d855268226e5b7ed431156cd8ca8089",
+    "hybrid/ridge.npz": "05da40482cee30f993682736db383f6d2243f87c3bb37b1b72eb3e525757b3c2",
+    "inner/context.json": "d13ae70d1b8044789f4f264a89aea0d82e95f5df71615c6d1b5821288fbf1bce",
+    "inner/network.pt": "02625e6d0eb50670656705710a87d7113ab87321ab76abbd9f5a6ec95ff8acc6",
+    "inner/rainfall_climatology.nc": "44b2548cf58f73a24b7c2de1150249911ad1d1b47250b1f4f97a34ab024d2196",
+    "inner/references.npz": "b5fc4a18e4228546beb7ad9948c842529e94f6660c2dcccbfa323187da9bf5c5",
+    "inner/scaling.npz": "81174ba6243f4a981c88fc7669741ce1e5513a30f8e957e99f8bff3548194d75",
+    "inner/training.json": "91b3dce3ef9877051688692dfa9139e818f42b88f59ade24909e68eeed0b9ae7",
+    "inner/training_history.json": "53787e9943551bcaf186863383f31ef8ba92329e4f7623d49c86106fef56a273",
+    "monthly_metrics.csv": "280d7197b163b5de0104078f25dd0438bcf4e9705e3b0681054e33c3c1d6e603",
+    "predictions.nc": "2f192714206bc3379202f32ffb690cbd1df83a53134bfa5701d4c7291f948f06",
+    "source_calendar.csv": "db9860b421d3190bc58f469badfad1a2375b9e9d2d14a235b3a07b32810739ef",
+    "split.json": "231802dd65c0e6995c5177860d036abd0e0f7292dade92dce64749a0717f1494",
+    "unet/context.json": "2133a3e7f1d1ff69b4ce0b25115561c2116b5557d05d22e5d859a315faaf1929",
+    "unet/network.pt": "f93a472e93dab9b26f0d47ea7862123dda34b2ad1359d36211221977ceea49e9",
+    "unet/rainfall_climatology.nc": "196b33ab9653326fae33592bb07ffb884bca89d75694a31e1dec295b57ecc1d3",
+    "unet/references.npz": "9a8890e4f803802c9adc1afed1678dbcf0b276186abcec26cf2ccb9d1af0280c",
+    "unet/scaling.npz": "cc6587ea3e7198b05bb00cec345072a30d379dc7dfc63cfec7d8d5e9f580b835",
+    "unet/training.json": "31c17e8568e8f5b159cf40ca194bd2def932192be5923fdad5e4622ead6d8981",
+    "unet/training_history.json": "6ae88f922f6f1fd73f1f5ecc91b4c64cfb16f8f91bd1e22b0771362bbdadbdd9"
+  },
+  "signature": "02d1ffc0a7205f2bf372673d337cf5daa95f125d43a95836b953c10ae101244c"
+}

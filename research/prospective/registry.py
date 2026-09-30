@@ -195,7 +195,8 @@ class Registro:
             faltantes.append('model: final package for the lagged-source baseline has not been registered')
         if agora() >= mes(alvo):
             faltantes.append('deadline: the month has started; backdating is prohibited')
-        return dict(mes_alvo=alvo, pronto=not faltantes, faltantes=faltantes, fontes=fontes, modelo=modelos[0]['id'] if modelos else None, protocolo=protocolo['id'], previsao_emitida=False)
+        emitida = any(e['tipo'] == 'previsao_congelada' and e['dados']['mes_alvo'] == alvo for e in ev)
+        return dict(mes_alvo=alvo, pronto=not faltantes, faltantes=faltantes, fontes=fontes, modelo=modelos[0]['id'] if modelos else None, protocolo=protocolo['id'], previsao_emitida=emitida)
 
     def congelar(self, alvo, arquivo, inferencia):
         """Accept audited inference only; no backdating or overwriting."""
