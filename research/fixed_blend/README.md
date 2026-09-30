@@ -58,7 +58,7 @@ Pooled centered forecast-error correlation was **0.983109**. Although the errors
 
 Keep the fixed blend as a **research candidate** and preserve the operational hybrid. The result supports investigating U-Net complementarity; it does not establish future improvement or remove the bias/medium-rainfall tradeoffs. Before operational adoption, freeze the same candidate and evaluate genuinely unconsulted outcomes or prospective months. Any new architecture or correction model is a separate experiment, not part of this result.
 
-The next prepared step is an [additional chronological evaluation in 2021–2022](../temporal_extension/README.md), using a new fit ending in September 2020. Because those observations participated in earlier final training, that extension is explicitly retrospective and does not replace the need for prospective confirmation.
+The [additional chronological evaluation in 2021–2022](../temporal_extension/RESULTS.md) is complete, using a new fit ending in September 2020. The same fixed blend reduced pooled RMSE by 0.0832%, but worsened MAE, absolute bias and the second year's RMSE. It remains a research candidate. Because those observations participated in earlier final training, the extension is explicitly retrospective and does not replace the need for prospective confirmation.
 
 Seventeen configuration, diagnostic and blend tests passed. All candidate NetCDF maps were read back exactly, original model sums were reproduced, intensity bins partitioned the complete sample, and both MSE identities matched the direct calculation. The workflow verified the complete run inventory. No model fitting, new download or Kaggle execution was needed.
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## Completed chronological extension — 2026-09-29
+
+- Record successful Kaggle version `354026629`, using the unchanged training cutoff, architecture and fixed 75/25 blend.
+- Record 2021–2022 pooled RMSE of 1.796784 for the hybrid and 1.795289 for the blend: a 0.0832% decrease, with worse MAE, absolute bias and 2022 RMSE.
+- Preserve the small reports and audit records; verify their hashes and recompute pooled metrics from monthly sums. Model weights and prediction maps remain in the saved Kaggle output.
+- Retain the operational hybrid and document a training-only bias-correction hypothesis for a separate experiment; no new fit or weight search is performed.
+
 ## Temporal-extension input coverage fix — 2026-09-29
 
 - Preserve failed Kaggle version `354007635`: its development-only ocean index table ended before the first 2021 forecast origin, so no outer evaluation was produced.

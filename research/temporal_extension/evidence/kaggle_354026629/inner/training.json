@@ -1,0 +1,9 @@
+{
+  "device": "cuda",
+  "inner_selection": true,
+  "parameter_count": 122945,
+  "selected_epochs": 8,
+  "train_end": "2018-06-01",
+  "train_months": 333,
+  "train_start": "1990-10-01"
+}

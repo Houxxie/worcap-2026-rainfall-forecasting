@@ -2,7 +2,7 @@
 
 This notebook evaluates the unchanged lagged hybrid, compact U-Net and fixed **75% hybrid + 25% U-Net** combination on one additional two-year block. It tests whether the development improvement persists in another period, without searching weights or changing architecture.
 
-**Status: corrected for a new Kaggle run; no 2021–2022 comparison is available yet.** The first attempt fitted the hybrid, then stopped on a missing ocean-index month before completing predictions or training the U-Net. Preparation checks do not measure forecast skill.
+**Status: completed on Kaggle, version `354026629`.** The fixed blend reduced pooled RMSE from **1.796784 to 1.795289 mm/day (0.0832%)**, but increased MAE and absolute bias and worsened RMSE in 2022. The operational hybrid remains unchanged. Read the [complete result and decision](RESULTS.md). The failed first attempt and its input-coverage repair remain recorded below.
 
 ## What this evaluation can establish
 
