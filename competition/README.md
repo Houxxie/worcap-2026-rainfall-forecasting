@@ -1,6 +1,6 @@
 # Competition hybrid
 
-Two LightGBM residual models plus local ridge regression, developed for the WorCAP 2026 Hackathon. **Top 10 · official final score: 1.80114.**
+Two LightGBM residual models plus local ridge regression, developed for the WorCAP 2026 Hackathon. **Top 10 · official final score: 1.78758.**
 
 - [Explained notebook](hybrid_forecast.ipynb)
 - [Executable script](hybrid_forecast.py)
