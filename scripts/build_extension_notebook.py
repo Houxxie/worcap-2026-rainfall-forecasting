@@ -11,7 +11,7 @@ from build_spatial_notebooks import build
 def main():
     names = ['research/spatial_unet/protocol.json', 'research/temporal_extension/protocol.json',
              'research/lagged_sources/library.py', 'research/lagged_sources/official_hashes.json',
-             'research/lagged_sources/ocean_indices.csv']
+             'research/lagged_sources/ocean_indices.csv', 'competition/metadata/NOAA/indices_noaa.csv']
     for folder in ['common', 'spatial_unet', 'temporal_extension']:
         names += [p.relative_to(ROOT).as_posix() for p in (ROOT / 'research' / folder).glob('*.py')]
     build('research/temporal_extension/temporal_extension.ipynb', 'research/temporal_extension/README.md', names, [

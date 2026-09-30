@@ -1,5 +1,11 @@
 # Changelog
 
+## Temporal-extension input coverage fix — 2026-09-29
+
+- Preserve failed Kaggle version `354007635`: its development-only ocean index table ended before the first 2021 forecast origin, so no outer evaluation was produced.
+- Load the existing full NOAA archive, verify its exact overlap with the development table, and reject missing training or forecast origins before fitting.
+- Add calendar-coverage regression checks and rebuild the standalone notebook. Architecture, weights and evaluation protocol remain fixed.
+
 ## Prepared chronological extension — 2026-09-29
 
 - Add a separate locked Kaggle notebook for the unchanged hybrid, U-Net and 75/25 blend on January 2021–December 2022, with fitting capped at September 2020.

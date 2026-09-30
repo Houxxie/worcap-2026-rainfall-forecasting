@@ -2,7 +2,7 @@
 
 This notebook evaluates the unchanged lagged hybrid, compact U-Net and fixed **75% hybrid + 25% U-Net** combination on one additional two-year block. It tests whether the development improvement persists in another period, without searching weights or changing architecture.
 
-**Status: prepared for Kaggle; the real 2021–2022 experiment has not been run.** The initial local checks use synthetic data and do not measure forecast skill.
+**Status: corrected for a new Kaggle run; no 2021–2022 comparison is available yet.** The first attempt fitted the hybrid, then stopped on a missing ocean-index month before completing predictions or training the U-Net. Preparation checks do not measure forecast skill.
 
 ## What this evaluation can establish
 
@@ -66,4 +66,12 @@ No result automatically replaces the operational hybrid, changes the ongoing sou
 
 ## Preparation checks
 
-Fourteen synthetic checks passed from the notebook's extracted source bundle in an isolated directory. They cover the original spatial model and this extension, including target-free inference equivalence, training-window selection, rejection of modified frozen predictions, pooled-error metrics and complete report generation. See the [validation record](evidence/validation.json). Real-data preflight, GPU fitting and the 2021–2022 scores remain pending in Kaggle.
+The original fourteen synthetic checks passed from the notebook's extracted source bundle in an isolated directory. They cover the original spatial model and this extension, including target-free inference equivalence, training-window selection, rejection of modified frozen predictions, pooled-error metrics and complete report generation. The [initial validation record](evidence/validation.json) describes that preparation, not a successful real-data run.
+
+### Missing-index fix
+
+Kaggle version `354007635` stopped at the first hybrid forecast with `KeyError: 2020-10-01`. The bundled development index table ended in September 2020, so its structural checks were insufficient for the new forecast calendar. No outer scores were produced. This was an input-loading defect, not a model result.
+
+The corrected loader uses the already preserved [NOAA archive](../../competition/metadata/NOAA/indices_noaa.csv), pins its SHA-256, and checks all required T−3 origins before fitting. All 526 shared months match the development table exactly; the 360 training origins are unchanged. Only July 1990–September 2022 is selected. There is no download, interpolation, new feature or protocol/weight change. `indices.json` records the source, overlap check and selected coverage.
+
+Two regression checks verify first/last forecast coverage and reject the old truncated table before fitting. The [repair validation record](evidence/coverage_fix_validation.json) records the results. The failed Kaggle version remains preserved; rerunning this correction uses a fresh output directory.

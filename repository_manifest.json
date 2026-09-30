@@ -14,8 +14,8 @@
       "bytes": 462
     },
     "CHANGELOG.md": {
-      "sha256": "4fd37e34b5f6462e845de5e5b071ac6ad9c62d34ee72339fa5c9411e1b805c4b",
-      "bytes": 2746
+      "sha256": "497657bb4321ddf533294148b2289e1746306f4c43d7110634f91adac42bfb91",
+      "bytes": 3266
     },
     "LICENSE": {
       "sha256": "bc7a311c017ec031a9a76aab9d42ee0a1a438257b180d55b4a931efec35ae287",
@@ -1022,20 +1022,24 @@
       "bytes": 6543
     },
     "research/temporal_extension/README.md": {
-      "sha256": "4e5071f730015740a1ae6e9ff75d2a0d8073a406db3d6a7313ffa7b7be33873d",
-      "bytes": 7619
+      "sha256": "bdcaa513aa814801af9e4e0c443955ff342a7800e19b2c28d00b6e311ad077e3",
+      "bytes": 8838
     },
     "research/temporal_extension/__init__.py": {
       "sha256": "73a12c9b4224de54cff998c920ba7d4d20d896ce3a16b89e85ecffb5a36cd9ba",
       "bytes": 77
+    },
+    "research/temporal_extension/evidence/coverage_fix_validation.json": {
+      "sha256": "714bb6219afe2125cd677f468127073125c1432a04338628d3473d6a67a92c94",
+      "bytes": 4414
     },
     "research/temporal_extension/evidence/validation.json": {
       "sha256": "118ce0ae4ceff7927ac681df08e5219291f47e74ea5b798eccce5da336d876ee",
       "bytes": 3216
     },
     "research/temporal_extension/experiment.py": {
-      "sha256": "c49657c160db5739f9b4cf82ef122541bf326e003f3b1880fd2ba8022265d234",
-      "bytes": 17885
+      "sha256": "5172ae29a3575c9bfeb21e5e1396ec09a622a41e34f6fc8dfe7eaf689b9708e7",
+      "bytes": 19941
     },
     "research/temporal_extension/protocol.json": {
       "sha256": "367fa9da29f45286c5ce2a8358bf87f415a69d35918c16fc129fffe61c5a8006",
@@ -1046,12 +1050,12 @@
       "bytes": 3848
     },
     "research/temporal_extension/temporal_extension.ipynb": {
-      "sha256": "06c5876c3f94ca95c06f833e093e9de35de14af006696cc63ff8eecb55e4b493",
-      "bytes": 191468
+      "sha256": "17e95fc714a3d9ac2511e5832130a411615efc2bf0a97b3e657a752ffbb6b56f",
+      "bytes": 216957
     },
     "research/temporal_extension/test_extension.py": {
-      "sha256": "7d900a1f702077f953263df5976122b93f2db521ef6cf5abd000d1cbe24368fb",
-      "bytes": 7792
+      "sha256": "c83ab2d1fd39d7588613bac3cd85a90e085ee82447236e72209741eaab45085d",
+      "bytes": 9258
     },
     "research/workflow/README.md": {
       "sha256": "0855fa64612c16945419efdad4c9d0a8de32c3c710e0a0d4a45c4e592fdb1777",
@@ -1110,8 +1114,8 @@
       "bytes": 1190
     },
     "scripts/build_extension_notebook.py": {
-      "sha256": "d33249cdc8f9a20b9efdd1eb131a1474d1d7fd3fca2a0d5584877e3de56ac129",
-      "bytes": 4812
+      "sha256": "d845be7d09486001cf3fca6934c35794ea65210027b3191a806ae2f5f1610fda",
+      "bytes": 4858
     },
     "scripts/build_notebooks.py": {
       "sha256": "7bbe589499d46bd8a611b7ee2f8a73fd0505e68eab4f3ae42d0bd524aeb86782",

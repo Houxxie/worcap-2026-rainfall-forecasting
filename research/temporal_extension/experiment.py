@@ -21,6 +21,9 @@ from research.spatial_unet.training import MonthlyMaps, fit_network, inference_m
 
 PROTOCOL_PATH = Path(__file__).with_name('protocol.json')
 SOURCE_PROTOCOL = ROOT / 'research/spatial_unet/protocol.json'
+INDEX_SNAPSHOT = ROOT / 'competition/metadata/NOAA/indices_noaa.csv'
+DEVELOPMENT_INDICES = ROOT / 'research/lagged_sources/ocean_indices.csv'
+INDEX_SNAPSHOT_SHA256 = 'b6f444fbec48681c1e5b46a5c22aa197ad91c7fbbdaff82c3ed3a9c63f7c15a4'
 MODELS = ('hybrid', 'unet', 'blend', 'climatology')
 
 
@@ -41,7 +44,7 @@ def protocol():
 
 def source_files():
     paths = [SOURCE_PROTOCOL, PROTOCOL_PATH, ROOT / 'research/lagged_sources/library.py',
-             ROOT / 'research/lagged_sources/official_hashes.json', ROOT / 'research/lagged_sources/ocean_indices.csv']
+             ROOT / 'research/lagged_sources/official_hashes.json', DEVELOPMENT_INDICES, INDEX_SNAPSHOT]
     for folder in ['common', 'spatial_unet', 'temporal_extension']:
         paths += list((ROOT / 'research' / folder).glob('*.py'))
     return sorted(set(paths))
@@ -53,6 +56,33 @@ def calendar(plan):
     require(len(training) == 360 and len(targets) == 24 and training[-1] == targets[0] - pd.DateOffset(months=4),
             'Invalid four-month label gap or window length.')
     return training, targets
+
+
+def require_index_coverage(table, required):
+    library().conferir_indices(table)
+    missing = pd.DatetimeIndex(required).difference(table.index)
+    require(len(missing) == 0, 'Ocean indices do not cover all training/forecast origins. Missing: '
+            + ', '.join(missing.strftime('%Y-%m').tolist()[:12]) + '. No fitting or imputation is allowed.')
+
+
+def index_snapshot(plan):
+    """Extend the calendar using the already archived NOAA table, with exact overlap checks."""
+    require(sha256(INDEX_SNAPSHOT) == INDEX_SNAPSHOT_SHA256, 'Archived NOAA snapshot changed.')
+    full = pd.read_csv(INDEX_SNAPSHOT, parse_dates=['time_origem']).set_index('time_origem')
+    development = pd.read_csv(DEVELOPMENT_INDICES, parse_dates=['time_origem']).set_index('time_origem')
+    library().conferir_indices(development)
+    shared = development.index.intersection(full.index)
+    require(len(shared) > 0 and full.columns.equals(development.columns)
+            and np.array_equal(full.loc[shared].values, development.loc[shared].values),
+            'Archived NOAA values differ from the development snapshot on shared months.')
+    training, targets = calendar(plan)
+    required = pd.date_range(training[0] - pd.DateOffset(months=3), targets[-1] - pd.DateOffset(months=3), freq='MS')
+    require_index_coverage(full, required)
+    audit = dict(source=INDEX_SNAPSHOT.relative_to(ROOT).as_posix(), sha256=sha256(INDEX_SNAPSHOT),
+                 development_sha256=sha256(DEVELOPMENT_INDICES), shared_months=len(shared), overlap_exact=True,
+                 selected_start=str(required[0].date()), selected_end=str(required[-1].date()),
+                 selected_months=len(required), new_download=False, historical_publication_vintages_verified=False)
+    return full.loc[required].copy(), audit
 
 
 def read_training_rain(path, training):
@@ -75,13 +105,12 @@ def load_inputs(paths, audit, output, plan):
     rain = read_training_rain(paths['official'] / 'treino_tp.nc', training)
     require(np.array_equal(rain.lat, np.arange(-60, 15.25, .25)) and np.array_equal(rain.lon, np.arange(-90, -24.75, .25)), 'Different grid.')
     atmosphere, _ = m.carregar_atmosfera(rain, training[0] - pd.DateOffset(months=4), targets[-1] - pd.DateOffset(months=4))
-    index_path = ROOT / 'research/lagged_sources/ocean_indices.csv'
-    m.INDICES_OC = pd.read_csv(index_path, parse_dates=['time_origem']).set_index('time_origem')
-    m.conferir_indices(m.INDICES_OC)
+    m.INDICES_OC, indices_audit = index_snapshot(plan)
+    write_json(output / 'indices.json', indices_audit)
     phases = ['desenvolvimento', 'somente_ajuste_final']
     seas = xr.concat([m.carregar_seas5(p, rain) for p in phases], dim='time').sel(time=slice(training[0], targets[-1]))
     cfs = xr.concat([m.carregar_cfsv2(p, rain) for p in phases], dim='time').sel(time=slice(training[0], targets[-1]))
-    audit = dict(audit, indices_sha256=sha256(index_path), library_sha256=sha256(ROOT / 'research/lagged_sources/library.py'),
+    audit = dict(audit, indices=indices_audit, library_sha256=sha256(ROOT / 'research/lagged_sources/library.py'),
                  rainfall_decoded_for_fit=[str(training[0].date()), str(training[-1].date())],
                  evaluation_rainfall_decoded=False, test_partition_read=False, sst_used=False)
     return SimpleNamespace(lib=m, rain=rain, atmosphere=atmosphere, seas=seas, cfs=cfs, audit=audit)
@@ -111,11 +140,13 @@ class ForecastMaps(Dataset):
 
 def check(official=None, seas5=None, cfsv2=None, device='cuda'):
     plan, _ = protocol()
+    _, indices = index_snapshot(plan)
     paths, audit = preflight(official, seas5, cfsv2, final=True)
     require(device in {'cpu', 'cuda'}, 'Device must be cpu or cuda.')
     require(device != 'cuda' or torch.cuda.is_available(), 'Enable a Kaggle GPU before fitting, or explicitly select cpu.')
     # These are already prepared seasonal inputs; no provider access is needed.
-    print('Ready: original training files and both seasonal partitions checked. No model fitted.', flush=True)
+    print('Ready: training files, seasonal partitions and ocean indices checked through', indices['selected_end'],
+          '| exact shared NOAA months:', indices['shared_months'], '| no model fitted.', flush=True)
     return paths, audit
 
 

@@ -19,6 +19,7 @@ from research.spatial_unet.network import RainfallUNet, seed_everything
 from research.spatial_unet.training import MonthlyMaps, inference_maps, split_inner
 from research.temporal_extension.experiment import (
     ForecastMaps, calendar, protocol, read_training_rain, verify_frozen, evaluate,
+    index_snapshot, require_index_coverage, DEVELOPMENT_INDICES, INDEX_SNAPSHOT,
 )
 
 
@@ -36,6 +37,28 @@ class ExtensionChecks(unittest.TestCase):
         self.assertEqual(valid[0], pd.Timestamp('2018-10-01'))
         self.assertEqual(fit[-1], pd.Timestamp('2018-06-01'))
         self.assertEqual(reference[0], pd.Timestamp('1990-10-01'))
+
+    def test_archived_indices_cover_first_and_last_forecast_without_changing_training(self):
+        plan, _ = protocol()
+        indices, audit = index_snapshot(plan)
+        self.assertEqual(len(indices), 387)
+        self.assertEqual(indices.index[-1], pd.Timestamp('2022-09-01'))
+        self.assertEqual(audit['shared_months'], 526)
+        self.assertTrue(audit['overlap_exact'])
+        reference = pd.read_csv(DEVELOPMENT_INDICES, parse_dates=['time_origem']).set_index('time_origem')
+        training, targets = calendar(plan)
+        training_origins = training - pd.DateOffset(months=3)
+        pd.testing.assert_frame_equal(indices.loc[training_origins], reference.loc[training_origins])
+        archive = pd.read_csv(INDEX_SNAPSHOT, parse_dates=['time_origem']).set_index('time_origem')
+        for date in [targets[0], targets[-1]]:
+            origin = date - pd.DateOffset(months=3)
+            np.testing.assert_array_equal(indices.loc[origin].values, archive.loc[origin].values)
+
+    def test_old_development_table_rejected_before_fitting(self):
+        table = pd.read_csv(DEVELOPMENT_INDICES, parse_dates=['time_origem']).set_index('time_origem')
+        targets = pd.date_range('2021-01-01', '2022-12-01', freq='MS')
+        with self.assertRaisesRegex(ValueError, 'Missing: 2020-10'):
+            require_index_coverage(table, targets - pd.DateOffset(months=3))
 
     def test_training_reader_does_not_include_later_values(self):
         dates = pd.date_range('2020-01-01', periods=12, freq='MS')
