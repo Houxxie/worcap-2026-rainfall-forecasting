@@ -1,0 +1,7 @@
+{
+  "schema": "rainfall_workbench_v1",
+  "name": "review-completed-comparison",
+  "task": "review",
+  "inputs": {"results": "/path/to/sst_unet_blend_reports.zip"},
+  "output_root": "/kaggle/working/experiments"
+}

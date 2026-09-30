@@ -1,0 +1,9 @@
+{
+  "archive": "operational_october_2026_frozen.zip",
+  "bytes": 64828247,
+  "sha256": "357118fe6b4c27e8f3ec6ec15accafe0e297237358ed6c44a2c3cec7f50ddfa6",
+  "entries_checked": 144,
+  "crc_valid": true,
+  "every_archived_file_hash_verified": true,
+  "registry_unchanged_during_export": true
+}

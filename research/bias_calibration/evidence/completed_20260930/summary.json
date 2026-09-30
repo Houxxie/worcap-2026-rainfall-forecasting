@@ -1,0 +1,31 @@
+{
+  "blocks": [
+    "A",
+    "B",
+    "C",
+    "H1",
+    "H2",
+    "H3",
+    "H4"
+  ],
+  "comparisons": {
+    "blend": {
+      "delta_absolute_bias": 0.0052727043742593,
+      "mae": 0.0006789769679078628,
+      "rmse": -5.5172164066252805e-06,
+      "vies": 0.0052727043742593
+    },
+    "hybrid": {
+      "delta_absolute_bias": 0.0093480394631736,
+      "mae": -0.0004058591755824459,
+      "rmse": -0.002776192076254791,
+      "vies": 0.0093480394631736
+    }
+  },
+  "complete_seven_blocks": true,
+  "forecast_issued": false,
+  "independent_holdout": false,
+  "model_promoted": false,
+  "status": "complete",
+  "weight_search": false
+}

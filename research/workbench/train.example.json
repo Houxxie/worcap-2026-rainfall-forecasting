@@ -1,0 +1,10 @@
+{
+  "schema": "rainfall_workbench_v1",
+  "name": "seven-block-training",
+  "task": "train",
+  "experiment": "hybrid_unet_v1",
+  "device": "cuda",
+  "inputs": {},
+  "search_roots": ["/kaggle/input"],
+  "output_root": "/kaggle/working/experiments"
+}

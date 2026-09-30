@@ -1,6 +1,6 @@
 # Fit and issue the lagged baseline
 
-The workflow covers final fitting, model registration, source normalization, inference and freezing. The first real final fit and authenticated ERA5/SEAS5 acquisition completed on 29 September 2026. **No forecast was issued:** September CFSv2 was incomplete. The [operational record](OPERATIONAL_STATUS.md) identifies the frozen package and remaining blocker.
+The workflow covers final fitting, model registration, source normalization, inference and freezing. The final fit and authenticated ERA5/SEAS5 acquisition completed on 29 September 2026. **October's forecast was frozen on 30 September at 18:18 UTC**, after the original IRI recipe supplied the complete CFSv2 ensemble. The [operational record](OPERATIONAL_STATUS.md) identifies the frozen package, source-equivalence evidence and issued forecast.
 
 The separate `baseline_inference.ipynb` bundles this code for Kaggle. Attach the official training data, the two prepared seasonal datasets, and the **complete existing registry** with its `eventos` and `objetos` directories. It must resume that chain rather than create a replacement with invented earlier receipt dates.
 
@@ -43,5 +43,7 @@ python research/prospective/issue_forecast.py --registry outputs/prospective --t
 ```
 
 Inference materializes the exact model and source objects selected by the registry, reconstructs nonnegative rainfall, and freezes both forecast and training climatology. A source-version change during inference invalidates freezing. An existing monthly prediction or a passed deadline blocks emission. A file produced before a failed freeze is only an unregistered artifact; it is not an issued forecast.
+
+The October example is already completed in the latest registry. Do not rerun it to replace the prediction. Its local inference used the exact frozen NumPy 2.0.2, pandas 2.3.3, xarray 2025.12.0 and LightGBM 4.6.0 versions; the actual Windows/Python 3.12.7 environment is retained in the evidence. The synthetic fitted-package replay passed. GRIB checks passed separately in the acquisition environment; inference reuses the normalized registered inputs.
 
 The U-Net experiment has a separate development protocol. It neither changes this baseline plan nor registers a neural prediction in the baseline's name.

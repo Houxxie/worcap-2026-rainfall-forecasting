@@ -1,0 +1,44 @@
+{
+  "research/sst_extension/evidence/completed_20260930/climatology": {
+    "bias": 4.85722573273506e-17,
+    "mae": 0.0,
+    "rmse": 0.0,
+    "rmse_area": 0.0
+  },
+  "research/sst_extension/evidence/completed_20260930/hybrid": {
+    "bias": 0.0,
+    "mae": 0.0,
+    "rmse": 0.0,
+    "rmse_area": 0.0
+  },
+  "research/sst_extension/evidence/completed_20260930/hybrid_sst": {
+    "bias": 8.326672684688674e-17,
+    "mae": 0.0,
+    "rmse": -2.220446049250313e-16,
+    "rmse_area": -2.220446049250313e-16
+  },
+  "research/temporal_extension/evidence/kaggle_354026629/blend": {
+    "bias": 8.326672684688674e-17,
+    "mae": 0.0,
+    "rmse": 0.0,
+    "rmse_area": 2.220446049250313e-16
+  },
+  "research/temporal_extension/evidence/kaggle_354026629/climatology": {
+    "bias": 4.85722573273506e-17,
+    "mae": 0.0,
+    "rmse": 0.0,
+    "rmse_area": 0.0
+  },
+  "research/temporal_extension/evidence/kaggle_354026629/hybrid": {
+    "bias": 0.0,
+    "mae": 0.0,
+    "rmse": 0.0,
+    "rmse_area": 0.0
+  },
+  "research/temporal_extension/evidence/kaggle_354026629/unet": {
+    "bias": 8.326672684688674e-17,
+    "mae": 0.0,
+    "rmse": 2.220446049250313e-16,
+    "rmse_area": 0.0
+  }
+}

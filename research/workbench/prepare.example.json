@@ -1,0 +1,9 @@
+{
+  "schema": "rainfall_workbench_v1",
+  "name": "monthly-readiness",
+  "task": "prepare",
+  "target": "2026-10",
+  "inputs": {},
+  "search_roots": ["/kaggle/input", "/kaggle/working"],
+  "output_root": "/kaggle/working/experiments"
+}

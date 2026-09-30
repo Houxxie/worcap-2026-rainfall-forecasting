@@ -1,0 +1,59 @@
+{
+  "checked_at_utc": "2026-09-30T18:20:32.800662+00:00",
+  "result": "Original IRI recipe yielded the complete ensemble; CCSR was not substituted.",
+  "target": "2026-10",
+  "complete_members": 24,
+  "recovered_members": [
+    21,
+    22,
+    23,
+    24
+  ],
+  "recipe_comparisons": [
+    {
+      "origin": "2024-09",
+      "expected": 24,
+      "old_complete": 24,
+      "recipe_complete": 24,
+      "all_values_identical_on_overlap": true,
+      "maximum_absolute_difference": 0.0,
+      "nonnegative": true
+    },
+    {
+      "origin": "2025-11",
+      "expected": 28,
+      "old_complete": 28,
+      "recipe_complete": 28,
+      "all_values_identical_on_overlap": true,
+      "maximum_absolute_difference": 0.0,
+      "nonnegative": true
+    },
+    {
+      "origin": "2026-08",
+      "expected": 24,
+      "old_complete": 20,
+      "recipe_complete": 24,
+      "all_values_identical_on_overlap": true,
+      "maximum_absolute_difference": 0.0,
+      "nonnegative": true
+    },
+    {
+      "origin": "2026-09",
+      "expected": 24,
+      "old_complete": 20,
+      "recipe_complete": 24,
+      "all_values_identical_on_overlap": true,
+      "maximum_absolute_difference": 0.0,
+      "nonnegative": true
+    }
+  ],
+  "exact_equal_overlap": true,
+  "model_changed": false,
+  "protocol_changed": false,
+  "imputation_or_ensemble_join": false,
+  "cfsv2_event": "b6ba02640ec1d4591a0e2533457382e1804fb9dc82274c7743c0c76b5dd70672",
+  "provider_root_cause": "Not confirmed by provider; named product is incomplete while native data and explicit recipe are complete.",
+  "successor_status": "Not interchangeable on four checked months; kept only for diagnostics.",
+  "recipe_definition": "https://github.com/iridl/dlentries/blob/7b8bcdd8be1c2beec01e441bcc09e31d5854958a/entries/Models/NMME/NCEP-CFSv2/FORECAST/PENTAD_SAMPLES/MONTHLY/index.tex",
+  "migration_notice": "https://iri.columbia.edu/resources/data-library/sunset/"
+}

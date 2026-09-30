@@ -1,0 +1,22 @@
+{
+  "scope": "Implementation verification only; no real-data pilot executed",
+  "tests_passed": 14,
+  "isolated_bundle_tests_passed": 14,
+  "isolated_bundle_seconds": 43.64,
+  "notebook_bundle_files": 19,
+  "notebook_code_cells_compiled": true,
+  "notebook_bundle_hashes_verified": true,
+  "local_versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "xarray": "2026.7.0",
+    "lightgbm": "4.7.0",
+    "torch": "2.8.0+cpu"
+  },
+  "python": "3.12.7",
+  "base_commit": "e15cc6ca1edfe0556ad6627c20ccf6f9560afbbd",
+  "log_sha256": "d68268be4a4975e47940c60258649d5513c4ab163e7da3b6590d171fe9fdbfb0",
+  "real_forecast_skill_measured": false,
+  "operational_model_changed": false,
+  "environment_note": "Tests ran on the existing local environment, which differs from the pinned real-data Kaggle environment. Existing local NumPy/NetCDF warnings were emitted; all tests completed. No dependency was changed."
+}

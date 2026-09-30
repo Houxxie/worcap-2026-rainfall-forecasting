@@ -76,7 +76,7 @@ if not (REGISTRY/'eventos').exists():
         shutil.copytree(previous[0]/folder,REGISTRY/folder)
 r = Registro(REGISTRY)
 r.eventos(conferir_objetos=True)
-TARGET = '2026-10'
+TARGET = '2026-11'  # October is already frozen in the latest registry.
 print(json.dumps(r.prontidao(TARGET),indent=2))
 '''
     build('research/prospective/baseline_inference.ipynb', 'research/prospective/BASELINE_RUN.md',
@@ -84,8 +84,8 @@ print(json.dumps(r.prontidao(TARGET),indent=2))
         markdown('## 1. Restore the actual event chain\nAttach the previous registry output with its events and objects. An absent or ambiguous chain stops this continuation. Review the target month; a passed deadline cannot be backdated.'), code(restore),
         markdown('## 2. Verify inputs and fit the fixed final baseline\nThe fit uses 1993–2022 with research lags. An already registered model is reused. No competition model is substituted.'),
         code("OFFICIAL = None\nSEAS5 = None\nCFSV2 = None\nfrom fit_baseline import execute as fit_final\nif not any(e['tipo']=='modelo_congelado' for e in r.eventos()):\n    MODEL = fit_final(RUN_ROOT/'model', REGISTRY, OFFICIAL, SEAS5, CFSV2)\nelse:\n    print('The registry already contains its immutable model package.')\n"),
-        markdown('## 3. Collect and normalize sources\nPublic inputs need Internet. To request ERA5/SEAS5, install `cdsapi` and `eccodes`, configure your existing CDS credential privately, and set `COLLECT_CDS=True`. This cell never prints a credential. CFSv2 with missing members remains blocked.'),
-        code("from collect_sources import executar\nfrom prepare_cfsv2 import preparar\nCOLLECT_CDS = False\nexecutar(REGISTRY, CODE_ROOT/'research/prospective/plan.json', TARGET, incluir_cfsv2=False)\npreparar(REGISTRY, TARGET, atualizar=True)\nif COLLECT_CDS:\n    from collect_cds import execute as acquire_cds\n    acquire_cds(REGISTRY, TARGET)\nelse:\n    print('CDS acquisition disabled. Audited ERA5/SEAS5 receipts are still required.')\n"),
+        markdown('## 3. Collect and normalize sources\nPublic inputs need Internet. CFSv2 uses the original IRI catalog recipe, requiring all expected members and exact overlap with the named product. It does not substitute CCSR. To request ERA5/SEAS5, configure your existing CDS credential privately and set `COLLECT_CDS=True`. Future sources may not be available yet; missing data continue to block issuance.'),
+        code("from collect_sources import executar\nfrom prepare_cfsv2_recipe import prepare\nCOLLECT_CDS = False\nassert not any(e['tipo']=='previsao_congelada' and e['dados']['mes_alvo']==TARGET for e in r.eventos()), 'This month already has a frozen forecast.'\nexecutar(REGISTRY, CODE_ROOT/'research/prospective/plan.json', TARGET, incluir_cfsv2=False)\nprepare(REGISTRY, TARGET)\nif COLLECT_CDS:\n    from collect_cds import execute as acquire_cds\n    acquire_cds(REGISTRY, TARGET)\nelse:\n    print('CDS acquisition disabled. Audited ERA5/SEAS5 receipts are still required.')\n"),
         markdown('## 4. Freeze only a complete, timely forecast\nThe file is generated from exactly the model/source bytes selected by the registry. Incomplete inputs or an expired deadline block emission, and an existing issued forecast is not replaced.'),
         code("from issue_forecast import execute as issue\nstate = r.prontidao(TARGET)\nprint(json.dumps(state,indent=2))\nalready_issued = any(e['tipo']=='previsao_congelada' and e['dados']['mes_alvo']==TARGET for e in r.eventos())\nif state['pronto'] and not already_issued:\n    FORECAST = issue(REGISTRY,TARGET,RUN_ROOT/('forecast_'+TARGET+'.nc'))\nelse:\n    print('No new forecast issued:', 'already frozen' if already_issued else state['faltantes'])\nr.exportar_resumo(REGISTRY/'resumo_registro.json')\nprint('Save all registry events and objects with the notebook output.')\n")])
 

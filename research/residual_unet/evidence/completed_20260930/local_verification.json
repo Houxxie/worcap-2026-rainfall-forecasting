@@ -1,0 +1,67 @@
+{
+  "zip_sha256": "1f65aae29e508941f1174f5ce3b40cf3827aa4e226d36a7dfede4f515366b202",
+  "pilot_complete": true,
+  "stage_count": 8,
+  "artifact_hashes_verified": 69,
+  "source_files_verified": 19,
+  "prediction_identity_verified": true,
+  "pooled_metrics_recomputed_from_monthly_sums": true,
+  "shared_scaling_verified": true,
+  "chronological_crossfit_calendar_verified": true,
+  "raw_observations_independently_recomputed": false,
+  "checkpoint_weights_executed": false,
+  "seconds": 692.7448849709999,
+  "monthly_rmse_better": 9,
+  "monthly_rmse_worse": 15,
+  "mean_applied_correction_mm_day": 0.06253564262014454,
+  "training": {
+    "direct_unet": {
+      "first_training_mse": 3.2615877389907837,
+      "last_training_mse": 3.0392627636591594,
+      "training_loss_reduction_percent": 6.816464652286713,
+      "epoch_seconds": 55.57757457299988
+    },
+    "residual_unet": {
+      "first_training_mse": 3.089513885974884,
+      "last_training_mse": 3.007868206501007,
+      "training_loss_reduction_percent": 2.6426707400317717,
+      "epoch_seconds": 55.22370819300045
+    }
+  },
+  "stage_timings": [
+    {
+      "stage": "direct_unet",
+      "seconds": 57.457718715000055
+    },
+    {
+      "stage": "reference",
+      "seconds": 74.53805129099999
+    },
+    {
+      "stage": "residual_unet",
+      "seconds": 56.746388503999924
+    },
+    {
+      "stage": "crossfit\\group_01",
+      "seconds": 68.30282550799996
+    },
+    {
+      "stage": "crossfit\\group_02",
+      "seconds": 71.79664392500001
+    },
+    {
+      "stage": "crossfit\\group_03",
+      "seconds": 74.58720595199998
+    },
+    {
+      "stage": "crossfit\\group_04",
+      "seconds": 74.73232569499999
+    },
+    {
+      "stage": "crossfit\\group_05",
+      "seconds": 74.05458207899994
+    }
+  ],
+  "progress_file_stale": true,
+  "limitations": "Raw competition observations are not included. Metrics were checked from recorded monthly sums, not independently from raw truth. Only final neural weights are saved; training curves cannot establish the best validation epoch. This is one previously consulted development block."
+}

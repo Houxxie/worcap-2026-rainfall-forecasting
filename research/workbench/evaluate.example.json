@@ -1,0 +1,9 @@
+{
+  "schema": "rainfall_workbench_v1",
+  "name": "saved-sst-unet",
+  "task": "evaluate",
+  "experiment": "sst_unet_blend_v1",
+  "inputs": {},
+  "search_roots": ["/kaggle/input", "/kaggle/working"],
+  "output_root": "/kaggle/working/experiments"
+}

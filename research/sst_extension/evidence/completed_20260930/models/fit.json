@@ -1,0 +1,77 @@
+{
+  "evaluation_labels_read": false,
+  "examples": 1800000,
+  "months": 360,
+  "paired_array_hashes": {
+    "X": "a99f35ee9db2514cea6a37833d4c2dc0e595770f334ff3cd86e41c4d7dff5af3",
+    "ids": "c0b724082e72b51e0aa1c26d572f277612886a0852b854182fed2ec10bba5696",
+    "y": "b17946625663a81446d43aae89d73c481878f57d76265828f1e9e6fe1c619f5f"
+  },
+  "parameters": {
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "deterministic": true,
+    "feature_fraction": 0.9,
+    "force_col_wise": true,
+    "lambda_l2": 10.0,
+    "learning_rate": 0.05,
+    "metric": "rmse",
+    "min_data_in_leaf": 150,
+    "num_leaves": 31,
+    "num_threads": 4,
+    "objective": "regression",
+    "seed": 42,
+    "verbosity": -1
+  },
+  "pca_components": 8,
+  "pca_explained_variance_ratio": [
+    0.1935682963978749,
+    0.11835695937138746,
+    0.06562114048924594,
+    0.04181761962836503,
+    0.03758986500138307,
+    0.03546434359817013,
+    0.030053567194076213,
+    0.028408337685789174
+  ],
+  "pca_training_origins": [
+    "1990-08-01",
+    "2020-07-01"
+  ],
+  "scales": [
+    0.9,
+    0.875
+  ],
+  "seconds": 187.35894487299993,
+  "shared_ridge": true,
+  "timings": [
+    {
+      "component": "arvores_seas5",
+      "model": "hybrid",
+      "seconds": 37.746929185
+    },
+    {
+      "component": "arvores_multissistema",
+      "model": "hybrid",
+      "seconds": 40.139484036
+    },
+    {
+      "component": "arvores_seas5",
+      "model": "hybrid_sst",
+      "seconds": 42.927786105999985
+    },
+    {
+      "component": "arvores_multissistema",
+      "model": "hybrid_sst",
+      "seconds": 44.909177763
+    }
+  ],
+  "training_end": "2020-09-01",
+  "training_start": "1990-10-01",
+  "trees": 300,
+  "weights": [
+    0.375,
+    0.375,
+    0.25
+  ]
+}

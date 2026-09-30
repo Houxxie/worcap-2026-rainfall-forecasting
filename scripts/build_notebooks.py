@@ -65,16 +65,17 @@ if not (REGISTRO/'eventos').exists() and Path('/kaggle/input').is_dir():
         for folder in ['eventos','objetos']:
             shutil.copytree(previous[0]/folder, REGISTRO/folder)
         print('Previous registry verified and restored. Receipt times are unchanged.')
-print('Registry prepared. No forecast has been issued.')
+print('Registry restored. This cell does not issue forecasts or change existing forecast records.')
 '''
     build('prospective','prospective_registry.ipynb',
           ['README.md','registry.py','data_contracts.py','collect_sources.py','prepare_cfsv2.py',
+           'prepare_cfsv2_recipe.py','cfsv2_compatibility.py',
            'cfsv2_adapter.py','evaluate.py','test_registry.py','plan.json','requirements.txt'], [
         markdown('## 1. Restore the previous registry\nAttach the last saved output to preserve the chain across Kaggle sessions. Never replace receipt timestamps with earlier dates.'),code(restore),
         markdown('## 2. Run isolated tests\nSynthetic inputs are created in temporary directories. They never enter the real registry.'),
         code("runpy.run_path(str(CODIGO/'test_registry.py'),run_name='__main__')\n"),
         markdown('## 3. Collect public sources and audit CFSv2\nEnable Internet. These downloads require no token. Responses are recorded at the actual receipt time. Missing ensemble members block preparation; the code does not substitute another month or product. Review the target month before running.'),
-        code("from collect_sources import executar\nfrom prepare_cfsv2 import preparar\nALVO = '2026-10'\nESTADO = executar(REGISTRO, CODIGO/'plan.json', ALVO, incluir_cfsv2=True)\nCFS_RECEIPT = preparar(REGISTRO, ALVO)\n"),
+        code("from collect_sources import executar\nfrom prepare_cfsv2_recipe import prepare\nALVO = '2026-11'  # October is already frozen in the latest registry.\nassert not any(e['tipo']=='previsao_congelada' and e['dados']['mes_alvo']==ALVO for e in Registro(REGISTRO).eventos()), 'This month already has a frozen forecast.'\nESTADO = executar(REGISTRO, CODIGO/'plan.json', ALVO, incluir_cfsv2=False)\n# Original IRI recipe; all expected members and exact named-product overlap required.\nCFS_RECEIPT = prepare(REGISTRO, ALVO)\n"),
         markdown('## 4. Inspect readiness and preserve outputs\nThis notebook records arrivals and validates readiness. Fitting and emission are implemented in the separate baseline_inference.ipynb workflow. No forecast is emitted by this source-collection notebook.'),
         code("from evaluate import painel\nfrom IPython.display import display, Markdown, FileLink\nr = Registro(REGISTRO)\nr.exportar_resumo(REGISTRO/'resumo_registro.json')\nstate = r.prontidao(ALVO)\n(REGISTRO/'prontidao.json').write_text(json.dumps(state,indent=2,ensure_ascii=False),encoding='utf-8')\n(REGISTRO/'painel.json').write_text(json.dumps(painel(r),indent=2,ensure_ascii=False),encoding='utf-8')\nprint(json.dumps(state,indent=2,ensure_ascii=False))\ndisplay(Markdown('**Save the version with outputs.** The registry records when each input arrived. This run does not fit a model or issue a forecast.'))\ndisplay(FileLink(str(REGISTRO/'resumo_registro.json')))\n")])
 

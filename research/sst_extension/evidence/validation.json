@@ -1,0 +1,26 @@
+{
+  "tests_passed": 7,
+  "isolated_bundle_tests_passed": true,
+  "isolated_indices_overlap_verified": true,
+  "notebook_cells_compiled": true,
+  "bundled_files": 13,
+  "notebook_sha256": "1a3ef46899471d37c557dc4bfe39d9c9b262f398f82036d90ec229b0f201c447",
+  "real_sst_hash_verified": true,
+  "sst_forecast_pc_shape": [
+    24,
+    8
+  ],
+  "sst_explained_variance_sum": 0.5508801293662917,
+  "real_rainfall_models_trained": false,
+  "operational_forecast_issued": false,
+  "seconds": 11.247858899994753,
+  "local_versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "xarray": "2026.7.0",
+    "lightgbm": "4.7.0",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "limitation": "Synthetic model/scoring tests and actual SST transform coverage only. Real paired Kaggle evaluation is pending. Local versions differ from the pinned Kaggle environment."
+}

@@ -1,0 +1,71 @@
+{
+  "archived_scores_reproduced": true,
+  "comparisons": {
+    "blend_reference": {
+      "absolute_bias": 0.006199925192479194,
+      "bias": 0.006199925192479194,
+      "mae": -0.0019435783458459088,
+      "months": {
+        "better": 12,
+        "tied": 0,
+        "worse": 12
+      },
+      "rmse": -0.0029842411557956527,
+      "rmse_area": -0.0031505203176185326,
+      "rmse_reduction_percent": 0.1662262698656769,
+      "years": {
+        "better": 2,
+        "tied": 0,
+        "worse": 0
+      }
+    },
+    "hybrid": {
+      "absolute_bias": 0.024169044511045068,
+      "bias": 0.024169044511045068,
+      "mae": 0.000638010794146604,
+      "months": {
+        "better": 15,
+        "tied": 0,
+        "worse": 9
+      },
+      "rmse": -0.004479323616979114,
+      "rmse_area": -0.004874117499705344,
+      "rmse_reduction_percent": 0.24929677604682565,
+      "years": {
+        "better": 2,
+        "tied": 0,
+        "worse": 0
+      }
+    },
+    "hybrid_sst": {
+      "absolute_bias": 0.015902477587739494,
+      "bias": 0.015902477587739494,
+      "mae": 0.00331466446932982,
+      "months": {
+        "better": 11,
+        "tied": 0,
+        "worse": 13
+      },
+      "rmse": -0.0003292041942328794,
+      "rmse_area": -0.00045691800785929715,
+      "rmse_reduction_percent": 0.018364277785520855,
+      "years": {
+        "better": 1,
+        "tied": 0,
+        "worse": 1
+      }
+    }
+  },
+  "complete_comparison": true,
+  "complete_seven_blocks": false,
+  "fixed_blend_identity_verified": true,
+  "forecast_issued": false,
+  "hybrid_maps_identical": true,
+  "independent_holdout": false,
+  "model_fits": 0,
+  "model_promoted": false,
+  "primary_reference": "blend_reference",
+  "seconds": 8.266773200999978,
+  "status": "complete",
+  "weight_search": false
+}

@@ -1,0 +1,100 @@
+{
+  "files": {
+    "calendar.csv": "0fbedb9562fe3c2e161e6d0ebfbbf2d4aab591ad864feabcc9a7b51c0ed55a89",
+    "candidate_frozen.json": "d7b0cbc03c11dfee9e5a1fa4c5b83f8d506768182cc75be5194624465e081433",
+    "code/research/common/inputs.py": "d22140d4ad3db4ac3fecdca26c7ebdd1d780486b51622a1f333fce2a637e6851",
+    "code/research/diagnostics/analyze_errors.py": "21ee50ab5d06fbb8ae59a524553ecac4121bb40136b77ac9b99299eff53f9067",
+    "code/research/fixed_blend/evaluate.py": "6c90f6cb96eaa2841fcec4ad57921b3bf9382f8143d3d2a4b8b04996e1cb44a9",
+    "code/research/sst_extension/evidence/completed_20260930/evaluation/global.csv": "6efdee5695689093202c639e46f58e5b2254db3454a5ac7eed48ef42b6f9ab3f",
+    "code/research/sst_extension/evidence/completed_20260930/frozen.json": "84c7c54e66686bbaa22f4aa15d50e2f9d19a5ab95a7637bde501eb06c8b46d23",
+    "code/research/sst_unet_blend/__init__.py": "bf61b3fab3d44f939bbb448de4d41d7174519520b7938680f8e47e3a38e66c35",
+    "code/research/sst_unet_blend/experiment.py": "3e60d4e4199a4af1298025d280cbf25efe8deead78707a12ed53e8ff08a0b388",
+    "code/research/sst_unet_blend/protocol.json": "57312ad188255b70b9b3103ef26d63d1c911971ff9f480c2c0c522f7aaffc7ae",
+    "code/research/sst_unet_blend/test_blend.py": "08d50a3dc39bdd74562b386b1d5417c77f1165cceb3f08c748414e93a5d98241",
+    "code/research/temporal_extension/evidence/kaggle_354026629/evaluation/global.csv": "044c310fe49c905b01b4963704cc550c31da6a9ac0bdaaf531361e569a378f36",
+    "code/research/temporal_extension/evidence/kaggle_354026629/frozen.json": "915ed044d66fd24406d9d688505b718f02da8f2b92c7fefeb94bbc03c8eaaa60",
+    "error_products.json": "18fe7124e6210dff9a48b7cb3ee08140566e31d442cfa114c7c36060241f3257",
+    "global_metrics.csv": "4e407350dffdcfc5597e965dcdc13746707d02c41e7fdc35193ae2eeb90a34fb",
+    "monthly_comparison.png": "0242875ad60d52c8b86482ff7791d5668c6500fc3d82508aa9f3df444b67f726",
+    "monthly_metrics.csv": "04d7dd35ef730a44f7757c5844e624f9e0d55628a2ccbb2e2a1c7866efba62e6",
+    "months.csv": "0662238ac0ca42dbebcae717068909397f50b3cf2285015d00a6077bf73f714d",
+    "predictions.nc": "14d73e62251347ddf76e2dd7711a423037ee2cda8dc338582e3029492a14b030",
+    "reference_checks.json": "675c8c000e1b2e7c690d9f5be9f269d1030d2fdd0e835aba3ee6ab1f1c288a88",
+    "regions.csv": "0bf37dd0c0b932de02ddc799d80a0243103163143f7970f7fa7ed7fa2e33cc14",
+    "report.html": "ca409a865a0f5f51acc989d6aff3b0027700affec896f1b60635257ff630fde6",
+    "signature.json": "2d0a2a707161cdd21b82a9613438f8f2064f202486f96d871d10c08b83ea2adf",
+    "summary.json": "45bf56ac8c946a5ec8d3d13b3717da8e72f47876169796053253d2f387aaac3f",
+    "years.csv": "1e2cda482649191a8f2b8806a8fce1772a04b5cfe97037ac6f82c2fb6e776bf0"
+  },
+  "summary": {
+    "archived_scores_reproduced": true,
+    "comparisons": {
+      "blend_reference": {
+        "absolute_bias": 0.006199925192479194,
+        "bias": 0.006199925192479194,
+        "mae": -0.0019435783458459088,
+        "months": {
+          "better": 12,
+          "tied": 0,
+          "worse": 12
+        },
+        "rmse": -0.0029842411557956527,
+        "rmse_area": -0.0031505203176185326,
+        "rmse_reduction_percent": 0.1662262698656769,
+        "years": {
+          "better": 2,
+          "tied": 0,
+          "worse": 0
+        }
+      },
+      "hybrid": {
+        "absolute_bias": 0.024169044511045068,
+        "bias": 0.024169044511045068,
+        "mae": 0.000638010794146604,
+        "months": {
+          "better": 15,
+          "tied": 0,
+          "worse": 9
+        },
+        "rmse": -0.004479323616979114,
+        "rmse_area": -0.004874117499705344,
+        "rmse_reduction_percent": 0.24929677604682565,
+        "years": {
+          "better": 2,
+          "tied": 0,
+          "worse": 0
+        }
+      },
+      "hybrid_sst": {
+        "absolute_bias": 0.015902477587739494,
+        "bias": 0.015902477587739494,
+        "mae": 0.00331466446932982,
+        "months": {
+          "better": 11,
+          "tied": 0,
+          "worse": 13
+        },
+        "rmse": -0.0003292041942328794,
+        "rmse_area": -0.00045691800785929715,
+        "rmse_reduction_percent": 0.018364277785520855,
+        "years": {
+          "better": 1,
+          "tied": 0,
+          "worse": 1
+        }
+      }
+    },
+    "complete_comparison": true,
+    "complete_seven_blocks": false,
+    "fixed_blend_identity_verified": true,
+    "forecast_issued": false,
+    "hybrid_maps_identical": true,
+    "independent_holdout": false,
+    "model_fits": 0,
+    "model_promoted": false,
+    "primary_reference": "blend_reference",
+    "seconds": 8.266773200999978,
+    "status": "complete",
+    "weight_search": false
+  }
+}

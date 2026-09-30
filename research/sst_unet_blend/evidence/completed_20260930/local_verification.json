@@ -1,0 +1,21 @@
+{
+  "input_zip_sha256": "a392124c8576acd3302074dc558fdbe4f68426b89c45832c896c7a377f651033",
+  "complete_comparison": true,
+  "included_artifact_hashes_verified": 24,
+  "source_files_matching_local": 11,
+  "aggregates_recomputed": [
+    "global_metrics",
+    "years",
+    "months",
+    "regions",
+    "calendar"
+  ],
+  "summary_deltas_and_win_counts_recomputed": true,
+  "blend_sse_identities_recomputed": true,
+  "missing_artifacts": [
+    "predictions.nc"
+  ],
+  "raw_observations_rescored_locally": false,
+  "actual_input_maps_rehashed_locally": false,
+  "limitations": "The reports omit prediction maps and original inputs. Checks verify included bytes and aggregate consistency, not independent raw-data rescoring or historical publication vintages."
+}

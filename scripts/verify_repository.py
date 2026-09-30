@@ -80,7 +80,7 @@ def main():
     for p in [ROOT/'README.md',ROOT/'competition/README.md']:
         text=p.read_text(encoding='utf-8')
         require('1.65354' not in text and '1.65183' not in text, 'Legacy leaderboard score in presentation.')
-    for name in ['research/spatial_unet/spatial_unet.ipynb', 'research/prospective/baseline_inference.ipynb', 'research/workflow/experiment_workflow.ipynb', 'research/temporal_extension/temporal_extension.ipynb', 'research/bias_calibration/unet_bias_calibration.ipynb']:
+    for name in ['research/spatial_unet/spatial_unet.ipynb', 'research/prospective/baseline_inference.ipynb', 'research/workflow/experiment_workflow.ipynb', 'research/temporal_extension/temporal_extension.ipynb', 'research/bias_calibration/unet_bias_calibration.ipynb', 'research/residual_unet/residual_unet_pilot.ipynb', 'research/sst_extension/sst_temporal_extension.ipynb', 'research/sst_unet_blend/sst_unet_fixed_blend.ipynb', 'research/workbench/rainfall_workbench.ipynb']:
         nb = json.loads((ROOT/name).read_text(encoding='utf-8'))
         tree = ast.parse(''.join(nb['cells'][1]['source']))
         bundle = next(ast.literal_eval(n.value) for n in tree.body if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='BUNDLE' for t in n.targets))

@@ -1,0 +1,69 @@
+{
+  "zip_sha256": "b1ff79262dc3f08b295c2e7c2b40edf21d131b7008fbbe05b7fd5003bb5e9aaa",
+  "complete_extension": true,
+  "complete_seven_blocks": false,
+  "frozen_files_verified": 20,
+  "frozen_files_omitted": 12,
+  "omitted_files": [
+    "models/climate_atmosphere_indices.npz",
+    "models/climate_cfsv2.nc",
+    "models/climate_rainfall.nc",
+    "models/climate_seas5.nc",
+    "models/hybrid_arvores_multissistema.txt",
+    "models/hybrid_arvores_seas5.txt",
+    "models/hybrid_sst_arvores_multissistema.txt",
+    "models/hybrid_sst_arvores_seas5.txt",
+    "models/pca.npz",
+    "models/predictions.nc",
+    "models/ridge.npz",
+    "models/sample.npz"
+  ],
+  "evaluation_files_verified": 9,
+  "source_files_verified": 11,
+  "source_matches_prepared_code": true,
+  "pooled_metrics_recomputed_from_monthly_sums": true,
+  "baseline_exactly_reproduced": true,
+  "sample_hash_matches_archived_baseline": true,
+  "source_calendar_checked": true,
+  "freeze_precedes_opening_record": true,
+  "raw_truth_independently_recomputed": false,
+  "prediction_maps_included": false,
+  "rmse_reduction_percent": 0.23097491513632526,
+  "year_delta_rmse": {
+    "2021": -0.001717345970764006,
+    "2022": -0.0064722184810239725
+  },
+  "region_delta_rmse": {
+    "dominio_inteiro": -0.0041501194227460125,
+    "lat_maior_igual_menos15": -0.004685450106121536,
+    "lat_menor_que_menos35": 0.0015130424280480614,
+    "lat_menos35_a_menos15": -0.008275911558915494
+  },
+  "monthly_wins": 12,
+  "monthly_losses": 12,
+  "best_month": "2022-01-01",
+  "best_month_delta": -0.0347377617690694,
+  "worst_month": "2022-04-01",
+  "worst_month_delta": 0.019692988692637803,
+  "seconds_fit": 187.35894487299993,
+  "pca_explained_variance_total": 0.5508801293662919,
+  "limitations": "The reports ZIP excludes fitted models, PCA arrays, sampled pixels and prediction maps. Their recorded hashes cannot be checked against absent files. No raw-observation re-score or historical publication-vintage verification was performed.",
+  "descriptive_pooled_2007_2022": {
+    "sources": [
+      {
+        "file": "research/lagged_sources/evidence/metricas_globais.csv",
+        "sha256": "227780400015e9ce8e3ba3a02bc7ad16c80690d1c80bd55d1d20aff9f8810d55"
+      },
+      {
+        "file": "evaluation/global.csv",
+        "sha256": "6efdee5695689093202c639e46f58e5b2254db3454a5ac7eed48ef42b6f9ab3f"
+      }
+    ],
+    "rmse_reduction_percent": 0.061706464564435425,
+    "blocks_improved": 7,
+    "blocks_total": 8,
+    "years_improved": 8,
+    "years_total": 16,
+    "independent_holdout": false
+  }
+}

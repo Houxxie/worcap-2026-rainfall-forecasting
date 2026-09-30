@@ -1,0 +1,2 @@
+# Evaluation, reports and read-only readiness. Training has separate fixed dependencies.
+-r ../workflow/requirements_evaluation.txt

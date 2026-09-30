@@ -1,0 +1,32 @@
+{
+  "unit_tests_passed": 18,
+  "standalone_workbench_tests_passed": 10,
+  "notebook_code_cells": 6,
+  "bundle_files": 110,
+  "stale_kernel_regression_passed": true,
+  "notebook_real_report_review_passed": true,
+  "notebook_sha256": "d143f32e71c3195159f5e9bc88e72db34ce426060bc2162e31269e41fe1d0b14",
+  "model_training_performed": false,
+  "real_forecast_issued": false,
+  "provider_downloads_performed": false,
+  "limitations": "Local verification and saved-report execution only; Kaggle execution and a new GPU training run were not performed.",
+  "real_completed_runs": [
+    {
+      "task": "review",
+      "fingerprint": "18720e20167a89b1f27cf79cd8918d77a23d481093d8d27aec54734055919f84",
+      "output_artifacts_verified": 56
+    },
+    {
+      "task": "review",
+      "fingerprint": "1c96bbd1e9a55b0d67bbc8851fd195497ae7f9325c826c8fedb967b342a827f6",
+      "output_artifacts_verified": 58
+    },
+    {
+      "task": "prepare",
+      "fingerprint": "daef678c99f1a8e0fc05526672b8041d60a8bbf8708f69998394dc24caba9ca4",
+      "output_artifacts_verified": 54
+    }
+  ],
+  "monthly_preview_visually_inspected": true,
+  "registry_events_verified": 35
+}

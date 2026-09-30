@@ -1,0 +1,17 @@
+{
+  "description": "Display of the first frozen operational forecast; not rainfall observations. Color bins are unequal and explicitly labeled.",
+  "target_month": "2026-10",
+  "issued_at_utc": "2026-09-30T18:18:00.374052+00:00",
+  "forecast_event": "712c60325428670c50ed1c059af09be6e58c192ac7a3ef25ff8cea6e35961a7e",
+  "forecast_sha256": "7ec16a8e96e942877aa25a0d817dc5ab3709e8672bae765781356fcce4bf45f7",
+  "image_sha256": "2a42195d3b99825926ca185fadf25e2494e17a7bab7574908f8f689f2c494a74",
+  "coastline": {
+    "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_coastline.geojson",
+    "received_at_utc": "2026-09-30T18:21:18.926164+00:00",
+    "sha256": "851f581ff5ffb844deed8ae1a9ce22e3c4bb3d74fa342cadb5d8e39b41ae7c3c",
+    "bytes": 139907,
+    "purpose": "Natural Earth coastline for visualization only; not a model input"
+  },
+  "renderer": "scripts/render_october_forecast.py",
+  "forecast_and_coastline_data_in_git": false
+}
