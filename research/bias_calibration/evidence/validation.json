@@ -1,0 +1,28 @@
+{
+  "status": "prepared_not_run_on_real_data",
+  "checked_at_utc": "2026-09-30T12:15:35.452414+00:00",
+  "python": "3.12.7",
+  "synthetic_tests_passed_in_isolated_notebook_bundle": 17,
+  "new_calibration_tests": 9,
+  "existing_spatial_tests": 8,
+  "standalone_notebook_bootstrap_passed": true,
+  "notebook_code_syntax_passed": true,
+  "synthetic_interruption_resume_and_tamper_checks_passed": true,
+  "calibration_rainfall_change_did_not_change_auxiliary_predictions_or_epoch_selection": true,
+  "local_environment_note": "Tests only. Local numerical versions differ from pinned Kaggle baseline. An existing non-fatal NumPy/NetCDF warning occurred in initial in-process checks; isolated notebook checks passed. No packages replaced.",
+  "real_data_training_executed": false,
+  "real_data_preflight_executed": false,
+  "forecast_issued": false,
+  "model_promoted": false,
+  "independent_holdout": false,
+  "code": {
+    "scripts/build_bias_notebook.py": "4804c2fe2fbce3720b833f1439f6c1fb35d73dbcf227407f6e0b5ffa03622ef2",
+    "research/bias_calibration/unet_bias_calibration.ipynb": "2bb9bef5f352155ce7ceadd8a7dfe15c290061175a3cdf278eefa913e195f861",
+    "research/bias_calibration/calibration.py": "6755caa06e9cb8f385514cf0b0d2affa8656c7480eaf48d0f11cd9e7a3c16f37",
+    "research/bias_calibration/experiment.py": "6092e7d370669f6550697afdfb3b5d42eaf80b2b6dbf744df61a0a69e12de018",
+    "research/bias_calibration/report.py": "2df80c02b328f8ad48642008bdc6d28a09bf31027b3419873e8040f7977d0368",
+    "research/bias_calibration/test_calibration.py": "921fd476fcae96a07441fd2b3b3e055dfcf99c688b2ea2d79ec4fd41d0e15809",
+    "research/bias_calibration/__init__.py": "e8497186a85b47020ee1e75dd72bea27e2a6ad0763480f1fe165d911641946a5",
+    "research/bias_calibration/protocol.json": "14490ee137af8b17d899ebf8fb9a26171f3acaadc6801db43532ec1e9a0b29e5"
+  }
+}

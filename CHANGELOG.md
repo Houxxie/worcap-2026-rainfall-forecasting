@@ -1,5 +1,12 @@
 # Changelog
 
+## Prepared neural bias-calibration experiment — 2026-09-30
+
+- Add a standalone Kaggle notebook using the same three inputs and the original seven development blocks, with no new data or weight search.
+- Estimate one signed offset from 24 earlier chronological forecasts, using an additional nested epoch-selection split and fixed 50% shrinkage. Keep the original component models and 75/25 blend weights unchanged.
+- Add target-isolation, numerical and saved-artifact checks, resumable completed blocks, preserved failed attempts and partial reports. Keep 2021–2022 out of this run.
+- This is a prepared experiment for user execution, not a measured improvement or operational promotion.
+
 ## Completed chronological extension — 2026-09-29
 
 - Record successful Kaggle version `354026629`, using the unchanged training cutoff, architecture and fixed 75/25 blend.

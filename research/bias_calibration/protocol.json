@@ -1,0 +1,23 @@
+{
+  "id": "unet_global_bias_v1",
+  "scope": "development_experiment_on_previously_consulted_years",
+  "blocks": ["H1", "H2", "H3", "H4", "A", "B", "C"],
+  "evaluation": ["2007-01-01", "2020-12-01"],
+  "source_protocol_sha256": "b5819403ce177b1c69cfd698160c0e2339f040d5d9ab0a4ad9608a469872c694",
+  "calibration_months": 24,
+  "prior_zero_bias_months": 24,
+  "label_lag_months": 4,
+  "correction": "One signed global offset per outer fold: 24/(24+24) times the mean of the 24 monthly mean prediction-minus-observation errors.",
+  "application": "max(0, original outer U-Net rainfall - offset); then 0.75*original hybrid + 0.25*corrected U-Net",
+  "epoch_selection": "The auxiliary calibration predictor selects epochs in a separate earlier chronological split, never on the 24 calibration targets. The original outer predictor keeps its original epoch-selection procedure.",
+  "transfer_assumption": "Bias estimated from an earlier, shorter-training auxiliary model is transferred to the fully refitted outer U-Net. This assumption is tested, not guaranteed.",
+  "weights": {"hybrid": 0.75, "unet": 0.25},
+  "spatial_or_seasonal_offsets": false,
+  "weight_search": false,
+  "hyperparameter_search": false,
+  "evaluation_2021_2022": false,
+  "automatic_promotion": false,
+  "forecast_issued": false,
+  "independent_holdout": false,
+  "historical_publication_vintages_verified": false
+}
