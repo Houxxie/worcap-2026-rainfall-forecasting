@@ -4,7 +4,7 @@ Start with the [offline demo](../demo/README.md) if you only want to inspect res
 
 | Path | Purpose | Output |
 |---|---|---|
-| Competition hybrid (8G) | Reproduce the submitted 2023–2024 CSV | `submission_hibrida.csv`, with the recorded SHA-256 |
+| Competition model (8G) | Reproduce the submitted 2023–2024 CSV | `submission_hibrida.csv`, with the recorded SHA-256 |
 | Research comparison | Refit the lagged hybrid and U-Net on seven historical blocks | Prediction maps, metrics, execution record and report |
 | Operational hybrid | Fit once on 1993–2022 and forecast future months with checked arrivals | See the [monthly guide](MONTHLY_FORECAST.md) |
 
