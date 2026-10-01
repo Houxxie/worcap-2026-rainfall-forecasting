@@ -1,6 +1,6 @@
 # Explore the results
 
-Download the repository ZIP, extract it, and open **`demo/index.html`** in a browser. You can also download [index.html](index.html) with GitHub's **Download raw file** button; all images and values are embedded in that one file. GitHub's source view itself does not execute the viewer.
+Download the repository ZIP, extract it, and open **`demo/index.html`** in a browser (I made it to be really simple). You can also download [index.html](index.html) with GitHub's **Download raw file** button; all images and values are embedded in that one file. GitHub's source view itself does not execute the viewer.
 
 No Python, credentials, Internet connection or model fitting is needed to view it.
 
