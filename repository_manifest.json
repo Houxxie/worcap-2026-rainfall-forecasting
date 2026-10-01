@@ -26,8 +26,8 @@
       "bytes": 1105
     },
     "README.md": {
-      "sha256": "6f39ab52c88e2c349391756e7be5faf8e307d20b4dffa08882e3e9bec10b3989",
-      "bytes": 8959
+      "sha256": "9aa7df07d820517aa70604dc5bceb0f5f65b3e970124c310528da815a7d47b3c",
+      "bytes": 8747
     },
     "assets/competition_forecast_example.json": {
       "sha256": "d41f00246a2f96e3f9c851b0c2b87c1456928aaca91ccacba93fab96afb4c7cf",
@@ -122,8 +122,8 @@
       "bytes": 328
     },
     "demo/README.md": {
-      "sha256": "a93015e7b6cc6db41a1a6a4731e69cdf791a7e6c6771aff92ac4e29a6257f979",
-      "bytes": 2224
+      "sha256": "fa667e6f69dace423eb3dc7f728d45c637fe56b76d33a975df4f0d0c63c399ab",
+      "bytes": 2256
     },
     "demo/explore.py": {
       "sha256": "6bd6a8d7f1b3dc59fed00449974b16560608faa37a0e72941f8e5cc5d8846517",

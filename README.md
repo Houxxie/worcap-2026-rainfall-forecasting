@@ -109,18 +109,16 @@ Over time, I started paying more attention to MAE, bias, and results by year and
 Reproducing the submission taught me to keep track of configurations, package versions, input files, and hashes. It also showed me how something as small as the order of CSV rounding can change the final file.
 
 
-## 🚀 Running the competition model
+## 🚀 Reproducing the competition model
 
-The notebook is prepared to run in Kaggle:
+The competition model can be reproduced in Kaggle using the preserved notebook or Python implementation.
 
-1. Import [hybrid_forecast.ipynb](competition/hybrid_forecast.ipynb).
-2. Attach the official competition data and the prepared SEAS5 and CFSv2 snapshots listed in the [data guide](docs/DATA.md).
-3. Use the [reference environment](competition/requirements.txt) and run the cells in order.
-4. The notebook fits the model components and generates `submission_hibrida.csv`, checking the IDs, coverage, and expected SHA-256.
+- [Competition notebook](competition/hybrid_forecast.ipynb)
+- [Python implementation](competition/hybrid_forecast.py)
+- [Reference environment](competition/requirements.txt)
+- [Data requirements](docs/DATA.md)
 
-The same implementation is also available as a [Python script](competition/hybrid_forecast.py).
-
-Raw datasets and fitted models are kept outside Git. Exact reproduction requires the recorded data snapshots, since providers may revise their files over time. The [reproduction guide](docs/REPRODUCTION.md) covers these requirements.
+Exact reproduction depends on the recorded data snapshots, since upstream providers may revise their files over time. See the [reproduction guide](docs/REPRODUCTION.md) for the complete procedure.
 
 ## Finding your way around
 
