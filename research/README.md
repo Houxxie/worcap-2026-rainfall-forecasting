@@ -1,6 +1,6 @@
 # Research after the hackathon
 
-The aim is to evaluate future monthly forecasts with inputs that actually arrived before issue time. The competition hybrid supplies the starting architecture; later changes are evaluated separately.
+The aim is to evaluate future monthly forecasts with inputs that actually arrived before issue time. The competition model supplies the starting architecture; later changes are evaluated separately.
 
 New here? [Explore the saved results](../demo/README.md), [reproduce a comparison](../docs/REPRODUCTION.md), or [start a monthly forecast](../docs/MONTHLY_FORECAST.md). The current operational reference is distinct from the experimental candidates listed below.
 
