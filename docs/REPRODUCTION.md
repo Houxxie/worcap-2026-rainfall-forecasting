@@ -4,15 +4,15 @@ Start with the [offline demo](../demo/README.md) if you only want to inspect res
 
 | Path | Purpose | Output |
 |---|---|---|
-| Competition model (8G) | Reproduce the submitted 2023–2024 CSV | `submission_hibrida.csv`, with the recorded SHA-256 |
-| Research comparison | Refit the lagged hybrid and U-Net on seven historical blocks | Prediction maps, metrics, execution record and report |
-| Operational hybrid | Fit once on 1993–2022 and forecast future months with checked arrivals | See the [monthly guide](MONTHLY_FORECAST.md) |
+| Competition model | Reproduce the submitted 2023–2024 CSV | `submission_hibrida.csv`, with the recorded SHA-256 |
+| Research comparison | Refit the reference model with longer input lags and U-Net on seven historical blocks | Prediction maps, metrics, execution record and report |
+| Current forecasting model | Fit once on 1993–2022 and forecast future months with checked arrivals | See the [monthly guide](MONTHLY_FORECAST.md) |
 
 The operational final fit must not be used to score earlier historical validation years.
 
 ## Competition: Kaggle
 
-1. Download and import [hybrid_forecast.ipynb](../competition/hybrid_forecast.ipynb).
+1. Download and import [competition notebook](../competition/hybrid_forecast.ipynb).
 2. Attach the official competition data and prepared SEAS5/CFSv2 datasets. Each seasonal source needs its manifest and all three `.nc` partitions. Expand Input and confirm the actual files are present, not only `notebook.ipynb` and `results.html`.
 3. Use Python 3.12 and the [reference environment](../competition/requirements.txt). The notebook checks core versions rather than silently upgrading packages. No GPU, CDS key or Internet is required with inputs attached.
 4. Leave the three `BANCA_PASTA_*` values as `None` for discovery of a single matching input, or set their directories explicitly.
@@ -38,7 +38,7 @@ python scripts/check_inputs.py --config configs/competition.inputs.json
 
 The default layout is `data/official`, `data/seas5`, `data/cfsv2`. Edit [competition.inputs.json](../configs/competition.inputs.json) for another layout. The read-only checker verifies exact historical bytes and four core package versions, not available RAM or the entire runtime.
 
-Set `BANCA_PASTA_DADOS`, `BANCA_PASTA_SEAS5` and `BANCA_PASTA_CFSV2` at the top of [hybrid_forecast.py](../competition/hybrid_forecast.py) to the same **absolute directories printed by the check**. The historical script does not read this JSON automatically. Then run:
+Set `BANCA_PASTA_DADOS`, `BANCA_PASTA_SEAS5` and `BANCA_PASTA_CFSV2` at the top of [competition script](../competition/hybrid_forecast.py) to the same **absolute directories printed by the check**. The historical script does not read this JSON automatically. Then run:
 
 ```bash
 python competition/hybrid_forecast.py
@@ -54,7 +54,7 @@ The run prints its output directory. Original feature order, intermediate CSV ro
 
 ## Research: seven-block comparison
 
-This fixed experiment compares the lagged hybrid with direct U-Net on 2007–2020. It does not issue a real-time forecast or produce a competition CSV. Archived pooled RMSE: **1.753399** for the hybrid and **1.764726** for U-Net, in mm/day. Neural execution can vary across hardware; preserve and compare the actual environment.
+This fixed experiment compares the reference model with longer input lags with direct U-Net on 2007–2020. It does not issue a real-time forecast or produce a competition CSV. Archived pooled RMSE: **1.753399** for the reference model and **1.764726** for U-Net, in mm/day. Neural execution can vary across hardware; preserve and compare the actual environment.
 
 For Kaggle, import [rainfall_workbench.ipynb](../research/workbench/rainfall_workbench.ipynb), attach official files and seasonal development partitions, choose `TASK = "train"`, `EXPERIMENT = "hybrid_unet_v1"`, and enable a GPU. Use the fixed training environment. The notebook includes the source bundle; see [workbench instructions](../research/workbench/README.md).
 

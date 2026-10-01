@@ -1,6 +1,6 @@
 # Start here
 
-There are two model paths: the **competition hybrid (8G)** and the **current operational hybrid**. Both combine two LightGBMs and local ridge. The operational version uses longer input lags and a separately fitted, frozen model package. U-Net and SST/PCA remain research candidates.
+There are two model paths: the **competition model** and the **current current forecasting model**. Both combine two LightGBMs and local ridge. The operational version uses longer input lags and a separately fitted, frozen model package. U-Net and SST/PCA remain research candidates.
 
 | What you want to do | Start here | What you need |
 |---|---|---|

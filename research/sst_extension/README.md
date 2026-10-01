@@ -1,12 +1,12 @@
 # Global SST: an additional chronological comparison
 
-This notebook tests whether **eight global SST principal components** add information to the fixed rainfall hybrid. It evaluates January 2021–December 2022, with training capped at September 2020. It does not fit a neural network.
+This notebook tests whether **eight global SST principal components** add information to the fixed rainfall reference model. It evaluates January 2021–December 2022, with training capped at September 2020. It does not fit a neural network.
 
 ## Why this experiment
 
 The existing seven-block 2007–2020 comparison already used SST T−2 and training-only PCA. SST reduced pooled RMSE from **1.753399 to 1.752762 mm/day**, but increased MAE from 1.047213 to 1.048663 and signed bias from +0.004916 to +0.017217. There is little justification for repeating that run unchanged.
 
-This extension keeps its SST method fixed and checks an additional period. **2021–2022 has already been consulted in the hybrid/U-Net extension and earlier final fits. It is not an untouched holdout.** Results cannot establish future forecast skill.
+This extension keeps its SST method fixed and checks an additional period. **2021–2022 has already been consulted in the reference model/U-Net extension and earlier final fits. It is not an untouched holdout.** Results cannot establish future forecast skill.
 
 ## Data and temporal boundaries
 
@@ -39,7 +39,7 @@ Both treatments use exactly the same sampled pixels, rainfall labels, base featu
 
 Budget: **one block, four LightGBM fits, one shared ridge, one PCA, zero neural fits**. Progress reports each tree component's fit and prediction time. Runtime has not been measured for this new notebook; input loading, hash checks and inference also take time.
 
-The reconstructed hybrid must match its archived 2021–2022 RMSE **1.7967836119** and the other recorded global metrics within 10⁻⁶. A mismatch is reported and blocks interpreting the run as a clean SST comparison.
+The reconstructed reference model must match its archived 2021–2022 RMSE **1.7967836119** and the other recorded global metrics within 10⁻⁶. A mismatch is reported and blocks interpreting the run as a clean SST comparison.
 
 ## Running and reading the output
 

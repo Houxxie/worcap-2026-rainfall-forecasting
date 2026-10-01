@@ -2,11 +2,11 @@
 
 **Issued and frozen: 30 September 2026, 18:18:00 UTC / 15:18:00 Brasília.** October's forecast passed the complete-source checks before the 1 October, 00:00 UTC deadline. The registered prediction contains 78,561 points on the 301 × 261 quarter-degree grid, with the training climatology stored beside it. Units are monthly mean precipitation in mm/day. This is a forecast; its future skill has not yet been measured.
 
-On 29 September, the fixed lagged hybrid was fitted on January 1993–December 2022 and registered with all 11 required package files. That package and its protocol remain unchanged. On 30 September, evaluating the original IRI product recipe explicitly returned all 24 expected CFSv2 members. Every available named-product value was reproduced exactly. The complete ensemble from that single expression was used, without joining datasets or filling missing values.
+On 29 September, the fixed reference model with longer input lags was fitted on January 1993–December 2022 and registered with all 11 required package files. That package and its protocol remain unchanged. On 30 September, evaluating the original IRI product recipe explicitly returned all 24 expected CFSv2 members. Every available named-product value was reproduced exactly. The complete ensemble from that single expression was used, without joining datasets or filling missing values.
 
 | Component | Recorded state |
 | --- | --- |
-| Final hybrid | Fitted once; two LightGBMs and local ridge; 52,248,030 bytes in the registered package |
+| Final reference model | Fitted once; two LightGBMs and local ridge; 52,248,030 bytes in the registered package |
 | ERA5 surface fields | June 2026; GRIB final-vintage metadata, units and quarter-degree grid validated |
 | ERA5 at 850 hPa | June 2026; six variables validated |
 | Ocean indices | July 2026 values available in recorded NOAA PSL responses |

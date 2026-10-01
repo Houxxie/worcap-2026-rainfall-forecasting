@@ -9,6 +9,7 @@ import shutil
 import zipfile
 import numpy as np
 import pandas as pd
+from research.common.presentation import display_frame
 import xarray as xr
 from research.common.inputs import ROOT, require, sha256, write_json
 from research.fixed_blend.evaluate import fixed_blend, error_products, summarize_products
@@ -157,7 +158,7 @@ def compare_references(table):
 
 
 def source_files():
-    files = ['research/common/inputs.py', 'research/diagnostics/analyze_errors.py', 'research/fixed_blend/evaluate.py',
+    files = ['research/common/inputs.py', 'research/common/presentation.py', 'research/diagnostics/analyze_errors.py', 'research/fixed_blend/evaluate.py',
              'research/sst_unet_blend/protocol.json']
     for folder in [SST_EVIDENCE, UNET_EVIDENCE]:
         files.extend([folder + '/frozen.json', folder + '/evaluation/global.csv'])
@@ -254,7 +255,7 @@ def render_report(output, tables, summary):
     monthly = tables['months'].pivot(index='date', columns='model', values='rmse')
     fig, axes = plt.subplots(2, 1, figsize=(11, 6), layout='constrained')
     for ax, reference, title in zip(axes, ['blend_reference', 'hybrid_sst'],
-                                    ['Contribution of SST to the existing hybrid/U-Net blend', 'Contribution of U-Net to the SST hybrid']):
+                                    ['Contribution of SST to the existing reference model/U-Net blend', 'Contribution of U-Net to the SST model']):
         delta = monthly.blend_sst - monthly[reference]
         ax.bar(range(24), delta, color=['#168293' if v < 0 else '#b56343' for v in delta])
         ax.axhline(0, color='#253746', lw=.8)
@@ -265,11 +266,11 @@ def render_report(output, tables, summary):
     plt.close(fig)
     encoded = base64.b64encode((output / 'monthly_comparison.png').read_bytes()).decode()
     html = '<!doctype html><html lang="en"><meta charset="utf-8"><title>SST and U-Net fixed blend</title><style>body{font:16px/1.5 system-ui;max-width:1100px;margin:35px auto;padding:0 20px;color:#213744}table{border-collapse:collapse}td,th{padding:7px;border-bottom:1px solid #ddd}img{max-width:100%}</style><body>'
-    html += '<h1>Does SST improve the fixed hybrid/U-Net blend?</h1><p>Candidate: 75% SST hybrid + 25% unchanged U-Net. Primary reference: 75% original hybrid + 25% the same U-Net. No models were fitted and no weights were searched.</p>'
+    html += '<h1>Does SST improve the fixed reference model/U-Net blend?</h1><p>Candidate: 75% SST model + 25% unchanged U-Net. Primary reference: 75% original reference model + 25% the same U-Net. No models were fitted and no weights were searched.</p>'
     html += '<p>2021–2022 is a previously consulted development period, not an independent holdout. Historical publication vintages remain unverified; no operational model is promoted.</p>'
-    html += tables['global_metrics'][['model', 'rmse', 'mae', 'bias', 'rmse_area']].to_html(index=False, float_format=lambda v: f'{v:.6f}')
+    html += display_frame(tables['global_metrics'][['model', 'rmse', 'mae', 'bias', 'rmse_area']]).to_html(index=False, float_format=lambda v: f'{v:.6f}')
     html += f'<img alt="Monthly contribution of SST and U-Net" src="data:image/png;base64,{encoded}">'
-    html += '<h2>Annual errors</h2>' + tables['years'][['model', 'year', 'rmse', 'mae', 'bias']].to_html(index=False, float_format=lambda v: f'{v:.6f}')
+    html += '<h2>Annual errors</h2>' + display_frame(tables['years'][['model', 'year', 'rmse', 'mae', 'bias']]).to_html(index=False, float_format=lambda v: f'{v:.6f}')
     html += '<p>All errors use the full supplied grid. Negative changes favor the candidate. Complementarity was checked using both exact fixed-blend MSE identities.</p></body></html>'
     (output / 'report.html').write_text(html, encoding='utf-8')
 

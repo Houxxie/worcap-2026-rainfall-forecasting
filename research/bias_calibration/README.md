@@ -1,6 +1,6 @@
 # Training-only U-Net bias calibration
 
-This is one new **development experiment**, not a replacement for the operational hybrid. It compares the hybrid reference, the original fixed 75% hybrid + 25% U-Net blend, and the same blend after a simple correction of the neural contribution. The unchanged component models and climatology are also reported.
+This is one new **development experiment**, not a replacement for the current forecasting model. It compares the reference model, the original fixed 75% reference model + 25% U-Net blend, and the same blend after a simple correction of the neural contribution. The unchanged component models and climatology are also reported.
 
 ## What changes
 
@@ -8,16 +8,16 @@ Only code and newly fitted model artifacts change. Use the same official competi
 
 For each of the seven original two-year blocks (2007–2020):
 
-1. Refit the original hybrid and U-Net using the original procedure. The hybrid must reproduce its archived metrics before proceeding. These regenerated components are shared by both blend candidates.
+1. Refit the original reference model and U-Net using the original procedure. The reference model must reproduce its archived metrics before proceeding. These regenerated components are shared by both blend candidates.
 2. Reserve the last 24 months of that outer training window for calibration. An auxiliary U-Net is trained only on earlier months, respecting the four-month label gap.
 3. Select the auxiliary network's epoch count using a further, earlier chronological split. **The 24 calibration months do not choose those epochs.** Refit the auxiliary network from the original seed before predicting the calibration months.
 4. Compute the mean prediction-minus-observation error across each complete monthly map, then average those 24 monthly errors. Apply a fixed 50% shrinkage toward zero, equivalent to 24 prior zero-bias months. This regularization strength is a prespecified experimental choice, not an optimized value.
-5. Subtract that signed scalar from the original outer U-Net forecasts, clipping rainfall at zero, and combine with the unchanged hybrid using 75/25 weights. No observation from the outer block enters the scalar.
+5. Subtract that signed scalar from the original outer U-Net forecasts, clipping rainfall at zero, and combine with the unchanged reference model using 75/25 weights. No observation from the outer block enters the scalar.
 
 ```text
 offset = mean(calibration prediction - calibration observation) / 2
 corrected U-Net = maximum(0, original outer U-Net - offset)
-candidate = 0.75 * original hybrid + 0.25 * corrected U-Net
+candidate = 0.75 * original reference model + 0.25 * corrected U-Net
 ```
 
 The correction is global and constant throughout each outer block. It can be positive or negative; no month, pixel or region selects its own adjustment. Bias from an earlier model with a shorter training history may not transfer to the final refitted model. This is the hypothesis being tested. Clipping also means the final mean shift need not equal the scalar exactly.
@@ -32,7 +32,7 @@ The original outer network retains its original inner selection, including train
 4. Use **Save Version → Save & Run All** so the output is preserved. Leave the seven-block list fixed. The notebook prints each fit and epoch and writes a partial report after each completed block.
 5. Download **`bias_calibration_reports.zip`** when all seven blocks finish. The final summary must say `complete_seven_blocks: true`. Keep the full notebook output as well: it contains weights, calibration predictions and candidate maps omitted from the small ZIP.
 
-This is more work than the single 2021–2022 extension: **four neural fits per block, 28 neural fits in total**, plus the original hybrid fits. The two extra fits per block isolate calibration from epoch selection. Actual duration depends on early stopping and the GPU; no short runtime is promised.
+This is more work than the single 2021–2022 extension: **four neural fits per block, 28 neural fits in total**, plus the original reference model fits. The two extra fits per block isolate calibration from epoch selection. Actual duration depends on early stopping and the GPU; no short runtime is promised.
 
 ## Resume and safeguards
 
@@ -44,7 +44,7 @@ The underlying development loader reads the historical rainfall archive. Selecti
 
 ## How to read the result
 
-Primary comparison: corrected blend versus the original blend on pooled full-grid RMSE. Also compare against the hybrid, and inspect MAE, absolute bias, annual and block stability, area-weighted RMSE and latitude bands. The grid includes ocean. A lower overall RMSE with worse bias or inconsistent years is a tradeoff, not automatic acceptance.
+Primary comparison: corrected blend versus the original blend on pooled full-grid RMSE. Also compare against the reference model, and inspect MAE, absolute bias, annual and block stability, area-weighted RMSE and latitude bands. The grid includes ocean. A lower overall RMSE with worse bias or inconsistent years is a tradeoff, not automatic acceptance.
 
 The 2007–2020 years are development data already inspected. The 2021–2022 findings motivated this hypothesis; those years are neither used to estimate the offsets nor rescored here. This comparison cannot establish future skill. Keep the operational model unchanged until a separate prospective evaluation supports a change.
 

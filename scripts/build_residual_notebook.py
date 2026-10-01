@@ -20,7 +20,7 @@ suite = unittest.defaultTestLoader.loadTestsFromNames([
 ])
 assert unittest.TextTestRunner(verbosity=2).run(suite).wasSuccessful(), "Synthetic checks failed."
 '''),
-        markdown('## 2. Run the bounded pilot\nSame three Inputs, GPU enabled. There are six hybrid fits and only two eight-epoch neural fits. No search or seven-block run is launched.'),
+        markdown('## 2. Run the bounded pilot\nSame three Inputs, GPU enabled. There are six reference model fits and only two eight-epoch neural fits. No search or seven-block run is launched.'),
         code('''from research.residual_unet.experiment import execute, export_reports
 OFFICIAL = None
 SEAS5 = None
@@ -39,10 +39,11 @@ assert RESULT["pilot_complete"] and RESULT["blocks"] == ["C"]
 '''),
         markdown('## 3. Results and download\nCompletion means `pilot_complete: true`. Seven-block completion remains false by design. Preserve the full saved output for later diagnostics.'),
         code('''import pandas as pd
+from research.common.presentation import display_frame
 from IPython.display import display, FileLink, HTML
 for name in ["global", "years", "regions"]:
     print(name)
-    display(pd.read_csv(OUTPUT/(name+".csv")))
+    display(display_frame(pd.read_csv(OUTPUT/(name+".csv"))))
 display(HTML((OUTPUT/"report.html").read_text(encoding="utf-8")))
 REPORT = export_reports(OUTPUT)
 display(FileLink(str(REPORT.relative_to(BASE))))

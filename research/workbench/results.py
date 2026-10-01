@@ -88,7 +88,7 @@ def inspect_result(source):
             metrics_path = 'fixed_blend/global_metrics.csv'
         table = a.table(metrics_path)
         years = a.table('fixed_blend/years.csv' if blend else 'comparison/years.csv')
-        description = 'Fixed hybrid/U-Net comparison · seven historical blocks'
+        description = 'Fixed reference model/U-Net comparison · seven historical blocks'
         period = '2007–2020'
         primary = 'hybrid'
         provenance = dict(source_fingerprint=record['fingerprint'], protocol=record.get('scientific_protocol'),
@@ -102,7 +102,7 @@ def inspect_result(source):
         signature = a.json('signature.json')
         require(signature['plan']['id'] == 'sst_unet_fixed_blend_2021_2022_v1', 'Unsupported saved-map protocol.')
         table, years = a.table('global_metrics.csv'), a.table('years.csv')
-        description, period, primary = 'Fixed SST-hybrid/U-Net comparison', '2021–2022', 'blend_reference'
+        description, period, primary = 'Fixed SST model/U-Net comparison', '2021–2022', 'blend_reference'
         provenance = dict(input_hashes=signature['input_hashes'], protocol=signature['plan'], source_summary=summary)
         figures = ['monthly_comparison.png']
     elif {'evaluation/complete.json', 'evaluation/global.csv', 'frozen.json'} <= a.names:
@@ -116,7 +116,7 @@ def inspect_result(source):
         require(completion.get('complete_extension') is True or completion.get('summary', {}).get('complete_extension') is True,
                 'SST extension is not complete.')
         table, years = a.table('evaluation/global.csv'), a.table('evaluation/years.csv')
-        description, period, primary = 'Hybrid with eight SST principal components', '2021–2022', 'hybrid'
+        description, period, primary = 'Reference model with eight SST principal components', '2021–2022', 'hybrid'
         provenance = dict(frozen_receipt=frozen, evaluation=completion)
         figures = ['evaluation/monthly_comparison.png']
     else:

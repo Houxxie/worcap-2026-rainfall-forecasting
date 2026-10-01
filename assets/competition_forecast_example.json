@@ -2,7 +2,7 @@
   "target_month": "2023-01",
   "selection": "First target month in the submitted CSV; no selection by performance.",
   "submission_sha256": "e98e8954debb8f7c764665a31804ec5512a1c2578c1ed4a24e50c51dedfb429b",
-  "image_sha256": "6243659e6f7407f9c5a3a0c946b86d4a88c1e829c29bd3e9d44661c85df8e43d",
+  "image_sha256": "e170d8d81a752a2a428d16d0b73579252de7f02d202cf10fa0080cd7e2d36437",
   "coastline": {
     "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_coastline.geojson",
     "received_at_utc": "2026-09-30T18:21:18.926164+00:00",

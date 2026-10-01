@@ -66,8 +66,9 @@ print(json.dumps(RESULT, indent=2))
         markdown('## 4. Read and export the results\nDownload the small report ZIP for review. Save the complete notebook output to retain frozen models and prediction maps; the report ZIP alone cannot restore a run.'),
         code('''import zipfile
 import pandas as pd
+from research.common.presentation import display_frame
 from IPython.display import display, FileLink, HTML
-display(pd.read_csv(RUN/"evaluation"/"global.csv"))
+display(display_frame(pd.read_csv(RUN/"evaluation"/"global.csv")))
 display(HTML((RUN/"evaluation"/"report.html").read_text(encoding="utf-8")))
 REPORT_ZIP = RUN_ROOT/"temporal_extension_reports.zip"
 with zipfile.ZipFile(REPORT_ZIP, "w", zipfile.ZIP_DEFLATED) as archive:

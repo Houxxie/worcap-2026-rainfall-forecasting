@@ -27,7 +27,7 @@ print('Active comparison code:', ACTIVE_CODE_ROOT)
 
 
 def main():
-    names = ['research/common/inputs.py', 'research/diagnostics/analyze_errors.py', 'research/fixed_blend/evaluate.py',
+    names = ['research/common/inputs.py', 'research/common/presentation.py', 'research/diagnostics/analyze_errors.py', 'research/fixed_blend/evaluate.py',
              'research/sst_unet_blend/protocol.json']
     for folder in ['research/sst_extension/evidence/completed_20260930',
                    'research/temporal_extension/evidence/kaggle_354026629']:
@@ -48,15 +48,16 @@ INPUTS = locate_files(protocol(), dict(observations=OBSERVATIONS,
     sst_predictions=SST_PREDICTIONS, unet_predictions=UNET_PREDICTIONS))
 print("All required maps are present. No fitting will be performed.")
 '''),
-        markdown('## 3. Evaluate the fixed 75/25 candidate\nOne previously consulted block, 2021–2022. Primary comparison: the existing hybrid/U-Net blend. Secondary comparison: the SST hybrid alone.'),
+        markdown('## 3. Evaluate the fixed 75/25 candidate\nOne previously consulted block, 2021–2022. Primary comparison: the existing reference model/U-Net blend. Secondary comparison: the SST model alone.'),
         code('''import pandas as pd
+from research.common.presentation import display_frame
 from IPython.display import display, HTML, FileLink
 OUTPUT = RUN_ROOT / "results"
 RESULT = execute(OUTPUT, **INPUTS)
 assert RESULT["complete_comparison"] and RESULT["archived_scores_reproduced"]
 for name in ["global_metrics", "years", "regions"]:
     print(name)
-    display(pd.read_csv(OUTPUT / (name + ".csv")))
+    display(display_frame(pd.read_csv(OUTPUT / (name + ".csv"))))
 display(HTML((OUTPUT / "report.html").read_text(encoding="utf-8")))
 REPORT = export_reports(OUTPUT)
 display(FileLink(str(REPORT.relative_to(BASE))))

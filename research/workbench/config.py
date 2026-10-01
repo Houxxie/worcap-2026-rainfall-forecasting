@@ -21,7 +21,7 @@ def normalize(raw, base):
     experiment = raw.get('experiment', 'hybrid_unet_v1')
     if task in {'evaluate', 'train'}:
         require(experiment in EXPERIMENTS, 'Unknown experiment. See the workbench catalogue.')
-        require(task != 'train' or experiment == 'hybrid_unet_v1', 'Training supports the existing seven-block hybrid/U-Net protocol only.')
+        require(task != 'train' or experiment == 'hybrid_unet_v1', 'Training supports the existing seven-block reference model/U-Net protocol only.')
     else:
         require('experiment' not in raw, 'prepare/review do not select or fit an experiment.')
     keys = ({'official', 'seas5', 'cfsv2'} if task == 'train' else

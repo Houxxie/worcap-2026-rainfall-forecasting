@@ -1,6 +1,6 @@
 # One workflow for development comparisons
 
-Use one configuration and one command to produce a verified comparison, tables, figures and a portable HTML report. The first supported experiment is the existing **fixed hybrid versus compact U-Net**, on all seven chronological blocks from 2007–2020. Architecture, training windows, input lags, weights and epoch selection remain unchanged.
+Use one configuration and one command to produce a verified comparison, tables, figures and a portable HTML report. The first supported experiment is the existing **fixed reference model versus compact U-Net**, on all seven chronological blocks from 2007–2020. Architecture, training windows, input lags, weights and epoch selection remain unchanged.
 
 There are two explicit modes:
 
@@ -11,7 +11,7 @@ There are two explicit modes:
 
 These are previously consulted **development years**. Neither mode claims an independent holdout, promotes a model or issues a prospective forecast. Operational data collection and its incomplete-source gate remain separate.
 
-The optional `experiment` field selects `hybrid_unet_v1` (the default comparison) or `fixed_blend_v1` (one prespecified 75% hybrid + 25% U-Net blend, saved mode only). The latter uses the [blend example](blend.example.json), retains the original diagnostics, and adds paired candidate tables, maps and a report. It never searches weights. See the [fixed-blend protocol and results](../fixed_blend/README.md).
+The optional `experiment` field selects `hybrid_unet_v1` (the default comparison) or `fixed_blend_v1` (one prespecified 75% reference model + 25% U-Net blend, saved mode only). The latter uses the [blend example](blend.example.json), retains the original diagnostics, and adds paired candidate tables, maps and a report. It never searches weights. See the [fixed-blend protocol and results](../fixed_blend/README.md).
 
 ## Easiest route: Kaggle
 
@@ -63,7 +63,7 @@ RUN_ID/
   code/                    Source snapshot captured before execution
   source_evidence/         Signature, block completion records and histories
   diagnostics/             Pooled metrics, error maps and four figures
-  comparison/              Block/year comparisons against the hybrid
+  comparison/              Block/year comparisons against the reference model
   report.html              Portable report with embedded figures
   REPORT.md                Short result and report entry point
   manifest.json            Completed output inventory and hashes
@@ -85,6 +85,6 @@ This implements the evaluation consolidation and brings forward part of the usab
 
 ## Validation of this integration
 
-The CLI completed saved-mode evaluation on all 168 real months and reproduced the archived RMSEs: hybrid **1.7533987173382521**, U-Net **1.764725739441376**. The completed run verified all 115 output artifacts. Thirteen configuration, integrity and diagnostic tests passed. The standalone notebook bootstrap was executed in an isolated local directory and its preflight verified all 73 configured input artifacts; notebook syntax and bundled-source consistency were also checked.
+The CLI completed saved-mode evaluation on all 168 real months and reproduced the archived RMSEs: reference model **1.7533987173382521**, U-Net **1.764725739441376**. The completed run verified all 115 output artifacts. Thirteen configuration, integrity and diagnostic tests passed. The standalone notebook bootstrap was executed in an isolated local directory and its preflight verified all 73 configured input artifacts; notebook syntax and bundled-source consistency were also checked.
 
 The HTML report was inspected in a browser. The full Kaggle notebook and a new GPU training run were not executed for this integration. Train mode delegates to the unchanged experiment implementation; the existing seven-block training result remains the measured evidence. See the [validation record](evidence/validation.json).

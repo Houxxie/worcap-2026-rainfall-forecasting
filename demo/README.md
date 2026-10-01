@@ -4,12 +4,12 @@ Download the repository ZIP, extract it, and open **`demo/index.html`** in a bro
 
 No Python, credentials, Internet connection or model fitting is needed to view it.
 
-- **Competition model:** archived 8G validation metrics, yearly charts and the first monthly prediction from its verified submitted CSV.
-- **Current forecasting model:** the lagged hybrid's historical evaluation and the October 2026 forecast, explicitly marked **not yet evaluated**.
+- **Competition model:** archived competition validation metrics, yearly charts and the first monthly prediction from its verified submitted CSV.
+- **Current forecasting model:** the reference model with longer input lags's historical evaluation and the October 2026 forecast, explicitly marked **not yet evaluated**.
 
 Switch the model tab and the RMSE/MAE/bias selector. Tables contain the exact saved values. October's anomaly map is a departure from climatology, not forecast error.
 
-The competition map is a submitted prediction, not an observation comparison: full 8G validation maps are not bundled. The historical metrics do not evaluate that particular map. The operational tab's historical metrics come from earlier fold fits, not from scoring 2007–2020 with the final 1993–2022 fit. Different source-lag protocols should not be treated as a controlled paired comparison.
+The competition map is a submitted prediction, not an observation comparison: full competition validation maps are not bundled. The historical metrics do not evaluate that particular map. The operational tab's historical metrics come from earlier fold fits, not from scoring 2007–2020 with the final 1993–2022 fit. Different source-lag protocols should not be treated as a controlled paired comparison.
 
 ## Rebuild or verify (optional)
 

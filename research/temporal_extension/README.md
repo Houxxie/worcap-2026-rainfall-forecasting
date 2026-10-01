@@ -1,8 +1,8 @@
 # Additional chronological evaluation: 2021–2022
 
-This notebook evaluates the unchanged lagged hybrid, compact U-Net and fixed **75% hybrid + 25% U-Net** combination on one additional two-year block. It tests whether the development improvement persists in another period, without searching weights or changing architecture.
+This notebook evaluates the unchanged reference model with longer input lags, compact U-Net and fixed **75% reference model + 25% U-Net** combination on one additional two-year block. It tests whether the development improvement persists in another period, without searching weights or changing architecture.
 
-**Status: completed on Kaggle, version `354026629`.** The fixed blend reduced pooled RMSE from **1.796784 to 1.795289 mm/day (0.0832%)**, but increased MAE and absolute bias and worsened RMSE in 2022. The operational hybrid remains unchanged. Read the [complete result and decision](RESULTS.md). The failed first attempt and its input-coverage repair remain recorded below.
+**Status: completed on Kaggle, version `354026629`.** The fixed blend reduced pooled RMSE from **1.796784 to 1.795289 mm/day (0.0832%)**, but increased MAE and absolute bias and worsened RMSE in 2022. The current forecasting model remains unchanged. Read the [complete result and decision](RESULTS.md). The failed first attempt and its input-coverage repair remain recorded below.
 
 ## What this evaluation can establish
 
@@ -25,9 +25,9 @@ The existing workflow deliberately supports its seven original blocks only. This
 | Seasonal initialization | T−1, from the existing audited SEAS5/CFSv2 snapshots |
 | Network | Original channels 16/32/64, seed 42, AdamW, maximum 40 epochs, patience 6 |
 | Final neural fitting | Fresh initialization; epoch count selected only inside the outer training window |
-| Hybrid | Same two LightGBMs and local ridge, refitted on the stated outer window |
-| Combination | Exactly 75% hybrid + 25% U-Net; no new clipping or recalibration |
-| Primary comparison | Pooled full-grid RMSE of the blend against the refitted hybrid |
+| Reference model | Same two LightGBMs and local ridge, refitted on the stated outer window |
+| Combination | Exactly 75% reference model + 25% U-Net; no new clipping or recalibration |
+| Primary comparison | Pooled full-grid RMSE of the blend against the refitted reference model |
 
 All models remain fixed throughout the 24 evaluation months. Source fields update for each target month according to the lags. The final operational model trained through December 2022 is **not** reused for this earlier block. The original [U-Net protocol](../spatial_unet/protocol.json) is hash-pinned by the [extension protocol](protocol.json).
 
@@ -36,7 +36,7 @@ All models remain fixed throughout the 24 evaluation months. Source fields updat
 1. Import [temporal_extension.ipynb](temporal_extension.ipynb) into a **new private notebook**.
 2. Attach the official competition dataset, `worcap-seas5-dados`, and `worcap-cfsv2-dados`. Each seasonal input needs its manifest and both `desenvolvimento` and `somente_ajuste_final` NetCDF files. The `teste` partitions and SST are not used. The seven old model outputs are unnecessary because this experiment refits the models with a new cutoff.
 3. Enable a GPU. Use the original baseline environment: NumPy 2.0.2, pandas 2.3.3, xarray 2025.12.0 and LightGBM 4.6.0. PyTorch and the NetCDF readers must also be present. Preflight stops on incompatible baseline versions or unavailable CUDA; it does not replace packages automatically. Actual PyTorch/GPU versions are recorded.
-4. Run cells in order. The check cell runs small synthetic tests and checks the input hashes. The fitting cell trains the hybrid, selects neural epochs internally, refits the network and freezes predictions. The evaluation cell then verifies that package before decoding the target rainfall.
+4. Run cells in order. The check cell runs small synthetic tests and checks the input hashes. The fitting cell trains the reference model, selects neural epochs internally, refits the network and freezes predictions. The evaluation cell then verifies that package before decoding the target rainfall.
 5. Read `report.html`, download `temporal_extension_reports.zip`, and save the notebook version **with all outputs**. The small ZIP contains reports and verification metadata; the full saved output also retains models and prediction maps.
 
 No Internet, CDS key, new downloads or GitHub login are needed when the prepared datasets are attached. This step performs one new outer block, with one inner neural fit and one final neural fit. It can take longer than evaluation of saved maps. The model prints each epoch's timing and progress.
@@ -62,7 +62,7 @@ The fit path decodes only the training rainfall window. Forecast inference uses 
 
 The separate `evaluation/` directory contains pooled global, annual, calendar-month and latitude-band metrics, monthly error sums, the opening record, a plot and a portable HTML report. Lower RMSE alone does not hide worsened MAE or absolute bias. Two years provide limited temporal diversity, the supplied grid includes ocean, and consolidated source files do not establish historical publication vintages.
 
-No result automatically replaces the operational hybrid, changes the ongoing source gate or issues a live forecast. Record the result once, including a negative result, before planning another hypothesis.
+No result automatically replaces the current forecasting model, changes the ongoing source gate or issues a live forecast. Record the result once, including a negative result, before planning another hypothesis.
 
 ## Preparation checks
 
@@ -70,7 +70,7 @@ The original fourteen synthetic checks passed from the notebook's extracted sour
 
 ### Missing-index fix
 
-Kaggle version `354007635` stopped at the first hybrid forecast with `KeyError: 2020-10-01`. The bundled development index table ended in September 2020, so its structural checks were insufficient for the new forecast calendar. No outer scores were produced. This was an input-loading defect, not a model result.
+Kaggle version `354007635` stopped at the first model forecast with `KeyError: 2020-10-01`. The bundled development index table ended in September 2020, so its structural checks were insufficient for the new forecast calendar. No outer scores were produced. This was an input-loading defect, not a model result.
 
 The corrected loader uses the already preserved [NOAA archive](../../competition/metadata/NOAA/indices_noaa.csv), pins its SHA-256, and checks all required T−3 origins before fitting. All 526 shared months match the development table exactly; the 360 training origins are unchanged. Only July 1990–September 2022 is selected. There is no download, interpolation, new feature or protocol/weight change. `indices.json` records the source, overlap check and selected coverage.
 

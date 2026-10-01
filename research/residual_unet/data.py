@@ -1,4 +1,4 @@
-"""Chronological hybrid forecasts and shared direct/residual map datasets."""
+"""Chronological model forecasts and shared direct/residual map datasets."""
 import gc
 from pathlib import Path
 import numpy as np
@@ -26,7 +26,7 @@ def validate_field(field, data, dates):
 
 
 def crossfit_plan(data, dates, chunk_months=24):
-    """Reject unavailable references before fitting any auxiliary hybrid."""
+    """Reject unavailable references before fitting any auxiliary reference model."""
     dates = pd.DatetimeIndex(dates)
     require(len(dates) > 0 and dates.equals(pd.date_range(dates[0], periods=len(dates), freq='MS')),
             'Cross-fit targets must be consecutive monthly dates.')
@@ -38,10 +38,10 @@ def crossfit_plan(data, dates, chunk_months=24):
         cutoff = targets[0] - pd.DateOffset(months=4)
         reference = data.lib.janela_referencia(cutoff)
         require(len(reference) == 360 and reference.isin(available).all(),
-                'Insufficient past rainfall for the unchanged 30-year hybrid. Do not shorten or fill the reference.')
+                'Insufficient past rainfall for the unchanged 30-year reference model. Do not shorten or fill the reference.')
         training = data.lib.calendario_pareado(cutoff)
         require(training[-1] == cutoff and not training.isin(targets).any(), 'In-sample cross-fit target.')
-        require(len(training) >= 24 and len(training) <= 360, 'Invalid hybrid training window.')
+        require(len(training) >= 24 and len(training) <= 360, 'Invalid reference model training window.')
         require(data.lib.origem_mensal(reference, 4).isin(
             pd.DatetimeIndex(data.atmosphere[data.lib.VARIAVEIS[0]].time.values)).all(), 'Incomplete past atmosphere.')
         for field in [data.seas, data.cfs]:
@@ -53,7 +53,7 @@ def crossfit_plan(data, dates, chunk_months=24):
 
 
 def crossfit(data, dates, directory, run_stage):
-    """Each target map is forecast by a hybrid fitted strictly before that group."""
+    """Each target map is forecast by a reference model fitted strictly before that group."""
     directory = Path(directory)
     groups = crossfit_plan(data, dates)
     fields, records = [], []
@@ -61,7 +61,7 @@ def crossfit(data, dates, directory, run_stage):
         folder = directory / f'group_{i:02d}'
         def action(group=group, folder=folder):
             state = baseline.fit(data, group['cutoff'], folder / 'hybrid')
-            require(pd.Timestamp(state['audit']['training_end']) == group['cutoff'], 'Wrong hybrid cutoff.')
+            require(pd.Timestamp(state['audit']['training_end']) == group['cutoff'], 'Wrong reference model cutoff.')
             prediction = baseline.predict(data, state, group['targets'])
             validate_field(prediction, data, group['targets'])
             prediction.rename('hybrid').to_netcdf(folder / 'predictions.nc', engine='h5netcdf')
@@ -110,7 +110,7 @@ class ForecastMaps(Dataset):
         require(all(np.isfinite(v).all() for v in self.scaling.values()) and (self.scaling['scale'] > 0).all(), 'Invalid scaler values.')
         if hybrid is not None:
             validate_field(hybrid, context.data, self.dates)
-        # Preserve the hybrid's float64 precision when adding a float32 correction.
+        # Preserve the reference model's float64 precision when adding a float32 correction.
         self.hybrid = None if hybrid is None else hybrid.values.copy()
 
     def __len__(self):

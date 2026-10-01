@@ -1,6 +1,6 @@
 # Prospective source and forecast registry
 
-This workflow records received data and monthly forecasts for October 2026–September 2027. **The first forecast, for October 2026, was frozen on 30 September at 18:18 UTC**, before the 1 October deadline. The fixed hybrid uses eight validated source snapshots. An explicit evaluation of the original IRI recipe recovered the four CFSv2 members missing from its named product, with exact agreement on the available members. See the [operational record](OPERATIONAL_STATUS.md) and [fitting and inference workflow](BASELINE_RUN.md).
+This workflow records received data and monthly forecasts for October 2026–September 2027. **The first forecast, for October 2026, was frozen on 30 September at 18:18 UTC**, before the 1 October deadline. The fixed reference model uses eight validated source snapshots. An explicit evaluation of the original IRI recipe recovered the four CFSv2 members missing from its named product, with exact agreement on the available members. See the [operational record](OPERATIONAL_STATUS.md) and [fitting and inference workflow](BASELINE_RUN.md).
 
 The [notebook](prospective_registry.ipynb) collects public sources, audits inputs, restores records and reports readiness. It does not train or substitute a model when inputs are unavailable.
 

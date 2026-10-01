@@ -1,9 +1,9 @@
-# A fixed hybrid / U-Net combination
+# A fixed reference model / U-Net combination
 
-This experiment asks whether the compact U-Net adds useful information to the hybrid even though it has a higher RMSE on its own. The single candidate is:
+This experiment asks whether the compact U-Net adds useful information to the reference model even though it has a higher RMSE on its own. The single candidate is:
 
 ```text
-rainfall = 0.75 × archived hybrid rainfall + 0.25 × archived U-Net rainfall
+rainfall = 0.75 × archived reference model rainfall + 0.25 × archived U-Net rainfall
 ```
 
 The weights were chosen before evaluating this combination, after looking at the component models' diagnostics. The 2007–2020 years are therefore development data. This is not an independent holdout or a claim about future skill.
@@ -28,7 +28,7 @@ The original diagnostic runs first, reproducing all source-model metrics and ver
 
 The paired error products verify both equivalent MSE identities for the fixed blend. Error correlation is reported descriptively; no best weight is estimated. Spatial and temporal dependence prevents treating millions of grid cells as independent evidence.
 
-Each workflow run preserves its source/configuration snapshot, protocol, candidate predictions, comparisons, figures, HTML report and output manifest. Candidate maps and observations stay outside Git. The operational hybrid, source-availability gate and original archived predictions are unchanged.
+Each workflow run preserves its source/configuration snapshot, protocol, candidate predictions, comparisons, figures, HTML report and output manifest. Candidate maps and observations stay outside Git. The current forecasting model, source-availability gate and original archived predictions are unchanged.
 
 ## Result: 29 September 2026
 
@@ -36,9 +36,9 @@ The complete local evaluation covered 168 months and 13,198,248 grid-point/month
 
 | Model | RMSE | MAE | Signed bias |
 |---|---:|---:|---:|
-| Hybrid reference | 1.753399 | 1.047213 | +0.004916 |
+| Reference model | 1.753399 | 1.047213 | +0.004916 |
 | U-Net alone | 1.764726 | 1.060313 | +0.021218 |
-| Fixed 75% hybrid + 25% U-Net | **1.750628** | **1.046128** | +0.008992 |
+| Fixed 75% reference model + 25% U-Net | **1.750628** | **1.046128** | +0.008992 |
 
 Units: mm/day. RMSE decreased by **0.002771 mm/day (0.1580%)**. The blend improved RMSE in **6/7 blocks**, **10/14 years**, **10/12 calendar months**, all three latitude bands and **56.99% of grid cells**. These percentages are descriptive, not significance or area-weighted estimates.
 
@@ -56,7 +56,7 @@ Pooled centered forecast-error correlation was **0.983109**. Although the errors
 
 ## Decision
 
-Keep the fixed blend as a **research candidate** and preserve the operational hybrid. The result supports investigating U-Net complementarity; it does not establish future improvement or remove the bias/medium-rainfall tradeoffs. Before operational adoption, freeze the same candidate and evaluate genuinely unconsulted outcomes or prospective months. Any new architecture or correction model is a separate experiment, not part of this result.
+Keep the fixed blend as a **research candidate** and preserve the current forecasting model. The result supports investigating U-Net complementarity; it does not establish future improvement or remove the bias/medium-rainfall tradeoffs. Before operational adoption, freeze the same candidate and evaluate genuinely unconsulted outcomes or prospective months. Any new architecture or correction model is a separate experiment, not part of this result.
 
 The [additional chronological evaluation in 2021–2022](../temporal_extension/RESULTS.md) is complete, using a new fit ending in September 2020. The same fixed blend reduced pooled RMSE by 0.0832%, but worsened MAE, absolute bias and the second year's RMSE. It remains a research candidate. Because those observations participated in earlier final training, the extension is explicitly retrospective and does not replace the need for prospective confirmation.
 

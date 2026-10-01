@@ -12,6 +12,7 @@ import platform
 
 import numpy as np
 import pandas as pd
+from research.common.presentation import model_label
 import xarray as xr
 import matplotlib
 matplotlib.use('Agg')
@@ -119,20 +120,20 @@ def plot_results(tables, maps, histories, output):
     fig, axes = plt.subplots(1, 2, figsize=(12, 4.5), constrained_layout=True)
     for model in MODELS:
         data = tables['calendar_month'].query('model == @model').sort_values('calendar_month')
-        axes[0].plot(data.calendar_month, data.rmse, marker='o', label=model.title(), color=COLORS[model])
+        axes[0].plot(data.calendar_month, data.rmse, marker='o', label=model_label(model), color=COLORS[model])
     axes[0].set(xlabel='Target calendar month', ylabel='Pooled RMSE (mm/day)', xticks=range(1, 13))
     axes[0].legend(frameon=False)
     axes[1].bar(monthly.calendar_month, monthly.delta_rmse,
                 color=np.where(monthly.delta_rmse > 0, COLORS['unet'], COLORS['hybrid']))
     axes[1].axhline(0, color='#555', linewidth=.8)
-    axes[1].set(xlabel='Target calendar month', ylabel='U-Net minus hybrid RMSE (mm/day)', xticks=range(1, 13))
+    axes[1].set(xlabel='Target calendar month', ylabel='U-Net minus reference model RMSE (mm/day)', xticks=range(1, 13))
     fig.suptitle('Calendar-month errors | 2007–2020 development years')
     fig.savefig(output / 'calendar_month.png', dpi=155); plt.close(fig)
 
     fig, axes = plt.subplots(1, 2, figsize=(12, 4.5), constrained_layout=True)
     for model in MODELS:
         data = tables['intensity'].query('model == @model').set_index('intensity').loc[list(BIN_NAMES)]
-        axes[0].plot(range(5), data.rmse, marker='o', label=model.title(), color=COLORS[model])
+        axes[0].plot(range(5), data.rmse, marker='o', label=model_label(model), color=COLORS[model])
         axes[1].plot(range(5), data.bias, marker='o', color=COLORS[model])
     for ax in axes:
         ax.set_xticks(range(5), ['0–<1', '1–<3', '3–<5', '5–<10', '≥10'])
@@ -148,11 +149,11 @@ def plot_results(tables, maps, histories, output):
     vmax = float(max(maps.hybrid_rmse.max(), maps.unet_rmse.max()))
     for ax, name in zip(axes[:2], ['hybrid', 'unet']):
         artist = ax.pcolormesh(maps.lon, maps.lat, maps[name + '_rmse'], shading='auto', cmap='viridis', vmin=0, vmax=vmax)
-        ax.set_title(name.title() + ' RMSE')
+        ax.set_title(model_label(name) + ' RMSE')
     fig.colorbar(artist, ax=list(axes[:2]), label='RMSE (mm/day)', orientation='horizontal', shrink=.9)
     bound = float(np.abs(delta).max())
     artist = axes[2].pcolormesh(maps.lon, maps.lat, delta, shading='auto', cmap='RdBu_r', vmin=-bound, vmax=bound)
-    axes[2].set_title('U-Net − hybrid RMSE')
+    axes[2].set_title('U-Net − reference model RMSE')
     fig.colorbar(artist, ax=axes[2], label='Difference (mm/day)', orientation='horizontal')
     for ax in axes:
         ax.set(xlabel='Longitude (°)', ylabel='Latitude (°)', xlim=(-90, -25), ylim=(-60, 15), aspect='equal')
@@ -240,7 +241,7 @@ def execute(predictions, observations, output, evidence=EVIDENCE):
               'region': pooled(monthly, ['model', 'region']), 'region_calendar_month': pooled(monthly, ['model', 'region', 'calendar_month']),
               'intensity': pooled(intensity_months, ['model', 'intensity']), 'block_intensity': pooled(intensity_months, ['model', 'block', 'intensity']),
               'training': pd.DataFrame(training_rows)}
-    total_n = int(tables['global'].query("model == 'hybrid'").n.iloc[0])
+    total_n = int(tables['global'].query("model == 'reference model'").n.iloc[0])
     require(total_n == 168 * 301 * 261, 'Incomplete evaluation.')
     np.testing.assert_allclose(tables['intensity'].groupby('model')[SUMS].sum().sort_index(), tables['global'].set_index('model')[SUMS].sort_index(), rtol=1e-12, atol=1e-7)
     archived_global = pd.read_csv(evidence / 'global.csv').set_index('modelo')

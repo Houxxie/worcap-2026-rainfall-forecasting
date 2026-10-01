@@ -17,7 +17,7 @@ def main():
     ax.axis('off')
     fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
     ax.text(6, 64, 'MONTHLY RAINFALL FORECASTING', fontsize=22, weight='bold', color=INK)
-    ax.text(6, 59, 'South America  /  Competition hybrid  /  WorCAP 2026', fontsize=12, color=MUTED)
+    ax.text(6, 59, 'South America  /  Competition model  /  WorCAP 2026', fontsize=12, color=MUTED)
 
     def box(x,y,w,h,title,body,color=TEAL):
         ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=0.7,rounding_size=1.1',facecolor='white',edgecolor='#cfdae2',lw=1.1))
@@ -42,7 +42,7 @@ def main():
         ax.text(95.5,y+1.6,weight,fontsize=11,weight='bold',color=INK,ha='center')
     ax.plot([105,105],[13.5,45.5],color='#8396a5',lw=1.3)
     arrow(105,29.5,109,29.5)
-    box(110,18,24,23,'HYBRID FORECAST','Monthly field\n301 × 261 grid\nmm/day → CSV')
+    box(110,18,24,23,'MONTHLY FORECAST','Monthly field\n301 × 261 grid\nmm/day → CSV')
     ax.text(6,2.5,'Up to 30 years of training  •  Chronological validation  •  Input and CSV integrity checks',fontsize=10,color=MUTED)
     path=ROOT/'outputs/model_overview_generated.png'
     path.parent.mkdir(parents=True,exist_ok=True)

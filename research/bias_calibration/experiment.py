@@ -93,7 +93,7 @@ def fit_calibration(data, training, reference, config, folder, device):
 
 def run_block(data, block, config, directory, device):
     directory.mkdir(parents=True, exist_ok=False)
-    # The unchanged original runner reproduces the hybrid and fits the reference U-Net.
+    # The unchanged original runner reproduces the reference model and fits the reference U-Net.
     # Its scores are recorded, never passed to calibration or used for selection.
     original_block(data, block, config, directory/'reference', device)
     m = data.lib

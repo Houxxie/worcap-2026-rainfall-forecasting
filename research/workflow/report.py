@@ -4,16 +4,15 @@ from pathlib import Path
 import base64
 import json
 import pandas as pd
+from research.common.presentation import display_frame
 
 
 def table_html(frame):
-    frame = frame.copy()
-    if 'model' in frame:
-        frame['model'] = frame.model.replace({'hybrid': 'Hybrid', 'unet': 'U-Net', 'climatology': 'Climatology'})
+    frame = display_frame(frame)
     if 'n' in frame:
         frame['n'] = frame.n.map(lambda n: f'{int(n):,}')
     labels = {'model': 'Model', 'n': 'Samples', 'rmse': 'RMSE', 'mae': 'MAE', 'bias': 'Bias',
-              'delta_rmse_vs_hybrid': 'Δ RMSE vs hybrid', 'calendar_month': 'Month', 'hybrid_rmse': 'Hybrid RMSE',
+              'delta_rmse_vs_hybrid': 'Δ RMSE vs reference model', 'calendar_month': 'Month', 'hybrid_rmse': 'Reference model RMSE',
               'unet_rmse': 'U-Net RMSE', 'delta_rmse': 'Δ RMSE', 'region': 'Latitude band',
               'intensity': 'Observed mm/day', 'block': 'Block', 'year': 'Year', 'selected_epochs': 'Selected epoch',
               'inner_epochs_run': 'Epochs run', 'first_inner_rmse': 'First inner RMSE',
@@ -30,15 +29,15 @@ def render(run, record):
     scores['delta_rmse_vs_hybrid'] = scores.rmse - baseline
     scores = scores[['model', 'rmse', 'mae', 'bias', 'delta_rmse_vs_hybrid', 'n']]
     signed = summary['unet_rmse'] - summary['hybrid_rmse']
-    outcome = ('The hybrid has lower pooled RMSE.' if signed > 0 else
+    outcome = ('The reference model has lower pooled RMSE.' if signed > 0 else
                'The U-Net has lower pooled RMSE on these development years.' if signed < 0 else 'Pooled RMSE is tied.')
     metadata = {
-        'Run': record['run_id'], 'Mode': record['mode'], 'Comparison': 'Fixed hybrid / compact U-Net / monthly climatology',
+        'Run': record['run_id'], 'Mode': record['mode'], 'Comparison': 'Fixed reference model / compact U-Net / monthly climatology',
         'Period': 'January 2007–December 2020 · seven chronological blocks',
         'Started (UTC)': record['started_at'], 'Run fingerprint': record['fingerprint'],
         'Source signature': record['source_signature_sha256'], 'Scope': 'Development years already consulted; not an independent holdout',
     }
-    parts = [f'<h1>Rainfall experiment report</h1><p class="lead">{escape(outcome)} U-Net − hybrid RMSE: <strong>{signed:+.6f} mm/day</strong>.</p>',
+    parts = [f'<h1>Rainfall experiment report</h1><p class="lead">{escape(outcome)} U-Net − reference model RMSE: <strong>{signed:+.6f} mm/day</strong>.</p>',
              '<p class="note">No model is automatically promoted. No prospective forecast is issued. This report does not establish future skill.</p>',
              '<p>January 2007–December 2020 · Seven chronological blocks · Full 0.25° grid</p>',
              '<details><summary>Run details and provenance</summary><dl>' + ''.join(f'<dt>{escape(k)}</dt><dd>{escape(str(v))}</dd>' for k, v in metadata.items()) + '</dl></details>',
@@ -46,7 +45,7 @@ def render(run, record):
              table_html(scores)]
     sections = [
         ('Calendar month', 'calendar_month.png', 'calendar_comparison.csv', ['calendar_month', 'hybrid_rmse', 'unet_rmse', 'delta_rmse'],
-         'Each month pools fourteen years. Positive differences favor the hybrid.'),
+         'Each month pools fourteen years. Positive differences favor the reference model.'),
         ('Location', 'spatial_errors.png', 'region_comparison.csv', ['region', 'hybrid_rmse', 'unet_rmse', 'delta_rmse'],
          f"U-Net RMSE is lower in {summary['unet_lower_rmse_grid_fraction']:.2%} of grid cells. This is not an area-weighted or land-only percentage."),
         ('Observed rainfall intensity', 'rainfall_intensity.png', 'intensity_comparison.csv', ['intensity', 'n', 'hybrid_rmse', 'unet_rmse', 'delta_rmse'],
@@ -68,7 +67,7 @@ def render(run, record):
     html = '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rainfall experiment report</title><style>body{font:16px/1.55 system-ui,sans-serif;color:#172b36;max-width:1100px;margin:40px auto;padding:0 24px;background:#f8fafb}h1,h2{line-height:1.2}h2{margin-top:44px}.lead{font-size:20px}.note{border-left:4px solid #087e8b;padding:12px 16px;background:#e9f4f5}details{margin:18px 0}summary{cursor:pointer;font-weight:650;margin-bottom:12px}dt{font-weight:650}dd{margin:0 0 12px;overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;font-size:14px;display:block;overflow:auto;background:white}th,td{padding:9px 12px;border-bottom:1px solid #dae2e6;text-align:right}th:first-child,td:first-child{text-align:left}img{max-width:100%;height:auto;background:white;margin:12px 0}</style><body>' + '\n'.join(parts) + '</body></html>'
     (run / 'report.html').write_text(html, encoding='utf-8', newline='\n')
     (run / 'REPORT.md').write_text(
-        '# Rainfall experiment report\n\n' + outcome + f' U-Net minus hybrid RMSE: {signed:+.6f} mm/day.\n\n'
+        '# Rainfall experiment report\n\n' + outcome + f' U-Net minus reference model RMSE: {signed:+.6f} mm/day.\n\n'
         + 'Open report.html for the complete tables and embedded figures.\n\n'
         + f'Run: `{record["run_id"]}`. Mode: `{record["mode"]}`.\n\n'
         + 'Development comparison, 2007–2020. No automatic promotion and no prospective forecast.\n', encoding='utf-8', newline='\n')

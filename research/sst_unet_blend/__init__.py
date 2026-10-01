@@ -1,1 +1,1 @@
-"""One fixed combination of archived SST-hybrid and U-Net predictions."""
+"""One fixed combination of archived SST model and U-Net predictions."""

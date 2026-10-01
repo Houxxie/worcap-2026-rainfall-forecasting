@@ -2,7 +2,7 @@
 
 A file describing T−1 may be published after the forecast deadline. A model initialization date is not the time an aggregated download became available.
 
-The competition hybrid aligns atmospheric and ocean inputs to T−1 and seasonal forecasts to initializations before the target. Final training ends in December 2022, without updating the fit using 2023–2024 rainfall. This checks alignment, not the historical availability of every consolidated product and hindcast version.
+The competition model aligns atmospheric and ocean inputs to T−1 and seasonal forecasts to initializations before the target. Final training ends in December 2022, without updating the fit using 2023–2024 rainfall. This checks alignment, not the historical availability of every consolidated product and hindcast version.
 
 ## Research information calendar
 

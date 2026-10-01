@@ -7,22 +7,22 @@ The prespecified H1 run completed on Kaggle on 29 September 2026 (UTC). It evalu
 | Model | RMSE | MAE | Bias |
 |---|---:|---:|---:|
 | Monthly climatology | 1.842602 | 1.076899 | -0.092341 |
-| Fixed hybrid | **1.741364** | 1.036688 | -0.033539 |
+| Fixed reference model | **1.741364** | 1.036688 | -0.033539 |
 | Compact U-Net | 1.743602 | **1.036606** | -0.069229 |
 
 Units are mm/day; each row covers the same 1,885,464 grid points and months. The U-Net RMSE is 0.002238 higher (about 0.129%). Its small MAE reduction does not offset the worse primary metric or larger absolute bias. It is **not adopted as the new baseline**.
 
 ## What was verified
 
-- The hybrid reproduced its archived H1 RMSE, MAE and bias within the prespecified 1e-6 tolerance before neural training started.
+- The reference model reproduced its archived H1 RMSE, MAE and bias within the prespecified 1e-6 tolerance before neural training started.
 - Inner chronological validation selected five epochs. A fresh U-Net was then fitted for those five epochs on all 295 allowed outer training months, March 1982 through September 2006.
-- The U-Net has 122,945 parameters. It used the same source information as the hybrid, with no new SST inputs. As documented in the protocol, its complete monthly training maps differ from the tree models' sampled pixels.
+- The U-Net has 122,945 parameters. It used the same source information as the reference model, with no new SST inputs. As documented in the protocol, its complete monthly training maps differ from the tree models' sampled pixels.
 - The eight spatial synthetic tests passed in Kaggle. Local isolated checks across spatial training, inference, registry and temporal logic totalled 35 passing tests.
 - After export, the run signature and all 11 block artifacts included in the report archive matched the completed-run hashes. Global, block, annual and regional scores were independently recomputed from the exported monthly error sums.
 
 ## Reproduction record
 
-The private [Kaggle notebook](https://www.kaggle.com/code/houxie/worcap-spatial-u-net-research) stores version 1, **H1 pilot - chronological U-Net and hybrid**, with its outputs. Source modules correspond to Git commit `1ae8c11a0fe397e383f06b97e450233facff8aa4`; the later report-link fix does not change training.
+The private [Kaggle notebook](https://www.kaggle.com/code/houxie/worcap-spatial-u-net-research) stores version 1, **H1 pilot - chronological U-Net and reference model**, with its outputs. Source modules correspond to Git commit `1ae8c11a0fe397e383f06b97e450233facff8aa4`; the later report-link fix does not change training.
 
 The actual training environment was Python 3.12.13, NumPy 2.0.2, pandas 2.3.3, xarray 2025.12.0, LightGBM 4.6.0 and **PyTorch 2.10.0+cu128 on one Tesla T4**. The separate CPU test environment used PyTorch 2.8.0. Matching code alone does not guarantee bitwise reproduction across these environments.
 

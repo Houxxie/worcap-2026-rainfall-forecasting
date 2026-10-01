@@ -1,4 +1,4 @@
-"""Fit and predict the fixed lagged hybrid, without changing its architecture."""
+"""Fit and predict the fixed reference model with longer input lags, without changing its architecture."""
 from pathlib import Path
 import gc
 import numpy as np

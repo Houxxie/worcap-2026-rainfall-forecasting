@@ -12,6 +12,7 @@ import shutil
 import zipfile
 import numpy as np
 import pandas as pd
+from research.common.presentation import display_frame
 import xarray as xr
 from research.common.inputs import ROOT, library, require, sha256, write_json
 from .data import calendar, check, load, INDEX
@@ -52,7 +53,7 @@ def protocol():
 
 
 def source_files():
-    names = [INDEX, REFERENCE, 'research/common/inputs.py', 'research/lagged_sources/library.py',
+    names = [INDEX, REFERENCE, 'research/common/inputs.py', 'research/common/presentation.py', 'research/lagged_sources/library.py',
              'research/lagged_sources/ocean_indices.csv', 'research/lagged_sources/official_hashes.json',
              'research/sst_extension/protocol.json']
     names += [p.relative_to(ROOT).as_posix() for p in Path(__file__).parent.glob('*.py')]
@@ -246,16 +247,16 @@ def score(output, official=None):
     ax.bar(range(len(delta)), delta, color=['#167d8d' if v < 0 else '#bd6745' for v in delta])
     ax.axhline(0, color='#263945', lw=.8)
     ax.set(xticks=list(range(0, 24, 3)), xticklabels=[t[:7] for t in delta.index[::3]],
-           ylabel='SST minus hybrid RMSE (mm/day)', title='Additional 2021–2022 block: negative values favor SST')
+           ylabel='SST minus reference model RMSE (mm/day)', title='Additional 2021–2022 block: negative values favor SST')
     ax.spines[['top', 'right']].set_visible(False)
     fig.savefig(report / 'monthly_comparison.png', dpi=150)
     plt.close(fig)
     text = '<!doctype html><meta charset="utf-8"><title>SST temporal extension</title>'
     text += '<style>body{font:16px system-ui;max-width:1050px;margin:36px auto;padding:0 20px;color:#213442}table{border-collapse:collapse}td,th{padding:8px;border-bottom:1px solid #ddd}pre{white-space:pre-wrap}</style>'
-    text += '<h1>Does global SST add information?</h1><p>Fixed 8-PC candidate, evaluated on 2021–2022 with the same samples and base inputs as the hybrid. Four tree fits and one shared ridge; no neural training or parameter search.</p>'
+    text += '<h1>Does global SST add information?</h1><p>Fixed 8-PC candidate, evaluated on 2021–2022 with the same samples and base inputs as the reference model. Four tree fits and one shared ridge; no neural training or parameter search.</p>'
     text += '<p><strong>Retrospective extension; both years have been consulted before.</strong> Monthly lags do not verify historical product vintages. These results do not authorize operational promotion.</p>'
-    text += '<h2>Pooled errors, mm/day</h2>' + tables['global'][['modelo', 'rmse', 'mae', 'vies', 'rmse_area']].to_html(index=False, float_format=lambda x: f'{x:.6f}')
-    text += '<h2>Annual errors</h2>' + tables['years'][['modelo', 'ano', 'rmse', 'mae', 'vies']].to_html(index=False, float_format=lambda x: f'{x:.6f}')
+    text += '<h2>Pooled errors, mm/day</h2>' + display_frame(tables['global'][['modelo', 'rmse', 'mae', 'vies', 'rmse_area']]).to_html(index=False, float_format=lambda x: f'{x:.6f}')
+    text += '<h2>Annual errors</h2>' + display_frame(tables['years'][['modelo', 'ano', 'rmse', 'mae', 'vies']]).to_html(index=False, float_format=lambda x: f'{x:.6f}')
     text += '<h2>Audit and decision inputs</h2><pre>' + html.escape(json.dumps(summary, indent=2)) + '</pre>'
     (report / 'report.html').write_text(text, encoding='utf-8')
     verify_frozen(output)

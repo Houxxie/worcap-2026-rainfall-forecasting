@@ -10,7 +10,7 @@ Use one notebook or command to check inputs, evaluate saved forecasts, train the
 |---|---|---|---|
 | `review` | Verify an existing result and build an easier-to-read report | Completed workflow folder, SST extension reports, or SST/U-Net reports ZIP | CPU; no recalculation of forecasts |
 | `evaluate` | Score saved maps with the existing comparison protocol | Observations and complete prediction outputs | CPU; no model fitting |
-| `train` | Run the existing seven-block hybrid/U-Net protocol, then evaluate | Official data, prepared SEAS5 and CFSv2 | GPU recommended; potentially long |
+| `train` | Run the existing seven-block reference model/U-Net protocol, then evaluate | Official data, prepared SEAS5 and CFSv2 | GPU recommended; potentially long |
 | `prepare` | Check the latest registry, source arrivals, frozen model and issue deadline | Complete registry with `eventos/` and `objetos/` | CPU; read-only, no provider request |
 
 **Start with `review` when the results already exist.** The small report ZIP is sufficient for review, but not for saved-map evaluation. `prepare` does not acquire data, fit the final model or emit a forecast; those actions remain in the [existing operational workflow](../prospective/BASELINE_RUN.md). The [operational record](../prospective/OPERATIONAL_STATUS.md) documents October's issued forecast and the separate, still-unresolved compatibility of the successor CCSR service.
@@ -47,9 +47,9 @@ The notebook clears previously imported `research` modules from memory before us
 
 ## Supported experiments
 
-- `hybrid_unet_v1`: existing hybrid/U-Net comparison on 2007–2020; saved evaluation or unchanged seven-block training.
-- `fixed_blend_v1`: existing 75% hybrid / 25% U-Net comparison on 2007–2020; saved evaluation only.
-- `sst_unet_blend_v1`: fixed 75% SST hybrid / 25% U-Net comparison on 2021–2022; saved evaluation only.
+- `hybrid_unet_v1`: existing reference model/U-Net comparison on 2007–2020; saved evaluation or unchanged seven-block training.
+- `fixed_blend_v1`: existing 75% reference model / 25% U-Net comparison on 2007–2020; saved evaluation only.
+- `sst_unet_blend_v1`: fixed 75% SST model / 25% U-Net comparison on 2021–2022; saved evaluation only.
 
 Review also accepts completed SST-extension reports from 2021–2022. Other experiment layouts need a reviewed adapter; the workbench does not guess their scientific protocol. All these historical periods were already consulted in development.
 

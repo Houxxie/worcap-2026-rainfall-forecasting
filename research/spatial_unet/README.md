@@ -26,9 +26,9 @@ All climatologies and normalization are fitted within training. The rainfall cli
 2. The last 24 available training target months form an inner validation period. Inner fitting ends four months before its first target. Its reference history is the outer reference truncated at that earlier cutoff, never extended into older unavailable inputs.
 3. Up to 40 epochs are run with AdamW, learning rate 0.001, weight decay 0.0001, batch size 2 and patience 6. Epoch count is chosen by inner reconstructed RMSE, with earliest-epoch tie breaking.
 4. A fresh model and preprocessing are fitted on the complete outer training window for that epoch count. Outer errors never choose the epoch count.
-5. The unchanged hybrid is refitted and must reproduce its archived block RMSE, MAE and bias within 1e-6 before the comparison is accepted.
+5. The unchanged reference model is refitted and must reproduce its archived block RMSE, MAE and bias within 1e-6 before the comparison is accepted.
 
-These historical years were already consulted during project development. They are **not an untouched holdout**, and successful historical results alone cannot establish performance in future years. The existing prospective hybrid plan remains unchanged; a future neural forecast series would need its own frozen protocol.
+These historical years were already consulted during project development. They are **not an untouched holdout**, and successful historical results alone cannot establish performance in future years. The existing prospective reference model plan remains unchanged; a future neural forecast series would need its own frozen protocol.
 
 ## Run in Kaggle
 
@@ -49,6 +49,6 @@ python research/spatial_unet/test_spatial.py
 python research/spatial_unet/run_experiment.py --output outputs/spatial_unet_v1 --blocks H1 --official /path/to/official --seas5 /path/to/seas5 --cfsv2 /path/to/cfsv2
 ```
 
-Primary metric: pooled RMSE, calculated from error sums rather than averaged block RMSE. Secondary metrics: MAE, signed bias, cosine-latitude weighted RMSE, annual results and three latitude bands. The comparison includes the hybrid, U-Net and climatology, without searching for an ensemble weight.
+Primary metric: pooled RMSE, calculated from error sums rather than averaged block RMSE. Secondary metrics: MAE, signed bias, cosine-latitude weighted RMSE, annual results and three latitude bands. The comparison includes the reference model, U-Net and climatology, without searching for an ensemble weight.
 
 Sources and constraints: [data documentation](../../docs/DATA.md), [temporal validity](../../docs/TEMPORAL_VALIDITY.md), and the machine-readable [protocol](protocol.json).

@@ -1,4 +1,4 @@
-"""Compare a monthly-map U-Net to the unchanged lagged hybrid on development years."""
+"""Compare a monthly-map U-Net to the unchanged reference model with longer input lags on development years."""
 from pathlib import Path
 import argparse
 import gc
@@ -57,7 +57,7 @@ def run_block(data, block, config, directory, device):
         require(abs(float(now[key]) - float(old[key])) < 1e-6, f'Control did not reproduce archived {key}. Stop comparison.')
     write_json(directory / 'baseline_check.json', dict(reproduced=True, tolerance=1e-6,
         rmse_archived=float(old.rmse), rmse_current=float(now.rmse)))
-    print(block['nome'], 'fixed hybrid reproduced; starting neural fit.', flush=True)
+    print(block['nome'], 'fixed reference model reproduced; starting neural fit.', flush=True)
     baseline_climate = state['climate']
     del state
     gc.collect()

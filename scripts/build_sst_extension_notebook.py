@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
-    names = ['research/common/inputs.py', 'research/common/baseline.py', 'research/common/synthetic_fixture.py',
+    names = ['research/common/inputs.py', 'research/common/presentation.py', 'research/common/baseline.py', 'research/common/synthetic_fixture.py',
              'research/lagged_sources/library.py', 'research/lagged_sources/ocean_indices.csv',
              'research/lagged_sources/official_hashes.json', 'competition/metadata/NOAA/indices_noaa.csv',
              'research/temporal_extension/evidence/kaggle_354026629/evaluation/global.csv',
@@ -30,11 +30,12 @@ freeze(OUTPUT, official=OFFICIAL, seas5=SEAS5, cfsv2=CFSV2, sst=SST)
 '''),
         markdown('## 3. Open evaluation rainfall and compare\nThe saved predictions and source hashes are verified first. These years were previously consulted; this is not an independent holdout.'),
         code('''import pandas as pd
+from research.common.presentation import display_frame
 from IPython.display import display, HTML, Image, FileLink
 RESULT = score(OUTPUT, official=OFFICIAL)
 for name in ["global", "years", "regions"]:
     print(name)
-    display(pd.read_csv(OUTPUT / "evaluation" / (name + ".csv")))
+    display(display_frame(pd.read_csv(OUTPUT / "evaluation" / (name + ".csv"))))
 display(HTML((OUTPUT / "evaluation/report.html").read_text(encoding="utf-8")))
 display(Image(filename=str(OUTPUT / "evaluation/monthly_comparison.png")))
 REPORT = export_reports(OUTPUT)

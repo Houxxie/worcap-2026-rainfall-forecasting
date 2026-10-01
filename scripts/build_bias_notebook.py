@@ -42,10 +42,11 @@ assert RESULT["complete_seven_blocks"], "Only a partial comparison is available.
 '''),
         markdown('## 3. Review and download\nSend the report ZIP for analysis. Save the full notebook output to preserve prediction maps and fitted models. No result automatically changes the operational forecast.'),
         code('''import pandas as pd
+from research.common.presentation import display_frame
 from IPython.display import display, FileLink, HTML
 for name in ["global", "blocks", "years", "offsets"]:
     print(name)
-    display(pd.read_csv(OUTPUT/(name+".csv")))
+    display(display_frame(pd.read_csv(OUTPUT/(name+".csv"))))
 display(HTML((OUTPUT/"report.html").read_text(encoding="utf-8")))
 REPORT = export_reports(OUTPUT)
 display(FileLink(str(REPORT.relative_to(BASE))))

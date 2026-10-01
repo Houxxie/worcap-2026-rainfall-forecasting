@@ -6,9 +6,7 @@ import json
 import numpy as np
 import pandas as pd
 
-LABELS = {'hybrid': 'Hybrid', 'hybrid_sst': 'Hybrid + SST', 'unet': 'U-Net',
-          'blend': 'Hybrid + U-Net', 'blend_reference': 'Hybrid + U-Net',
-          'blend_sst': 'Hybrid + SST + U-Net', 'climatology': 'Climatology'}
+from research.common.presentation import MODEL_LABELS as LABELS, display_frame
 
 
 def forecast_map(path, output, month=None):
@@ -42,9 +40,7 @@ def forecast_map(path, output, month=None):
 
 
 def table(frame):
-    frame = frame.copy()
-    if 'model' in frame:
-        frame['model'] = frame.model.replace(LABELS)
+    frame = display_frame(frame)
     return frame.to_html(index=False, escape=True, border=0, float_format=lambda v: f'{v:.6f}')
 
 

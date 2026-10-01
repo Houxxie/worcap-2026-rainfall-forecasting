@@ -23,7 +23,7 @@ figure{margin:22px 0 0}img{display:block;width:100%;height:auto;border-radius:8p
 <nav aria-label="Choose model"><button type="button" aria-pressed="true" aria-controls="competition" data-view="competition">Competition model</button><button type="button" aria-pressed="false" aria-controls="current" data-view="current">Current forecasting model</button></nav>
 <noscript><p class="notice">Enable JavaScript to view the saved metrics and switch sections. The embedded maps below remain available.</p></noscript>
 <section id="competition" aria-labelledby="competition-title">
-<div class="panel"><span class="tag">COMPETITION · 8G</span><h2 id="competition-title">The submitted hybrid</h2>
+<div class="panel"><span class="tag">COMPETITION MODEL</span><h2 id="competition-title">The competition submission</h2>
 <p>Two LightGBM models and local ridge regression, combined with fixed weights of 37.5%, 37.5% and 25%. The final fit used 1993–2022 to predict 2023–2024.</p>
 <p class="muted">The metrics below are the archived seven-block validation over 2007–2020. They are not the competition's 2024 score or the performance of a model fitted through 2022 on earlier years.</p>
 <div class="cards" data-cards="competition"></div>
@@ -34,7 +34,7 @@ figure{margin:22px 0 0}img{display:block;width:100%;height:auto;border-radius:8p
 <div class="panel"><h3>A map from the submitted CSV</h3><figure><img class="competition-image" src="data:image/png;base64,@@COMPETITION_MAP@@" alt="January 2023 monthly rainfall prediction from the verified competition CSV, on the South America grid."><figcaption>January 2023, the first target month in the submitted file. This is an archived prediction, not observed rainfall. The validation tables above concern 2007–2020; they do not score this map. This demo does not include the full competition validation maps needed for a spatial prediction–observation comparison.</figcaption></figure></div>
 </section>
 <section id="current" aria-labelledby="current-title">
-<div class="panel"><span class="tag">CURRENT REFERENCE</span><h2 id="current-title">The hybrid with longer input lags</h2>
+<div class="panel"><span class="tag">CURRENT REFERENCE</span><h2 id="current-title">The current forecasting model</h2>
 <p>The architecture and fixed blend are retained. Atmospheric inputs use T−4, ocean indices T−3, and seasonal initializations T−1. The operational package was fitted separately on 1993–2022; U-Net and global SST/PCA remain research experiments.</p>
 <p class="muted">These historical metrics come from earlier training windows evaluated on 2007–2020. They use the lagged protocol and are not a paired new-model contest against the competition tab. Development years have already been consulted.</p>
 <div class="cards" data-cards="current"></div>

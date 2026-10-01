@@ -2,16 +2,17 @@
 from html import escape
 import json
 import pandas as pd
+from research.common.presentation import display_frame
 
 
 def render(output, result):
     parts=['<h1>U-Net bias calibration</h1>',
-           '<p>Development comparison, 2007–2020. One global offset per fold, estimated on earlier chronological predictions and shrunk by 50%. Fixed hybrid/U-Net weights: 75/25. Units: mm/day.</p>',
+           '<p>Development comparison, 2007–2020. One global offset per fold, estimated on earlier chronological predictions and shrunk by 50%. Fixed reference model/U-Net weights: 75/25. Units: mm/day.</p>',
            '<p>Status: <strong>'+escape(result['status'])+'</strong>. A partial run is not the seven-block result. No operational model is replaced.</p>']
     for name in ['global','blocks','years','regions','calendar']:
         frame=pd.read_csv(output/(name+'.csv'))
         cols=[c for c in ['modelo','bloco','ano','mes','regiao','rmse','mae','vies','rmse_area','n'] if c in frame]
-        parts += ['<h2>'+name.title()+'</h2>',frame[cols].rename(columns={'modelo':'Model','vies':'Bias'}).to_html(index=False,float_format=lambda x:f'{x:.6f}',border=0)]
+        parts += ['<h2>'+name.title()+'</h2>',display_frame(frame[cols].rename(columns={'modelo':'Model','vies':'Bias'})).to_html(index=False,float_format=lambda x:f'{x:.6f}',border=0)]
     offsets=[]
     for block in result['blocks']:
         record=json.loads((output/block/'complete.json').read_text())

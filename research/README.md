@@ -10,8 +10,8 @@ Two LightGBMs and local ridge, fixed weights **0.375 / 0.375 / 0.25**, up to 30 
 
 | Archived 2007–2020 experiment | RMSE | MAE | Bias |
 |---|---:|---:|---:|
-| Hybrid with lagged sources | 1.753399 | 1.047213 | +0.004916 |
-| Same hybrid + 8 SST PCs | 1.752762 | 1.048663 | +0.017217 |
+| Reference model with lagged sources | 1.753399 | 1.047213 | +0.004916 |
+| Same reference model + 8 SST PCs | 1.752762 | 1.048663 | +0.017217 |
 
 Units: mm/day. SST reduced RMSE by 0.0363% but worsened MAE and bias; it remains experimental.
 
@@ -24,17 +24,17 @@ Units: mm/day. SST reduced RMSE by 0.0363% but worsened MAE and bias; it remains
 - [Error maps, rainfall intensity, seasonality and training diagnostics](diagnostics/README.md)
 - [Unified evaluation workflow and standalone Kaggle notebook](workflow/README.md)
 - [Rainfall workbench: one entry point, saved-result review, recovery and monthly readiness](workbench/README.md)
-- [One fixed 75% hybrid / 25% U-Net combination](fixed_blend/README.md)
+- [One fixed 75% reference model / 25% U-Net combination](fixed_blend/README.md)
 - [Prepared additional chronological evaluation: 2021–2022](temporal_extension/README.md)
 - [Completed global bias-correction experiment: no adoption](bias_calibration/RESULTS.md)
 - [Residual U-Net: one bounded development pilot](residual_unet/README.md)
 - [Completed residual pilot: no adoption](residual_unet/RESULTS.md)
 - [SST contribution: 2021–2022 notebook](sst_extension/README.md)
 - [Completed SST extension: modest RMSE/MAE gain, increased bias](sst_extension/RESULTS.md)
-- [Fixed SST-hybrid/U-Net blend from saved maps](sst_unet_blend/README.md)
+- [Fixed SST model/U-Net blend from saved maps](sst_unet_blend/README.md)
 - [Completed SST/U-Net blend: small RMSE gain, mixed added value](sst_unet_blend/RESULTS.md)
 - [Earlier research results](../docs/RESEARCH_HISTORY.md)
 
-The operational hybrid was fitted and frozen on 29 September 2026. Its first real forecast, for October, was frozen on 30 September at 18:18 UTC after all sources passed validation; see the [operational status](prospective/OPERATIONAL_STATUS.md). Future skill has not yet been measured. The U-Net completed all seven development blocks: RMSE was 1.764726 versus 1.753399 for the hybrid, with no improved block. A subsequent single fixed 75% hybrid / 25% U-Net blend reached 1.750628, improving six blocks but worsening global absolute bias. It remains a research candidate; the hybrid remains the operational reference. Both diagnostics used the archived maps without retraining.
+The current forecasting model was fitted and frozen on 29 September 2026. Its first real forecast, for October, was frozen on 30 September at 18:18 UTC after all sources passed validation; see the [operational status](prospective/OPERATIONAL_STATUS.md). Future skill has not yet been measured. The U-Net completed all seven development blocks: RMSE was 1.764726 versus 1.753399 for the reference model, with no improved block. A subsequent single fixed 75% reference model / 25% U-Net blend reached 1.750628, improving six blocks but worsening global absolute bias. It remains a research candidate; the reference model remains the operational reference. Both diagnostics used the archived maps without retraining.
 
 Freeze hypotheses and configurations before new evaluation. Compare identical dates, grid points and information cutoffs, inspect temporal/regional behavior, and record decisions even without improvement. Small gains on consulted years do not establish future skill.

@@ -1,4 +1,4 @@
-"""Reproduce the competition hybrid. See hybrid_forecast.ipynb for explanations."""
+"""Reproduce the competition model. See hybrid_forecast.ipynb for explanations."""
 
 from pathlib import Path
 import os, json
@@ -25,7 +25,7 @@ archived_years = archived_years[archived_years.modelo == 'solucao_hibrida'].sort
 with plt.rc_context({'axes.spines.top': False, 'axes.spines.right': False}):
     fig, ax = plt.subplots(figsize=(10, 3.5), layout='constrained')
     ax.plot(archived_years.ano, archived_years.rmse, marker='o', color='#087f79')
-    ax.set(title='Hybrid · archived historical validation', xlabel='Target year', ylabel='RMSE (mm/day)', xticks=archived_years.ano)
+    ax.set(title='Competition model · archived historical validation', xlabel='Target year', ylabel='RMSE (mm/day)', xticks=archived_years.ano)
     ax.grid(axis='y', alpha=0.2)
     plt.show()
 
@@ -1041,7 +1041,7 @@ BANCA_IDENTICO = BANCA_AUDITORIA['submissao_sha256'] == BANCA_REF['hash_solucao'
 salvar_json('identidade_csv.json', dict(identico_byte_a_byte=BANCA_IDENTICO, sha256_esperado=BANCA_REF['hash_solucao'], sha256_obtido=BANCA_AUDITORIA['submissao_sha256'], auditoria=BANCA_AUDITORIA))
 exigir(BANCA_IDENTICO, 'Reproduction differs from the documented CSV. Check the environment and input snapshots.')
 salvar_json('manifesto_reproducao.json', dict(protocolo=protocolo_banca(), ambiente=VERSOES, contrato=CONTRATO, auditoria_componentes=BANCA_AUDITORIAS, auditoria_final=BANCA_AUDITORIA, identico_byte_a_byte=True, envio_automatico=False))
-print('REPRODUCTION VERIFIED: the hybrid CSV matches the documented SHA-256.')
+print('REPRODUCTION VERIFIED: the competition model CSV matches the documented SHA-256.')
 print('SHA-256:', BANCA_AUDITORIA['submissao_sha256'])
 display(FileLink(os.path.relpath(BANCA_CSV, Path.cwd())))
 
@@ -1053,7 +1053,7 @@ for ax, mapa, ano in zip(axes, mapas, [2023, 2024]):
     ax.set(title=f'Mean prediction in {ano}', xlabel='Longitude', ylabel='Latitude')
     ax.set_aspect('equal')
 fig.colorbar(img, ax=list(axes), label='mm/day - unweighted mean of 12 months', shrink=0.8, extend='max')
-fig.suptitle('Monthly precipitation predicted by the hybrid model', fontsize=15, fontweight='bold')
+fig.suptitle('Monthly precipitation predicted by the competition model', fontsize=15, fontweight='bold')
 fig.savefig(BANCA_SAIDA / 'mapa_previsoes.png', dpi=160, bbox_inches='tight')
 plt.show()
 print('Unweighted mean of the 12 monthly fields. This is not a comparison against observed rainfall.')

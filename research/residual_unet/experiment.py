@@ -10,6 +10,7 @@ import time
 import zipfile
 import numpy as np
 import pandas as pd
+from research.common.presentation import display_frame
 import torch
 import xarray as xr
 from research.common.inputs import ROOT, Inputs, Context, preflight, require, sha256, write_json
@@ -149,7 +150,7 @@ def run_pilot(data, plan, config, output, device, stages):
     archived = pd.read_csv(ROOT / 'research/lagged_sources/evidence/metricas_blocos.csv')
     old = archived[(archived.bloco == plan['block']) & (archived.modelo == 'controle_defasado')].iloc[0]
     for key in ['rmse', 'mae', 'vies']:
-        require(abs(scores.loc['hybrid', key] - old[key]) < 1e-6, 'Historical hybrid did not reproduce: ' + key)
+        require(abs(scores.loc['hybrid', key] - old[key]) < 1e-6, 'Historical reference model did not reproduce: ' + key)
     write_json(output / 'baseline_check.json', dict(reproduced=True, tolerance=1e-6,
         rmse_archived=float(old.rmse), rmse_current=float(scores.loc['hybrid', 'rmse'])))
     comparisons = {}
@@ -161,9 +162,9 @@ def run_pilot(data, plan, config, output, device, stages):
         comparisons=comparisons, independent_holdout=False, model_promoted=False, forecast_issued=False,
         note='One fixed-budget, previously consulted block. The 120-month/eight-epoch direct control is new, not the archived full-training U-Net.')
     write_json(output / 'summary.json', result)
-    html = '<!doctype html><html lang="en"><meta charset="utf-8"><title>Residual U-Net pilot</title><style>body{font:16px system-ui;max-width:1100px;margin:40px auto;padding:0 20px;color:#162a38}table{border-collapse:collapse}th,td{padding:9px;border:1px solid #ccd5da;text-align:right}h1,h2{color:#126478}</style><h1>Learning the hybrid forecast error</h1><p>Block C: January 2019–December 2020. Same 120 training months and eight epochs for both neural targets. Five chronological hybrid fits generate out-of-fit residuals. Previously consulted development data; no operational promotion.</p>'
+    html = '<!doctype html><html lang="en"><meta charset="utf-8"><title>Residual U-Net pilot</title><style>body{font:16px system-ui;max-width:1100px;margin:40px auto;padding:0 20px;color:#162a38}table{border-collapse:collapse}th,td{padding:9px;border:1px solid #ccd5da;text-align:right}h1,h2{color:#126478}</style><h1>Learning the model forecast error</h1><p>Block C: January 2019–December 2020. Same 120 training months and eight epochs for both neural targets. Five chronological reference model fits generate out-of-fit residuals. Previously consulted development data; no operational promotion.</p>'
     for name in ['global', 'years', 'regions']:
-        html += '<h2>' + name.title() + '</h2>' + pd.read_csv(output / (name + '.csv')).to_html(index=False, float_format=lambda x: f'{x:.6f}')
+        html += '<h2>' + name.title() + '</h2>' + display_frame(pd.read_csv(output / (name + '.csv'))).to_html(index=False, float_format=lambda x: f'{x:.6f}')
     (output / 'report.html').write_text(html + '</html>', encoding='utf-8')
     return result
 
@@ -201,7 +202,7 @@ def execute(output, official=None, seas5=None, cfsv2=None, device='cuda'):
             shutil.copy2(ROOT / name, p)
     start = time.perf_counter()
     write_json(output / 'run_state.json', dict(status='running', pilot_complete=False, complete_seven_blocks=False))
-    print('PILOT C only | six hybrid fits (five chronological + one reference) | two neural fits × eight epochs.', flush=True)
+    print('PILOT C only | six reference model fits (five chronological + one reference) | two neural fits × eight epochs.', flush=True)
     try:
         data = Inputs(**paths, output=output)
         result = run_pilot(data, plan, config, output, torch.device(device), Stages(output, sha256(sigfile)))

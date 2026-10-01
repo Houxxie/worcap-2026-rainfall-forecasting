@@ -1,4 +1,4 @@
-"""Fit the fixed 1993–2022 lagged hybrid and register its complete model package."""
+"""Fit the fixed 1993–2022 reference model with longer input lags and register its complete model package."""
 from pathlib import Path
 import argparse
 import json
@@ -35,7 +35,7 @@ def execute(output, registry, official=None, seas5=None, cfsv2=None):
     write_json(output / 'auditoria_treino.json', audit)
     result = r.modelo({name: output / name for name in plan['arquivos_modelo']}, audit)
     r.exportar_resumo(Path(registry) / 'resumo_registro.json')
-    print('Lagged hybrid package frozen:', result['id'], flush=True)
+    print('Reference model with longer input lags package frozen:', result['id'], flush=True)
     return result
 
 

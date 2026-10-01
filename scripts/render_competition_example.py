@@ -48,7 +48,7 @@ def main():
     ax.set(xlim=(-90, -25), ylim=(-60, 15), xlabel="Longitude (°)", ylabel="Latitude (°)")
     ax.set_aspect("equal")
     ax.grid(alpha=.15)
-    fig.suptitle("Competition hybrid · January 2023", fontsize=17)
+    fig.suptitle("Competition model · January 2023", fontsize=17)
     ax.set_title("First target month in the submitted CSV", fontsize=11)
     cb = fig.colorbar(im, ax=ax, pad=.04, shrink=.85)
     cb.set_label("Monthly mean precipitation (mm/day)")
