@@ -78,27 +78,27 @@ The [operational record](research/prospective/OPERATIONAL_STATUS.md) explains th
 
 ## 💡 What I learned
 
-### Working with climate data
+### 🌦️ Working with climate data
 
 I became much more comfortable working with NetCDF and GRIB files. Combining different sources taught me to check units, coordinates, calendars, and ensemble members before using the data. It also made me pay closer attention to interpolation and what each dataset’s resolution actually represents.
 
-### Thinking about time in a forecasting problem
+### 🕒 Thinking about time in a forecasting problem
 
 One of the biggest lessons for me was separating the month a value describes from the date it becomes available. This changed how I approach validation: I now check both the training cutoff and whether the inputs could have been available when the forecast was made.
 
-### Understanding climatologies and anomalies
+### 🔍 Understanding climatologies and anomalies
 
 Working with monthly climatologies helped me understand how to represent the seasonal rainfall cycle. From there, I learned how anomalies capture departures from that cycle, and why a training observation needs to be excluded from its own rainfall reference when constructing the residual target.
 
-### Combining different models
+### 🌐 Combining different models
 
 I explored how a simpler local regression could contribute alongside gradient boosting. Evaluating the blend helped me understand how components can complement each other and why their individual scores only tell part of the story.
 
-### Looking beyond a single metric
+### 🔮 Looking beyond a single metric
 
 Over time, I started paying more attention to MAE, bias, and results by year and region. Looking at these together helped me spot trade-offs that were easy to miss when I focused mainly on the overall RMSE.
 
-### Making my work reproducible
+### 🫸💥🫷 Making my work reproducible
 
 Reproducing the submission taught me to keep track of configurations, package versions, input files, and hashes. It also showed me how something as small as the order of CSV rounding can change the final file.
 
