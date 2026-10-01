@@ -20,7 +20,7 @@ The competition solution and the model I'm developing now are both here. I kept 
 | **Reproduce an experiment** | [Follow the reproduction guide](docs/REPRODUCTION.md): choose the competition model or a new research comparison, check the inputs, then run. |
 | **Run a monthly forecast** | [Use the operational guide](docs/MONTHLY_FORECAST.md): fit or restore the current model, collect sources, check readiness and freeze a forecast. |
 
-<img width="900" alt="WorCAP 2026 - Trim (3)" src="https://github.com/user-attachments/assets/88e222fa-3a07-4861-9934-7aba5e4c99df" />
+<img width="900" alt="WorCAP 2026 - Trim (3)" src="assets/demo_preview.gif" />
 
 For a quick look, download the repository ZIP, extract it and open `demo/index.html` in a browser. The two tabs distinguish the submitted model from the current reference.
 
