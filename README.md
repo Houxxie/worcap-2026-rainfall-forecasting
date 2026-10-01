@@ -8,7 +8,8 @@ After the competition, I decided to keep working on it. This repository brings t
 
 ![Overview of the rainfall forecasting model](assets/model_overview.png)
 
-## Start here
+
+## 🏁 Start here
 
 The competition solution and the model I'm developing now are both here. I kept the submitted version separate so it can still be reproduced while the research continues.
 
@@ -21,6 +22,7 @@ The competition solution and the model I'm developing now are both here. I kept 
 For a quick look, download the repository ZIP, extract it and open `demo/index.html` in a browser. The two tabs distinguish the submitted model from the current reference. October's forecast is still marked as **not yet evaluated**.
 
 Full runs need the [documented datasets](docs/DATA.md#availability), which are not all included in Git. [Start here](docs/GETTING_STARTED.md) explains what is available and what needs to be prepared.
+
 
 ## 📝 About the project
 
@@ -40,6 +42,7 @@ Training uses up to 30 years of data, with climatologies and transformations fit
 
 The [competition notebook](competition/hybrid_forecast.ipynb) explains the full process, from loading the data to generating the final CSV.
 
+
 ## 💾 Technologies
 
 - Python
@@ -51,6 +54,7 @@ The [competition notebook](competition/hybrid_forecast.ipynb) explains the full 
 - Matplotlib
 - NetCDF/GRIB
 - Kaggle
+
 
 ## 🛠️ How I built it
 
@@ -64,6 +68,7 @@ After the competition, my focus shifted toward forecasts for future months. That
 
 The [research folder](research/README.md) contains this work, including the current baseline, U-Net and global SST/PCA experiments, and a [shared notebook for reviewing results](research/workbench/README.md). The experiment notes include what improved, what didn’t, and why some ideas stayed in research.
 
+
 ## 🌧️ First forecast for a future month
 
 The first forecast for **October 2026** was saved on **30 September at 18:18 UTC**, before the month began. For October, I used an operational version of the competition hybrid: two LightGBM models and local ridge regression, trained on 1993–2022 with longer input lags. U-Net and global SST/PCA remain separate research experiments.
@@ -75,6 +80,7 @@ The first forecast for **October 2026** was saved on **30 September at 18:18 UTC
 This is something I wanted to do after the competition: keep a forecast made in advance and come back later to see how it performed. October’s accuracy is still unknown. Under the current protocol, the first check against final ERA5 data can begin in **February 2027**.
 
 The [operational record](research/prospective/OPERATIONAL_STATUS.md) explains the source checks, the CFSv2 acquisition fix, and how this forecast was preserved.
+
 
 ## 💡 What I learned
 
@@ -101,6 +107,7 @@ Over time, I started paying more attention to MAE, bias, and results by year and
 ### 🫸💥🫷 Making my work reproducible
 
 Reproducing the submission taught me to keep track of configurations, package versions, input files, and hashes. It also showed me how something as small as the order of CSV rounding can change the final file.
+
 
 ## 🚀 Running the competition model
 
