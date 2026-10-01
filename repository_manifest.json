@@ -50,8 +50,8 @@
       "bytes": 112223
     },
     "competition/README.md": {
-      "sha256": "97612ded5a3f194aa5a4bfa31aa9eaefffc3bf51a3a47f2afaf484f4d544019a",
-      "bytes": 1483
+      "sha256": "85d4bdc17a8657bb7ba679d8b6457be35b92567c1365f69a1b4902c512cbb895",
+      "bytes": 1484
     },
     "competition/hybrid_forecast.ipynb": {
       "sha256": "631237a3ff9f37bd2709e0da016fb6862bff000205c189432a42a7532fbb347e",
@@ -130,16 +130,16 @@
       "bytes": 4345
     },
     "demo/index.html": {
-      "sha256": "f83445901947acd02802e7fb41425713169d6c1f7b3147430fabb8a0c412f0e3",
-      "bytes": 588502
+      "sha256": "af9c3cdd038e6a46685305d27d99bb9f249579a6ba59506a034d69da3cddc63f",
+      "bytes": 588410
     },
     "demo/sources.json": {
       "sha256": "91bb8b83699c47706765a9f745f82ad5b5e1d3bb43f8b5aa35f048e3f09b0509",
       "bytes": 985
     },
     "demo/template.html": {
-      "sha256": "5d65d9c3d5b280f11d245285abf30ce743fdfe4249dbb69520bb9238ce4cb69a",
-      "bytes": 11856
+      "sha256": "14d08e8e660afc0e9805ac54d8d025d7181c27d8bddb2b0cb921c854ac458b74",
+      "bytes": 11764
     },
     "docs/DATA.md": {
       "sha256": "169d6d5ed0cf4d8f1d11cb1091002a8ffb7376e0d0a0c65c2cacf503f68badc8",
@@ -158,8 +158,8 @@
       "bytes": 5323
     },
     "docs/REPRODUCTION.md": {
-      "sha256": "2271aaed22c475f98a651c7d08c97e292c8fe937423eb4f2c405df890cddf793",
-      "bytes": 6075
+      "sha256": "87588b52157cc414174f4ef190e5189e5ba792a40b77fc550ec979326c3e4db5",
+      "bytes": 6074
     },
     "docs/RESEARCH_HISTORY.md": {
       "sha256": "8d9cfe08f8afc75d8c9ec722839faa030b4ad83b72ffaab0038865ded42bd0c1",
@@ -174,8 +174,8 @@
       "bytes": 1911
     },
     "research/README.md": {
-      "sha256": "1f37e00b212f1a3ec40f76238f85769dc144a3c64adfd44592cce4c33d87fb08",
-      "bytes": 3468
+      "sha256": "7a145be0721beabc97d8e6f44d07e7650f670a8d3ebfb07d2c705c1f916c2e5e",
+      "bytes": 3467
     },
     "research/bias_calibration/README.md": {
       "sha256": "334717441d8cdfa0ae2fe5642dc535850eaba5d3613d77aee2f12025fe9b901d",
