@@ -26,8 +26,8 @@
       "bytes": 1105
     },
     "README.md": {
-      "sha256": "f760acc73132e54be0b2320b3c9e6ceac2af236de87fa4cffe1a9316502206e7",
-      "bytes": 8903
+      "sha256": "741f5cc99a01a70bdf5df4149f816abb1c9eef7ec6ad4a3d90aa07d9160fe791",
+      "bytes": 8847
     },
     "assets/competition_forecast_example.json": {
       "sha256": "d41f00246a2f96e3f9c851b0c2b87c1456928aaca91ccacba93fab96afb4c7cf",
@@ -36,6 +36,10 @@
     "assets/competition_forecast_example.png": {
       "sha256": "6243659e6f7407f9c5a3a0c946b86d4a88c1e829c29bd3e9d44661c85df8e43d",
       "bytes": 128187
+    },
+    "assets/demo_preview.gif": {
+      "sha256": "f0e77a5000997590da7b9857073ed062f29fca6ae099da1be7a804c7235be9f9",
+      "bytes": 10166926
     },
     "assets/forecast_october_2026.json": {
       "sha256": "41983ab3d385b30c4e3e0603c20fb9581433c63341df5a6fc2afdafbe8249e34",
@@ -46,8 +50,8 @@
       "bytes": 301713
     },
     "assets/model_overview.png": {
-      "sha256": "bd7738a726233018fc6525343bd051d710de0fd2b61bafdfd2c5d3ceffb23820",
-      "bytes": 112223
+      "sha256": "6a6d2783005c49f5285abb86332e6bf41923a42466b6cdec38290a5679839b43",
+      "bytes": 1120154
     },
     "competition/README.md": {
       "sha256": "85d4bdc17a8657bb7ba679d8b6457be35b92567c1365f69a1b4902c512cbb895",
@@ -130,24 +134,24 @@
       "bytes": 4345
     },
     "demo/index.html": {
-      "sha256": "af9c3cdd038e6a46685305d27d99bb9f249579a6ba59506a034d69da3cddc63f",
-      "bytes": 588410
+      "sha256": "729ab1caba7b601af76688df1f7b9849c5477d1d1ac4727364b99f369973c7b6",
+      "bytes": 588402
     },
     "demo/sources.json": {
       "sha256": "91bb8b83699c47706765a9f745f82ad5b5e1d3bb43f8b5aa35f048e3f09b0509",
       "bytes": 985
     },
     "demo/template.html": {
-      "sha256": "14d08e8e660afc0e9805ac54d8d025d7181c27d8bddb2b0cb921c854ac458b74",
-      "bytes": 11764
+      "sha256": "08e2375b10f0b9e13de475ac211c52d12b6a21598b199c348dfeef2d0fc76184",
+      "bytes": 11756
     },
     "docs/DATA.md": {
-      "sha256": "169d6d5ed0cf4d8f1d11cb1091002a8ffb7376e0d0a0c65c2cacf503f68badc8",
-      "bytes": 5654
+      "sha256": "8e160ef5e1a9f11a577227477303f894f42899fce5362f2ab0bf9d43efdf273e",
+      "bytes": 5613
     },
     "docs/GETTING_STARTED.md": {
-      "sha256": "0d82b1042e1ecf00f32b9ee133ef726e8934d26e49bb6b4ecd5922f5c6065384",
-      "bytes": 2504
+      "sha256": "81454d7be6b68b201792e8845a21d3ecf41294d8c297334bab290245a52e66f0",
+      "bytes": 2447
     },
     "docs/GETTING_STARTED_CHECKS.json": {
       "sha256": "891cc8bd2c334d0d791ef2b7180a50e8b50fdcb9c80a2bb0f73312608fe9cdab",

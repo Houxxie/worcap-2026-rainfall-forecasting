@@ -37,7 +37,7 @@ Historical acquisition scripts remain in `pesquisa-v0.1.0`. Newly acquired CFSv2
 
 | Artifact | Included in the repository? | How to obtain or use it |
 |---|---|---|
-| Competition and research code | Yes | Download ZIP or clone; repository access is currently required |
+| Competition and research code | Yes | Download ZIP or clone |
 | Lightweight demo, archived metrics and selected map images | Yes | Open `demo/index.html` after downloading; no credentials |
 | Official competition NetCDFs and sample CSV | No | Use the competition data link above; access is controlled by Kaggle/organizers |
 | Exact historical SEAS5/CFSv2 prepared NetCDFs | No; manifests only | Use a retained matching snapshot; no project release download is currently attached |

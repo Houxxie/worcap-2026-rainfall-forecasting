@@ -10,7 +10,7 @@ There are two model paths: the **competition hybrid (8G)** and the **current ope
 
 ## Get the code
 
-Clone the repository, or use **Code → Download ZIP** and extract it. The repository is currently private; access is required. A notebook export by itself does not include the data files produced by its execution.
+Clone the repository, or use **Code → Download ZIP** and extract it. A notebook export by itself does not include the data files produced by its execution.
 
 ```bash
 git clone https://github.com/Houxxie/worcap-2026-rainfall-forecasting.git
