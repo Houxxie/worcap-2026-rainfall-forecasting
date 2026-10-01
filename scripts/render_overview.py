@@ -1,4 +1,4 @@
-"""Render the documented competition architecture; no synthetic forecast data."""
+"""Render a reference diagram without overwriting the author-designed README artwork."""
 from pathlib import Path
 import matplotlib
 matplotlib.use('Agg')
@@ -44,7 +44,7 @@ def main():
     arrow(105,29.5,109,29.5)
     box(110,18,24,23,'HYBRID FORECAST','Monthly field\n301 × 261 grid\nmm/day → CSV')
     ax.text(6,2.5,'Up to 30 years of training  •  Chronological validation  •  Input and CSV integrity checks',fontsize=10,color=MUTED)
-    path=ROOT/'assets/model_overview.png'
+    path=ROOT/'outputs/model_overview_generated.png'
     path.parent.mkdir(parents=True,exist_ok=True)
     fig.savefig(path,dpi=160,facecolor=BG)
     plt.close(fig)

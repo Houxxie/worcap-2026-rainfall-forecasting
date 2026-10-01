@@ -9,7 +9,7 @@
 - `build_spatial_notebooks.py`: build the separate U-Net experiment and final-baseline inference notebooks.
 - `build_workflow_notebook.py`: build the unified saved-evaluation/training notebook and its checked source bundle.
 - `build_extension_notebook.py`: build the fixed 2021–2022 temporal-extension notebook, with separate prediction freezing and evaluation.
-- `render_overview.py`: regenerate the model architecture image with Matplotlib.
+- `render_overview.py`: render a reference architecture diagram to `outputs/model_overview_generated.png`. The README uses the author-designed artwork in `assets/model_overview.png`; this script leaves it unchanged.
 - `render_october_forecast.py`: render the frozen October forecast, climatology and anomaly after checking the forecast and Natural Earth coastline hashes in `assets/forecast_october_2026.json`.
 - `build_workbench_notebook.py`: build the shared notebook for result review, saved-map evaluation, existing training and read-only operational readiness.
 - `build_residual_notebook.py`, `build_sst_extension_notebook.py`, `build_sst_unet_blend_notebook.py`: package the separate, fixed research experiments.
