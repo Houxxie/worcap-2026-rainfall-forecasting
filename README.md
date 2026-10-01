@@ -22,7 +22,7 @@ The competition solution and the model I'm developing now are both here. I kept 
 | **Run a monthly forecast** | [Use the operational guide](docs/MONTHLY_FORECAST.md): fit or restore the current model, collect sources, check readiness and freeze a forecast. |
 
 ![Explore the saved competition results and the current model forecast](https://github.com/user-attachments/assets/aa8fd56a-f70b-4e6c-bc77-ced17c030307)
-"The gif shows the offline demo working"
+
 For a quick look, download the repository ZIP, extract it and open `demo/index.html` in a browser. The two tabs distinguish the submitted model from the current reference. October's forecast is still marked as **not yet evaluated**.
 
 Full runs need the [documented datasets](docs/DATA.md#availability), which are not all included in Git. [Start here](docs/GETTING_STARTED.md) explains what is available and what needs to be prepared.
