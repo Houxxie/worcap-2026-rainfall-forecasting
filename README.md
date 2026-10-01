@@ -2,7 +2,7 @@
 
 Monthly rainfall forecasting over South America, combining seasonal climate forecasts, gradient boosting, and local ridge regression.
 
-This project started during the **WorCAP 2026 Hackathon**, where it finished in the **Top 10**. The hybrid model documented here scored **1.78758 in the 2024 evaluation**.
+This project started during the **WorCAP 2026 Hackathon**, where it finished in the **Top 10**. The model in question documented here scored **1.78758 in the 2024 evaluation**.
 
 After the competition, I decided to keep working on it. This repository brings together the submitted model, an explanation of how it works, and the experiments I’m developing now.
 
@@ -16,7 +16,7 @@ The competition solution and the model I'm developing now are both here. I kept 
 | What would you like to do? | Where to start |
 |---|---|
 | **Explore the results** | [Open the offline demo](demo/README.md): competition results and the current model, with saved maps and yearly metrics. No credentials or training. |
-| **Reproduce an experiment** | [Follow the reproduction guide](docs/REPRODUCTION.md): choose the competition hybrid or a research comparison, check the inputs, then run. |
+| **Reproduce an experiment** | [Follow the reproduction guide](docs/REPRODUCTION.md): choose the competition model or a new research comparison, check the inputs, then run. |
 | **Run a monthly forecast** | [Use the operational guide](docs/MONTHLY_FORECAST.md): fit or restore the current model, collect sources, check readiness and freeze a forecast. |
 
 For a quick look, download the repository ZIP, extract it and open `demo/index.html` in a browser. The two tabs distinguish the submitted model from the current reference. October's forecast is still marked as **not yet evaluated**.
@@ -62,7 +62,7 @@ The starting point was a model based on rainfall climatology. From there, I grad
 
 Forecast anomalies became an important part of the model. These describe how much a prediction differs from the usual conditions for a particular location and time of year.
 
-For the final hybrid, I combined two LightGBM components with a local ridge regression. Predictions were evaluated across seven chronological validation blocks covering 2007–2020, checking both the overall results and the differences between years.
+For the final approach, I combined two LightGBM components with a local ridge regression. Predictions were evaluated across seven chronological validation blocks covering 2007–2020, checking both the overall results and the differences between years.
 
 After the competition, my focus shifted toward forecasts for future months. That meant looking more closely at when each data source would actually be available. I started using longer input lags and recording when new files arrive, while keeping the model experiments separate.
 
@@ -71,7 +71,7 @@ The [research folder](research/README.md) contains this work, including the curr
 
 ## 🌧️ First forecast for a future month
 
-The first forecast for **October 2026** was saved on **30 September at 18:18 UTC**, before the month began. For October, I used an operational version of the competition hybrid: two LightGBM models and local ridge regression, trained on 1993–2022 with longer input lags. U-Net and global SST/PCA remain separate research experiments.
+The first forecast for **October 2026** was saved on **30 September at 18:18 UTC**, before the month began. For October, I used an operational version of the competition code: two LightGBM models and local ridge regression, trained on 1993–2022 with longer input lags. U-Net and global SST/PCA remain separate research experiments.
 
 ![October 2026 rainfall forecast, training climatology, and their difference](assets/forecast_october_2026.png)
 
@@ -126,7 +126,7 @@ Raw datasets and fitted models are kept outside Git. Exact reproduction requires
 
 | Folder | Contents |
 |---|---|
-| [`competition/`](competition/README.md) | The explained hybrid notebook, executable script, and reference metadata |
+| [`competition/`](competition/README.md) | The explained competition notebook, executable script, and reference metadata |
 | [`research/`](research/README.md) | Current experiments and the prospective source registry |
 | [`docs/`](docs/REPRODUCTION.md) | Data sources, reproduction instructions, and temporal limitations |
 | [`scripts/`](scripts/README.md) | Repository checks, notebook builds, and diagram generation |
