@@ -1,4 +1,4 @@
-# Competition hybrid
+# Competition program
 
 Two LightGBM residual models plus local ridge regression, developed for the WorCAP 2026 Hackathon. **Top 10 · official final score: 1.78758.**
 
