@@ -57,7 +57,7 @@ def main():
                 rows.append(dict(path=name, bytes=len(data), sha256=hashlib.sha256(data).hexdigest()))
         catalog["snapshots"][source] = dict(archive=filename, url=f"{BASE}/{filename}", bytes=archive.stat().st_size, sha256=digest(archive), files=rows)
         print(filename, archive.stat().st_size)
-    (args.output / "data_snapshots.json").write_text(json.dumps(catalog, indent=2) + "\n", encoding="utf-8")
+    (args.output / "data_snapshots.json").write_text(json.dumps(catalog, indent=2) + "\n", encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":
