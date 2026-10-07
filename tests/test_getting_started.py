@@ -70,6 +70,10 @@ class GettingStartedTests(unittest.TestCase):
                 p.write_bytes(b"expected bytes")
         with patch("scripts.check_inputs.importlib.metadata.version", side_effect=CORE.__getitem__):
             self.assertTrue(check(cfg, self.root)["ready"])
+            with patch("scripts.check_inputs.sys.version_info", (3, 13, 0)):
+                newer = check(cfg, self.root)
+                self.assertFalse(newer["ready"])
+                self.assertEqual(newer["python_version"]["status"], "different")
             path = self.root / "data/cfsv2/cfsv2_desenvolvimento.nc"
             path.write_bytes(b"changed bytes")
             manifest = self.root / "data/cfsv2/cfsv2_manifesto.json"

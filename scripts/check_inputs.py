@@ -66,9 +66,11 @@ def check(config_path, root=ROOT):
             installed = None
         versions.append(dict(package=name, required=required, installed=installed,
                              status="ok" if installed == required else "missing-or-different"))
-    ready = all(r["status"] == "ok" for r in files + versions)
+    python_version = dict(required="3.12", installed=".".join(map(str, sys.version_info[:3])),
+                          status="ok" if sys.version_info[:2] == (3, 12) else "different")
+    ready = all(r["status"] == "ok" for r in files + versions + [python_version])
     return dict(profile=profile, ready=ready, paths={k: str(v) for k, v in paths.items()},
-                files=files, core_versions=versions,
+                files=files, core_versions=versions, python_version=python_version,
                 scope="Historical input bytes and core versions only. No training, downloads, source-arrival validation or forecast issuance.")
 
 

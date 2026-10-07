@@ -6,6 +6,7 @@
 - Add standard-library download and official-ZIP preparation commands, with archive/member integrity checks and protection against overwriting changed inputs.
 - Add a configuration-based competition launcher and a setup notebook for a clean Kaggle session. Preserve model parameters, historical evidence and the required final CSV hash.
 - Document the concrete first-run steps and the distinction between these historical snapshots and operational source acquisition.
+- Verify anonymous downloads and a clean Kaggle CPU run using an isolated Python 3.12.13 environment. The final 1,885,464-row CSV matches the recorded SHA-256 byte for byte; seven historical blocks were not retrained.
 
 ## Clear model names — 2026-10-01
 

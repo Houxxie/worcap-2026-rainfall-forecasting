@@ -14,8 +14,8 @@
       "bytes": 462
     },
     "CHANGELOG.md": {
-      "sha256": "375de8399d377071d7814f91d9c2a6a73de781137afdf03b383931d7418fcbbc",
-      "bytes": 12420
+      "sha256": "e1d7eb992505b67689acc5a93d21098245e4fde506733c046fec9bb85261f4b5",
+      "bytes": 12638
     },
     "LICENSE": {
       "sha256": "bc7a311c017ec031a9a76aab9d42ee0a1a438257b180d55b4a931efec35ae287",
@@ -105,6 +105,10 @@
       "sha256": "351eee33a84877569912107e380c5032385a2f14be4070c0554ad05fcf0cad55",
       "bytes": 183
     },
+    "competition/results/reproduction_20261007.json": {
+      "sha256": "b9ab8eedeea4ba245e816047426623b9b31279760c0f6f945bc66d06d948bb14",
+      "bytes": 1614
+    },
     "competition/results/years.csv": {
       "sha256": "f05d8cb46a82208c9bbc42f6a025c971a080fd8240babe3dcd63e928cec328aa",
       "bytes": 1892
@@ -161,6 +165,10 @@
       "sha256": "3938290ff3758ae396a8baaa466f6fd9d7a324a9e168596fadd036b4f98bcf8f",
       "bytes": 3949
     },
+    "docs/FIRST_RUN_CHECK.md": {
+      "sha256": "8fde084c8be1df67da118b10b7fb2aa0b160e94321ba36b2992ea2e3bbbe1bd6",
+      "bytes": 2642
+    },
     "docs/GETTING_STARTED.md": {
       "sha256": "1ad61d6212fa4892ecd63358b07242581489c3886f4773a59de4850a9fa8665d",
       "bytes": 2562
@@ -174,8 +182,8 @@
       "bytes": 5417
     },
     "docs/REPRODUCTION.md": {
-      "sha256": "f656fbbfbfebd7e3d895eb189a0df7d95e08d5d4034deaed0da5054d463e4ebb",
-      "bytes": 6859
+      "sha256": "31887af1ede64bf47fb2cb23f98a4b1b1209f2563630c6c2d7d0dc6e9a84f170",
+      "bytes": 7021
     },
     "docs/RESEARCH_HISTORY.md": {
       "sha256": "8d9cfe08f8afc75d8c9ec722839faa030b4ad83b72ffaab0038865ded42bd0c1",
@@ -1778,8 +1786,8 @@
       "bytes": 4298
     },
     "scripts/check_inputs.py": {
-      "sha256": "d59722ac667ebb542264e3957d63c2203a7537be1cff4d0a39efa0037a49aa59",
-      "bytes": 4268
+      "sha256": "4529aced6d331b2d99f0b873177569e40230cb76ebe5380ab8ef73739ff4a326",
+      "bytes": 4504
     },
     "scripts/data_io.py": {
       "sha256": "c896b3ed2f23a3a01c74e0936b7db87c5716a1b5160f0c87caba27d641ab54c2",
@@ -1818,8 +1826,8 @@
       "bytes": 5355
     },
     "tests/test_getting_started.py": {
-      "sha256": "6cd94bf216aa6ef0ff3c2c58e4de143e2a01fe6663b270280eaa5d68b829f1ad",
-      "bytes": 4810
+      "sha256": "4cd9a8ad7e63265d4528a75e41f915bbda46c8afb167816da85e054dc909a9f8",
+      "bytes": 5063
     },
     "tests/test_presentation.py": {
       "sha256": "8980c6e6967af350852c5d8c52ae16bbc2afc3857f39552469aead573a33cc92",

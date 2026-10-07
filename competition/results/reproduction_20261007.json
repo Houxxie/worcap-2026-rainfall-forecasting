@@ -1,0 +1,44 @@
+{
+  "schema": "worcap_competition_reproduction_check_v1",
+  "checked_on": "2026-10-07",
+  "code_revision": "750d6c9a9c7b56d564d99799f2af77a1edc6d4df",
+  "code_tag": "reproduction-v1",
+  "data_release": "data-snapshots-v1",
+  "execution_id": "20261007T144840813094Z",
+  "environment": {
+    "platform": "Kaggle Linux CPU",
+    "notebook_python": "3.13.15",
+    "model_python": "3.12.13",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "xarray": "2025.12.0",
+    "lightgbm": "4.6.0",
+    "scipy": "1.18.1",
+    "netCDF4": "1.7.4",
+    "matplotlib": "3.11.2"
+  },
+  "checks": {
+    "anonymous_repository_download": true,
+    "anonymous_seas5_cfsv2_sst_download": true,
+    "official_zip_local_import_verified_files": 13,
+    "kaggle_verified_input_files_including_manifests": 21,
+    "final_components_refitted": true,
+    "seven_historical_blocks_refitted": false,
+    "operational_model_refitted": false,
+    "new_forecast_issued": false,
+    "model_process_exit_code": 0
+  },
+  "csv_identity": {
+    "file": "submission_hibrida.csv",
+    "rows": 1885464,
+    "bytes": 57689422,
+    "expected_sha256": "e98e8954debb8f7c764665a31804ec5512a1c2578c1ed4a24e50c51dedfb429b",
+    "observed_sha256": "e98e8954debb8f7c764665a31804ec5512a1c2578c1ed4a24e50c51dedfb429b",
+    "identical_bytes": true,
+    "ids_preserved": true,
+    "order_preserved": true,
+    "complete_coverage": true,
+    "values_checked_after_writing": true
+  },
+  "scope": "Execution and data-access verification for the competition submission. Archived historical scores were displayed, not recomputed. This is not a new forecast-skill evaluation."
+}

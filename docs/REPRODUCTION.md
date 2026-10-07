@@ -2,6 +2,8 @@
 
 Start with the [offline demo](../demo/README.md) if you only want to inspect results. Full reproduction needs the files in the [data guide](DATA.md); a manifest is not a substitute for its NetCDF files.
 
+The competition path was [tested from a fresh checkout and Kaggle session](FIRST_RUN_CHECK.md) on 7 October 2026 and reproduced the submitted CSV byte for byte.
+
 | Path | Purpose | Output |
 |---|---|---|
 | Competition model | Reproduce the submitted 2023–2024 CSV | `submission_hibrida.csv`, with the recorded SHA-256 |
