@@ -90,8 +90,8 @@
       "bytes": 36637
     },
     "competition/reproduce_from_github.ipynb": {
-      "sha256": "71565f243fddb63b2612161986fa0b932f6b14debdb436b2047383e51c2cda85",
-      "bytes": 5605
+      "sha256": "5187550e4775b2eb422738bbaedb3a3a19e8db5c971720225596e5f0b7bad3cd",
+      "bytes": 6328
     },
     "competition/requirements.txt": {
       "sha256": "aecdb3b707e96469f7507ba2af609101c85ad859ef92090e58681831712e5765",
@@ -174,8 +174,8 @@
       "bytes": 5417
     },
     "docs/REPRODUCTION.md": {
-      "sha256": "4b2c74c002a9279ebe260618e3fdb5a0ba0323de9cb359c3e43a48286f357850",
-      "bytes": 6618
+      "sha256": "f656fbbfbfebd7e3d895eb189a0df7d95e08d5d4034deaed0da5054d463e4ebb",
+      "bytes": 6859
     },
     "docs/RESEARCH_HISTORY.md": {
       "sha256": "8d9cfe08f8afc75d8c9ec722839faa030b4ad83b72ffaab0038865ded42bd0c1",

@@ -14,10 +14,10 @@ The operational final fit must not be used to score earlier historical validatio
 
 1. Download [reproduce_from_github.ipynb](../competition/reproduce_from_github.ipynb) with GitHub's **Download raw file** button and import it into a new Kaggle notebook.
 2. Attach the official WorCAP competition dataset with **Add Input**. Keep a CPU session with sufficient RAM; no GPU or CDS key is needed.
-3. Enable Internet and run the cells in order. The notebook fetches the pinned public code release, installs the reference environment, downloads about 17 MB of prepared seasonal data, and checks every input hash.
+3. Enable Internet and run the cells in order. The notebook fetches the pinned public code release, creates an isolated Python 3.12.13 environment with uv, installs the reference packages, downloads about 17 MB of prepared seasonal data, and checks every input hash.
 4. The final model fits and generates the CSV. Save a version **with outputs** and retain the CSV and audit records.
 
-The default run does not retrain seven historical validation blocks. Displaying their archived tables is not a new validation run. The full grids require substantial RAM; the original environment was Kaggle/Linux. Runtime depends on input loading and CPU.
+The default run does not retrain seven historical validation blocks. Displaying their archived tables is not a new validation run. The setup supports a newer Kaggle notebook interpreter by running the model in its separate Python 3.12 environment. Interpreter and package downloads are additional to the data download. The full grids require substantial RAM; the original environment was Kaggle/Linux. Runtime depends on input loading and CPU.
 
 The [explanatory competition notebook](../competition/hybrid_forecast.ipynb) remains available for reading the model step by step and for offline execution with all inputs attached. Its manual directory settings still work.
 
