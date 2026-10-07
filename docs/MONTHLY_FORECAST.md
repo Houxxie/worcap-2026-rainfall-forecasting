@@ -22,7 +22,7 @@ python scripts/check_inputs.py --config configs/operational.inputs.json
 
 Default folders: `data/official`, `data/seas5`, `data/cfsv2`. Seasonal development and final-fit partitions are needed; 2023–2024 test partitions are not used. Change paths in [input settings](../configs/operational.inputs.json) and the fitting command together if needed.
 
-Exact prepared datasets and pretrained packages are not currently distributed in a release; see [availability](DATA.md#availability). CPU fitting is supported; no GPU is required. GRIB decoding needs ecCodes. Preserve the package versions recorded at fitting for inference.
+The exact historical SEAS5/CFSv2 inputs are available with `python scripts/download_data.py`; official files still come from Kaggle. Pretrained operational packages are not distributed; see [availability](DATA.md#availability). CPU fitting is supported; no GPU is required. GRIB decoding needs ecCodes. Preserve the package versions recorded at fitting for inference.
 
 ## 2. Fit once (new registry only)
 

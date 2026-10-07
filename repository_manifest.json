@@ -170,8 +170,8 @@
       "bytes": 1475
     },
     "docs/MONTHLY_FORECAST.md": {
-      "sha256": "09b242b0edc3415a9555f523587846fce73dc49656cc7836ca5f87e74f7dd7fd",
-      "bytes": 5323
+      "sha256": "45328a0ff67a979c69290ab481962f6c73704ea7fcf753e87e2c35500bee1008",
+      "bytes": 5417
     },
     "docs/REPRODUCTION.md": {
       "sha256": "4b2c74c002a9279ebe260618e3fdb5a0ba0323de9cb359c3e43a48286f357850",
@@ -1822,8 +1822,8 @@
       "bytes": 4810
     },
     "tests/test_presentation.py": {
-      "sha256": "89e749ea84ad4dc746eeaebeecafd6dbee7605c0a2a8b4506964e304017dcec4",
-      "bytes": 1184
+      "sha256": "8980c6e6967af350852c5d8c52ae16bbc2afc3857f39552469aead573a33cc92",
+      "bytes": 1183
     }
   }
 }
