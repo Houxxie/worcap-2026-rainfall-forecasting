@@ -10,39 +10,38 @@ Start with the [offline demo](../demo/README.md) if you only want to inspect res
 
 The operational final fit must not be used to score earlier historical validation years.
 
-## Competition: Kaggle
+## Competition: Kaggle (recommended)
 
-1. Download and import [competition notebook](../competition/hybrid_forecast.ipynb).
-2. Attach the official competition data and prepared SEAS5/CFSv2 datasets. Each seasonal source needs its manifest and all three `.nc` partitions. Expand Input and confirm the actual files are present, not only `notebook.ipynb` and `results.html`.
-3. Use Python 3.12 and the [reference environment](../competition/requirements.txt). The notebook checks core versions rather than silently upgrading packages. No GPU, CDS key or Internet is required with inputs attached.
-4. Leave the three `BANCA_PASTA_*` values as `None` for discovery of a single matching input, or set their directories explicitly.
-5. Leave `REEXECUTAR_VALIDACAO = False` for the final fit and archived historical tables. Set it to `True` only to retrain the seven validation blocks too. Run cells in order.
-6. Save a version **with outputs** and retain the CSV and audit records. Displaying archived tables is not a new validation run.
+1. Download [reproduce_from_github.ipynb](../competition/reproduce_from_github.ipynb) with GitHub's **Download raw file** button and import it into a new Kaggle notebook.
+2. Attach the official WorCAP competition dataset with **Add Input**. Keep a CPU session with sufficient RAM; no GPU or CDS key is needed.
+3. Enable Internet and run the cells in order. The notebook fetches the pinned public code release, installs the reference environment, downloads about 17 MB of prepared seasonal data, and checks every input hash.
+4. The final model fits and generates the CSV. Save a version **with outputs** and retain the CSV and audit records.
 
-The full grids need substantial RAM. Runtime depends on loading, CPU and whether validation is enabled.
+The default run does not retrain seven historical validation blocks. Displaying their archived tables is not a new validation run. The full grids require substantial RAM; the original environment was Kaggle/Linux. Runtime depends on input loading and CPU.
+
+The [explanatory competition notebook](../competition/hybrid_forecast.ipynb) remains available for reading the model step by step and for offline execution with all inputs attached. Its manual directory settings still work.
 
 ## Competition: local Python
 
-Create an isolated environment:
+Use Python 3.12 and create an isolated environment:
 
 ```bash
 python -m venv .venv
 ```
 
-Activate it with `.venv\Scripts\Activate.ps1` in PowerShell or `source .venv/bin/activate` on Linux/macOS, then:
+Activate it with `.venv\Scripts\Activate.ps1` in PowerShell or `source .venv/bin/activate` on Linux/macOS. From the repository root:
 
 ```bash
 python -m pip install -r competition/requirements.txt
-python scripts/check_inputs.py --config configs/competition.inputs.json
+python scripts/download_data.py
+python scripts/prepare_official.py --archive "/path/to/competition-download.zip"
+python scripts/reproduce_competition.py --check-only
+python scripts/reproduce_competition.py
 ```
 
-The default layout is `data/official`, `data/seas5`, `data/cfsv2`. Edit [competition.inputs.json](../configs/competition.inputs.json) for another layout. The read-only checker verifies exact historical bytes and four core package versions, not available RAM or the entire runtime.
+The official ZIP must be your own [Kaggle download](DATA.md#prepare-a-new-checkout). The default layout is `data/official`, `data/seas5`, `data/cfsv2`. Edit [competition.inputs.json](../configs/competition.inputs.json) for another layout and pass `--config path/to/config.json`. Relative input paths resolve against the configuration file's parent directory. You no longer need to edit paths in the model code.
 
-Set `BANCA_PASTA_DADOS`, `BANCA_PASTA_SEAS5` and `BANCA_PASTA_CFSV2` at the top of [competition script](../competition/hybrid_forecast.py) to the same **absolute directories printed by the check**. The historical script does not read this JSON automatically. Then run:
-
-```bash
-python competition/hybrid_forecast.py
-```
+The launcher checks exact historical bytes and four core package versions, then fits the final model in a subprocess. Each run creates a timestamped directory under `outputs/reproduction/worcap_banca_hibrida/`. Use `--output path/to/runs` to change that root. Add `--validation` only when intentionally refitting the seven historical blocks too; it takes substantially longer.
 
 Successful exact reproduction generates `submission_hibrida.csv` with 1,885,464 rows and SHA-256:
 
@@ -90,4 +89,4 @@ python scripts/verify_repository.py
 python -m unittest discover -s tests -v
 ```
 
-These use the standard library to check packaging and the getting-started paths, not a new full-grid fit. Scientific tests have separate dependencies, for example `python research/prospective/test_registry.py` in the research environment.
+The repository inventory and data-download tests use the standard library; presentation tests also need the model environment (including pandas). These checks are not a new full-grid fit. Scientific tests have separate dependencies, for example `python research/prospective/test_registry.py` in the research environment.

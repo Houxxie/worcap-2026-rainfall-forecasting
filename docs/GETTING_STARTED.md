@@ -1,6 +1,6 @@
 # Start here
 
-There are two model paths: the **competition model** and the **current current forecasting model**. Both combine two LightGBMs and local ridge. The operational version uses longer input lags and a separately fitted, frozen model package. U-Net and SST/PCA remain research candidates.
+There are two model paths: the **competition model** and the **current forecasting model**. Both combine two LightGBMs and local ridge. The operational version uses longer input lags and a separately fitted, frozen model package. U-Net and SST/PCA remain research candidates.
 
 | What you want to do | Start here | What you need |
 |---|---|---|
@@ -27,6 +27,6 @@ The demo displays saved evidence. It does not run inference or establish future 
 
 ## Before a full run
 
-Read the [data availability table](DATA.md#availability). Code, small reports and metadata are included. Large prepared datasets and fitted model packages currently have no project download attached to a release. Exact reproduction is conditional on obtaining the recorded input files; the demo works without them.
+Read the [data availability table](DATA.md#availability). Code, small reports and metadata are included. Exact SEAS5/CFSv2 snapshots are available in a public data release; `python scripts/download_data.py` installs and verifies them. Official competition files still come from Kaggle, and fitted model packages are produced by your run. See the [reproduction guide](REPRODUCTION.md) for a notebook that handles setup and the final fit.
 
 The [input checker](../scripts/check_inputs.py) lists missing or mismatched historical files and core packages together, before expensive work. Copy or edit the appropriate file in `configs/`. Paths in those JSON files resolve relative to the JSON file, not your terminal directory. These settings do not change model parameters.

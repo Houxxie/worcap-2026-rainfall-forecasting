@@ -1,5 +1,12 @@
 # Changelog
 
+## Reproducible data access — 2026-10-07
+
+- Publish hash-verified historical SEAS5, CFSv2 and optional ERSSTv5 snapshots as versioned release assets, with source attribution and separate data-use conditions. Official competition files remain on Kaggle.
+- Add standard-library download and official-ZIP preparation commands, with archive/member integrity checks and protection against overwriting changed inputs.
+- Add a configuration-based competition launcher and a setup notebook for a clean Kaggle session. Preserve model parameters, historical evidence and the required final CSV hash.
+- Document the concrete first-run steps and the distinction between these historical snapshots and operational source acquisition.
+
 ## Clear model names — 2026-10-01
 
 - Use competition model, current forecasting model and reference model in documentation, notebook explanations and generated reports. Remove unexplained development version labels from the presentation.

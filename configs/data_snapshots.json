@@ -1,0 +1,90 @@
+{
+  "schema": "worcap_public_snapshots_v1",
+  "release": "data-snapshots-v1",
+  "snapshots": {
+    "seas5": {
+      "archive": "seas5-snapshot-v1.zip",
+      "url": "https://github.com/Houxxie/worcap-2026-rainfall-forecasting/releases/download/data-snapshots-v1/seas5-snapshot-v1.zip",
+      "bytes": 8304051,
+      "sha256": "61aa5463d23d5a9b48e153b993a22c99a2fe82bc91702c1a1ba4effbe8e08f10",
+      "files": [
+        {
+          "path": "seas5/NOTICE.txt",
+          "bytes": 3949,
+          "sha256": "3938290ff3758ae396a8baaa466f6fd9d7a324a9e168596fadd036b4f98bcf8f"
+        },
+        {
+          "path": "seas5/seas5_51_desenvolvimento.nc",
+          "bytes": 7500406,
+          "sha256": "bb4ba9085b32f008172ba1987b5c158263d0019a63e52046ad4c99dc20e02fa8"
+        },
+        {
+          "path": "seas5/seas5_51_manifesto.json",
+          "bytes": 791589,
+          "sha256": "c7ce3a54f9a6f16189f5732ce12898ad42e1128de1a9395170c50b97718a45a9"
+        },
+        {
+          "path": "seas5/seas5_51_somente_ajuste_final.nc",
+          "bytes": 400718,
+          "sha256": "28e8703ce9f629ea6b7d6954e154a36883a291ba5f8cb65dc46e715a92c3f3bc"
+        },
+        {
+          "path": "seas5/seas5_51_teste.nc",
+          "bytes": 400922,
+          "sha256": "15623c1e7092f61f9d6a5a5f7378adb1d5b095ea96c9ca64c8afd31979a7c4a0"
+        }
+      ]
+    },
+    "cfsv2": {
+      "archive": "cfsv2-snapshot-v1.zip",
+      "url": "https://github.com/Houxxie/worcap-2026-rainfall-forecasting/releases/download/data-snapshots-v1/cfsv2-snapshot-v1.zip",
+      "bytes": 8551375,
+      "sha256": "93de5e92b29920cd7878c3330721ba97bbebe96b511003eb80dc126117c545f3",
+      "files": [
+        {
+          "path": "cfsv2/NOTICE.txt",
+          "bytes": 3949,
+          "sha256": "3938290ff3758ae396a8baaa466f6fd9d7a324a9e168596fadd036b4f98bcf8f"
+        },
+        {
+          "path": "cfsv2/cfsv2_desenvolvimento.nc",
+          "bytes": 7758924,
+          "sha256": "1c20df191e347268d3844bff855904a963d5769544929dfcc03363a5f5720163"
+        },
+        {
+          "path": "cfsv2/cfsv2_manifesto.json",
+          "bytes": 100146,
+          "sha256": "02423b1016bae9c90314d7aea1cab6b374d09c010c226f635576d7f79f42d196"
+        },
+        {
+          "path": "cfsv2/cfsv2_somente_ajuste_final.nc",
+          "bytes": 417712,
+          "sha256": "38706f6880b71b78d420bac9a7d0b36868dbf59193c7ef5ebf9f5c82197552d8"
+        },
+        {
+          "path": "cfsv2/cfsv2_teste.nc",
+          "bytes": 417555,
+          "sha256": "99c13472e561acabf56c4eff9b8fd814b305a8138b44f59e24341553be8f4b66"
+        }
+      ]
+    },
+    "sst": {
+      "archive": "sst-snapshot-v1.zip",
+      "url": "https://github.com/Houxxie/worcap-2026-rainfall-forecasting/releases/download/data-snapshots-v1/sst-snapshot-v1.zip",
+      "bytes": 3515660,
+      "sha256": "d6232a8d88d53cf74c90072fbd73b617019aea181a33540021dce1c830acc591",
+      "files": [
+        {
+          "path": "sst/NOTICE.txt",
+          "bytes": 3949,
+          "sha256": "3938290ff3758ae396a8baaa466f6fd9d7a324a9e168596fadd036b4f98bcf8f"
+        },
+        {
+          "path": "sst/ersstv5_4graus_198201_202411.nc",
+          "bytes": 3574571,
+          "sha256": "908034f6418833302ea432f25850ad2982d1114b747b7b298e26a350eaf2891d"
+        }
+      ]
+    }
+  }
+}

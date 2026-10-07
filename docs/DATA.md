@@ -29,7 +29,7 @@ SEAS5 rates in m/s are converted to mm/day by multiplying by 86,400,000. Negativ
 
 CFSv2 normally has 24 or 28 expected members. The historical August 2019 missing-member exception was individually verified. It does not authorize partial future ensembles. Seasonal fields are bilinearly interpolated without extrapolation; that does not increase their effective physical resolution.
 
-Raw data, models and large prediction arrays stay outside Git. There is currently no public project download for the exact prepared NetCDF snapshots. Provider links locate the products, but revised downloads may differ. Exact reproduction requires the snapshots matching the hashes.
+Raw data, models and large prediction arrays stay outside Git. The [versioned data release](https://github.com/Houxxie/worcap-2026-rainfall-forecasting/releases/tag/data-snapshots-v1) provides the exact prepared SEAS5/CFSv2 snapshots, plus optional research SST. The [catalog](../configs/data_snapshots.json) records archive and member hashes. Provider downloads may have been revised; use the recorded snapshots for exact reproduction. See [distribution and attribution](DATA_RIGHTS.md) for the separate data conditions.
 
 Historical acquisition scripts remain in `pesquisa-v0.1.0`. Newly acquired CFSv2 is audited by the active prospective adapter. Source terms remain separate from the code license. See [temporal validity](TEMPORAL_VALIDITY.md).
 
@@ -40,7 +40,8 @@ Historical acquisition scripts remain in `pesquisa-v0.1.0`. Newly acquired CFSv2
 | Competition and research code | Yes | Download ZIP or clone |
 | Lightweight demo, archived metrics and selected map images | Yes | Open `demo/index.html` after downloading; no credentials |
 | Official competition NetCDFs and sample CSV | No | Use the competition data link above; access is controlled by Kaggle/organizers |
-| Exact historical SEAS5/CFSv2 prepared NetCDFs | No; manifests only | Use a retained matching snapshot; no project release download is currently attached |
+| Exact historical SEAS5/CFSv2 prepared NetCDFs | Release assets, not Git objects | Run `python scripts/download_data.py` (about 17 MB, no credentials) |
+| Historical ERSSTv5 research snapshot | Optional release asset | Add `--include-sst` (about 3.5 MB); not used by the competition model |
 | Archived NOAA indices | Yes | Included in the code and metadata; current inference acquires fresh recorded responses |
 | Trained operational model and full registry | No | Fit with the matching historical inputs, or restore your own complete saved registry |
 | Complete historical forecast maps and experiment model weights | No | Retain the full output of your experiment; the small reports ZIP is insufficient for rescoring |
@@ -60,3 +61,25 @@ data/
 Run `python scripts/check_inputs.py --config configs/competition.inputs.json` from the repository root. It reports every missing/changed file and core package. Research and operational-fit profiles need fewer partitions; use their separate configs.
 
 For provenance, the archived preparation sources are [SEAS5 acquisition](https://github.com/Houxxie/worcap-2026-rainfall-forecasting/blob/pesquisa-v0.1.0/entregas/etapa7A_SEAS5/01_SEAS5_baixar_e_auditar.py) and [CFSv2 acquisition](https://github.com/Houxxie/worcap-2026-rainfall-forecasting/blob/pesquisa-v0.1.0/entregas/etapa8A_CFSv2_dados/01_CFSv2_baixar_e_auditar.py). They are historical sources, not a guarantee that today's endpoints return the same bytes. Review provider compatibility before using them for a new dataset; keep changed data under a new experiment identity.
+
+## Prepare a new checkout
+
+From the repository root, Python's standard library is enough to download the prepared sources:
+
+```bash
+python scripts/download_data.py
+```
+
+For the SST research experiment, use `python scripts/download_data.py --include-sst`. This does not fit PCA or download new monthly observations. Existing matching files are reused; changed files are preserved and reported as an error.
+
+Download the official dataset with **Download All** on the competition's Data page, then:
+
+```bash
+python scripts/prepare_official.py --archive "/path/to/previsao-climatica-de-precipitacao-sobre-a-america-do-sul.zip"
+```
+
+This verifies and extracts the 13 original files to `data/official`. It requires space for the ZIP, roughly 2 GB of extracted files and temporary staging. It never uploads your files. If access to the competition data is unavailable, the demo and climate snapshots remain usable, but full competition reproduction cannot proceed. The project does not substitute a different rainfall dataset silently.
+
+On Kaggle, attach the official competition dataset with **Add Input** instead of extracting another copy. The [setup notebook](../competition/reproduce_from_github.ipynb) downloads the seasonal snapshots and finds that input directory.
+
+For an offline machine, download the ZIP assets from the release on another machine, transfer them, and use `python scripts/download_data.py --archive-dir /path/to/archives`. No API keys are needed for these historical snapshots. Current operational acquisition is a separate workflow with its own arrival checks and credentials.
