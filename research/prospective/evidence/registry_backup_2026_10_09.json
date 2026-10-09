@@ -1,0 +1,10 @@
+{
+  "archive": "registry_2026_11_prepared_20261009.zip",
+  "bytes": 56838259,
+  "sha256": "d3c3d43b7d5d735d6a56faaefa31123d5a5bc8e09783c683a0b02097ae59ba90",
+  "event_count": 54,
+  "registry_tip": "78f3f0eae1b0c236cb91d362a0ab91b89d8da89300017d2bd2523b8766985b16",
+  "files_verified": 97,
+  "referenced_objects_verified": 42,
+  "registry_unchanged": true
+}

@@ -32,6 +32,6 @@ On 28–30 September 2026, the named CFSv2 product lacked members 21–24. The s
 python research/prospective/prepare_cfsv2_recipe.py --registry outputs/prospective --target 2026-11
 ```
 
-This command downloads and audits once; it does not issue a forecast or select another provider. Restore the latest **44-event registry** before continuing. October already has a frozen prediction and cannot be issued again. A future month's completeness must be checked anew.
+This command downloads and audits once; it does not issue a forecast or select another provider. Restore the latest **54-event registry** described in [November preparation](NOVEMBER_2026.md) before continuing. October already has a frozen prediction and cannot be issued again. A future month's completeness must be checked anew.
 
 `cfsv2_compatibility.py` separately compares original IRI and successor CCSR fields for diagnostics. CCSR did not reproduce the original values on the four checked months and is not an approved substitute. Sources are listed in [DATA.md](../../docs/DATA.md).

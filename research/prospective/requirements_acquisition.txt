@@ -1,0 +1,5 @@
+# Acquisition/diagnostics only. Keep the frozen inference environment separate.
+-r requirements.txt
+cdsapi>=0.7,<1
+eccodes>=2.40,<3
+pydap>=3.5,<4

@@ -78,7 +78,7 @@ def predict(package, inputs, target):
         anom = m.prever_par(model, name, fields, seas, cfs, atmosphere, climate, *climates, [target])
         pieces.append(m.reconstruir_chuva(climate, anom, scale).values.astype('float64'))
     prediction = .75 * (.5 * pieces[0] + .5 * pieces[1]) + .25 * m.mos_predict(ridge, seas, cfs, [target])
-    require(np.isfinite(prediction).all() and (prediction >= 0).all(), 'Invalid reference model prediction.')
+    require(np.isfinite(prediction).all() and (prediction >= 0).all(), 'Invalid hybrid prediction.')
     return xr.Dataset({
         'precipitacao': (('time', 'lat', 'lon'), prediction, dict(units='mm/day')),
         'climatologia': (('time', 'lat', 'lon'), climate.values[[target.month - 1]], dict(units='mm/day'))},

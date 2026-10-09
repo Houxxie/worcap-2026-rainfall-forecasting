@@ -1,5 +1,7 @@
 # October 2026 operational forecast
 
+For the latest continuation, see [November preparation](NOVEMBER_2026.md): **54 events**, November not yet issued. The October issuance evidence below remains unchanged.
+
 **Issued and frozen: 30 September 2026, 18:18:00 UTC / 15:18:00 Brasília.** October's forecast passed the complete-source checks before the 1 October, 00:00 UTC deadline. The registered prediction contains 78,561 points on the 301 × 261 quarter-degree grid, with the training climatology stored beside it. Units are monthly mean precipitation in mm/day. This is a forecast; its future skill has not yet been measured.
 
 On 29 September, the fixed reference model with longer input lags was fitted on January 1993–December 2022 and registered with all 11 required package files. That package and its protocol remain unchanged. On 30 September, evaluating the original IRI product recipe explicitly returned all 24 expected CFSv2 members. Every available named-product value was reproduced exactly. The complete ensemble from that single expression was used, without joining datasets or filling missing values.
@@ -34,9 +36,9 @@ The successor CCSR product differs numerically in all four comparisons and remai
 - [Exact forecast registry event](evidence/forecast_event_2026_10.json)
 - [Portable-backup verification](evidence/forecast_backup_2026_10.json)
 
-The latest registry contains **44 events** and has tip `712c60325428670c50ed1c059af09be6e58c192ac7a3ef25ff8cea6e35961a7e`. The forecast is 957,631 bytes, SHA-256 `7ec16a8e96e942877aa25a0d817dc5ab3709e8672bae765781356fcce4bf45f7`. Its original full backup is 64,828,247 bytes; all 144 inventoried archive entries and every referenced registry object were checked.
+The October registry snapshot contains **44 events** and has tip `712c60325428670c50ed1c059af09be6e58c192ac7a3ef25ff8cea6e35961a7e`. The forecast is 957,631 bytes, SHA-256 `7ec16a8e96e942877aa25a0d817dc5ab3709e8672bae765781356fcce4bf45f7`. Its original full backup is 64,828,247 bytes; all 144 inventoried archive entries and every referenced registry object were checked.
 
-Resume from this complete 44-event registry, preserving `eventos` and `objetos` together. October must not be regenerated or replaced. The first verification against final ERA5 is eligible from **1 February 2027**, under the frozen T+4 verification protocol. Receipt records use the local UTC clock and hashes, not an independent timestamp. No automatic monitoring job is enabled.
+For new work, resume from the latest complete snapshot identified in [November preparation](NOVEMBER_2026.md), preserving `eventos` and `objetos` together. October must not be regenerated or replaced. The first verification against final ERA5 is eligible from **1 February 2027**, under the frozen T+4 verification protocol. Receipt records use the local UTC clock and hashes, not an independent timestamp. No automatic monitoring job is enabled.
 
 ## Initial preparation — historical record
 

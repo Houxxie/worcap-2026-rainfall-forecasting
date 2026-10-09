@@ -143,7 +143,7 @@ def download_raw(url, path):
     return receipt
 
 
-def acquire_pair(folder, origin):
+def acquire_pair(folder, origin, engine='netcdf4', include_recipe=False):
     """Small regional requests only. No model or observation data are opened."""
     p = folder / str(pd.Timestamp(origin).date())
     p.mkdir()  # A new acquisition may not overwrite a previous receipt.
@@ -151,13 +151,15 @@ def acquire_pair(folder, origin):
     old_path, new_path = p / 'legacy_raw.nc', p / 'successor_decoded.nc'
     old_receipt = download_raw(legacy_url(origin), old_path)
     started = utc()
-    with xr.open_dataset(SUCCESSOR, engine='netcdf4') as source:
+    options = dict(timeout=45) if engine == 'pydap' else {}
+    with xr.open_dataset(SUCCESSOR, engine=engine, backend_kwargs=options) as source:
         subset = source.sel(S=[pd.Timestamp(origin)], L=[1], Y=slice(-61, 16), X=slice(269, 336)).load()
     ended = utc()
     # Record the exact decoded subset before validation, including invalid data.
     subset.to_netcdf(new_path, engine='netcdf4')
     new_receipt = dict(url=SUCCESSOR, started_at_utc=started, received_at_utc=ended,
                        kind='local_serialization_of_decoded_opendap_subset_not_raw_http',
+                       reader=engine,
                        selection=dict(S=str(pd.Timestamp(origin).date()), L=1, Y=[-61, 16], X=[269, 336]),
                        **fingerprint(new_path), first_publication_time_unknown=True,
                        initialization_dates_by_member_proven=False)
@@ -166,10 +168,64 @@ def acquire_pair(folder, origin):
     new = successor_fields(subset, origin)
     result = compare_fields(old, new, origin)
     result['files'] = dict(legacy=old_receipt, successor=new_receipt)
+    if include_recipe:
+        if __package__:
+            from . import prepare_cfsv2_recipe as recipe
+        else:
+            import prepare_cfsv2_recipe as recipe
+        recipe_path, normalized = p / 'recipe_raw.nc', p / 'recipe_normalized.nc'
+        table_path = p / 'initializations_raw.nc'
+        table_url = ('https://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.EMC/.CFSv2/'
+                     '.REALTIME_ENSEMBLE/.FLXF/sampleS/' + legacy_url(origin).split('/.prec/')[1].split('L/1.5')[0] + 'data.nc')
+        result['files']['recipe'] = download_raw(recipe.recipe_url(origin), recipe_path)
+        result['files']['initializations'] = download_raw(table_url, table_path)
+        explicit = recipe.normalize_recipe(recipe_path, normalized, origin)
+        dates = legacy.tabela_inicializacoes(table_path, pd.DatetimeIndex([origin]))
+        result['original_recipe_overlap'] = recipe.verify_overlap(old, explicit, dates[origin]['mascara'])
+        result['recipe_vs_successor'] = compare_fields(explicit, new, origin)
+        result['files']['normalized_recipe'] = dict(kind='local_normalization', **fingerprint(normalized))
+        result['catalog_definition'] = recipe.CATALOG_URL
     write_json(p / 'comparison.json', result)
     print(f'{origin}: {len(result["common_complete_members"])} common members; '
           f'mean-field difference RMSE={result.get("ensemble_mean_difference_rmse")}', flush=True)
     return result
+
+
+def decision(months):
+    # Missing downloads are inconclusive, never evidence of equivalent services.
+    if any(m.get('numerical_agreement_on_overlap') is False for m in months):
+        return 'not_numerically_interchangeable'
+    return 'insufficient_evidence_for_operational_migration'
+
+
+def run_diagnostics(output, origins, engine='netcdf4', include_recipe=False):
+    output = Path(output)
+    output.mkdir(parents=True, exist_ok=False)
+    report = dict(schema='worcap_cfsv2_service_comparison_v1', started_at_utc=utc(),
+                  provider_notice=NOTICE, provider_regridding_note=SOURCE_REGRID_NOTE,
+                  source_policy_changed=False, model_changed=False, forecast_issued=False,
+                  engine=engine, include_original_recipe=include_recipe, months=[])
+    try:
+        for extension in ['dds', 'das']:
+            download_raw(SUCCESSOR + '.' + extension, output / ('successor.' + extension))
+    except (OSError, ValueError, requests.RequestException) as error:
+        report.update(finished_at_utc=utc(), decision='insufficient_evidence_for_operational_migration',
+                      metadata_error=dict(error_type=type(error).__name__, message=str(error)[:500]))
+        write_json(output / 'report.json', report)
+        return report
+    for origin in origins:
+        try:
+            report['months'].append(acquire_pair(output, origin, engine, include_recipe))
+        except (OSError, ValueError, requests.RequestException, KeyError) as error:
+            failure = dict(origin=str(pd.Timestamp(origin).date()), status='acquisition_or_contract_failed',
+                           error_type=type(error).__name__, message=str(error)[:500], operationally_authorized=False,
+                           numerical_agreement_on_overlap=None)
+            report['months'].append(failure)
+            print(f'{origin}: {failure["status"]} ({failure["error_type"]}); retained files are diagnostic only.', flush=True)
+    report['finished_at_utc'] = utc()
+    report['decision'] = decision(report['months'])
+    write_json(output / 'report.json', report)
+    return report
 
 
 def main():
@@ -177,23 +233,15 @@ def main():
     parser.add_argument('--output', type=Path, required=True, help='A new diagnostic folder.')
     parser.add_argument('--origins', nargs='+', required=True, help='Nominal origins in YYYY-MM format.')
     parser.add_argument('--download', action='store_true', help='Explicitly permit public subset downloads.')
+    parser.add_argument('--engine', choices=['netcdf4', 'pydap'], default='netcdf4',
+                        help='Explicit OPeNDAP reader. Pydap uses Requests HTTPS; certificate validation stays enabled.')
+    parser.add_argument('--include-recipe', action='store_true',
+                        help='Also audit the complete original IRI expression and member initialization table.')
     args = parser.parse_args()
     require(args.download, 'Use --download for live acquisition. This command never issues a forecast.')
     origins = [pd.Timestamp(x + '-01') for x in args.origins]
     require(len(set(origins)) == len(origins), 'Duplicate origins.')
-    args.output.mkdir(parents=True, exist_ok=False)
-    report = dict(schema='worcap_cfsv2_service_comparison_v1', started_at_utc=utc(),
-                  provider_notice=NOTICE, provider_regridding_note=SOURCE_REGRID_NOTE,
-                  source_policy_changed=False, model_changed=False, forecast_issued=False, months=[])
-    download_raw(SUCCESSOR + '.dds', args.output / 'successor.dds')
-    download_raw(SUCCESSOR + '.das', args.output / 'successor.das')
-    for origin in origins:
-        report['months'].append(acquire_pair(args.output, origin))
-    report['finished_at_utc'] = utc()
-    report['decision'] = ('not_numerically_interchangeable' if any(
-        m['numerical_agreement_on_overlap'] is False for m in report['months'])
-        else 'insufficient_evidence_for_operational_migration')
-    write_json(args.output / 'report.json', report)
+    report = run_diagnostics(args.output, origins, args.engine, args.include_recipe)
     print(report['decision'], flush=True)
 
 

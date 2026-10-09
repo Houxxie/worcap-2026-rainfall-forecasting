@@ -93,10 +93,14 @@ def registry_snapshot(folder, target):
             continue
         expected = deslocar(target, -rule['lag'])
         selected = next((e for e in events if e['id'] == status['fontes'].get(source)), None)
-        candidates = [e for e in events if e['tipo'] == 'fonte_recebida' and e['dados']['fonte'] == source
-                      and expected in e['dados']['inspecao'].get('meses', [])]
+        receipts = [e for e in events if e['tipo'] == 'fonte_recebida' and e['dados']['fonte'] == source]
+        candidates = [e for e in receipts if expected in e['dados']['inspecao'].get('meses', [])]
         latest = candidates[-1] if candidates else None
+        valid_months = [month for e in receipts if e['dados']['inspecao'].get('validado') is True
+                        for month in e['dados']['inspecao'].get('meses', [])]
         rows.append(dict(source=source, required_month=expected, status='validated' if selected else 'missing or unvalidated',
+                         latest_valid_month=max(valid_months) if valid_months else None,
+                         last_acquisition=receipts[-1]['registrado_em_utc'] if receipts else None,
                          selected_event=selected['id'] if selected else None,
                          received_at=selected['registrado_em_utc'] if selected else None,
                          latest_receipt=latest['registrado_em_utc'] if latest else None,

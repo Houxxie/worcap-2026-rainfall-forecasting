@@ -57,8 +57,9 @@ def render(folder, info):
                  f'<p>Deadline: <strong>{escape(snapshot["deadline_utc"])}</strong>. Checked: {escape(snapshot["checked_at"])}.</p>',
                  '<ul>'+''.join(f'<li>{escape(x)}</li>' for x in snapshot['status']['faltantes'])+'</ul>',
                  '<h2>Source arrivals</h2>', table(pd.DataFrame(snapshot['sources'])[
-                     ['source', 'required_month', 'status', 'received_at', 'latest_receipt']]),
+                     ['source', 'required_month', 'latest_valid_month', 'status', 'last_acquisition']]),
                  '<p>Receipt time is the acquisition time. First publication time remains unknown.</p>',
+                 '<p>A recent acquisition can still end before the required month. Latest valid month describes the recorded files, not all data available from a provider.</p>',
                  '<h2>Forecast map</h2><p>This task checks preparation and does not issue a forecast or invent a map.</p>']
     else:
         scores = pd.read_csv(folder/'metrics.csv')

@@ -70,6 +70,10 @@ def main():
     script_tree=ast.parse((ROOT/'competition/hybrid_forecast.py').read_text(encoding='utf-8'))
     script_tree.body=script_tree.body[1:]  # The script has one leading module docstring.
     require(ast.dump(script_tree)==ast.dump(notebook_tree),'Competition script and notebook disagree.')
+    issued = json.loads((ROOT/'research/prospective/evidence/forecast_event_2026_10.json').read_text(encoding='utf-8'))
+    expected_inference = issued['dados']['inferencia']['inference_code_sha256']
+    require(hashlib.sha256((ROOT/'research/prospective/infer_baseline.py').read_bytes()).hexdigest() == expected_inference,
+            'Operational inference differs from the frozen series. Even message-only edits change its required hash.')
     for folder,filename in [('lagged_sources','lagged_sources.ipynb'),('prospective','prospective_registry.ipynb')]:
         path=ROOT/'research'/folder/filename
         nb=json.loads(path.read_text(encoding='utf-8'))

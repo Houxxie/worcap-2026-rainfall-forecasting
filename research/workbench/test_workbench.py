@@ -136,6 +136,26 @@ class WorkbenchTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'Missing registry'): inputs.registry_snapshot(root/'absent','2099-01')
             self.assertFalse((root/'absent').exists())
 
+    def test_fresh_receipt_with_old_month_still_blocks_source_readiness(self):
+        from research.prospective.registry import Registro
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            r = Registro(root/'registry')
+            r.iniciar(dict(primeiro_mes='2099-01', ultimo_mes='2099-12',
+                           fontes={'nino34': dict(lag=3, obrigatoria=True)}))
+            receipt = r.recibo('nino34', b'old but valid',
+                               dict(validado=True, meses=['2098-09']), dict(metodo='test'))
+            r.recibo('nino34', b'unvalidated newer data',
+                     dict(validado=False, meses=['2098-10']), dict(metodo='test'))
+            snapshot = inputs.registry_snapshot(root/'registry', '2099-01')
+            source = snapshot['sources'][0]
+            self.assertEqual(source['required_month'], '2098-10')
+            self.assertEqual(source['latest_valid_month'], '2098-09')
+            self.assertIsNotNone(source['last_acquisition'])
+            self.assertIsNone(source['selected_event'])
+            self.assertEqual(source['status'], 'missing or unvalidated')
+            self.assertFalse(snapshot['status']['pronto'])
+
     def test_training_routes_only_to_existing_protocol_with_resolved_paths(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)

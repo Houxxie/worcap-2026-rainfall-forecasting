@@ -1,0 +1,282 @@
+{
+  "checked_at": "2026-10-09T00:49:05.715059+00:00",
+  "target": "2026-11",
+  "deadline_utc": "2026-11-01T00:00:00+00:00",
+  "status": {
+    "mes_alvo": "2026-11",
+    "pronto": false,
+    "faltantes": [
+      "era5_pl: month 2026-07",
+      "era5_sl: month 2026-07",
+      "nino12: month 2026-08",
+      "nino34: month 2026-08",
+      "seas5: month 2026-10",
+      "tna: month 2026-08",
+      "tsa: month 2026-08"
+    ],
+    "fontes": {
+      "cfsv2": "78f3f0eae1b0c236cb91d362a0ab91b89d8da89300017d2bd2523b8766985b16"
+    },
+    "modelo": "8b7fae77efa361b7ec09d4212f20f429a2ba30a01ebdba36ec44f0b9733e6d82",
+    "protocolo": "b61d3ae3dac9e65da02c1b6d5aa3b66f9d918bae94db51a9f55c3728cf490e37",
+    "previsao_emitida": false
+  },
+  "sources": [
+    {
+      "source": "cfsv2",
+      "required_month": "2026-10",
+      "status": "validated",
+      "latest_valid_month": "2026-10",
+      "last_acquisition": "2026-10-09T00:38:57.895526+00:00",
+      "selected_event": "78f3f0eae1b0c236cb91d362a0ab91b89d8da89300017d2bd2523b8766985b16",
+      "received_at": "2026-10-09T00:38:57.895526+00:00",
+      "latest_receipt": "2026-10-09T00:38:57.895526+00:00",
+      "first_publication": "unknown"
+    },
+    {
+      "source": "era5_pl",
+      "required_month": "2026-07",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-06",
+      "last_acquisition": "2026-09-29T19:45:48.495030+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "era5_sl",
+      "required_month": "2026-07",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-06",
+      "last_acquisition": "2026-09-29T19:45:31.375237+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "nino12",
+      "required_month": "2026-08",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-07",
+      "last_acquisition": "2026-10-09T00:38:16.789218+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "nino34",
+      "required_month": "2026-08",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-07",
+      "last_acquisition": "2026-10-09T00:38:15.966737+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "seas5",
+      "required_month": "2026-10",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-09",
+      "last_acquisition": "2026-09-29T19:46:27.224207+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "tna",
+      "required_month": "2026-08",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-07",
+      "last_acquisition": "2026-10-09T00:38:17.733322+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "tsa",
+      "required_month": "2026-08",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-07",
+      "last_acquisition": "2026-10-09T00:38:18.693321+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    }
+  ],
+  "events": 54,
+  "tip": "78f3f0eae1b0c236cb91d362a0ab91b89d8da89300017d2bd2523b8766985b16",
+  "model_id": "8b7fae77efa361b7ec09d4212f20f429a2ba30a01ebdba36ec44f0b9733e6d82",
+  "source_check": "Recorded bytes only; providers were not contacted.",
+  "next_action": "Resolve the listed source/model/deadline blockers; do not substitute incomplete inputs.",
+  "schema": "rainfall_monthly_preparation_v1",
+  "required_sources_ready": 1,
+  "required_sources_total": 8,
+  "original_44_events_preserved": true,
+  "frozen_model_files_verified": 11,
+  "inference_source_matches_frozen_model": true,
+  "model_changed": false,
+  "forecast_issued": false,
+  "authenticated_acquisition": {
+    "status": "not_executed",
+    "reason": "Kaggle editor failed to load: Failed to fetch; authentication internal error. No local CDS credential.",
+    "sources": [
+      "era5_sl",
+      "era5_pl",
+      "seas5"
+    ],
+    "provider_availability_not_established": true
+  },
+  "deadline_brasilia": "2026-10-31T21:00:00-03:00",
+  "cfsv2_audit": {
+    "aquisicao": "original IRI recipe, explicitly evaluated",
+    "auditoria": [
+      {
+        "arquivo_bruto": "explicit_recipe_normalized.nc",
+        "fase_fonte": "operacional",
+        "inicializacao_mais_antiga": "2026-09-08",
+        "inicializacao_mais_recente": "2026-10-03",
+        "inicializacoes_anteriores_ao_alvo": true,
+        "lead": 1.5,
+        "maximo_media_mm_day": 23.10506820678711,
+        "maximo_membros_mm_day": 48.1958122253418,
+        "media_espacial_mm_day": 3.4784365124967893,
+        "membro_ids": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
+        "membros": 24,
+        "membros_ausentes_estruturais": 4,
+        "membros_esperados": 24,
+        "membros_indisponiveis_ids": [],
+        "minimo_media_mm_day": 0.0,
+        "minimo_membros_mm_day": 0.0,
+        "negativos_corrigidos": 0,
+        "pixels_ausentes_membros_validos": 0,
+        "politica_membros": "todos_membros_esperados_sem_lacunas_v1",
+        "sha256_bruto": "c57a8457ac83641b669b581b3fbb055850a1cab0f5fe137d90f5afbd5d9c2b89",
+        "time_alvo": "2026-11-01",
+        "time_origem": "2026-10-01"
+      }
+    ],
+    "equivalencia": {
+      "alternate_provider_used": false,
+      "complete_cached_members": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "complete_expected_members": 24,
+      "ensemble_joined_or_imputed": false,
+      "maximum_absolute_difference": 0.0,
+      "recovered_members": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "values_identical_on_overlap": true
+    },
+    "equivalencia_evento": "e74dab4596c0af1c45639b41fd25d586ebdffeb69dc4ab88b2907ed82e7598b0",
+    "lead": 1.5,
+    "meses": [
+      "2026-10"
+    ],
+    "meses_alvo": [
+      "2026-11"
+    ],
+    "unidades": "mm/day",
+    "validado": true
+  },
+  "latest_noaa_receipts": [
+    {
+      "source": "nino34",
+      "event_id": "675cf5fed96987330faf9cc5f4f354fa90be7b61b5d34d85faf798647eb5b9aa",
+      "received_at_utc": "2026-10-09T00:38:15.966737+00:00",
+      "latest_month": "2026-07",
+      "object": {
+        "bytes": 16327,
+        "sha256": "46e501b91f624ef85b525d73fbb427f9d04d30411ba6e5c7cff579b35fb4ff01"
+      },
+      "url": "https://psl.noaa.gov/data/timeseries/month/data/nino34.long.anom.data",
+      "headers": {
+        "Content-Length": "4146",
+        "Date": "Fri, 09 Oct 2026 00:38:15 GMT",
+        "ETag": "\"3fc7-65d595000cffe-gzip\"",
+        "Last-Modified": "Thu, 08 Oct 2026 19:33:55 GMT"
+      }
+    },
+    {
+      "source": "nino12",
+      "event_id": "0f9d6f3692e74e88ebb1b1ad64087c9f94efdd8e690d22c32b92bb6a9d068633",
+      "received_at_utc": "2026-10-09T00:38:16.789218+00:00",
+      "latest_month": "2026-07",
+      "object": {
+        "bytes": 16328,
+        "sha256": "b13ad5ad085cd13e70ec5d82662b509d522204e38a8eefd133f14be270e51928"
+      },
+      "url": "https://psl.noaa.gov/data/timeseries/month/data/nino12.long.anom.data",
+      "headers": {
+        "Content-Length": "4254",
+        "Date": "Fri, 09 Oct 2026 00:38:16 GMT",
+        "ETag": "\"3fc8-65d59500075dc-gzip\"",
+        "Last-Modified": "Thu, 08 Oct 2026 19:33:55 GMT"
+      }
+    },
+    {
+      "source": "tna",
+      "event_id": "cb5f9cc95119a06a555eb9c1e3a81bf7cc25a6711f966819c02938cd782f6a62",
+      "received_at_utc": "2026-10-09T00:38:17.733322+00:00",
+      "latest_month": "2026-07",
+      "object": {
+        "bytes": 8332,
+        "sha256": "387c4125f377e57bcb683a849aefcd76da7d7f3cdcb2ac68ab086ceadf300e8b"
+      },
+      "url": "https://psl.noaa.gov/data/correlation/tna.data",
+      "headers": {
+        "Content-Length": "2027",
+        "Date": "Fri, 09 Oct 2026 00:38:17 GMT",
+        "ETag": "\"208c-65d594fa47ffc-gzip\"",
+        "Last-Modified": "Thu, 08 Oct 2026 19:33:49 GMT"
+      }
+    },
+    {
+      "source": "tsa",
+      "event_id": "e7d5375976c06217b94c286f7310787f787c2f08eebc6227b7f6b565c324706e",
+      "received_at_utc": "2026-10-09T00:38:18.693321+00:00",
+      "latest_month": "2026-07",
+      "object": {
+        "bytes": 8230,
+        "sha256": "700c0dffda0f19c1254ba482808b345eaa0538f5bf09fc3bc025f46a5fbe3a69"
+      },
+      "url": "https://psl.noaa.gov/data/correlation/tsa.data",
+      "headers": {
+        "Content-Length": "1956",
+        "Date": "Fri, 09 Oct 2026 00:38:18 GMT",
+        "ETag": "\"2026-65d594fa45539-gzip\"",
+        "Last-Modified": "Thu, 08 Oct 2026 19:33:49 GMT"
+      }
+    }
+  ]
+}

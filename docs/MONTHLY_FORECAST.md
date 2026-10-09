@@ -11,6 +11,8 @@ The [fixed plan](../research/prospective/plan.json) covers October 2026–Septem
 
 October was already issued. Inspect it in the [saved demo](../demo/README.md). Do not replace it, change receipt times or label a later reconstruction as the original forecast.
 
+The [November preparation record](../research/prospective/NOVEMBER_2026.md) identifies the current **54-event** continuation, completed CFSv2 acquisition and remaining NOAA/authenticated-download blockers. Its successor-source check has not approved a migration.
+
 ## 1. Prepare the environment and inputs
 
 Use Python 3.12 in an isolated environment. After activating it, from the repository root:
@@ -68,6 +70,12 @@ Expected output: a NetCDF with forecast and training climatology and a successfu
 ## 5. Preserve and evaluate
 
 Back up the complete registry, model and forecast, including Kaggle outputs. The local hash chain is not an independent timestamp or external signature.
+
+```bash
+python research/prospective/backup_registry.py --registry outputs/prospective --output outputs/registry-next.zip
+```
+
+Choose a new archive name for each snapshot. The command verifies the chain and every referenced object, checks archived hashes and preserves the existing registry.
 
 The first verification uses final ERA5 received from T+4 onward: February 2027 for October 2026. This evaluates an ERA5 target, not independent rain gauges. Preserve the forecast while researching new candidates separately.
 

@@ -1,5 +1,13 @@
 # Changelog
 
+## November preparation and source continuity — 2026-10-09 UTC
+
+- Acquire and audit all 24 CFSv2 members for November through the original IRI recipe. Preserve the October forecast/model and extend the verified registry from 44 to 54 events.
+- Record that current NOAA index receipts end in July; August and authenticated ERA5/SEAS5 acquisition remain pending. November is not issued.
+- Recheck CCSR with an explicit Pydap transport: four complete members, differing from IRI. Add original-recipe comparison and inconclusive failure reports; do not authorize migration.
+- Show latest recorded valid months in readiness reports and add a verified full-registry backup command.
+- Restore the exact frozen inference script after a message-only edit changed its hash. Protect its recorded identity in repository verification; model calculations and parameters remain unchanged.
+
 ## Reproducible data access — 2026-10-07
 
 - Publish hash-verified historical SEAS5, CFSv2 and optional ERSSTv5 snapshots as versioned release assets, with source attribution and separate data-use conditions. Official competition files remain on Kaggle.

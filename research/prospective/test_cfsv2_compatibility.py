@@ -1,5 +1,9 @@
 """Synthetic source-contract checks; no network or model training."""
 import unittest
+from unittest.mock import patch
+from pathlib import Path
+import tempfile
+import json
 
 import numpy as np
 import xarray as xr
@@ -21,6 +25,39 @@ def fixture():
 
 
 class CompatibilityTests(unittest.TestCase):
+    def test_partial_successor_is_diagnostic_even_when_overlap_matches(self):
+        old = c.successor_fields(fixture(), '2026-09-01')
+        new = old.copy()
+        new[4:] = np.nan
+        result = c.compare_fields(old, new, '2026-09-01')
+        self.assertEqual(result['common_complete_members'], [1, 2, 3, 4])
+        self.assertTrue(result['numerical_agreement_on_overlap'])
+        self.assertFalse(result['successor_complete'])
+        self.assertFalse(result['operationally_authorized'])
+        self.assertEqual(c.decision([result]), 'insufficient_evidence_for_operational_migration')
+
+    def test_transport_failure_is_preserved_and_cannot_approve_migration(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp) / 'comparison'
+            with patch.object(c, 'download_raw'), patch.object(c, 'acquire_pair', side_effect=OSError('unavailable')):
+                result = c.run_diagnostics(output, ['2026-10-01'], engine='pydap')
+            saved = json.loads((output/'report.json').read_text())
+            self.assertEqual(result, saved)
+            self.assertEqual(saved['months'][0]['status'], 'acquisition_or_contract_failed')
+            self.assertFalse(saved['months'][0]['operationally_authorized'])
+            self.assertEqual(saved['decision'], 'insufficient_evidence_for_operational_migration')
+            with self.assertRaises(FileExistsError):
+                c.run_diagnostics(output, ['2026-10-01'])
+
+    def test_metadata_failure_also_leaves_an_inconclusive_report(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp) / 'comparison'
+            with patch.object(c, 'download_raw', side_effect=OSError('unavailable')):
+                result = c.run_diagnostics(output, ['2026-10-01'])
+            self.assertTrue((output/'report.json').exists())
+            self.assertEqual(result['metadata_error']['error_type'], 'OSError')
+            self.assertEqual(result['decision'], 'insufficient_evidence_for_operational_migration')
+
     def test_matching_overlap_does_not_authorize_missing_legacy_members(self):
         new = c.successor_fields(fixture(), '2026-09-01')
         old = new.copy()
