@@ -1,0 +1,396 @@
+{
+  "checked_at": "2026-10-20T20:21:26.270077+00:00",
+  "target": "2026-11",
+  "deadline_utc": "2026-11-01T00:00:00+00:00",
+  "status": {
+    "mes_alvo": "2026-11",
+    "pronto": false,
+    "faltantes": [
+      "era5_pl: month 2026-07",
+      "nino12: month 2026-08",
+      "nino34: month 2026-08",
+      "seas5: month 2026-10",
+      "tna: month 2026-08",
+      "tsa: month 2026-08"
+    ],
+    "fontes": {
+      "cfsv2": "78f3f0eae1b0c236cb91d362a0ab91b89d8da89300017d2bd2523b8766985b16",
+      "era5_sl": "683fa9203c31c748a78ed0ad1caaca14d61a85d311c0c7f8c2b45dc9a40228cb"
+    },
+    "modelo": "8b7fae77efa361b7ec09d4212f20f429a2ba30a01ebdba36ec44f0b9733e6d82",
+    "protocolo": "b61d3ae3dac9e65da02c1b6d5aa3b66f9d918bae94db51a9f55c3728cf490e37",
+    "previsao_emitida": false
+  },
+  "sources": [
+    {
+      "source": "cfsv2",
+      "required_month": "2026-10",
+      "status": "validated",
+      "latest_valid_month": "2026-10",
+      "last_acquisition": "2026-10-09T00:38:57.895526+00:00",
+      "selected_event": "78f3f0eae1b0c236cb91d362a0ab91b89d8da89300017d2bd2523b8766985b16",
+      "received_at": "2026-10-09T00:38:57.895526+00:00",
+      "latest_receipt": "2026-10-09T00:38:57.895526+00:00",
+      "first_publication": "unknown"
+    },
+    {
+      "source": "era5_pl",
+      "required_month": "2026-07",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-06",
+      "last_acquisition": "2026-09-29T19:45:48.495030+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "era5_sl",
+      "required_month": "2026-07",
+      "status": "validated",
+      "latest_valid_month": "2026-07",
+      "last_acquisition": "2026-10-20T20:20:00.947669+00:00",
+      "selected_event": "683fa9203c31c748a78ed0ad1caaca14d61a85d311c0c7f8c2b45dc9a40228cb",
+      "received_at": "2026-10-20T20:20:00.947669+00:00",
+      "latest_receipt": "2026-10-20T20:20:00.947669+00:00",
+      "first_publication": "unknown"
+    },
+    {
+      "source": "nino12",
+      "required_month": "2026-08",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-07",
+      "last_acquisition": "2026-10-20T20:04:06.609771+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "nino34",
+      "required_month": "2026-08",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-07",
+      "last_acquisition": "2026-10-20T20:04:05.706378+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "seas5",
+      "required_month": "2026-10",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-09",
+      "last_acquisition": "2026-09-29T19:46:27.224207+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "tna",
+      "required_month": "2026-08",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-07",
+      "last_acquisition": "2026-10-20T20:04:07.422042+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "tsa",
+      "required_month": "2026-08",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-07",
+      "last_acquisition": "2026-10-20T20:04:09.163499+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    }
+  ],
+  "events": 60,
+  "tip": "683fa9203c31c748a78ed0ad1caaca14d61a85d311c0c7f8c2b45dc9a40228cb",
+  "model_id": "8b7fae77efa361b7ec09d4212f20f429a2ba30a01ebdba36ec44f0b9733e6d82",
+  "source_check": "Recorded bytes only; providers were not contacted.",
+  "next_action": "Resolve the listed source/model/deadline blockers; do not substitute incomplete inputs.",
+  "schema": "rainfall_monthly_preparation_v1",
+  "required_sources_ready": 2,
+  "required_sources_total": 8,
+  "original_54_events_preserved": true,
+  "frozen_model_files_verified": 11,
+  "inference_source_matches_frozen_model": true,
+  "model_changed": false,
+  "forecast_issued": false,
+  "deadline_brasilia": "2026-10-31T21:00:00-03:00",
+  "latest_noaa_receipts": [
+    {
+      "source": "nino34",
+      "id": "14b9661e6fc4881f7a3ea6f38b96eb93c3481c3f2878f53dbe1cca89c1e5c4d4",
+      "received_utc": "2026-10-20T20:04:05.706378+00:00",
+      "validated": true,
+      "latest_month": "2026-07",
+      "august_available": false,
+      "object": {
+        "sha256": "46e501b91f624ef85b525d73fbb427f9d04d30411ba6e5c7cff579b35fb4ff01",
+        "bytes": 16327
+      },
+      "transport": {
+        "url": "https://psl.noaa.gov/data/timeseries/month/data/nino34.long.anom.data",
+        "metodo": "HTTPS GET",
+        "iniciado_em_utc": "2026-10-20T20:04:04.770218+00:00",
+        "resposta_em_utc": "2026-10-20T20:04:05.677283+00:00",
+        "status_http": 200,
+        "cabecalhos": {
+          "Date": "Tue, 20 Oct 2026 20:04:05 GMT",
+          "Last-Modified": "Tue, 20 Oct 2026 13:34:19 GMT",
+          "ETag": "\"3fc7-65e45b00adfe7-gzip\"",
+          "Content-Length": "4146"
+        },
+        "last_modified_nao_e_primeira_publicacao": true
+      }
+    },
+    {
+      "source": "nino12",
+      "id": "a01b7a053fc2ea8cfc8bb6f76b43d024dbc2eba3fb5d36c55c18a033979fc842",
+      "received_utc": "2026-10-20T20:04:06.609771+00:00",
+      "validated": true,
+      "latest_month": "2026-07",
+      "august_available": false,
+      "object": {
+        "sha256": "b13ad5ad085cd13e70ec5d82662b509d522204e38a8eefd133f14be270e51928",
+        "bytes": 16328
+      },
+      "transport": {
+        "url": "https://psl.noaa.gov/data/timeseries/month/data/nino12.long.anom.data",
+        "metodo": "HTTPS GET",
+        "iniciado_em_utc": "2026-10-20T20:04:05.710881+00:00",
+        "resposta_em_utc": "2026-10-20T20:04:06.555643+00:00",
+        "status_http": 200,
+        "cabecalhos": {
+          "Date": "Tue, 20 Oct 2026 20:04:06 GMT",
+          "Last-Modified": "Tue, 20 Oct 2026 13:34:19 GMT",
+          "ETag": "\"3fc8-65e45b006e848-gzip\"",
+          "Content-Length": "4254"
+        },
+        "last_modified_nao_e_primeira_publicacao": true
+      }
+    },
+    {
+      "source": "tna",
+      "id": "4be0fdca2b8c50ed14ba77d46abb65960daf270928a609e0d9460e58044acf82",
+      "received_utc": "2026-10-20T20:04:07.422042+00:00",
+      "validated": true,
+      "latest_month": "2026-07",
+      "august_available": false,
+      "object": {
+        "sha256": "387c4125f377e57bcb683a849aefcd76da7d7f3cdcb2ac68ab086ceadf300e8b",
+        "bytes": 8332
+      },
+      "transport": {
+        "url": "https://psl.noaa.gov/data/correlation/tna.data",
+        "metodo": "HTTPS GET",
+        "iniciado_em_utc": "2026-10-20T20:04:06.613849+00:00",
+        "resposta_em_utc": "2026-10-20T20:04:07.379589+00:00",
+        "status_http": 200,
+        "cabecalhos": {
+          "Date": "Tue, 20 Oct 2026 20:04:07 GMT",
+          "Last-Modified": "Tue, 20 Oct 2026 19:34:16 GMT",
+          "ETag": "\"208c-65e4ab74f05d6-gzip\"",
+          "Content-Length": "2027"
+        },
+        "last_modified_nao_e_primeira_publicacao": true
+      }
+    },
+    {
+      "source": "tsa",
+      "id": "15856adcd2017f55822dc1eda60ecc73213be938c08c98b4b18371b94ec40cf2",
+      "received_utc": "2026-10-20T20:04:09.163499+00:00",
+      "validated": true,
+      "latest_month": "2026-07",
+      "august_available": false,
+      "object": {
+        "sha256": "700c0dffda0f19c1254ba482808b345eaa0538f5bf09fc3bc025f46a5fbe3a69",
+        "bytes": 8230
+      },
+      "transport": {
+        "url": "https://psl.noaa.gov/data/correlation/tsa.data",
+        "metodo": "HTTPS GET",
+        "iniciado_em_utc": "2026-10-20T20:04:07.425571+00:00",
+        "resposta_em_utc": "2026-10-20T20:04:09.124447+00:00",
+        "status_http": 200,
+        "cabecalhos": {
+          "Date": "Tue, 20 Oct 2026 20:04:09 GMT",
+          "Last-Modified": "Tue, 20 Oct 2026 19:34:16 GMT",
+          "ETag": "\"2026-65e4ab74ebe8a-gzip\"",
+          "Content-Length": "1956"
+        },
+        "last_modified_nao_e_primeira_publicacao": true
+      }
+    }
+  ],
+  "noaa_bytes_unchanged_since_2026_10_09": true,
+  "authenticated_acquisition": {
+    "status": "partially_registered_background_run_active",
+    "registered_sources": [
+      "era5_sl"
+    ],
+    "pending_sources": [
+      "era5_pl",
+      "seas5"
+    ],
+    "surface_acquisition": {
+      "schema": "worcap_cds_continuation_v1",
+      "checked_at": "2026-10-20T20:20:01.775561+00:00",
+      "target": "2026-11",
+      "transport_bundle_sha256": "fd2344022ef3b296be085063081eb17224b3edab92da9c5144e1ddca6d2e13b3",
+      "transport_bundle_bytes": 909867,
+      "events_before": 58,
+      "events_after": 60,
+      "original_58_events_preserved": true,
+      "frozen_model_and_october_forecast_unchanged": true,
+      "tip": "683fa9203c31c748a78ed0ad1caaca14d61a85d311c0c7f8c2b45dc9a40228cb",
+      "status": {
+        "mes_alvo": "2026-11",
+        "pronto": false,
+        "faltantes": [
+          "era5_pl: month 2026-07",
+          "nino12: month 2026-08",
+          "nino34: month 2026-08",
+          "seas5: month 2026-10",
+          "tna: month 2026-08",
+          "tsa: month 2026-08"
+        ],
+        "fontes": {
+          "cfsv2": "78f3f0eae1b0c236cb91d362a0ab91b89d8da89300017d2bd2523b8766985b16",
+          "era5_sl": "683fa9203c31c748a78ed0ad1caaca14d61a85d311c0c7f8c2b45dc9a40228cb"
+        },
+        "modelo": "8b7fae77efa361b7ec09d4212f20f429a2ba30a01ebdba36ec44f0b9733e6d82",
+        "protocolo": "b61d3ae3dac9e65da02c1b6d5aa3b66f9d918bae94db51a9f55c3728cf490e37",
+        "previsao_emitida": false
+      },
+      "sources": [
+        {
+          "source": "era5_sl",
+          "event_id": "683fa9203c31c748a78ed0ad1caaca14d61a85d311c0c7f8c2b45dc9a40228cb",
+          "received_at": "2026-10-20T20:20:00.947669+00:00",
+          "remote_started_utc": "2026-10-20T20:05:34.277326+00:00",
+          "remote_completed_utc": "2026-10-20T20:06:53.471621+00:00",
+          "raw_sha256": "17d0e7a2f27a4155c2a69a676b55fb2f8b0b6b99daaecc11d7f822c8ddcec186",
+          "raw_bytes": 471690,
+          "audit": {
+            "validado": true,
+            "meses": [
+              "2026-07"
+            ],
+            "meses_alvo": [
+              "2026-11"
+            ],
+            "auditoria": [
+              {
+                "variable": "cloud_cover",
+                "paramId": 164,
+                "units": "(0 - 1)",
+                "expver": 1
+              },
+              {
+                "variable": "t2",
+                "paramId": 167,
+                "units": "K",
+                "expver": 1
+              },
+              {
+                "variable": "surface_pressure",
+                "paramId": 134,
+                "units": "Pa",
+                "expver": 1
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "kaggle_checkpoint_version": 360548741,
+    "kaggle_background_version": 360550645,
+    "pressure_request_id": "3d10eea8-0143-411a-8916-9d858bced4c9",
+    "pressure_request_accepted_utc": "2026-10-20T20:19:45.410+00:00",
+    "background_mode": "Save & Run All; completed files must still be imported and audited",
+    "old_draft_outcome": "Not established; the previous draft session was off and its November outputs were not preserved"
+  },
+  "cfsv2_audit": {
+    "aquisicao": "original IRI recipe, explicitly evaluated",
+    "auditoria": [
+      {
+        "arquivo_bruto": "explicit_recipe_normalized.nc",
+        "fase_fonte": "operacional",
+        "inicializacao_mais_antiga": "2026-09-08",
+        "inicializacao_mais_recente": "2026-10-03",
+        "inicializacoes_anteriores_ao_alvo": true,
+        "lead": 1.5,
+        "maximo_media_mm_day": 23.10506820678711,
+        "maximo_membros_mm_day": 48.1958122253418,
+        "media_espacial_mm_day": 3.4784365124967893,
+        "membro_ids": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
+        "membros": 24,
+        "membros_ausentes_estruturais": 4,
+        "membros_esperados": 24,
+        "membros_indisponiveis_ids": [],
+        "minimo_media_mm_day": 0.0,
+        "minimo_membros_mm_day": 0.0,
+        "negativos_corrigidos": 0,
+        "pixels_ausentes_membros_validos": 0,
+        "politica_membros": "todos_membros_esperados_sem_lacunas_v1",
+        "sha256_bruto": "c57a8457ac83641b669b581b3fbb055850a1cab0f5fe137d90f5afbd5d9c2b89",
+        "time_alvo": "2026-11-01",
+        "time_origem": "2026-10-01"
+      }
+    ],
+    "equivalencia": {
+      "alternate_provider_used": false,
+      "complete_cached_members": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "complete_expected_members": 24,
+      "ensemble_joined_or_imputed": false,
+      "maximum_absolute_difference": 0.0,
+      "recovered_members": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "values_identical_on_overlap": true
+    },
+    "equivalencia_evento": "e74dab4596c0af1c45639b41fd25d586ebdffeb69dc4ab88b2907ed82e7598b0",
+    "lead": 1.5,
+    "meses": [
+      "2026-10"
+    ],
+    "meses_alvo": [
+      "2026-11"
+    ],
+    "unidades": "mm/day",
+    "validado": true
+  }
+}

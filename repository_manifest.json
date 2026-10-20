@@ -178,8 +178,8 @@
       "bytes": 1475
     },
     "docs/MONTHLY_FORECAST.md": {
-      "sha256": "bcf93daeb46947378bdde2d9634573875c77fc468fb005c4b9a3eff2b37d1198",
-      "bytes": 5973
+      "sha256": "f27b3df6550487dee8e1cf2f5e4ed193ce0a241a774dd422436126d202fb6b51",
+      "bytes": 6782
     },
     "docs/REPRODUCTION.md": {
       "sha256": "31887af1ede64bf47fb2cb23f98a4b1b1209f2563630c6c2d7d0dc6e9a84f170",
@@ -590,16 +590,16 @@
       "bytes": 5395
     },
     "research/prospective/NOVEMBER_2026.md": {
-      "sha256": "c18fefddeadc4a11e48e8dd40533c909b2a57e4f3f596ac1ed5ac364d0a8c4e6",
-      "bytes": 5489
+      "sha256": "350717ee5321b7741929aa9b96b076cafc2fe8678b9df72f8deec259e7217365",
+      "bytes": 6505
     },
     "research/prospective/OPERATIONAL_STATUS.md": {
-      "sha256": "078df91ff3bd2f5b3ade1f91d9f5cb0d196df1811eeb5dd3359b351b6b6fdd6a",
+      "sha256": "330976983144913412282e7960b389084e2eda320956059a41a7c2cee3eaad17",
       "bytes": 9882
     },
     "research/prospective/README.md": {
-      "sha256": "54d6650130fa20a6e7533756e162f6bcda75964ad5005880c91e7c2eca504bcc",
-      "bytes": 3238
+      "sha256": "77bf48d61f362f883324d092cada88e87e99f60e945f44a971bd5047be259dba",
+      "bytes": 3239
     },
     "research/prospective/backup_registry.py": {
       "sha256": "ce0cbb57c84627ab5d2c899f3fa5c4f40244db9b7f0d81687639de564382f5dd",
@@ -665,6 +665,10 @@
       "sha256": "3773cc1e612b965672c55b8daaa1c0994162fddddbd68298461b84b210e68300",
       "bytes": 9187
     },
+    "research/prospective/evidence/november_preparation_2026_10_20.json": {
+      "sha256": "ae69bc767f0b4b7a149d9b12c14aa3293708a5de7a588819b03553a7d65ba385",
+      "bytes": 13590
+    },
     "research/prospective/evidence/operational_2026_10.json": {
       "sha256": "74aa141b5ae0b801ec91e55b24fe3b2a934102a4a103061f330f9b2fc9a6ba9e",
       "bytes": 6608
@@ -676,6 +680,10 @@
     "research/prospective/evidence/registry_backup_2026_10_09.json": {
       "sha256": "4c646fec15eadd2504fd833d3a70fc2318e08a95a3447b2d5b3ce41dd8ff67b4",
       "bytes": 357
+    },
+    "research/prospective/evidence/registry_backup_2026_10_20.json": {
+      "sha256": "f7b8619628d2938de926bd494cc23616dd9726e6e1599b6830932f7fc7d223f4",
+      "bytes": 358
     },
     "research/prospective/fit_baseline.py": {
       "sha256": "3a431419f9f959f3bc25120356a51dbc6bacbebc1ed2ece21478b8b51cef2787",
@@ -706,8 +714,8 @@
       "bytes": 8511
     },
     "research/prospective/prospective_registry.ipynb": {
-      "sha256": "e4bccf36c5acfc0ecbe14681301df4ee727d270dcc11e0c9a01e2f2cd0409832",
-      "bytes": 94458
+      "sha256": "b8bbfeb02fc4b8ef117a55589249addb2ecbb8eb2318b4ae87b6820dde1d6498",
+      "bytes": 94460
     },
     "research/prospective/registry.py": {
       "sha256": "71a2d34a21c5f1005aa424f3465e23f963ec92f06491cd184c605c7d9f036690",

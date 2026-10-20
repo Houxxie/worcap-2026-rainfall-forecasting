@@ -11,7 +11,7 @@ The [fixed plan](../research/prospective/plan.json) covers October 2026–Septem
 
 October was already issued. Inspect it in the [saved demo](../demo/README.md). Do not replace it, change receipt times or label a later reconstruction as the original forecast.
 
-The [November preparation record](../research/prospective/NOVEMBER_2026.md) identifies the current **54-event** continuation, completed CFSv2 acquisition and remaining NOAA/authenticated-download blockers. Its successor-source check has not approved a migration.
+The [November preparation record](../research/prospective/NOVEMBER_2026.md) identifies the current **60-event** continuation: CFSv2 and surface ERA5 are ready; pressure-level ERA5 and SEAS5 acquisition is in progress, and NOAA August indices are still missing. Its successor-source check has not approved a migration.
 
 ## 1. Prepare the environment and inputs
 
@@ -47,6 +47,12 @@ python research/prospective/prepare_cfsv2_recipe.py --registry outputs/prospecti
 ```
 
 The public collector records NOAA indices and an optional SST arrival; SST is not a model input. The CFSv2 command uses the audited original IRI recipe and checks member completeness. The separate CCSR successor has not been approved as equivalent. A failed request must not trigger silent source substitution.
+
+### Keep Kaggle outputs after the session ends
+
+A saved draft does not preserve the files in its temporary session. After acquisition, use **Save Version → Quick Save → Advanced settings → Save Output**, select **Always save output when creating a Quick Save**, and save. Verify that the saved version's **Output** tab contains the data bundle, then download it. A successful Quick Save with output disabled preserves the notebook but not the generated data files.
+
+For unattended work, use **Save & Run All** only with a notebook prepared to run from top to bottom. Do not run old fitting or issuance cells simply to save a new acquisition. Continue from the complete registry and its recorded sources; a notebook draft is not a registry backup.
 
 ## 4. Check readiness, then issue
 
