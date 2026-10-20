@@ -1,6 +1,6 @@
 # October 2026 operational forecast
 
-For the latest continuation, see [November preparation](NOVEMBER_2026.md): **60 events**, November not yet issued. The October issuance evidence below remains unchanged.
+For the latest continuation, see [November preparation](NOVEMBER_2026.md): **66 events**, November not yet issued. The October issuance evidence below remains unchanged.
 
 **Issued and frozen: 30 September 2026, 18:18:00 UTC / 15:18:00 Brasília.** October's forecast passed the complete-source checks before the 1 October, 00:00 UTC deadline. The registered prediction contains 78,561 points on the 301 × 261 quarter-degree grid, with the training climatology stored beside it. Units are monthly mean precipitation in mm/day. This is a forecast; its future skill has not yet been measured.
 

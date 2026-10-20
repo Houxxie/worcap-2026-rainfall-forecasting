@@ -11,7 +11,7 @@ The [fixed plan](../research/prospective/plan.json) covers October 2026–Septem
 
 October was already issued. Inspect it in the [saved demo](../demo/README.md). Do not replace it, change receipt times or label a later reconstruction as the original forecast.
 
-The [November preparation record](../research/prospective/NOVEMBER_2026.md) identifies the current **60-event** continuation: CFSv2 and surface ERA5 are ready; pressure-level ERA5 and SEAS5 acquisition is in progress, and NOAA August indices are still missing. Its successor-source check has not approved a migration.
+The [November preparation record](../research/prospective/NOVEMBER_2026.md) identifies the current **66-event** continuation: CFSv2, surface ERA5 and SEAS5 are ready; pressure-level ERA5 acquisition is in progress, and NOAA August indices are still missing. Its successor-source check has not approved a migration.
 
 ## 1. Prepare the environment and inputs
 

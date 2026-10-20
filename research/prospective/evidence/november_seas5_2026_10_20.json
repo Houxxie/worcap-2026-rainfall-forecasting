@@ -1,0 +1,660 @@
+{
+  "checked_at": "2026-10-20T21:53:06.969051+00:00",
+  "target": "2026-11",
+  "deadline_utc": "2026-11-01T00:00:00+00:00",
+  "status": {
+    "mes_alvo": "2026-11",
+    "pronto": false,
+    "faltantes": [
+      "era5_pl: month 2026-07",
+      "nino12: month 2026-08",
+      "nino34: month 2026-08",
+      "tna: month 2026-08",
+      "tsa: month 2026-08"
+    ],
+    "fontes": {
+      "cfsv2": "78f3f0eae1b0c236cb91d362a0ab91b89d8da89300017d2bd2523b8766985b16",
+      "era5_sl": "683fa9203c31c748a78ed0ad1caaca14d61a85d311c0c7f8c2b45dc9a40228cb",
+      "seas5": "8571b9bcf5c3190f223d187ccc5e724d791c93a9ded1d776571d74306efd56d6"
+    },
+    "modelo": "8b7fae77efa361b7ec09d4212f20f429a2ba30a01ebdba36ec44f0b9733e6d82",
+    "protocolo": "b61d3ae3dac9e65da02c1b6d5aa3b66f9d918bae94db51a9f55c3728cf490e37",
+    "previsao_emitida": false
+  },
+  "sources": [
+    {
+      "source": "cfsv2",
+      "required_month": "2026-10",
+      "status": "validated",
+      "latest_valid_month": "2026-10",
+      "last_acquisition": "2026-10-09T00:38:57.895526+00:00",
+      "selected_event": "78f3f0eae1b0c236cb91d362a0ab91b89d8da89300017d2bd2523b8766985b16",
+      "received_at": "2026-10-09T00:38:57.895526+00:00",
+      "latest_receipt": "2026-10-09T00:38:57.895526+00:00",
+      "first_publication": "unknown"
+    },
+    {
+      "source": "era5_pl",
+      "required_month": "2026-07",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-06",
+      "last_acquisition": "2026-09-29T19:45:48.495030+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "era5_sl",
+      "required_month": "2026-07",
+      "status": "validated",
+      "latest_valid_month": "2026-07",
+      "last_acquisition": "2026-10-20T20:20:00.947669+00:00",
+      "selected_event": "683fa9203c31c748a78ed0ad1caaca14d61a85d311c0c7f8c2b45dc9a40228cb",
+      "received_at": "2026-10-20T20:20:00.947669+00:00",
+      "latest_receipt": "2026-10-20T20:20:00.947669+00:00",
+      "first_publication": "unknown"
+    },
+    {
+      "source": "nino12",
+      "required_month": "2026-08",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-07",
+      "last_acquisition": "2026-10-20T21:47:20.420472+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "nino34",
+      "required_month": "2026-08",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-07",
+      "last_acquisition": "2026-10-20T21:47:19.453739+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "seas5",
+      "required_month": "2026-10",
+      "status": "validated",
+      "latest_valid_month": "2026-10",
+      "last_acquisition": "2026-10-20T21:51:59.269438+00:00",
+      "selected_event": "8571b9bcf5c3190f223d187ccc5e724d791c93a9ded1d776571d74306efd56d6",
+      "received_at": "2026-10-20T21:51:59.269438+00:00",
+      "latest_receipt": "2026-10-20T21:51:59.269438+00:00",
+      "first_publication": "unknown"
+    },
+    {
+      "source": "tna",
+      "required_month": "2026-08",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-07",
+      "last_acquisition": "2026-10-20T21:47:21.383803+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    },
+    {
+      "source": "tsa",
+      "required_month": "2026-08",
+      "status": "missing or unvalidated",
+      "latest_valid_month": "2026-07",
+      "last_acquisition": "2026-10-20T21:47:22.237357+00:00",
+      "selected_event": null,
+      "received_at": null,
+      "latest_receipt": null,
+      "first_publication": "unknown"
+    }
+  ],
+  "events": 66,
+  "tip": "8571b9bcf5c3190f223d187ccc5e724d791c93a9ded1d776571d74306efd56d6",
+  "model_id": "8b7fae77efa361b7ec09d4212f20f429a2ba30a01ebdba36ec44f0b9733e6d82",
+  "source_check": "Recorded bytes only; providers were not contacted.",
+  "next_action": "Resolve the listed source/model/deadline blockers; do not substitute incomplete inputs.",
+  "schema": "rainfall_monthly_preparation_v1",
+  "required_sources_ready": 3,
+  "required_sources_total": 8,
+  "original_60_events_preserved": true,
+  "frozen_model_files_verified": 11,
+  "inference_source_matches_frozen_model": true,
+  "frozen_model_and_october_forecast_unchanged": true,
+  "forecast_issued": false,
+  "deadline_brasilia": "2026-10-31T21:00:00-03:00",
+  "latest_noaa_receipts": [
+    {
+      "source": "nino34",
+      "id": "3d38c137fee8ad469c148737dbb631fc208e639edd2bc51b6944a5b416dfebec",
+      "received_utc": "2026-10-20T21:47:19.453739+00:00",
+      "validated": true,
+      "latest_month": "2026-07",
+      "august_available": false,
+      "object": {
+        "sha256": "46e501b91f624ef85b525d73fbb427f9d04d30411ba6e5c7cff579b35fb4ff01",
+        "bytes": 16327
+      },
+      "transport": {
+        "url": "https://psl.noaa.gov/data/timeseries/month/data/nino34.long.anom.data",
+        "metodo": "HTTPS GET",
+        "iniciado_em_utc": "2026-10-20T21:47:18.541604+00:00",
+        "resposta_em_utc": "2026-10-20T21:47:19.378736+00:00",
+        "status_http": 200,
+        "cabecalhos": {
+          "Date": "Tue, 20 Oct 2026 21:47:19 GMT",
+          "Last-Modified": "Tue, 20 Oct 2026 19:34:23 GMT",
+          "ETag": "\"3fc7-65e4ab7bbe5b5-gzip\"",
+          "Content-Length": "4146"
+        },
+        "last_modified_nao_e_primeira_publicacao": true
+      }
+    },
+    {
+      "source": "nino12",
+      "id": "0ce6c9c35c651b8fe2f7307bd286d4378d4327d072222a7f5b9f84275442338b",
+      "received_utc": "2026-10-20T21:47:20.420472+00:00",
+      "validated": true,
+      "latest_month": "2026-07",
+      "august_available": false,
+      "object": {
+        "sha256": "b13ad5ad085cd13e70ec5d82662b509d522204e38a8eefd133f14be270e51928",
+        "bytes": 16328
+      },
+      "transport": {
+        "url": "https://psl.noaa.gov/data/timeseries/month/data/nino12.long.anom.data",
+        "metodo": "HTTPS GET",
+        "iniciado_em_utc": "2026-10-20T21:47:19.458752+00:00",
+        "resposta_em_utc": "2026-10-20T21:47:20.344348+00:00",
+        "status_http": 200,
+        "cabecalhos": {
+          "Date": "Tue, 20 Oct 2026 21:47:20 GMT",
+          "Last-Modified": "Tue, 20 Oct 2026 19:34:23 GMT",
+          "ETag": "\"3fc8-65e4ab7bb9a1c-gzip\"",
+          "Content-Length": "4254"
+        },
+        "last_modified_nao_e_primeira_publicacao": true
+      }
+    },
+    {
+      "source": "tna",
+      "id": "e47b56a52bb47b851fa2f439e622afd1bbb266a785e71e8709c1e77f4c72139b",
+      "received_utc": "2026-10-20T21:47:21.383803+00:00",
+      "validated": true,
+      "latest_month": "2026-07",
+      "august_available": false,
+      "object": {
+        "sha256": "387c4125f377e57bcb683a849aefcd76da7d7f3cdcb2ac68ab086ceadf300e8b",
+        "bytes": 8332
+      },
+      "transport": {
+        "url": "https://psl.noaa.gov/data/correlation/tna.data",
+        "metodo": "HTTPS GET",
+        "iniciado_em_utc": "2026-10-20T21:47:20.426878+00:00",
+        "resposta_em_utc": "2026-10-20T21:47:21.309678+00:00",
+        "status_http": 200,
+        "cabecalhos": {
+          "Date": "Tue, 20 Oct 2026 21:47:21 GMT",
+          "Last-Modified": "Tue, 20 Oct 2026 19:34:16 GMT",
+          "ETag": "\"208c-65e4ab74f05d6-gzip\"",
+          "Content-Length": "2027"
+        },
+        "last_modified_nao_e_primeira_publicacao": true
+      }
+    },
+    {
+      "source": "tsa",
+      "id": "e2aeb46190d49d3d47322b2818d48701f95060e085d49655a8bbea42da620816",
+      "received_utc": "2026-10-20T21:47:22.237357+00:00",
+      "validated": true,
+      "latest_month": "2026-07",
+      "august_available": false,
+      "object": {
+        "sha256": "700c0dffda0f19c1254ba482808b345eaa0538f5bf09fc3bc025f46a5fbe3a69",
+        "bytes": 8230
+      },
+      "transport": {
+        "url": "https://psl.noaa.gov/data/correlation/tsa.data",
+        "metodo": "HTTPS GET",
+        "iniciado_em_utc": "2026-10-20T21:47:21.389350+00:00",
+        "resposta_em_utc": "2026-10-20T21:47:22.145002+00:00",
+        "status_http": 200,
+        "cabecalhos": {
+          "Date": "Tue, 20 Oct 2026 21:47:22 GMT",
+          "Last-Modified": "Tue, 20 Oct 2026 19:34:16 GMT",
+          "ETag": "\"2026-65e4ab74ebe8a-gzip\"",
+          "Content-Length": "1956"
+        },
+        "last_modified_nao_e_primeira_publicacao": true
+      }
+    }
+  ],
+  "noaa_bytes_unchanged_since_previous_check": true,
+  "seas5_acquisition": {
+    "schema": "worcap_cds_continuation_v1",
+    "checked_at": "2026-10-20T21:52:00.057214+00:00",
+    "target": "2026-11",
+    "transport_bundle_sha256": "82541d01bfc31676e6c7700be076ce5d681f56c1fc968806761e2f80f9858f6a",
+    "transport_bundle_bytes": 522253,
+    "events_before": 64,
+    "events_after": 66,
+    "original_64_events_preserved": true,
+    "frozen_model_and_october_forecast_unchanged": true,
+    "tip": "8571b9bcf5c3190f223d187ccc5e724d791c93a9ded1d776571d74306efd56d6",
+    "status": {
+      "mes_alvo": "2026-11",
+      "pronto": false,
+      "faltantes": [
+        "era5_pl: month 2026-07",
+        "nino12: month 2026-08",
+        "nino34: month 2026-08",
+        "tna: month 2026-08",
+        "tsa: month 2026-08"
+      ],
+      "fontes": {
+        "cfsv2": "78f3f0eae1b0c236cb91d362a0ab91b89d8da89300017d2bd2523b8766985b16",
+        "era5_sl": "683fa9203c31c748a78ed0ad1caaca14d61a85d311c0c7f8c2b45dc9a40228cb",
+        "seas5": "8571b9bcf5c3190f223d187ccc5e724d791c93a9ded1d776571d74306efd56d6"
+      },
+      "modelo": "8b7fae77efa361b7ec09d4212f20f429a2ba30a01ebdba36ec44f0b9733e6d82",
+      "protocolo": "b61d3ae3dac9e65da02c1b6d5aa3b66f9d918bae94db51a9f55c3728cf490e37",
+      "previsao_emitida": false
+    },
+    "sources": [
+      {
+        "source": "seas5",
+        "event_id": "8571b9bcf5c3190f223d187ccc5e724d791c93a9ded1d776571d74306efd56d6",
+        "received_at": "2026-10-20T21:51:59.269438+00:00",
+        "remote_started_utc": "2026-10-20T21:49:07.383112+00:00",
+        "remote_completed_utc": "2026-10-20T21:49:43.286424+00:00",
+        "raw_sha256": "93215d330ad80a6ce9c3453f9bc914c94b28b43e3a066138754bb2c2c49e1315",
+        "raw_bytes": 533154,
+        "audit": {
+          "validado": true,
+          "meses": [
+            "2026-10"
+          ],
+          "meses_alvo": [
+            "2026-11"
+          ],
+          "auditoria": [
+            {
+              "member": 0,
+              "corrected": 0,
+              "minimum_before": 0.001885928213596344,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 1,
+              "corrected": 0,
+              "minimum_before": 0.000628642737865448,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 2,
+              "corrected": 0,
+              "minimum_before": 0.003771856427192688,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 3,
+              "corrected": 0,
+              "minimum_before": 0.000628642737865448,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 4,
+              "corrected": 0,
+              "minimum_before": 0.003771856427192688,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 5,
+              "corrected": 0,
+              "minimum_before": 0.001257285475730896,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 6,
+              "corrected": 0,
+              "minimum_before": 0.005029141902923584,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 7,
+              "corrected": 0,
+              "minimum_before": 0.000628642737865448,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 8,
+              "corrected": 0,
+              "minimum_before": 0.003771856427192688,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 9,
+              "corrected": 0,
+              "minimum_before": 0.0,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 10,
+              "corrected": 0,
+              "minimum_before": 0.004400499165058136,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 11,
+              "corrected": 0,
+              "minimum_before": 0.002514570951461792,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 12,
+              "corrected": 0,
+              "minimum_before": 0.002514570951461792,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 13,
+              "corrected": 0,
+              "minimum_before": 0.015087425708770752,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 14,
+              "corrected": 0,
+              "minimum_before": 0.003771856427192688,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 15,
+              "corrected": 0,
+              "minimum_before": 0.005029141902923584,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 16,
+              "corrected": 0,
+              "minimum_before": 0.001257285475730896,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 17,
+              "corrected": 0,
+              "minimum_before": 0.000628642737865448,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 18,
+              "corrected": 0,
+              "minimum_before": 0.00314321368932724,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 19,
+              "corrected": 0,
+              "minimum_before": 0.0,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 20,
+              "corrected": 0,
+              "minimum_before": 0.001257285475730896,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 21,
+              "corrected": 0,
+              "minimum_before": 0.001257285475730896,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 22,
+              "corrected": 0,
+              "minimum_before": 0.000628642737865448,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 23,
+              "corrected": 0,
+              "minimum_before": 0.007543712854385376,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 24,
+              "corrected": 0,
+              "minimum_before": 0.017601996660232544,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 25,
+              "corrected": 0,
+              "minimum_before": 0.001257285475730896,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 26,
+              "corrected": 0,
+              "minimum_before": 0.0,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 27,
+              "corrected": 0,
+              "minimum_before": 0.000628642737865448,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 28,
+              "corrected": 0,
+              "minimum_before": 0.003771856427192688,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 29,
+              "corrected": 0,
+              "minimum_before": 0.000628642737865448,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 30,
+              "corrected": 0,
+              "minimum_before": 0.002514570951461792,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 31,
+              "corrected": 0,
+              "minimum_before": 0.0,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 32,
+              "corrected": 0,
+              "minimum_before": 0.003771856427192688,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 33,
+              "corrected": 0,
+              "minimum_before": 0.000628642737865448,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 34,
+              "corrected": 0,
+              "minimum_before": 0.0,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 35,
+              "corrected": 0,
+              "minimum_before": 0.002514570951461792,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 36,
+              "corrected": 0,
+              "minimum_before": 0.000628642737865448,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 37,
+              "corrected": 0,
+              "minimum_before": 0.003771856427192688,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 38,
+              "corrected": 0,
+              "minimum_before": 0.005657784640789032,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 39,
+              "corrected": 0,
+              "minimum_before": 0.001257285475730896,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 40,
+              "corrected": 0,
+              "minimum_before": 0.004400499165058136,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 41,
+              "corrected": 0,
+              "minimum_before": 0.045890919864177704,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 42,
+              "corrected": 0,
+              "minimum_before": 0.014458782970905304,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 43,
+              "corrected": 0,
+              "minimum_before": 0.0,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 44,
+              "corrected": 0,
+              "minimum_before": 0.001885928213596344,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 45,
+              "corrected": 0,
+              "minimum_before": 0.000628642737865448,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 46,
+              "corrected": 0,
+              "minimum_before": 0.000628642737865448,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 47,
+              "corrected": 0,
+              "minimum_before": 0.001257285475730896,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 48,
+              "corrected": 0,
+              "minimum_before": 0.000628642737865448,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 49,
+              "corrected": 0,
+              "minimum_before": 0.001257285475730896,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            },
+            {
+              "member": 50,
+              "corrected": 0,
+              "minimum_before": 0.001257285475730896,
+              "indices_grib": [],
+              "values_before_mm_day": []
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "authenticated_acquisition": {
+    "status": "era5_pressure_pending",
+    "registered_sources": [
+      "era5_sl",
+      "seas5"
+    ],
+    "pending_sources": [
+      "era5_pl"
+    ],
+    "kaggle_seas5_saved_version": 360568015,
+    "kaggle_background_version": 360550645,
+    "seasonal_request_id": "528e75b1-47ae-4c62-971d-fabfe6dea70e",
+    "pressure_request_id": "3d10eea8-0143-411a-8916-9d858bced4c9",
+    "note": "SEAS5 was acquired separately without interrupting the saved ERA5 run. The saved run may retrieve the same seasonal request again; already registered bytes must be checked, not appended twice."
+  }
+}

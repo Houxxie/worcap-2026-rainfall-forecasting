@@ -178,8 +178,8 @@
       "bytes": 1475
     },
     "docs/MONTHLY_FORECAST.md": {
-      "sha256": "f27b3df6550487dee8e1cf2f5e4ed193ce0a241a774dd422436126d202fb6b51",
-      "bytes": 6782
+      "sha256": "165c9bcf57a823bb486910054ad2528349fe1f28415f64f4cbe1bcd0ee8d2a5e",
+      "bytes": 6779
     },
     "docs/REPRODUCTION.md": {
       "sha256": "31887af1ede64bf47fb2cb23f98a4b1b1209f2563630c6c2d7d0dc6e9a84f170",
@@ -590,11 +590,11 @@
       "bytes": 5395
     },
     "research/prospective/NOVEMBER_2026.md": {
-      "sha256": "350717ee5321b7741929aa9b96b076cafc2fe8678b9df72f8deec259e7217365",
-      "bytes": 6505
+      "sha256": "7b40505ab6c684e7541ba9c406be26a2693cdbe795196631f83cc8984d16e462",
+      "bytes": 7078
     },
     "research/prospective/OPERATIONAL_STATUS.md": {
-      "sha256": "330976983144913412282e7960b389084e2eda320956059a41a7c2cee3eaad17",
+      "sha256": "27a63a5472069a8e52ea51aa9a6991ec6b50175faac3d860a76f4d998326d858",
       "bytes": 9882
     },
     "research/prospective/README.md": {
@@ -669,6 +669,10 @@
       "sha256": "ae69bc767f0b4b7a149d9b12c14aa3293708a5de7a588819b03553a7d65ba385",
       "bytes": 13590
     },
+    "research/prospective/evidence/november_seas5_2026_10_20.json": {
+      "sha256": "f6c41657f9ef1dbe055b981cb8469d1fb59dd94414810eb1f21852ec8c3716c8",
+      "bytes": 22096
+    },
     "research/prospective/evidence/operational_2026_10.json": {
       "sha256": "74aa141b5ae0b801ec91e55b24fe3b2a934102a4a103061f330f9b2fc9a6ba9e",
       "bytes": 6608
@@ -684,6 +688,10 @@
     "research/prospective/evidence/registry_backup_2026_10_20.json": {
       "sha256": "f7b8619628d2938de926bd494cc23616dd9726e6e1599b6830932f7fc7d223f4",
       "bytes": 358
+    },
+    "research/prospective/evidence/registry_backup_seas5_2026_10_20.json": {
+      "sha256": "ee2ad5410372733cee1e366cba7571c257d893ac451cb8004ed9bc6271b9217d",
+      "bytes": 355
     },
     "research/prospective/fit_baseline.py": {
       "sha256": "3a431419f9f959f3bc25120356a51dbc6bacbebc1ed2ece21478b8b51cef2787",
