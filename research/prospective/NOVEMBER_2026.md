@@ -1,32 +1,33 @@
 # November preparation and CFSv2 continuity
 
-Checked on **20 October 2026**. November has **not** been issued. October's forecast, the registered model and the fixed plan are unchanged.
+Checked on **21 October 2026, 02:35 UTC / 20 October, 23:35 Brasília**. November has **not** been issued. October's forecast, the registered model and the fixed plan are unchanged.
 
 ## Source readiness
 
 | Source | Required month | Result of this check |
 | --- | --- | --- |
 | CFSv2 | October initialization → November target | Complete: 24 members through the original IRI recipe; exact equality on all 20 complete named-product members |
-| Niño 1+2, Niño 3.4, TNA, TSA | August | The four files received on 20 October still end in July; their bytes are unchanged since 9 October |
+| Niño 1+2, Niño 3.4, TNA, TSA | August | The four files received at 02:35 UTC on 21 October still end in July; their bytes are unchanged since 9 October |
 | ERA5 surface | July | Acquired, independently audited and registered: final ERA5, all three variables, exact 301 × 261 grid |
-| ERA5 at 850 hPa | July | Authenticated request accepted; still waiting for the CDS result |
-| SEAS5 | October initialization → November target | Acquired separately while ERA5 waits: all 51 members, target month, units and grid independently audited and registered |
+| ERA5 at 850 hPa | July | Acquired, independently audited and registered: final ERA5, all six variables, exact 301 × 261 grid |
+| SEAS5 | October initialization → November target | All 51 members, target month, units and grid independently audited and registered |
 
 September ERSSTv5 was also received, but is optional archival data, not a reference-model input. A successful download does not establish that a file includes its required month. The readiness report now shows both the required month and the latest valid month in recorded receipts.
 
 The deadline is **before 1 November, 00:00 UTC / 31 October, 21:00 Brasília**. Missing sources block issuance. July indices cannot replace August indices, and an incomplete seasonal ensemble cannot supply its mean.
 
-- [Current preparation, SEAS5 audit and latest NOAA receipts](evidence/november_seas5_2026_10_20.json)
+- [Current preparation, completed CDS audit and latest NOAA receipts](evidence/november_cds_complete_2026_10_21.json)
+- [Earlier SEAS5 audit and NOAA receipts](evidence/november_seas5_2026_10_20.json)
 - [Earlier surface acquisition and model integrity check](evidence/november_preparation_2026_10_20.json)
 - [Earlier preparation check on 9 October](evidence/november_preparation_2026_10_09.json)
 - [Original IRI recipe versus successor comparison](evidence/cfsv2_compatibility_2026_10_09.json)
-- [Current complete registry backup verification](evidence/registry_backup_seas5_2026_10_20.json)
+- [Current complete registry backup verification](evidence/registry_backup_cds_complete_2026_10_21.json)
 
-The previous Kaggle draft session was off, with no preserved November outputs proving its outcome. The surface data were acquired again and saved with their original GRIB, normalized field and metadata in private checkpoint version 360548741. A separate acquisition-only **Save & Run All** execution, version 360550645, is running so completed files survive the interactive session. The earlier notebook is retained in version history and a local backup. The saved run does not fit a model, start another registry or issue a forecast.
+The previous Kaggle draft session was off, with no preserved November outputs proving its outcome. The surface data were acquired again and saved with their original GRIB, normalized field and metadata in private checkpoint version 360548741. A separate acquisition-only **Save & Run All** execution, version 360550645, completed successfully after 5 hours 45 minutes. The earlier notebook is retained in version history and a local backup. The saved run did not fit a model, start another registry or issue a forecast.
 
-SEAS5 finished in a separate interactive acquisition and was preserved in private version 360568015. Its transport ZIP passed a second local audit before registration. All four NOAA files were checked again at 21:47 UTC (18:47 Brasília); they still contain no August values and have identical bytes to the earlier check.
+SEAS5 finished in a separate interactive acquisition and was preserved in private version 360568015. Its transport ZIP passed a second local audit before registration. The completed three-source bundle from version 360550645 subsequently passed ZIP integrity, file hashes, request contracts and independent GRIB conversion checks. Its surface and SEAS5 bytes exactly match the already registered files, so only pressure-level ERA5 was appended. The raw acquisitions and normalized fields are preserved with actual receipt times.
 
-There are currently **3 of 8 required sources ready in the canonical registry**. Pressure-level ERA5 is the only remaining CDS input. When the saved run finishes, download its transport ZIP and independently audit that source before appending it to the same registry. Check that its surface and SEAS5 files match the existing receipts rather than appending duplicate inputs. A running notebook is not evidence that those files are ready.
+There are currently **4 of 8 required sources ready in the canonical registry**. All CDS inputs are complete. All four NOAA files were checked again at 02:35 UTC on 21 October (23:35 Brasília on 20 October); they still contain no August values and have identical bytes to the earlier check. These four missing monthly values are the only remaining source blockers.
 
 ## Successor comparison
 
@@ -40,13 +41,13 @@ Continuing the existing series through another source requires a complete member
 
 ## Continue from the current registry
 
-The verified continuation has **66 events**, retaining the exact earlier 60-event history. Tip: `8571b9bcf5c3190f223d187ccc5e724d791c93a9ded1d776571d74306efd56d6`.
+The verified continuation has **72 events**, retaining the exact earlier 66-event history. Tip: `5735e076bb17e5da57c9705f67561151ac8f9de308b38b574572387eec6bb0b7`.
 
-The local `registry_2026_11_seas5_20261020.zip` contains the complete chain and all 46 referenced objects, including the frozen model and October prediction. Its verification sidecar identifies its hash. Keep this backup; it is not a public Git asset. Earlier backups remain preserved but omit the latest receipts and SEAS5 data.
+The local `registry_2026_11_cds_complete_20261021.zip` contains the complete chain and all 48 referenced objects, including the frozen model and October prediction. Its verification sidecar identifies its hash. Keep this backup; it is not a public Git asset. Earlier backups remain preserved but omit the latest receipts and pressure-level ERA5 data.
 
 All 11 registered model files passed hash checks. A presentation edit had changed only an exception message in `infer_baseline.py`, causing the existing exact-code guard to reject it. The file now matches the registered inference code byte for byte. Repository verification protects this identity. Weights and computation did not change.
 
-Finish the saved acquisition of July pressure-level ERA5, then continue this complete registry. Recheck NOAA for August and run readiness again. Issue November only when all eight required sources pass and the deadline has not passed. No recurring monitoring schedule was created.
+Continue this complete registry, recheck the same four NOAA series for August and run readiness again. No additional CDS download is needed for this target. Issue November only when all eight required sources pass and the deadline has not passed. No recurring monitoring schedule was created.
 
 To acquire new diagnostic evidence, use a new output directory in a separate acquisition environment:
 

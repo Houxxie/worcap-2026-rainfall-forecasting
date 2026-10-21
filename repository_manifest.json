@@ -178,8 +178,8 @@
       "bytes": 1475
     },
     "docs/MONTHLY_FORECAST.md": {
-      "sha256": "165c9bcf57a823bb486910054ad2528349fe1f28415f64f4cbe1bcd0ee8d2a5e",
-      "bytes": 6779
+      "sha256": "5db3b25f909e092cfb9a8c27ec2e0fd3bbe193829791fa8ee4ecea5c87455ba3",
+      "bytes": 6745
     },
     "docs/REPRODUCTION.md": {
       "sha256": "31887af1ede64bf47fb2cb23f98a4b1b1209f2563630c6c2d7d0dc6e9a84f170",
@@ -590,11 +590,11 @@
       "bytes": 5395
     },
     "research/prospective/NOVEMBER_2026.md": {
-      "sha256": "7b40505ab6c684e7541ba9c406be26a2693cdbe795196631f83cc8984d16e462",
-      "bytes": 7078
+      "sha256": "88c96d6ee9aa44bbffc1391759524ce9b80adadb1113972c31b56dbdea788565",
+      "bytes": 7388
     },
     "research/prospective/OPERATIONAL_STATUS.md": {
-      "sha256": "27a63a5472069a8e52ea51aa9a6991ec6b50175faac3d860a76f4d998326d858",
+      "sha256": "4ed4134f06f292f0b1ff97e3b16b0210a5000c089579c60a4499ec330fa65930",
       "bytes": 9882
     },
     "research/prospective/README.md": {
@@ -661,6 +661,10 @@
       "sha256": "c196f4ae310a83ee6105bfd4280712fe263525cb107aed6efbbb28caf10f325a",
       "bytes": 2843
     },
+    "research/prospective/evidence/november_cds_complete_2026_10_21.json": {
+      "sha256": "43e42881b5902cd724ec963df5b2d4fe262dce19700ea188d5bb08b3297a2ec9",
+      "bytes": 12094
+    },
     "research/prospective/evidence/november_preparation_2026_10_09.json": {
       "sha256": "3773cc1e612b965672c55b8daaa1c0994162fddddbd68298461b84b210e68300",
       "bytes": 9187
@@ -688,6 +692,10 @@
     "research/prospective/evidence/registry_backup_2026_10_20.json": {
       "sha256": "f7b8619628d2938de926bd494cc23616dd9726e6e1599b6830932f7fc7d223f4",
       "bytes": 358
+    },
+    "research/prospective/evidence/registry_backup_cds_complete_2026_10_21.json": {
+      "sha256": "170304acd84b47a0a350ede10ad6e2c9a4d86cf661b61834ecf22cfb56c8d0d6",
+      "bytes": 362
     },
     "research/prospective/evidence/registry_backup_seas5_2026_10_20.json": {
       "sha256": "ee2ad5410372733cee1e366cba7571c257d893ac451cb8004ed9bc6271b9217d",

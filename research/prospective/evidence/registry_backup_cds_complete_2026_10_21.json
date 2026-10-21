@@ -1,0 +1,10 @@
+{
+  "archive": "registry_2026_11_cds_complete_20261021.zip",
+  "bytes": 60152544,
+  "sha256": "ef8486a9d7095249e0c73c147f20e81447a0ed50cd7946d31abfe963badafb6e",
+  "event_count": 72,
+  "registry_tip": "5735e076bb17e5da57c9705f67561151ac8f9de308b38b574572387eec6bb0b7",
+  "files_verified": 121,
+  "referenced_objects_verified": 48,
+  "registry_unchanged": true
+}
