@@ -7,7 +7,11 @@
     "research/lagged_sources/evidence/metricas_globais.csv": "227780400015e9ce8e3ba3a02bc7ad16c80690d1c80bd55d1d20aff9f8810d55",
     "research/lagged_sources/evidence/metricas_anos.csv": "fafc64f22696e09e79dfe38e61b2cb1ddd5af6065c289f3d5b892f606b62f384",
     "research/prospective/evidence/issued_forecast_2026_10.json": "c196f4ae310a83ee6105bfd4280712fe263525cb107aed6efbbb28caf10f325a",
-    "assets/competition_forecast_example.png": "e170d8d81a752a2a428d16d0b73579252de7f02d202cf10fa0080cd7e2d36437",
-    "assets/forecast_october_2026.png": "2a42195d3b99825926ca185fadf25e2494e17a7bab7574908f8f689f2c494a74"
+    "assets/competition_forecast_example.png": "979cd3c8c35b9993e7d1a18202e1cf7434debb3d46a82405ec44e6a597d9c40d",
+    "assets/competition_forecast_example.json": "4a905954f07d59e55d6d2dd45a87932825dd6d5c8b32b41778aad6f5e709a66b",
+    "assets/forecast_october_2026.json": "f56a32b76efe059c57dcd2c96158378cf440858f4fcc6870f131060695d9d2b3",
+    "assets/demo_october_forecast.png": "73427d1a4468ee1e52eda79b1152d8ba9a8f1a51c7897bd749b7493ef1524fc5",
+    "assets/demo_october_climatology.png": "270c4a5d56b81f5165718461cd6db4f795dc1ad46bdc4c0b2cc239624ec89051",
+    "assets/demo_october_anomaly.png": "4d3209d3dab8600d091fdae2500f5872e3e0261dec6dddfed588ba73e7009d76"
   }
 }

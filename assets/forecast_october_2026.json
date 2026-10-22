@@ -13,5 +13,20 @@
     "purpose": "Natural Earth coastline for visualization only; not a model input"
   },
   "renderer": "scripts/render_october_forecast.py",
-  "forecast_and_coastline_data_in_git": false
+  "forecast_and_coastline_data_in_git": false,
+  "demo_panels": {
+    "forecast": {
+      "image": "assets/demo_october_forecast.png",
+      "image_sha256": "73427d1a4468ee1e52eda79b1152d8ba9a8f1a51c7897bd749b7493ef1524fc5"
+    },
+    "climatology": {
+      "image": "assets/demo_october_climatology.png",
+      "image_sha256": "270c4a5d56b81f5165718461cd6db4f795dc1ad46bdc4c0b2cc239624ec89051"
+    },
+    "anomaly": {
+      "image": "assets/demo_october_anomaly.png",
+      "image_sha256": "4d3209d3dab8600d091fdae2500f5872e3e0261dec6dddfed588ba73e7009d76"
+    }
+  },
+  "demo_presentation": "Individual panels use the same frozen fields and color intervals as the original comparison; no interpolation or rescoring."
 }

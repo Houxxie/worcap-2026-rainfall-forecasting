@@ -9,11 +9,14 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.colors import BoundaryNorm
+from plot_rainfall import render_panel
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--forecast', type=Path, required=True)
 parser.add_argument('--coastline', type=Path, required=True)
 parser.add_argument('--output', type=Path, required=True)
+parser.add_argument('--panel', choices=['comparison', 'forecast', 'climatology', 'anomaly'], default='comparison',
+                    help='Render the original comparison or one readable map for the demo.')
 args = parser.parse_args()
 metadata = json.loads((Path(__file__).resolve().parents[1] / 'assets/forecast_october_2026.json').read_text(encoding='utf-8'))
 for path, expected in [(args.forecast, metadata['forecast_sha256']), (args.coastline, metadata['coastline']['sha256'])]:
@@ -25,12 +28,20 @@ args.output.parent.mkdir(parents=True, exist_ok=True)
 with xr.open_dataset(args.forecast, engine='h5netcdf') as ds:
     ds = ds.load()
 coast = json.loads(args.coastline.read_text(encoding='utf-8'))
-fig, axes = plt.subplots(1, 3, figsize=(15, 8))
-fig.patch.set_facecolor('#f7f8fa')
-fig.subplots_adjust(left=.055, right=.98, bottom=.17, top=.81, wspace=.22)
 p, c = ds.precipitacao.values[0], ds.climatologia.values[0]
 levels = [0, .5, 1, 2, 4, 6, 8, 12, 20, 40, 80, 100]
 delta_levels = [-20, -10, -5, -3, -2, -1, -.5, 0, .5, 1, 2, 3, 5, 10, 20]
+if args.panel != 'comparison':
+    field, title = {'forecast': (p, 'Monthly rainfall forecast'),
+                    'climatology': (c, 'October climatology'),
+                    'anomaly': (p-c, 'Departure from climatology')}[args.panel]
+    render_panel(ds.lon, ds.lat, field, coast, args.output, title=title,
+                 subtitle='South America · ' + ('1993–2022 training period' if args.panel == 'climatology' else 'October 2026'),
+                 levels=delta_levels if args.panel == 'anomaly' else levels, anomaly=args.panel == 'anomaly')
+    raise SystemExit(0)
+fig, axes = plt.subplots(1, 3, figsize=(15, 8))
+fig.patch.set_facecolor('#f7f8fa')
+fig.subplots_adjust(left=.055, right=.98, bottom=.17, top=.81, wspace=.22)
 for i, (field, title) in enumerate([(p, 'Frozen forecast'), (c, 'Training climatology (1993–2022)'),
                                     (p-c, 'Forecast − climatology')]):
     lev = levels if i < 2 else delta_levels

@@ -11,6 +11,7 @@
 - `build_extension_notebook.py`: build the fixed 2021–2022 temporal-extension notebook, with separate prediction freezing and evaluation.
 - `render_overview.py`: render a reference architecture diagram to `outputs/model_overview_generated.png`. The README uses the author-designed artwork in `assets/model_overview.png`; this script leaves it unchanged.
 - `render_october_forecast.py`: render the frozen October forecast, climatology and anomaly after checking the forecast and Natural Earth coastline hashes in `assets/forecast_october_2026.json`.
+- `plot_rainfall.py`: shared layout for individual demo maps, with centered headings and the original unequal color intervals. It does not resample the fields.
 - `build_workbench_notebook.py`: build the shared notebook for result review, saved-map evaluation, existing training and read-only operational readiness.
 - `build_residual_notebook.py`, `build_sst_extension_notebook.py`, `build_sst_unet_blend_notebook.py`: package the separate, fixed research experiments.
 
@@ -21,5 +22,7 @@ To reproduce the October figure, use the forecast NetCDF from the complete opera
 ```bash
 python scripts/render_october_forecast.py --forecast /path/to/forecast_2026_10.nc --coastline /path/to/ne_110m_coastline.geojson --output /path/to/october_preview.png
 ```
+
+For an individual demo map, add `--panel forecast`, `--panel climatology` or `--panel anomaly`, with a distinct output path for each. The default remains the three-panel comparison used in the README. After reviewing new figure assets, update their image hashes in the figure metadata and `demo/sources.json`, then run `python demo/explore.py`. Input-data hashes remain fixed.
 
 After reviewing and staging intentional source changes, run `python scripts/verify_repository.py --refresh-inventory` to refresh current repository hashes, then stage `repository_manifest.json`. This updates the packaging inventory, not source-data hashes or frozen protocols. Rebuild research notebooks after editing their bundled modules or guides.

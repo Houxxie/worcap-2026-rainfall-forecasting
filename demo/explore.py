@@ -58,7 +58,9 @@ def build(root=ROOT):
     replacements = {
         "@@DATA@@": json.dumps(data, allow_nan=False).replace("<", "\\u003c"),
         "@@COMPETITION_MAP@@": base64.b64encode(checked["assets/competition_forecast_example.png"]).decode(),
-        "@@OCTOBER_MAP@@": base64.b64encode(checked["assets/forecast_october_2026.png"]).decode(),
+        "@@OCTOBER_FORECAST@@": base64.b64encode(checked["assets/demo_october_forecast.png"]).decode(),
+        "@@OCTOBER_CLIMATOLOGY@@": base64.b64encode(checked["assets/demo_october_climatology.png"]).decode(),
+        "@@OCTOBER_ANOMALY@@": base64.b64encode(checked["assets/demo_october_anomaly.png"]).decode(),
         "@@ISSUED@@": event["issued_at_utc"],
         "@@VERIFY_FROM@@": event["first_verification_eligible_from"][:10],
         "@@SOURCES@@": "\n".join('<li><code>' + name + '</code></li>' for name in checked),

@@ -30,20 +30,32 @@
       "bytes": 8860
     },
     "assets/competition_forecast_example.json": {
-      "sha256": "7579c9ca407ee2b2c47c5d26ea2644e521a50442a5accb59a3aff853fdf1ea51",
-      "bytes": 880
+      "sha256": "4a905954f07d59e55d6d2dd45a87932825dd6d5c8b32b41778aad6f5e709a66b",
+      "bytes": 1044
     },
     "assets/competition_forecast_example.png": {
-      "sha256": "e170d8d81a752a2a428d16d0b73579252de7f02d202cf10fa0080cd7e2d36437",
-      "bytes": 128084
+      "sha256": "979cd3c8c35b9993e7d1a18202e1cf7434debb3d46a82405ec44e6a597d9c40d",
+      "bytes": 145702
+    },
+    "assets/demo_october_anomaly.png": {
+      "sha256": "4d3209d3dab8600d091fdae2500f5872e3e0261dec6dddfed588ba73e7009d76",
+      "bytes": 137655
+    },
+    "assets/demo_october_climatology.png": {
+      "sha256": "270c4a5d56b81f5165718461cd6db4f795dc1ad46bdc4c0b2cc239624ec89051",
+      "bytes": 147315
+    },
+    "assets/demo_october_forecast.png": {
+      "sha256": "73427d1a4468ee1e52eda79b1152d8ba9a8f1a51c7897bd749b7493ef1524fc5",
+      "bytes": 144695
     },
     "assets/demo_preview.gif": {
       "sha256": "6a083817bfcd8dcbf0b7320ef7a99f9acf14d668eacab555d4b7476bd554a6cc",
       "bytes": 10319683
     },
     "assets/forecast_october_2026.json": {
-      "sha256": "41983ab3d385b30c4e3e0603c20fb9581433c63341df5a6fc2afdafbe8249e34",
-      "bytes": 978
+      "sha256": "f56a32b76efe059c57dcd2c96158378cf440858f4fcc6870f131060695d9d2b3",
+      "bytes": 1650
     },
     "assets/forecast_october_2026.png": {
       "sha256": "2a42195d3b99825926ca185fadf25e2494e17a7bab7574908f8f689f2c494a74",
@@ -138,24 +150,24 @@
       "bytes": 328
     },
     "demo/README.md": {
-      "sha256": "e9ec61cb6f3745d5ff2a58fe9c1dd2071f5b351b0672f6d0d52d384897ca162e",
-      "bytes": 2299
+      "sha256": "967a52869fdd747b603914a82c95cd2df89b607c0c78e3ce9a79c01ea0478c30",
+      "bytes": 2694
     },
     "demo/explore.py": {
-      "sha256": "6bd6a8d7f1b3dc59fed00449974b16560608faa37a0e72941f8e5cc5d8846517",
-      "bytes": 4345
+      "sha256": "32a9da6062326038cf6899869801503193947f6d1d0ae257d9fb5ba5f3bce6be",
+      "bytes": 4562
     },
     "demo/index.html": {
-      "sha256": "b09b06f2bae29925edf4420749935e4def0c0c6cd4b387dd94126c39a8340695",
-      "bytes": 588268
+      "sha256": "0e69a6c1a42b132123c87b9dd3420f1159e89fac0cca11d7faf812c4dd583165",
+      "bytes": 789535
     },
     "demo/sources.json": {
-      "sha256": "8804f709acbc8dfe0cafc6d2f0c179e48119779e7954e096946d8fa3004ba78e",
-      "bytes": 985
+      "sha256": "e0b4ba262f10c631d6a77432cdbb0c47ada7bd8ac91deed9c527baeb947991d6",
+      "bytes": 1428
     },
     "demo/template.html": {
-      "sha256": "70a794f3372ce8d52475d54bc1f2699ea7661e19d5c155cfaf1fe80d5284a4c6",
-      "bytes": 11758
+      "sha256": "4d05bba817fd0c9ab30d51f7ef5cb548d8ca4c548ec36427c60c065dc2390e23",
+      "bytes": 18745
     },
     "docs/DATA.md": {
       "sha256": "14ff2dd48253898213bc6ae933e0832393bc223f47df6101d201453dfef0a8af",
@@ -1794,8 +1806,8 @@
       "bytes": 294
     },
     "scripts/README.md": {
-      "sha256": "f60db7405fdee2bfa0c00f2634574c3f2d51b1df27995601678b0e48c9a05a35",
-      "bytes": 2892
+      "sha256": "6fe9182ccfb9cfae26367432417592fcd1cd2583949b28bba336a8eb013f9a5f",
+      "bytes": 3430
     },
     "scripts/build_bias_notebook.py": {
       "sha256": "ab1b288af832fc41b88e1ca6def2a0932e5198df2ef7acf6a8aeecfbef91acb1",
@@ -1849,17 +1861,21 @@
       "sha256": "cfd0873d2e48e8accd9e3ce69baa417117eff5d88151f9db16392f73d75048ea",
       "bytes": 2584
     },
+    "scripts/plot_rainfall.py": {
+      "sha256": "5e33356f52b3932d8f24a786c3bb8a0dcab5de9fe7b41417ea61dbba63bb5e55",
+      "bytes": 2095
+    },
     "scripts/prepare_official.py": {
       "sha256": "a7f82b3fbe86020fd3dcf35d33a081dafc1615b141532beef384c06a9bbdac15",
       "bytes": 1251
     },
     "scripts/render_competition_example.py": {
-      "sha256": "99a92644462b80b676b1437cca79d8ac56d37ef3e0dfc6d4319691ba36a10876",
-      "bytes": 3246
+      "sha256": "f2cbefc4c1e163c521cc3dad5aeea9c50bfed68561a6d3c8cef715e2a9a7ff08",
+      "bytes": 2104
     },
     "scripts/render_october_forecast.py": {
-      "sha256": "2206361a901ac6b1fb83e26c6804ce8f32ca973e255a962dda7f93b1af3436b2",
-      "bytes": 3208
+      "sha256": "645b3c5a47e188beed5e3c44d6695409ede1097ff8f90fb8b64773b4bccbfb45",
+      "bytes": 4034
     },
     "scripts/render_overview.py": {
       "sha256": "ef930e298ae53cf3c3bdcdcfa90d66961beb51056d71451ba7304c3ad7094b02",
