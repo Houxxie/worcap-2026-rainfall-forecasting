@@ -7,7 +7,7 @@ No Python, credentials, Internet connection or model fitting is needed to view i
 - **Competition model:** archived competition validation metrics, yearly charts and the first monthly prediction from its verified submitted CSV.
 - **Current forecasting model:** historical evaluation of the reference with longer input lags and the October 2026 forecast, explicitly marked **not yet evaluated**.
 
-Start with either model tab. For October, switch between **Forecast**, **Climatology** and **Anomaly**. Each map can be enlarged or downloaded as a PNG, including when the page is opened offline. The titles and map proportions are preserved on smaller screens.
+Start with either model tab. Each map has a short, always-visible explanation. For October, switch between **Forecast**, **Climatology** and **Anomaly**; the explanation and status label follow the selected layer, while shared technical details stay under **Model and data sources**. Each map can be enlarged or downloaded as a PNG, including when the page is opened offline. The titles and map proportions are preserved on smaller screens.
 
 Historical metrics follow the maps. Switch the RMSE/MAE/bias selector; expand the tables for exact saved values or the explanatory sections for methodology and source details. On a small screen, the yearly chart scrolls horizontally. October's anomaly is a departure from climatology, not forecast error.
 
