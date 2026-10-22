@@ -158,16 +158,16 @@
       "bytes": 4562
     },
     "demo/index.html": {
-      "sha256": "0e69a6c1a42b132123c87b9dd3420f1159e89fac0cca11d7faf812c4dd583165",
-      "bytes": 789535
+      "sha256": "3c96bd606314aeb8439750822c808de23197286ae8c387d48f81a9a1278f3cc0",
+      "bytes": 788275
     },
     "demo/sources.json": {
       "sha256": "e0b4ba262f10c631d6a77432cdbb0c47ada7bd8ac91deed9c527baeb947991d6",
       "bytes": 1428
     },
     "demo/template.html": {
-      "sha256": "4d05bba817fd0c9ab30d51f7ef5cb548d8ca4c548ec36427c60c065dc2390e23",
-      "bytes": 18745
+      "sha256": "bac75d9b5e704abe95da2ddce273a2b4e7a860769e34ac8899202987ec7c64c4",
+      "bytes": 17485
     },
     "docs/DATA.md": {
       "sha256": "14ff2dd48253898213bc6ae933e0832393bc223f47df6101d201453dfef0a8af",
