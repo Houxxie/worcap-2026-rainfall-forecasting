@@ -1,5 +1,6 @@
 # Environments, local settings and credentials.
 .venv/
+.venv-*/
 .ipynb_checkpoints/
 __pycache__/
 *.pyc

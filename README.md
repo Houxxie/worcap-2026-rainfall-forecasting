@@ -84,6 +84,8 @@ This is something I wanted to do after the competition: keep a forecast made in 
 
 The [operational record](research/prospective/OPERATIONAL_STATUS.md) explains the source checks, the CFSv2 acquisition fix, and how this forecast was preserved.
 
+The [evaluation guide](docs/FORECAST_EVALUATION.md) covers the next part: checking final observations, comparing the forecast with its training climatology, and keeping the first result when the data is revised. [Automatic checks](docs/CHECKS.md) exercise that workflow with synthetic data on each code update.
+
 
 ## 💡 What I learned
 

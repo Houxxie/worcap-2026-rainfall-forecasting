@@ -1,5 +1,13 @@
 # Changelog
 
+## Automatic checks and future evaluation — 2026-10-22
+
+- Add GitHub Actions for repository integrity, notebook consistency, offline-demo checks and synthetic forecast/source/report tests. No credentials, source acquisition or model training are required.
+- Add a documented evaluation CLI with a read-only T+4 preflight, optional final ERA5 acquisition, strict GRIB validation and a portable HTML/CSV/JSON report.
+- Preserve original observation bytes, code and provenance in new verification events; reuse identical observations, label revisions and keep the first evaluation primary.
+- Test registry backup/restore, full-grid scoring, report-only recovery, malformed inputs and concurrent-write rejection with synthetic data. Preserve the issued forecast, model, protocol and inference-code bytes.
+- Keep this as consolidation work; no stable release or real October evaluation is performed here.
+
 ## November preparation and source continuity — 2026-10-09 UTC
 
 - Acquire and audit all 24 CFSv2 members for November through the original IRI recipe. Preserve the October forecast/model and extend the verified registry from 44 to 54 events.

@@ -85,4 +85,6 @@ Choose a new archive name for each snapshot. The command verifies the chain and 
 
 The first verification uses final ERA5 received from T+4 onward: February 2027 for October 2026. This evaluates an ERA5 target, not independent rain gauges. Preserve the forecast while researching new candidates separately.
 
+The [forecast evaluation guide](FORECAST_EVALUATION.md) provides the readiness check, final ERA5 download, scoring and report-only recovery commands. It preserves the first evaluation when observations are revised and reports every planned month, including missing forecasts.
+
 For Kaggle continuation, import [baseline_inference.ipynb](../research/prospective/baseline_inference.ipynb) with the complete existing registry. The [detailed workflow](../research/prospective/BASELINE_RUN.md) and [operational record](../research/prospective/OPERATIONAL_STATUS.md) document adapter checks and October's issuance.

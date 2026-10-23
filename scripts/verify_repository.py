@@ -40,6 +40,9 @@ def main():
         (ROOT/'repository_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8',newline='\n')
     files = manifest['files']
     listed = set(files) | {'repository_manifest.json'}
+    if (ROOT/'.git').exists():
+        tracked = set(subprocess.check_output(['git','ls-files','-z'],cwd=ROOT).decode('utf-8').split('\0')) - {''}
+        require(tracked == listed, 'Tracked files differ from the inventory; review and refresh it after staging intended changes.')
     count = {'files':0, 'python_files':0, 'notebooks':0, 'code_cells':0}
     for name,item in files.items():
         path = ROOT/name

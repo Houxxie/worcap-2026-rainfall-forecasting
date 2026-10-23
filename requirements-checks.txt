@@ -1,0 +1,4 @@
+# CPU-only contract tests. No LightGBM, PyTorch, data downloads or credentials.
+-r research/prospective/requirements_verification.txt
+matplotlib==3.11.1
+requests==2.32.5

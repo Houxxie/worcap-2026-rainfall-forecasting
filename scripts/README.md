@@ -5,6 +5,7 @@
 - `render_competition_example.py`: plot the first submitted month after verifying the exact competition CSV and coastline hashes; no training or observation scoring.
 
 - `verify_repository.py`: check inventory, hashes, links, syntax and notebook/script consistency without training.
+- `run_checks.py`: run the same bounded repository and synthetic forecast checks as GitHub Actions. See [the check guide](../docs/CHECKS.md) for the separate environment.
 - `build_notebooks.py`: rebuild the self-contained research notebooks from their guides and modules.
 - `build_spatial_notebooks.py`: build the separate U-Net experiment and final-baseline inference notebooks.
 - `build_workflow_notebook.py`: build the unified saved-evaluation/training notebook and its checked source bundle.
