@@ -22,10 +22,12 @@ ELIGIBLE = datetime(2027, 2, 1, tzinfo=timezone.utc)
 
 
 def grib_fixture(path, value=.002, **overrides):
+    """Synthetic field with the time header of a real final ERA5 monthly rainfall GRIB."""
     handle = ec.codes_grib_new_from_samples('regular_ll_sfc_grib1')
     try:
         settings = dict(centre='ecmf', setLocalDefinition=1, localDefinitionNumber=1,
-            **{'class': 'ea'}, stream='moda', expver='0001', paramId=228, dataDate=20261001, dataTime=0,
+            **{'class': 'ea'}, stream='moda', type='fc', expver='0001', paramId=228,
+            dataDate=20260930, dataTime=1800, timeRangeIndicator=130, P1=0, P2=12,
             Ni=len(v.LON), Nj=len(v.LAT), latitudeOfFirstGridPointInDegrees=15,
             longitudeOfFirstGridPointInDegrees=270, latitudeOfLastGridPointInDegrees=-60,
             longitudeOfLastGridPointInDegrees=335, iDirectionIncrementInDegrees=.25,
@@ -166,7 +168,8 @@ class VerificationTests(unittest.TestCase):
     def test_bad_grib_headers_grid_negative_values_and_duplicate_fields_rejected(self):
         self.advance()
         variants = [dict(expver='0005'), dict(stream='mnth'), dict(paramId=167),
-                    dict(dataDate=20260901), dict(dataTime=1200),
+                    dict(dataDate=20260901), dict(dataDate=20260831), dict(dataTime=1200),
+                    dict(dataDate=20261001, dataTime=0), dict(timeRangeIndicator=0), dict(P2=6),
                     dict(longitudeOfFirstGridPointInDegrees=269), dict(value=-.001)]
         for i, settings in enumerate(variants):
             with self.subTest(settings=settings):

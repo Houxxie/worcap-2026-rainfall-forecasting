@@ -11,7 +11,9 @@ The [fixed plan](../research/prospective/plan.json) covers October 2026–Septem
 
 October was already issued. Inspect it in the [saved demo](../demo/README.md). Do not replace it, change receipt times or label a later reconstruction as the original forecast.
 
-The [November preparation record](../research/prospective/NOVEMBER_2026.md) identifies the current **72-event** continuation: CFSv2, both ERA5 inputs and SEAS5 are ready. Only the four NOAA August indices are still missing. Its successor-source check has not approved a migration.
+November 2026 was not issued. The [November preparation record](../research/prospective/NOVEMBER_2026.md) describes the latest **72-event** registry: on 21 October, CFSv2, both ERA5 inputs and SEAS5 were ready and the four NOAA August indices were missing. No later check was recorded before the deadline. Its successor-source check has not approved a migration.
+
+As of `v1.0.0` (17 November 2026) no further monthly forecasts are planned from this repository. The steps below remain for anyone who wants to run their own registry.
 
 ## 1. Prepare the environment and inputs
 
@@ -36,7 +38,7 @@ This initializes the fixed plan, fits and registers the model. It stops if a mod
 
 ## 3. Collect sources
 
-The examples use **November 2026**. Set every target consistently and run before the target month's deadline, within the plan. November sources may not all be available yet; a missing source must remain a blocked status.
+The examples use **November 2026**, the month being prepared when this guide was written. Its deadline has passed, so replace it with a target that is still ahead. Set every target consistently and run before the target month's deadline, within the plan. A missing source must remain a blocked status.
 
 Configure CDS credentials outside Git through the normal `cdsapi` configuration and accept the relevant dataset terms. On Kaggle, enable the `CDS_API_KEY` secret; the adapter receives it as `CDSAPI_KEY` with `CDSAPI_URL=https://cds.climate.copernicus.eu/api`. Never print the secret or save it in settings.
 

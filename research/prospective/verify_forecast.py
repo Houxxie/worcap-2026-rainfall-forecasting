@@ -3,6 +3,7 @@
 Run this file directly. The legacy metric/registry modules intentionally keep
 their original imports and bytes because standalone notebooks bundle them.
 """
+from datetime import timedelta
 from pathlib import Path
 import argparse
 import csv
@@ -100,8 +101,15 @@ def decode_observation(path, target, folder):
                and get('stream') == 'moda', 'Require final ERA5: class ea, expver 1, stream moda.')
         exigir(int(get('paramId')) == 228 and get('units') == 'm'
                and get('typeOfLevel') == 'surface', 'Require surface total precipitation in metres.')
-        exigir(int(get('dataDate')) == int(target.replace('-', '') + '01')
-               and int(get('dataTime')) == 0, 'Observation month/time differs from the target.')
+        # Monthly rainfall is a mean of daily accumulations from short forecasts, so the real
+        # header starts at 18 UTC on the day before the month and is valid from 06 UTC on day 1
+        # (checked against a final ERA5 field; see evidence/era5_rainfall_header_2026_11_17.json).
+        first_day = mes(target)
+        start = first_day - timedelta(hours=6)
+        exigir(get('stepType') == 'avgad', 'Require the monthly mean of daily accumulations (stepType avgad).')
+        exigir(int(get('dataDate')) == int(start.strftime('%Y%m%d')) and int(get('dataTime')) == 1800
+               and int(get('validityDate')) == int(first_day.strftime('%Y%m%d'))
+               and int(get('validityTime')) == 600, 'Observation month/time differs from the target.')
         exigir(int(get('numberOfMissing')) == 0, 'Observation contains missing grid cells.')
         lat, lon, values = regular_grid(ec.codes_get_array(handle, 'latitudes'),
             ec.codes_get_array(handle, 'longitudes'), ec.codes_get_values(handle))

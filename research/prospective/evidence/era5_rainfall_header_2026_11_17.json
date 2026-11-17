@@ -1,0 +1,67 @@
+{
+  "checked_on": "2026-11-17",
+  "purpose": "Read one real final ERA5 monthly rainfall GRIB with the evaluation decoder before closing v1.0.0. Earlier tests used a synthetic header only.",
+  "result": "The original time check rejected the real file. The decoder and its synthetic fixture now follow the real header; the same file is accepted and a wrong target month is still rejected.",
+  "not_a_forecast_evaluation": true,
+  "registry_events_added": 0,
+  "month_checked": "2026-06",
+  "why_this_month": "Already final in November 2026 and outside the forecast plan, so no issued forecast is scored.",
+  "request": {
+    "dataset": "reanalysis-era5-single-levels-monthly-means",
+    "product_type": ["monthly_averaged_reanalysis"],
+    "variable": ["total_precipitation"],
+    "year": ["2026"],
+    "month": ["06"],
+    "time": ["00:00"],
+    "area": [15, -90, -60, -25],
+    "data_format": "grib",
+    "download_format": "unarchived",
+    "submitted_through": "CDS web form; its request omits the explicit 0.25-degree grid key used by the CLI download"
+  },
+  "file": {
+    "bytes": 157230,
+    "sha256": "7d9f18854edcf5973f08256cd62793bb9a0868a12a6934e3b9605e7d00e38fd5",
+    "messages": 1,
+    "kept_in_git": false
+  },
+  "header": {
+    "edition": 1,
+    "class": "ea",
+    "stream": "moda",
+    "type": "fc",
+    "expver": "0001",
+    "paramId": 228,
+    "units": "m",
+    "typeOfLevel": "surface",
+    "dataDate": 20260531,
+    "dataTime": 1800,
+    "stepType": "avgad",
+    "stepRange": "0-12",
+    "timeRangeIndicator": 130,
+    "validityDate": 20260601,
+    "validityTime": 600,
+    "numberIncludedInAverage": 720,
+    "numberOfMissing": 0,
+    "Ni": 261,
+    "Nj": 301,
+    "packingType": "grid_simple",
+    "bitsPerValue": 16
+  },
+  "before_fix": {
+    "assumed": "dataDate on the first day of the target month and dataTime 0",
+    "outcome": "rejected: Observation month/time differs from the target."
+  },
+  "after_fix": {
+    "required": "stepType avgad; dataDate/dataTime at 18 UTC on the day before the target month; validity at 06 UTC on its first day",
+    "outcome_target_2026_06": "accepted",
+    "outcome_target_2026_07": "rejected: Observation month/time differs from the target.",
+    "grid": [301, 261],
+    "units_after_conversion": "mm/day",
+    "minimum": 0.0,
+    "mean": 3.2918357832126097,
+    "maximum": 80.36041259765625,
+    "negative_cells": 0,
+    "all_finite": true
+  },
+  "limits": "One month of one product. October 2026 has not been retrieved or scored, and its file must still pass every check when it becomes eligible."
+}

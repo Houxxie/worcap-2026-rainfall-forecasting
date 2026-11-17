@@ -2,7 +2,7 @@
 
 This workflow compares the **forecast and training climatology already frozen in the registry** with final ERA5 rainfall. It does not refit the model or produce a new forecast.
 
-October 2026 becomes eligible on **1 February 2027 at 00:00 UTC** under the fixed T+4 protocol. That is the earliest permitted check, not a guarantee that final ERA5 will be available. November becomes eligible on 1 March 2027. The command also requires final-product metadata in the downloaded bytes.
+October 2026 becomes eligible on **1 February 2027 at 00:00 UTC** under the fixed T+4 protocol. That is the earliest permitted check, not a guarantee that final ERA5 will be available. November 2026 was not issued, so it has nothing to evaluate; reports list it as a month without a forecast. The command also requires final-product metadata in the downloaded bytes.
 
 ## Prepare once
 
@@ -41,6 +41,8 @@ python research/prospective/verify_forecast.py evaluate --registry outputs/prosp
 The request is for **the target month's total precipitation**, not the lagged atmospheric inputs used for prediction. It retrieves one GRIB field from [ERA5 monthly averaged single-level data](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels-monthly-means). Requests only start after the eligibility check. Downloads may queue at CDS.
 
 The decoder requires `class=ea`, `expver=1`, `stream=moda`, precipitation parameter 228, the correct month and a complete **301 × 261** grid. It rejects ERA5T, duplicate fields, missing cells, wrong coordinates and negative rainfall. No interpolation, filling or clipping is performed. For this specific monthly product, metres are converted to **mm/day by multiplying by 1000**, following the [ECMWF documentation](https://confluence.ecmwf.int/pages/viewpage.action?pageId=216495524).
+
+Monthly rainfall is a mean of daily accumulations, so its GRIB header is dated 18 UTC on the day before the target month and valid from 06 UTC on the first day. The decoder requires exactly that. This was [checked against a real final ERA5 field](../research/prospective/evidence/era5_rainfall_header_2026_11_17.json) for June 2026, a month outside the forecast plan; the first version of the check assumed a different date and would have rejected the real file.
 
 If you already downloaded the **original GRIB**, use this alternative:
 
@@ -85,4 +87,4 @@ This reads recorded results without downloading, scoring or appending events. It
 
 This measures agreement with **ERA5 reanalysis**, not independent rain-gauge observations. One evaluated month cannot establish general skill in future years. The local registry records actual workflow receipt times and hashes; it is not an independent timestamp authority.
 
-The new workflow is covered by [automatic synthetic checks](CHECKS.md). Those checks do not evaluate October or substitute synthetic data in the operational registry. The live CDS download and real evaluation can only be completed when the required final observations are available.
+The new workflow is covered by [automatic synthetic checks](CHECKS.md). Those checks do not evaluate October or substitute synthetic data in the operational registry. Only the decoder has read a real ERA5 file so far. The live CDS download and real evaluation can only be completed when the required final observations are available.

@@ -5,14 +5,14 @@ Monthly rainfall forecasting over South America, combining seasonal climate fore
 
 This project started during the **WorCAP 2026 Hackathon**, where it finished in the **Top 10**. The model in question documented here scored **1.78758 in the 2024 evaluation**.
 
-After the competition, I decided to keep working on it. This repository brings together the submitted model, an explanation of how it works, and the experiments I’m developing now.
+After the competition, I decided to keep working on it. This repository brings together the submitted model, an explanation of how it works, and the experiments that came afterwards.
 
 ![Overview of the rainfall forecasting model](assets/model_overview.png)
 
 
 ## 🏁 Start here
 
-The competition solution and the model I'm developing now are both here. I kept the submitted version separate so it can still be reproduced while the research continues.
+The competition solution and the forecasting model that followed it are both here. I kept the submitted version separate so it can still be reproduced on its own.
 
 | What would you like to do? | Where to start |
 |---|---|
@@ -82,6 +82,8 @@ The first forecast for **October 2026** was saved on **30 September at 18:18 UTC
 
 This is something I wanted to do after the competition: keep a forecast made in advance and come back later to see how it performed. October’s accuracy is still unknown. Under the current protocol, the first check against final ERA5 data can begin in **February 2027**.
 
+November didn’t get a forecast. The ocean indices it needed were still missing at my last check, and the deadline passed, so that month stays empty rather than being filled in afterwards. With `v1.0.0` this repository is at its final version: no new experiments or monthly forecasts are planned, and October’s check is the one thing left to come back to.
+
 The [operational record](research/prospective/OPERATIONAL_STATUS.md) explains the source checks, the CFSv2 acquisition fix, and how this forecast was preserved.
 
 The [evaluation guide](docs/FORECAST_EVALUATION.md) covers the next part: checking final observations, comparing the forecast with its training climatology, and keeping the first result when the data is revised. [Automatic checks](docs/CHECKS.md) exercise that workflow with synthetic data on each code update.
@@ -134,7 +136,7 @@ Exact reproduction depends on the recorded data snapshots, since upstream provid
 | [`docs/`](docs/REPRODUCTION.md) | Data sources, reproduction instructions, and temporal limitations |
 | [`scripts/`](scripts/README.md) | Repository checks, notebook builds, and diagram generation |
 
-The original competition delivery is preserved under the `competicao-2026` Git tag. The current branch contains the English presentation and my ongoing research. Changes are recorded in the [changelog](CHANGELOG.md).
+The original competition delivery is preserved under the `competicao-2026` Git tag. The current branch contains the English presentation and the research that followed, closed as `v1.0.0`. Changes are recorded in the [changelog](CHANGELOG.md).
 
 ## License and acknowledgements
 

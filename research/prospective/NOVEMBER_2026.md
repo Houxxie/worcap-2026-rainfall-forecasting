@@ -1,5 +1,7 @@
 # November preparation and CFSv2 continuity
 
+> **Closed on 17 November 2026: November was not issued.** No source check or forecast was recorded after 21 October, and the deadline passed on 1 November at 00:00 UTC. The registry still ends at event 72. November 2026 stays as a month without a forecast; it will not be issued afterwards or evaluated. Everything below is the preparation record as written on 21 October, including instructions that no longer apply.
+
 Checked on **21 October 2026, 02:35 UTC / 20 October, 23:35 Brasília**. November has **not** been issued. October's forecast, the registered model and the fixed plan are unchanged.
 
 ## Source readiness

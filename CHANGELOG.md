@@ -1,5 +1,14 @@
 # Changelog
 
+## Final version v1.0.0 — 2026-11-17
+
+- Close active development. This version covers the competition model, the frozen forecasting model, the completed research reports, the automatic checks and the evaluation workflow.
+- Record November 2026 as not issued: no source check or forecast was recorded after 21 October and the deadline passed. Nothing was issued afterwards. October 2026 remains the only issued forecast.
+- Update status text in the README and guides. Historical evidence, protocols, the registered inference code and the October forecast keep their bytes.
+- Fix the evaluation decoder after reading a real final ERA5 rainfall GRIB (June 2026, outside the forecast plan). The real header is dated 18 UTC on the day before the month; the earlier check expected the first day at 00 UTC and would have rejected October's file in February. The synthetic test fixture now uses the real header, and the check is recorded as evidence.
+- No model fitting, forecast or score is part of this version. That one ERA5 field was the only download; it was not added to the registry. October can be evaluated against final ERA5 from 1 February 2027; its skill is still unknown.
+- Known limits: the 2007–2022 results are retrospective and not an untouched holdout; CFSv2 acquisition still depends on the original IRI service, and its successor was not approved as equivalent; fitted model files, source data and the operational registry are not distributed here.
+
 ## Automatic checks and future evaluation — 2026-10-22
 
 - Add GitHub Actions for repository integrity, notebook consistency, offline-demo checks and synthetic forecast/source/report tests. No credentials, source acquisition or model training are required.

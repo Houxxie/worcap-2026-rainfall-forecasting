@@ -18,8 +18,8 @@
       "bytes": 471
     },
     "CHANGELOG.md": {
-      "sha256": "1db9746ff47d416a9c53c4454ab64ccb8ebb61adca444fe203bc1360e090d2a7",
-      "bytes": 14418
+      "sha256": "bf5819c6c37965a9899836e9d41d8d4cefb23832fe0b4c8c59f7469821523636",
+      "bytes": 15884
     },
     "LICENSE": {
       "sha256": "bc7a311c017ec031a9a76aab9d42ee0a1a438257b180d55b4a931efec35ae287",
@@ -30,8 +30,8 @@
       "bytes": 1105
     },
     "README.md": {
-      "sha256": "2e9ad606baa717f3d08d407e788e95223fdb03520cc18be83975ca18ff1a5c3c",
-      "bytes": 9172
+      "sha256": "f7553e0fde1aa01987af43a96b3aa6d0a31bc914a6820e6a378c68b55928521c",
+      "bytes": 9551
     },
     "assets/competition_forecast_example.json": {
       "sha256": "4a905954f07d59e55d6d2dd45a87932825dd6d5c8b32b41778aad6f5e709a66b",
@@ -190,8 +190,8 @@
       "bytes": 2642
     },
     "docs/FORECAST_EVALUATION.md": {
-      "sha256": "de5635757a5f64a5cc9280825bba7400f7b2fcf5d5a6a05f69612b4c62d3de5e",
-      "bytes": 6914
+      "sha256": "21731ea701b2981f62c44bc8582af81ae505fd09d9e86065ab3fe121d82b8f00",
+      "bytes": 7494
     },
     "docs/GETTING_STARTED.md": {
       "sha256": "1ad61d6212fa4892ecd63358b07242581489c3886f4773a59de4850a9fa8665d",
@@ -202,8 +202,8 @@
       "bytes": 1475
     },
     "docs/MONTHLY_FORECAST.md": {
-      "sha256": "4bf552c07a2b7b2aaf77b92f0ed316d644a21d83f2563226547323ec1796a0c6",
-      "bytes": 7022
+      "sha256": "eafc5fdadd37c382619692fe28c0630569398ede45f2be75c50deee5535ee4b0",
+      "bytes": 7354
     },
     "docs/REPRODUCTION.md": {
       "sha256": "31887af1ede64bf47fb2cb23f98a4b1b1209f2563630c6c2d7d0dc6e9a84f170",
@@ -218,16 +218,16 @@
       "bytes": 1587
     },
     "docs/VERSIONS.md": {
-      "sha256": "9f7faf92356ad1617ea39e879edc8cffbe057f1c9b261844d7ad38050e0bbf15",
-      "bytes": 2145
+      "sha256": "a83554147a296342e91596582e0344066489297519ef6e7a0585cfffcd23ffd5",
+      "bytes": 2737
     },
     "requirements-checks.txt": {
       "sha256": "68b38bad7a36de5d889cc031287652c9cb40fd0c746d889a52224b52cc47aa1e",
       "bytes": 170
     },
     "research/README.md": {
-      "sha256": "566943ac7c64aa0e9dee84e97c0c00f2867b2b77903560a952e8145278c4edd4",
-      "bytes": 3527
+      "sha256": "6b4f4bd4dd034575fde9c3758b6183cd1e9e600729f7c1f7c26abd467498dd7b",
+      "bytes": 3659
     },
     "research/bias_calibration/README.md": {
       "sha256": "ef8a2c3b0c55dfcf3241daf56b17f1449591c6c6f21cd082eba0f6f02883105e",
@@ -618,12 +618,12 @@
       "bytes": 5395
     },
     "research/prospective/NOVEMBER_2026.md": {
-      "sha256": "88c96d6ee9aa44bbffc1391759524ce9b80adadb1113972c31b56dbdea788565",
-      "bytes": 7388
+      "sha256": "e71d89196ca56e3445649acf3d6345edac1ac4467b9726d5110fed230e20aeae",
+      "bytes": 7808
     },
     "research/prospective/OPERATIONAL_STATUS.md": {
-      "sha256": "4ed4134f06f292f0b1ff97e3b16b0210a5000c089579c60a4499ec330fa65930",
-      "bytes": 9882
+      "sha256": "5044435df3c8d8b146ce739f51dceaf036ffeb001cc03ce827b213dc99b712dd",
+      "bytes": 9980
     },
     "research/prospective/README.md": {
       "sha256": "77bf48d61f362f883324d092cada88e87e99f60e945f44a971bd5047be259dba",
@@ -676,6 +676,10 @@
     "research/prospective/evidence/cfsv2_resolution_2026_09_30.json": {
       "sha256": "10774c7bc128b5087e58dd24a9b0a0c63f7fcefba68f5b79c909c23a06d768bd",
       "bytes": 1981
+    },
+    "research/prospective/evidence/era5_rainfall_header_2026_11_17.json": {
+      "sha256": "e667c66894ce53c8f96609ae9b02698004045e92482a7cc0cd28ee725f23ae94",
+      "bytes": 2565
     },
     "research/prospective/evidence/forecast_backup_2026_10.json": {
       "sha256": "4f73732fee4211fbbb1434c6d502505670602a3a5a82a697252294cfe4503ec4",
@@ -802,12 +806,12 @@
       "bytes": 9099
     },
     "research/prospective/test_verification.py": {
-      "sha256": "6860687f65e42aca3bdae4fbc80b4e8727e00b78f53e559cde232b0d541324da",
-      "bytes": 11486
+      "sha256": "603f7a9e4232cc713606076a6f13bfecb4e9e1eb466110d8a3e56a1e5f8f89e9",
+      "bytes": 11762
     },
     "research/prospective/verify_forecast.py": {
-      "sha256": "bb1e7dee9908dbbd37994e13669ea6c85f639c30f7bd1e4cf63f6105c8a03704",
-      "bytes": 18502
+      "sha256": "c17556406fc5ea8cd0e3262dcc95fb7b70e57ce6400f6b540be0db5cd38722f3",
+      "bytes": 19127
     },
     "research/residual_unet/README.md": {
       "sha256": "39bc3ed89326e7785e73e22816977da6e1e29d2d607c5630973d18cc16842164",

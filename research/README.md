@@ -37,4 +37,6 @@ Units: mm/day. SST reduced RMSE by 0.0363% but worsened MAE and bias; it remains
 
 The current forecasting model was fitted and frozen on 29 September 2026. Its first real forecast, for October, was frozen on 30 September at 18:18 UTC after all sources passed validation; see the [operational status](prospective/OPERATIONAL_STATUS.md). Future skill has not yet been measured. The U-Net completed all seven development blocks: RMSE was 1.764726 versus 1.753399 for the reference model, with no improved block. A subsequent single fixed 75% reference model / 25% U-Net blend reached 1.750628, improving six blocks but worsening global absolute bias. It remains a research candidate; the reference model remains the operational reference. Both diagnostics used the archived maps without retraining.
 
+Research stopped here with `v1.0.0` in November 2026. None of the candidates above was promoted, and November 2026 was not issued.
+
 Freeze hypotheses and configurations before new evaluation. Compare identical dates, grid points and information cutoffs, inspect temporal/regional behavior, and record decisions even without improvement. Small gains on consulted years do not establish future skill.
